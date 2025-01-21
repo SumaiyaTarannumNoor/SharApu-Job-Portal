@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
+import JobSectionCard from './components/JobSection/JobSectionCard';
 
 
 const WorkerCard = ({ imageSrc, title, description }) => (
@@ -217,6 +218,7 @@ const App = () => {
             </div>
           </div>
         </div>
+        <JobSectionCard />
 
         {/* Categories Section */}
         <div className="mt-12 bg-pink-500 text-white pt-4 rounded-lg">
