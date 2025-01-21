@@ -7,6 +7,9 @@ import Footer from './components/UI/Footer';
 import HeroImage from '../assets/LandingPageImage/HeroImage.png'
 import HeroSection from './components/UI/Hero';
 import WorkerLandingPage from './components/Workers/WorkerLandingPage';
+import Check1 from '../assets/LandingPageIconImage/Check1.png'
+import Penguine1 from '../assets/LandingPageIconImage/Penguine1.png'
+import ReasonsSection from './components/UI/ReasonsSection';
 
 
 const WorkerCard = ({ imageSrc, title, description }) => (
@@ -144,18 +147,19 @@ const App = () => {
       <WorkerLandingPage />
 
         {/* Reasons Section */}
-        <div className="mt-24 bg-gray-100 py-12 sm:py-16 px-4 rounded-lg">
+        {/* <div className="mt-24 bg-gray-100 py-12 sm:py-16 px-4 rounded-lg">
           <div className="flex flex-col sm:flex-row items-center justify-between mb-8 space-y-4 sm:space-y-0">
-            <img src="/api/placeholder/64/64" alt="Check" className="w-12 h-12" />
+            <img src={Check1} alt="Check" className="w-12 h-12" />
             <h2 className="text-2xl sm:text-3xl font-bold text-pink-500">シュフティが選ばれる<span className="text-blue-400">3</span>つの理由</h2>
-            <img src="/api/placeholder/64/64" alt="Mascot" className="w-16 h-16" />
+            <img src={Penguine1} alt="Mascot" className="w-16 h-16" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reasons.map((reason, index) => (
               <ReasonCard key={index} {...reason} />
             ))}
           </div>
-        </div>
+        </div> */}
+        <ReasonsSection />
 
         {/* Jobs Section */}
         <JobSectionCard1 />
