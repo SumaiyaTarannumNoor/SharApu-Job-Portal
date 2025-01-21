@@ -11,15 +11,17 @@ import Worker8 from "../../../assets/Workers/Worker8.png";
 // Worker Card Component
 const WorkerCard = ({ imageSrc, title, description }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <img 
-        src={imageSrc} 
-        alt={title} 
-        className="w-full h-48 object-contain"
-      />
+    <div className="bg-white rounded-lg overflow-hidden w-56 mb-8">
+      <div className="w-52 h-44 bg-white">
+        <img
+          src={imageSrc}
+          alt={title}
+          className="w-full h-full object-contain"
+        />
+      </div>
       <div className="p-4">
-        <h3 className="text-lg font-semibold mb-2 line-clamp-2">{title}</h3>
-        <p className="text-gray-600 text-sm line-clamp-3">{description}</p>
+        <h3 className="text-lg font-semibold mb-2 line-clamp-2 text-pink-600">{title}</h3>
+        <p className="text-gray-600 text-sm line-clamp-2">{description}</p>
       </div>
     </div>
   );
@@ -79,12 +81,12 @@ const WorkerLandingPage = () => {
         <p className="text-base sm:text-lg mb-8">
           時間の使い方や仕事の選び方など、参考になるインタビューを多数掲載
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
           {workers.map((worker, index) => (
             <WorkerCard key={index} {...worker} />
           ))}
         </div>
-        <div className="text-center mt-8">
+        <div className="text-center mt-12">
           <button className="bg-white text-pink-500 border-2 border-pink-500 px-8 py-3 rounded-full text-xl hover:bg-pink-100 transition duration-300">
             インタビューをもっと見る
           </button>
