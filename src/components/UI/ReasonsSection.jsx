@@ -3,14 +3,18 @@ import Check1 from '../../../assets/LandingPageIconImage/Check1.png';
 import Penguine1 from '../../../assets/LandingPageIconImage/Penguine1.png';
 
 const ReasonCard = ({ title, description, icon }) => (
-    <div className="bg-white p-6 rounded-full shadow-md">
+    <div className="bg-pink-50 p-6 rounded-full shadow-md h-full flex flex-col">
         <div className="flex items-center justify-center mb-4">
             <img src={icon} alt={title} className="w-16 h-16" />
         </div>
-        <h3 className="text-xl font-semibold text-yellow-300 mb-2 text-center">
+        <h3 className="text-center text-yellow-300 font-semibold 
+            text-xl md:text-lg sm:text-base 
+            mb-2 max-w-full break-words">
             {title}
         </h3>
-        <p className="text-gray-600 text-center">
+        <p className="text-black text-center flex-grow
+            text-base md:text-sm sm:text-xs 
+            max-w-full break-words">
             {description}
         </p>
     </div>
@@ -36,11 +40,11 @@ const ReasonsSection = () => {
     ];
 
     return (
-        <div className="mt-24 bg-pink-100 py-12 sm:py-16 px-4 rounded-lg">
+        <div className="mt-24 bg-pink-200 py-24 sm:py-16 px-4 rounded-lg">
             <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 mb-8 space-y-2 sm:space-y-0">
                 <img src={Check1} alt="Check" className="w-16 h-16" />
-                <div className="flex flex-col space-y-2">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-pink-500 text-center">
+                <div className="flex flex-col space-y-2 text-center sm:text-left">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-pink-500">
                         シュフティが選ばれる<span className="text-blue-400">3</span>つの理由
                     </h2>
                     <h4 className="text-md sm:text-md text-black-200">
