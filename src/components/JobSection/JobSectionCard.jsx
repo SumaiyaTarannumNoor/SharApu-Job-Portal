@@ -1,14 +1,18 @@
 import React from 'react';
 
 const JobCard = ({ type, reward, daysLeft, title }) => (
-  <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-    <div className="flex justify-between items-center mb-2">
-      <span className="px-3 py-1 rounded text-white text-sm bg-pink-500">
+  <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow h-32 flex flex-col">
+    <div className="flex justify-between items-center mb-2 h-8">
+      <span className="px-3 py-1 rounded text-white text-sm bg-pink-500 truncate max-w-[40%]">
         {type}
       </span>
-      <span className="text-gray-600 text-sm">報酬額：{reward} | あと{daysLeft}日</span>
+      <span className="text-gray-600 text-sm truncate">報酬額：{reward} | あと{daysLeft}日</span>
     </div>
-    <p className="text-gray-800 line-clamp-2">{title}</p>
+    <div className="h-16 overflow-hidden">
+      <p className="text-gray-800 text-sm sm:text-base md:text-sm lg:text-base xl:text-base line-clamp-2">
+        {title}
+      </p>
+    </div>
   </div>
 );
 
@@ -54,9 +58,11 @@ const JobSectionCard = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
       {jobSections.map((section, sectionIndex) => (
         <div key={sectionIndex}>
-          <h3 className="text-xl font-semibold mb-4 bg-gray-100 p-4">
-            {section.title}
-          </h3>
+          <div className="h-20 mb-4 bg-gray-100 p-4 flex items-center">
+            <h3 className="text-xl font-semibold line-clamp-2">
+              {section.title}
+            </h3>
+          </div>
           <div className="space-y-4">
             {section.jobs.map((job, jobIndex) => (
               <JobCard key={jobIndex} {...job} />
