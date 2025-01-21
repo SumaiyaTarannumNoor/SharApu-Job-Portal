@@ -2,6 +2,10 @@ import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import JobSectionCard from './components/JobSection/JobSectionCard';
 import JobSectionCard1 from './components/JobSection/JobSectionCard1';
+import JobCategoriesCard from './components/JobCategories/JobCategoriesCard';
+import Footer from './components/UI/Footer';
+import HeroImage from '../assets/LandingPageImage/HeroImage.png'
+import HeroSection from './components/UI/Hero';
 
 
 const WorkerCard = ({ imageSrc, title, description }) => (
@@ -133,22 +137,7 @@ const App = () => {
       {/* <main className="container mx-auto px-4 sm:px-6 lg:px-8"> */}
          <main className="container mx-auto px-4 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-64 max-w-[2000px]">
         {/* Hero Section */}
-        <div className="mt-8 flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
-          <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl font-bold text-pink-500 mb-4">スキマ時間に自分のペースで仕事できる</h1>
-            <p className="text-lg sm:text-xl mb-6">シュフティなら自分なりのワークスタイルきっと見つかります</p>
-            <button className="bg-pink-500 text-white px-6 sm:px-8 py-3 rounded-lg text-lg sm:text-xl w-full sm:w-auto">
-              3分で完了！無料会員登録はこちら
-            </button>
-          </div>
-          <div className="w-full lg:w-1/2">
-            <img 
-              src="/api/placeholder/600/400" 
-              alt="Smiling woman" 
-              className="rounded-lg w-full h-auto"
-            />
-          </div>
-        </div>
+        <HeroSection HeroImage={HeroImage} />
 
         {/* Workers Section */}
         <div className="mt-16">
@@ -183,66 +172,11 @@ const App = () => {
         {/* Jobs Section */}
         <JobSectionCard1 />
         <JobSectionCard />
-
-        {/* Categories Section */}
-        <div className="mt-12 bg-pink-500 text-white pt-4 rounded-lg">
-          <h2 className="text-2xl font-bold text-center mb-8">仕事ジャンル一覧</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-            <div className="space-y-4">
-              <h4 className="font-bold">データ入力・商品登録</h4>
-              <div className="space-y-2">
-                <p className="hover:text-pink-200 cursor-pointer">データ入力・データチェック</p>
-                <p className="hover:text-pink-200 cursor-pointer">データ収集・分類</p>
-                <p className="hover:text-pink-200 cursor-pointer">商品登録</p>
-              </div>
-            </div>
-            {/* Add more category sections as needed */}
-          </div>
-          <div className="text-center mt-8 pb-8">
-            <button className="bg-white text-pink-500 px-8 py-3 rounded-lg text-xl hover:bg-pink-100 transition duration-300">
-              さっそく無料ではじめる
-            </button>
-          </div>
-        </div>
+        <JobCategoriesCard />
       </main>
 
       {/* Footer */}
-      <footer className="bg-pink-500 text-white mt-16">
-        <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <h3 className="font-bold mb-4">Main Menu</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-pink-200">Search for a job</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Support</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-pink-200">User Guide</a></li>
-                <li><a href="#" className="hover:text-pink-200">Q&A List</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Link</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-pink-200">Shufuti Blog</a></li>
-                <li><a href="#" className="hover:text-pink-200">Official Twitter</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Operating Company</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-pink-200">Company Information</a></li>
-                <li><a href="#" className="hover:text-pink-200">Terms of Service</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-pink-400 mt-8 pt-8 text-center">
-            <p>© 2007-2025 ULURU CO., LTD.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
