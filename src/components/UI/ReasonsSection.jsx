@@ -1,11 +1,14 @@
 import React from 'react';
 import Check1 from '../../../assets/LandingPageIconImage/Check1.png';
 import Penguine1 from '../../../assets/LandingPageIconImage/Penguine1.png';
+import Ok from '../../../assets/LandingPageIconImage/Ok.png';
+import Work_Time from '../../../assets/LandingPageIconImage/Work_Time.png';
+import Safety from '../../../assets/LandingPageIconImage/Safety.png';
 
 const ReasonCard = ({ title, description, icon }) => (
     <div className="bg-pink-50 p-6 rounded-full shadow-md h-full flex flex-col">
         <div className="flex items-center justify-center mb-4">
-            <img src={icon} alt={title} className="w-16 h-16" />
+            <img src={icon} alt={title} className="w-24 h-24" />
         </div>
         <h3 className="text-center text-yellow-300 font-semibold 
             text-xl md:text-lg sm:text-base 
@@ -25,17 +28,17 @@ const ReasonsSection = () => {
         {
             title: "高品質なサービス",
             description: "最高品質のサービスを提供し、お客様のニーズに合わせた解決策をご提案します。",
-            icon: "/api/placeholder/48/48"
+            icon: Ok
         },
         {
             title: "24時間サポート",
             description: "年中無休で専門スタッフが対応し、迅速なサポートを提供します。",
-            icon: "/api/placeholder/48/48"
+            icon: Work_Time
         },
         {
             title: "リーズナブルな価格",
             description: "競争力のある価格設定で、高品質なサービスを提供します。",
-            icon: "/api/placeholder/48/48"
+            icon: Safety
         }
     ];
 
