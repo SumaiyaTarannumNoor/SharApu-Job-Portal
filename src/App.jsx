@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import JobSectionCard from './components/JobSection/JobSectionCard';
+import JobSectionCard1 from './components/JobSection/JobSectionCard1';
 
 
 const WorkerCard = ({ imageSrc, title, description }) => (
@@ -180,44 +181,7 @@ const App = () => {
         </div>
 
         {/* Jobs Section */}
-        <div className="mt-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 bg-gray-100 p-4">多彩なジャンルあり！自分の体験談を活用できる仕事</h3>
-              <div className="space-y-4">
-                <JobCard
-                  type="プロジェクト"
-                  reward="2,303 円"
-                  daysLeft={6}
-                  title="【1文字1.5円〜】記事作成のお仕事！富谷市の街の魅力を発信！"
-                />
-                <JobCard
-                  type="プロジェクト"
-                  reward="2,303 円"
-                  daysLeft={6}
-                  title="【1文字1.5円〜】記事作成のお仕事！二子玉川の街の魅力を発信！"
-                />
-              </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 bg-gray-100 p-4">スキル不要ですぐに参加できる仕事</h3>
-              <div className="space-y-4">
-                <JobCard
-                  type="プロジェクト"
-                  reward="400 円"
-                  daysLeft={2}
-                  title="【完全在宅♡丁寧サポート♡】スマホのみで隙間時間に簡単データ入力"
-                />
-                <JobCard
-                  type="タスク"
-                  reward="30 円 / 件"
-                  daysLeft={13}
-                  title="【90字以上/30円/1記事】WEBサービス・ツールの使用経験レビュー"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <JobSectionCard1 />
         <JobSectionCard />
 
         {/* Categories Section */}
