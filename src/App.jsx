@@ -128,7 +128,8 @@ const App = () => {
       <Navbar />
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* <main className="container mx-auto px-4 sm:px-6 lg:px-8"> */}
+         <main className="container mx-auto px-4 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-64 max-w-[2000px]">
         {/* Hero Section */}
         <div className="mt-8 flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
           <div className="w-full lg:w-1/2 text-center lg:text-left">
