@@ -6,6 +6,7 @@ import JobCategoriesCard from './components/JobCategories/JobCategoriesCard';
 import Footer from './components/UI/Footer';
 import HeroImage from '../assets/LandingPageImage/HeroImage.png'
 import HeroSection from './components/UI/Hero';
+import WorkerLandingPage from './components/Workers/WorkerLandingPage';
 
 
 const WorkerCard = ({ imageSrc, title, description }) => (
@@ -140,20 +141,7 @@ const App = () => {
         <HeroSection HeroImage={HeroImage} />
 
         {/* Workers Section */}
-        <div className="mt-16">
-          <h2 className="text-xl sm:text-2xl font-bold text-pink-500 mb-4">主婦の在宅ワーカーさんが多数活躍中！</h2>
-          <p className="text-base sm:text-lg mb-8">時間の使い方や仕事の選び方など、参考になるインタビューを多数掲載</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {workers.map((worker, index) => (
-              <WorkerCard key={index} {...worker} />
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <button className="bg-white text-pink-500 border-2 border-pink-500 px-8 py-3 rounded-full text-xl hover:bg-pink-100 transition duration-300">
-              インタビューをもっと見る
-            </button>
-          </div>
-        </div>
+      <WorkerLandingPage />
 
         {/* Reasons Section */}
         <div className="mt-24 bg-gray-100 py-12 sm:py-16 px-4 rounded-lg">
