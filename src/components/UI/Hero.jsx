@@ -25,7 +25,7 @@ const HeroSection = ({ HeroImage }) => {
               スキマ時間に自分のペースで仕事できる
             </h1>
             <p className="text-lg sm:text-xl mb-6 text-white">
-              シュフティなら自分なりのワークスタイルきっと見つかります
+            SharApuを使えば、自分だけのワークスタイルがきっと見つかります。
             </p>
             <button className="bg-pink-500 hover:bg-pink-600 transition-colors duration-300 text-white px-6 sm:px-8 py-3 rounded-lg text-lg sm:text-xl w-full sm:w-auto">
               3分で完了！無料会員登録はこちら

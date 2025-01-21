@@ -10,7 +10,7 @@ const Footer = () => {
       { text: 'Q&A List', link: '#' }
     ],
     'Link': [
-      { text: 'Shufuti Blog', link: '#' },
+      { text: 'SharApu Blog', link: '#' },
       { text: 'Official Twitter', link: '#' }
     ],
     'Operating Company': [
@@ -38,8 +38,15 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="border-t border-pink-400 mt-8 pt-8 text-center">
-          <p>© 2007-2025 ULURU CO., LTD.</p>
+        <div className="border-t border-pink-400/30 mt-8">
+          <div className="py-6 text-center">
+            <p className="text-white/90 text-sm mt-6">
+              ©{new Date().getFullYear()} 
+              <span className="font-semibold text-white"> SharApu  || </span> 
+              Powered By 
+              <span className="font-semibold"> TechKnowGram Limited</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -139,7 +139,7 @@ const App = () => {
 
       {/* Main Content */}
       {/* <main className="container mx-auto px-4 sm:px-6 lg:px-8"> */}
-         <main className="container mx-auto px-4 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-64 max-w-[2000px]">
+         <main className="container px-4 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-64 max-w-[2000px]">
         {/* Hero Section */}
         <HeroSection HeroImage={HeroImage} />
 

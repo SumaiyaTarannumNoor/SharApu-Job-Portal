@@ -50,7 +50,7 @@ const ReasonsSection = () => {
                 <img src={Check1} alt="Check" className="w-16 h-16" />
                 <div className="flex flex-col space-y-1 text-center sm:text-left">
                     <h2 className="text-2xl sm:text-3xl font-bold text-pink-500">
-                        シュフティが選ばれる<span className="text-blue-400">3</span>つの理由
+                      SharApu が選ばれる<span className="text-blue-400">3</span>つの理由
                     </h2>
                     <h4 className="text-sm text-gray-600">
                         在宅ワークが初めての方も、安心・安全にご利用いただけます！
