@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import legssystem from '../../assets/RecruiterIconImage/legssystem.png';
+import logoazw from '../../assets/RecruiterIconImage/logoazw.png';
+import lpemake from '../../assets/RecruiterIconImage/lpe_mark.jpg';
+import mash from '../../assets/RecruiterIconImage/mash.png';
+import mishonna from '../../assets/RecruiterIconImage/mishonna.jpg';
+import webhero from '../../assets/RecruiterIconImage/webhero_logo_icon.png';
 
 const SearchForAJobPage = () => {
   const [expandedCategories, setExpandedCategories] = useState({});
@@ -44,7 +50,7 @@ const SearchForAJobPage = () => {
       estimatedHourlyRate: 1000,
       company: {
         name: 'AW Recruitment Acco...',
-        logo: '/api/placeholder/48/48',
+        logo: logoazw,
         averageHourlyRate: 874
       },
       views: 78,
@@ -60,7 +66,7 @@ const SearchForAJobPage = () => {
       estimatedHourlyRate: 1800,
       company: {
         name: 'LEGS system',
-        logo: '/api/placeholder/48/48',
+        logo: legssystem,
         averageHourlyRate: 1000
       },
       views: 373,
@@ -76,8 +82,8 @@ const SearchForAJobPage = () => {
       price: 50,
       estimatedHourlyRate: 1500,
       company: {
-        name: 'DataPro Solutions',
-        logo: '/api/placeholder/48/48',
+        name: 'LPE Solutions',
+        logo: lpemake,
         averageHourlyRate: 950
       },
       views: 245,
@@ -93,8 +99,8 @@ const SearchForAJobPage = () => {
       price: 25,
       estimatedHourlyRate: 1200,
       company: {
-        name: 'TranscribeNow Inc.',
-        logo: '/api/placeholder/48/48',
+        name: 'Mash Corp',
+        logo: mash,
         averageHourlyRate: 1100
       },
       views: 156,
@@ -109,8 +115,8 @@ const SearchForAJobPage = () => {
       price: 35,
       estimatedHourlyRate: 2000,
       company: {
-        name: 'Consumer Research JP',
-        logo: '/api/placeholder/48/48',
+        name: 'Web Hero',
+        logo: webhero,
         averageHourlyRate: 1500
       },
       views: 289,
@@ -273,7 +279,7 @@ const SearchForAJobPage = () => {
                     <img 
                       src={job.company.logo} 
                       alt={job.company.name} 
-                      className="w-12 h-12 rounded"
+                      className="w-12 h-12 rounded object-cover"
                     />
                     <div>
                       <div className="font-bold">{job.company.name}</div>
