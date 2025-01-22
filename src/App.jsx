@@ -1,17 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import JobSectionCard from './components/JobSection/JobSectionCard';
 import JobSectionCard1 from './components/JobSection/JobSectionCard1';
 import JobCategoriesCard from './components/JobCategories/JobCategoriesCard';
 import Footer from './components/UI/Footer';
-import HeroImage from '../assets/LandingPageImage/HeroImage.png'
+import HeroImage from '../assets/LandingPageImage/HeroImage.png';
 import HeroSection from './components/UI/Hero';
 import WorkerLandingPage from './components/Workers/WorkerLandingPage';
-import Check1 from '../assets/LandingPageIconImage/Check1.png'
-import Penguine1 from '../assets/LandingPageIconImage/Penguine1.png'
+import Check1 from '../assets/LandingPageIconImage/Check1.png';
+import Penguine1 from '../assets/LandingPageIconImage/Penguine1.png';
 import ReasonsSection from './components/UI/ReasonsSection';
-
-
+import MembershipForm from './components/Authenticator/membershipform';
+import PersonalInformationForm from './components/Authenticator/personalInformationForm';
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
     <img src={imageSrc} alt={title} className="w-full h-48 object-cover" crossOrigin="anonymous" />
@@ -41,6 +42,20 @@ const JobCard = ({ type, reward, daysLeft, title }) => (
     <p className="text-gray-800">{title}</p>
   </div>
 );
+
+// Homepage component to contain all the landing page content
+const Homepage = ({ HeroImage }) => {
+  return (
+    <>
+      <HeroSection HeroImage={HeroImage} />
+      <WorkerLandingPage />
+      <ReasonsSection />
+      <JobSectionCard1 />
+      <JobSectionCard />
+      <JobCategoriesCard />
+    </>
+  );
+};
 
 const App = () => {
   const workers = [
@@ -132,33 +147,24 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <Router>
+      <div className="min-h-screen bg-white">
+        {/* Navigation */}
+        <Navbar />
 
-      {/* Navigation */}
-      <Navbar />
+        {/* Main Content */}
+        <main className="container px-4 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-64 max-w-[2000px]">
+          <Routes>
+            <Route path="/" element={<Homepage HeroImage={HeroImage} />} />
+            <Route path="/membership-registration" element={<MembershipForm />} />
+            <Route path="/personal-information" element={<PersonalInformationForm />} />
+          </Routes>
+        </main>
 
-      {/* Main Content */}
-      {/* <main className="container mx-auto px-4 sm:px-6 lg:px-8"> */}
-         <main className="container px-4 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-64 max-w-[2000px]">
-        {/* Hero Section */}
-        <HeroSection HeroImage={HeroImage} />
-
-        {/* Workers Section */}
-      <WorkerLandingPage />
-
-        {/* Reasons Section */}
-
-        <ReasonsSection />
-
-        {/* Jobs Section */}
-        <JobSectionCard1 />
-        <JobSectionCard />
-        <JobCategoriesCard />
-      </main>
-
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

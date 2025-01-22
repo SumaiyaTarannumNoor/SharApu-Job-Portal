@@ -1,6 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = ({ HeroImage }) => {
+  const navigate = useNavigate();
+
+  const handleRegisterClick = () => {
+    navigate('/membership-registration');
+  };
   return (
     <section className="relative h-96 w-full">
       {/* Background Image */}
@@ -27,7 +33,9 @@ const HeroSection = ({ HeroImage }) => {
             <p className="text-lg sm:text-xl mb-6 text-white">
             With SharApu, you're sure to find your own work style.
             </p>
-            <button className="bg-pink-500 hover:bg-pink-600 transition-colors duration-300 text-white px-6 sm:px-8 py-3 rounded-lg text-lg sm:text-xl w-full sm:w-auto">
+            <button 
+            onClick={handleRegisterClick}
+            className="bg-pink-500 hover:bg-pink-600 transition-colors duration-300 text-white px-6 sm:px-8 py-3 rounded-lg text-lg sm:text-xl w-full sm:w-auto">
               It only takes 3 minutes! Register for free here
             </button>
           </div>

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
+  const handleRegisterClick = () => {
+    navigate('/membership-registration');
+  };
   return (
     <div className="w-full">
       <header className="bg-white text-pink-600 py-1 text-center text-sm">
@@ -38,7 +42,9 @@ const Navbar = () => {
                 <button className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
                   Log In 
                 </button>
-                <button className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
+                <button 
+                onClick={handleRegisterClick}
+                className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
                   Register as a Member (Free)
                 </button>
               </div>
@@ -72,7 +78,9 @@ const Navbar = () => {
                 <button className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200">
                   Log In
                 </button>
-                <button className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200">
+                <button 
+                onClick={handleRegisterClick}
+                className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200">
                 Register as a Member (Free)）
                 </button>
               </div>
