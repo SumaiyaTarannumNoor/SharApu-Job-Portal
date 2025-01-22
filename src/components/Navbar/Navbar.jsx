@@ -16,6 +16,10 @@ const Navbar = () => {
   const handleLoginClick = () => {
     navigate('/login');
   };
+
+  const handleHomeClick = () => {
+    navigate('/');
+  };
   
   return (
     <div className="w-full">
@@ -28,7 +32,7 @@ const Navbar = () => {
           {/* Top bar with logo and hamburger */}
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <div className="text-2xl sm:text-3xl font-bold">sharApu</div>
+            <div onClick={handleHomeClick} className="text-2xl sm:text-3xl font-bold mouse-pointer">sharApu</div>
 
             {/* Hamburger Button */}
             <button 
