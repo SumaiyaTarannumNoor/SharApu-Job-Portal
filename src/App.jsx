@@ -14,6 +14,7 @@ import ReasonsSection from './components/UI/ReasonsSection';
 import MembershipForm from './components/Authenticator/membershipform';
 import PersonalInformationForm from './components/Authenticator/personalInformationForm';
 import SearchForAJobPage from './Pages/SearchForAJob';
+import LoginForm from './components/Authenticator/loginform';
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
     <img src={imageSrc} alt={title} className="w-full h-48 object-cover" crossOrigin="anonymous" />
@@ -150,20 +151,16 @@ const App = () => {
   return (
     <Router>
       <div className="min-h-screen bg-white">
-        {/* Navigation */}
         <Navbar />
-
-        {/* Main Content */}
         <main className="container px-4 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-64 max-w-[2000px]">
           <Routes>
             <Route path="/" element={<Homepage HeroImage={HeroImage} />} />
             <Route path="/membership-registration" element={<MembershipForm />} />
             <Route path="/personal-information" element={<PersonalInformationForm />} />
             <Route path="/search-for-a-job" element={<SearchForAJobPage />} />
+            <Route path="/login" element={<LoginForm />} />
           </Routes>
         </main>
-
-        {/* Footer */}
         <Footer />
       </div>
     </Router>

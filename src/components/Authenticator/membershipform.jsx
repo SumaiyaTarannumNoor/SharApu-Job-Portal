@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import Social from '../Authenticator/socialLogin';
 const MembershipForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
@@ -196,9 +197,9 @@ const MembershipForm = () => {
           </button>
         </form>
       </div>
-
+      <Social/>
       {/* Alternative Registration */}
-      <div>
+      {/* <div>
         <div className="bg-pink-50 p-3 mb-4">
           <p>Register with an account from another service</p>
         </div>
@@ -212,7 +213,7 @@ const MembershipForm = () => {
             Register with Yahoo! JAPAN ID
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

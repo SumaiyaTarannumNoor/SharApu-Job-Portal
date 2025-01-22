@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -10,12 +11,16 @@ const Navbar = () => {
 
   const handleSearchForAJob = () => {
     navigate('/search-for-a-job');
-  }
+  };
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
   
   return (
     <div className="w-full">
       <header className="bg-white text-pink-600 py-1 text-center text-sm">
-      We support working housewives!
+        We support working housewives!
       </header>
       
       <nav className="bg-pink-500 text-white py-4 relative z-50">
@@ -44,12 +49,14 @@ const Navbar = () => {
                 <a href="#" className="hover:text-pink-200 transition-colors duration-200">Those who want to receive work</a>
               </div>
               <div className="flex space-x-4">
-                <button className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
+                <button 
+                  onClick={handleLoginClick}
+                  className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
                   Log In 
                 </button>
                 <button 
-                onClick={handleRegisterClick}
-                className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
+                  onClick={handleRegisterClick}
+                  className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
                   Register as a Member (Free)
                 </button>
               </div>
@@ -71,22 +78,24 @@ const Navbar = () => {
                   Search for a Job
                 </button>
                 <a href="#" className="text-lg hover:text-pink-200 transition-colors duration-200">
-                If you want to order work
+                  If you want to order work
                 </a>
                 <a href="#" className="text-lg hover:text-pink-200 transition-colors duration-200">
-                Those who want to receive work
+                  Those who want to receive work
                 </a>
               </div>
               
               {/* Buttons */}
               <div className="flex flex-col space-y-3 pt-4">
-                <button className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200">
+                <button 
+                  onClick={handleLoginClick}
+                  className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200">
                   Log In
                 </button>
                 <button 
-                onClick={handleRegisterClick}
-                className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200">
-                Register as a Member (Free)）
+                  onClick={handleRegisterClick}
+                  className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200">
+                  Register as a Member (Free)
                 </button>
               </div>
             </div>
