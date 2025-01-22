@@ -25,20 +25,20 @@ const ReasonCard = ({ title, description, icon, subtitle }) => (
 const ReasonsSection = () => {
     const reasons = [
         {
-            title: "高品質なサービス",
-            description: "最高品質のサービスを提供し、お客様のニーズに合わせた解決策をご提案します。",
+            title: "High Quality Service",
+            description: "We provide the highest quality service and propose solutions tailored to your needs.",
             icon: Ok,
             subtitle: "OK"
         },
         {
-            title: "24時間サポート",
-            description: "年中無休で専門スタッフが対応し、迅速なサポートを提供します。",
+            title: "24 Hour support",
+            description: "Our expert staff is available 24/7 to provide prompt support.",
             icon: Work_Time,
             subtitle: "Work Time"
         },
         {
-            title: "リーズナブルな価格",
-            description: "競争力のある価格設定で、高品質なサービスを提供します。",
+            title: "Reasonable price",
+            description: "We provide high quality services at competitive prices.",
             icon: Safety,
             subtitle: "Safety"
         }
@@ -50,10 +50,10 @@ const ReasonsSection = () => {
                 <img src={Check1} alt="Check" className="w-16 h-16" />
                 <div className="flex flex-col space-y-1 text-center sm:text-left">
                     <h2 className="text-2xl sm:text-3xl font-bold text-pink-500">
-                      SharApu が選ばれる<span className="text-blue-400">3</span>つの理由
+                      <span className="text-blue-400">3 </span>reasons to choose SharApu
                     </h2>
-                    <h4 className="text-sm text-gray-600">
-                        在宅ワークが初めての方も、安心・安全にご利用いただけます！
+                    <h4 className="text-sm text-gray-600 text-center">
+                    Even if you are new to working from home, you can use this service safely and securely!
                     </h4>
                 </div>
                 <img src={Penguine1} alt="Mascot" className="w-16 h-16" />
@@ -65,7 +65,7 @@ const ReasonsSection = () => {
             </div>
             <div className="text-center mt-12">
                 <button className="bg-pink-500 text-white px-8 py-3 rounded-lg text-md hover:bg-pink-600 transition duration-300">
-                    さっそく無料ではじめる
+                    Start Now For Free
                 </button>
             </div>
         </div>
