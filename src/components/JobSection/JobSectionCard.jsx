@@ -6,7 +6,7 @@ const JobCard = ({ type, reward, daysLeft, title }) => (
       <span className="px-3 py-1 rounded text-white text-sm bg-pink-500 truncate max-w-[40%]">
         {type}
       </span>
-      <span className="text-gray-600 text-sm truncate">報酬額：{reward} | あと{daysLeft}日</span>
+      <span className="text-gray-600 text-sm truncate">Reward：{reward} | {daysLeft} Days Left</span>
     </div>
     <div className="h-16 overflow-hidden">
       <p className="text-gray-800 text-sm sm:text-base md:text-sm lg:text-base xl:text-base line-clamp-2">
@@ -19,36 +19,36 @@ const JobCard = ({ type, reward, daysLeft, title }) => (
 const JobSectionCard = () => {
   const jobSections = [
     {
-      title: "多彩なジャンルあり！自分の体験談を活用できる仕事",
+      title: "Various genres available! Jobs where you can utilize your personal experiences",
       jobs: [
         {
-          type: "プロジェクト",
-          reward: "3,284 円",
+          type: "Project",
+          reward: "3,284 yen",
           daysLeft: 7,
-          title: "【1文字2.0円〜】記事作成のお仕事！横浜市戸塚区の街の魅力を発信！2つから自由に選択可能です。マニュアル完備♪"
+          title: "【2.0 yen per character】Article writing job! Promote the charm of Totsuka Ward, Yokohama City! Choose freely from 2 options. Manual provided♪"
         },
         {
-          type: "プロジェクト",
-          reward: "2,303 円",
+          type: "Project",
+          reward: "2,303 yen",
           daysLeft: 7,
-          title: "【1文字1.5円〜】記事作成のお仕事！八千代市の街の魅力を発信！2つから自由に選択可能です。マニュアル完備♪"
+          title: "【1.5 yen per character】Article writing job! Promote the charm of Yachiyo City! Choose freely from 2 options. Manual provided♪"
         }
       ]
     },
     {
-      title: "スキル不要ですぐに参加できる仕事",
+      title: "Jobs you can start immediately without any skills",
       jobs: [
         {
-          type: "プロジェクト",
-          reward: "3,000 円",
+          type: "Project",
+          reward: "3,000 yen",
           daysLeft: 1,
-          title: "【スキマ時間に対応！在宅OK】3000円/1件 保険相談サービスのオンライン調査 男女歓迎"
+          title: "【Flexible hours! Work from home OK】3000 yen/case Online survey for insurance consultation service. All genders welcome"
         },
         {
-          type: "プロジェクト",
-          reward: "3,000 円",
+          type: "Project",
+          reward: "3,000 yen",
           daysLeft: 1,
-          title: "【20代限定！在宅OK】3000円/1件 転職・スキルアップスクールのオンライン調査 男女歓迎"
+          title: "【20s only! Work from home OK】3000 yen/case Online survey for career change and skill development schools. All genders welcome"
         }
       ]
     }
@@ -70,7 +70,7 @@ const JobSectionCard = () => {
           </div>
           <div className="mt-6 text-center">
             <a href="#" className="text-pink-500 hover:text-pink-600 text-sm">
-              類似の仕事をもっと見る
+              See more similar jobs
             </a>
           </div>
         </div>
