@@ -22,13 +22,13 @@ const HeroSection = ({ HeroImage }) => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="w-full lg:w-1/2 text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl font-bold text-pink-500 mb-4">
-              スキマ時間に自分のペースで仕事できる
+            You can work at your own pace in your spare time
             </h1>
             <p className="text-lg sm:text-xl mb-6 text-white">
-            SharApuを使えば、自分だけのワークスタイルがきっと見つかります。
+            With SharApu, you're sure to find your own work style.
             </p>
             <button className="bg-pink-500 hover:bg-pink-600 transition-colors duration-300 text-white px-6 sm:px-8 py-3 rounded-lg text-lg sm:text-xl w-full sm:w-auto">
-              3分で完了！無料会員登録はこちら
+              It only takes 3 minutes! Register for free here
             </button>
           </div>
         </div>
