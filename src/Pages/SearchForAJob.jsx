@@ -1,6 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SearchForAJobPage = () => {
+  const [expandedCategories, setExpandedCategories] = useState({});
+
+  const toggleCategory = (category) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [category]: !prev[category]
+    }));
+  };
+
+  const categories = [
+    'Data entry and product registration',
+    'lighting',
+    'Sales, customer support, research',
+    'Design, photography, and video',
+    'Web production, Web design and development',
+    'translation',
+    'Shufuti outing'
+  ];
+
   const popularTags = [
     'Beginners welcome',
     'No skills required',
@@ -173,6 +192,32 @@ const SearchForAJobPage = () => {
             <button className="w-full mt-4 bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors">
               Narrow your search
             </button>
+          </div>
+
+          {/* Categories Section */}
+          <div className="bg-gray-100 p-4 rounded-lg">
+            <h2 className="font-bold mb-4">category</h2>
+            <div className="space-y-2">
+              {categories.map((category) => (
+                <div key={category} className="border-b border-gray-200 py-2 last:border-b-0">
+                  <button
+                    onClick={() => toggleCategory(category)}
+                    className="w-full flex items-center justify-between text-left hover:text-blue-600"
+                  >
+                    <span className="text-sm">{category}</span>
+                    <span className="text-xl font-bold">
+                      {expandedCategories[category] ? '-' : '+'}
+                    </span>
+                  </button>
+                  {expandedCategories[category] && (
+                    <div className="mt-2 pl-4 text-sm">
+                      {/* Subcategories can be added here */}
+                      <div className="text-gray-600">Subcategory content...</div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

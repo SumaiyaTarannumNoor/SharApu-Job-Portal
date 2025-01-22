@@ -7,6 +7,5 @@ import SearchForAJobPage from './Pages/SearchForAJob'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <SearchForAJobPage />
   </React.StrictMode>,
 )
