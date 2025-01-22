@@ -5,7 +5,7 @@ const JobCard = ({ type, reward, daysLeft, title }) => (
     <div className="space-y-2">
       <div className="flex justify-between items-center">
         <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">{type}</span>
-        <span className="text-gray-600 text-sm">{daysLeft}日残り</span>
+        <span className="text-gray-600 text-sm">{daysLeft}Remaining days</span>
       </div>
       <h4 className="font-medium line-clamp-2 text-base lg:text-lg">
         {title}
@@ -23,42 +23,42 @@ const JobSectionCard1 = () => (
       <div>
         <div className="bg-gray-100 p-4 h-16 flex items-center mb-4">
           <h3 className="text-xl font-semibold line-clamp-1">
-            多彩なジャンルあり！自分の体験談を活用できる仕事
+          There are various genres! A job where you can use your own experiences
           </h3>
         </div>
         <div className="space-y-4">
           <JobCard
-            type="プロジェクト"
-            reward="2,303 円"
+            type="Project"
+            reward="2,303 en"
             daysLeft={6}
-            title="【1文字1.5円〜】記事作成のお仕事！富谷市の街の魅力を発信！"
+            title="[From 1.5 yen per character] Article writing job! Spread the charm of Tomiya City!"
           />
           <JobCard
-            type="プロジェクト"
-            reward="2,303 円"
+            type="Project"
+            reward="2,303 yen"
             daysLeft={6}
-            title="【1文字1.5円〜】記事作成のお仕事！二子玉川の街の魅力を発信！"
+            title="[From 1.5 yen per character] Article writing job! Spread the charm of the Futako Tamagawa area!"
           />
         </div>
       </div>
       <div>
         <div className="bg-gray-100 p-4 h-16 flex items-center mb-4">
           <h3 className="text-xl font-semibold line-clamp-1">
-            スキル不要ですぐに参加できる仕事
+          Jobs that you can join right away without any skills required
           </h3>
         </div>
         <div className="space-y-4">
           <JobCard
-            type="プロジェクト"
-            reward="400 円"
+            type="Project"
+            reward="400 yen"
             daysLeft={2}
-            title="【完全在宅♡丁寧サポート♡】スマホのみで隙間時間に簡単データ入力"
+            title="[Completely from home ♡ Careful support ♡] Easy data entry in your spare time using only your smartphone"
           />
           <JobCard
-            type="タスク"
-            reward="30 円 / 件"
+            type="Task"
+            reward="30 yen/item"
             daysLeft={13}
-            title="【90字以上/30円/1記事】WEBサービス・ツールの使用経験レビュー"
+            title="[90 characters or more/30 yen/1 article] Review of experience using web services and tools"
           />
         </div>
       </div>
