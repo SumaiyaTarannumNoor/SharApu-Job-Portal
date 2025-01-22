@@ -64,7 +64,7 @@ const JobCategoriesCard = () => {
               ))}
             </ul> 
           </div>
-        ))}fwff
+        ))}
       </div>
       <div className="text-center py-8 bg-gray-50">
         <button className="bg-pink-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-pink-600 transition duration-300">
