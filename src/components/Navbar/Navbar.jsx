@@ -7,6 +7,11 @@ const Navbar = () => {
   const handleRegisterClick = () => {
     navigate('/membership-registration');
   };
+
+  const handleSearchForAJob = () => {
+    navigate('/search-for-a-job');
+  }
+  
   return (
     <div className="w-full">
       <header className="bg-white text-pink-600 py-1 text-center text-sm">
@@ -34,7 +39,7 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <div className="hidden lg:flex lg:items-center lg:justify-between lg:w-4/5">
               <div className="flex space-x-6">
-                <a href="#" className="hover:text-pink-200 transition-colors duration-200">Search for a Job</a>
+                <button onClick={handleSearchForAJob} className="hover:text-pink-200 transition-colors duration-200">Search for a Job</button>
                 <a href="#" className="hover:text-pink-200 transition-colors duration-200">If you want to order work</a>
                 <a href="#" className="hover:text-pink-200 transition-colors duration-200">Those who want to receive work</a>
               </div>
@@ -62,9 +67,9 @@ const Navbar = () => {
             <div className="px-4 py-6 space-y-6 border-t border-pink-400">
               {/* Navigation Links */}
               <div className="flex flex-col space-y-4">
-                <a href="#" className="text-lg hover:text-pink-200 transition-colors duration-200">
-                Search for a Job
-                </a>
+                <button onClick={handleSearchForAJob} className="text-left text-lg hover:text-pink-200 transition-colors duration-200">
+                  Search for a Job
+                </button>
                 <a href="#" className="text-lg hover:text-pink-200 transition-colors duration-200">
                 If you want to order work
                 </a>
