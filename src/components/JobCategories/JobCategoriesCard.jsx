@@ -62,7 +62,7 @@ const JobCategoriesCard = () => {
                   {item}
                 </li>
               ))}
-            </ul>
+            </ul> 
           </div>
         ))}
       </div>
