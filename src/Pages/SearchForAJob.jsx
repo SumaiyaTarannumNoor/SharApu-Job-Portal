@@ -18,29 +18,83 @@ const SearchForAJobPage = () => {
     {
       id: 1,
       type: 'project',
-      tags: ['Beginners welcome', 'Salary increase available'],
-      title: 'Fully online office work from home! 3 days a week, 3 hours a day OK! Hourly wage...',
-      reward: 15,
-      price: 15,
-      estimatedHourlyRate: 900,
-      company: {
-        name: 'WebHERO LLC',
-        logo: '/api/placeholder/48/48',
-        averageHourlyRate: 420
-      },
-      views: 670,
-      daysLeft: 13,
-      hasStandingOrder: true
-    },
-    {
-      id: 2,
-      type: 'project',
       tags: ['Beginners welcome', 'No skills required', 'questionnaire'],
       title: 'We are looking for people who want to start a side job in earnest this year! Monitor...',
       reward: 1000,
       price: 1000,
       estimatedHourlyRate: 1000,
+      company: {
+        name: 'AW Recruitment Acco...',
+        logo: '/api/placeholder/48/48',
+        averageHourlyRate: 874
+      },
       views: 78,
+      membersOnly: true
+    },
+    {
+      id: 2,
+      type: 'project',
+      tags: ['Beginners welcome', 'No skills required', 'Salary increase available'],
+      title: '[No experience necessary!] Even beginners can earn over 2,000 yen per hour! We are ...',
+      reward: 30000,
+      price: 30,
+      estimatedHourlyRate: 1800,
+      company: {
+        name: 'LEGS system',
+        logo: '/api/placeholder/48/48',
+        averageHourlyRate: 1000
+      },
+      views: 373,
+      daysLeft: 14,
+      hasStandingOrder: true
+    },
+    {
+      id: 3,
+      type: 'project',
+      tags: ['Beginners welcome', 'Data Entry', 'No skills required'],
+      title: 'Simple data entry work from home! Perfect for beginners looking for flexible hours...',
+      reward: 5000,
+      price: 50,
+      estimatedHourlyRate: 1500,
+      company: {
+        name: 'DataPro Solutions',
+        logo: '/api/placeholder/48/48',
+        averageHourlyRate: 950
+      },
+      views: 245,
+      daysLeft: 7,
+      hasStandingOrder: true
+    },
+    {
+      id: 4,
+      type: 'project',
+      tags: ['Transcription', 'Flexible hours', 'Work from home'],
+      title: 'Audio transcription work available! Set your own schedule and work at your pace...',
+      reward: 2500,
+      price: 25,
+      estimatedHourlyRate: 1200,
+      company: {
+        name: 'TranscribeNow Inc.',
+        logo: '/api/placeholder/48/48',
+        averageHourlyRate: 1100
+      },
+      views: 156,
+      daysLeft: 10
+    },
+    {
+      id: 5,
+      type: 'project',
+      tags: ['Beginners welcome', 'questionnaire', 'Product Registration'],
+      title: 'Product testing and feedback needed! Share your opinions and earn rewards...',
+      reward: 3000,
+      price: 35,
+      estimatedHourlyRate: 2000,
+      company: {
+        name: 'Consumer Research JP',
+        logo: '/api/placeholder/48/48',
+        averageHourlyRate: 1500
+      },
+      views: 289,
       membersOnly: true
     }
   ];
@@ -57,7 +111,8 @@ const SearchForAJobPage = () => {
 
       <div className="grid grid-cols-4 gap-6">
         {/* Left Sidebar */}
-        <div className="col-span-1">
+        <div className="col-span-1 space-y-6">
+          {/* Popular Tags Section */}
           <div className="bg-gray-100 p-4 rounded-lg">
             <h2 className="font-bold mb-4">Popular Tags</h2>
             <div className="space-y-2">
@@ -67,6 +122,57 @@ const SearchForAJobPage = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Job Type & Free Word Section */}
+          <div className="bg-gray-100 p-4 rounded-lg">
+            <h2 className="font-bold mb-4">Job type / Free word</h2>
+            
+            {/* Job Type */}
+            <div className="mb-6">
+              <h3 className="font-semibold mb-3">Job Type</h3>
+              <div className="space-y-2">
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="jobType" value="all" defaultChecked className="text-blue-500" />
+                  <span>all</span>
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="jobType" value="project" className="text-blue-500" />
+                  <span>project</span>
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="jobType" value="task" className="text-blue-500" />
+                  <span>task</span>
+                </label>
+              </div>
+            </div>
+
+            {/* Free Word */}
+            <div className="mb-6">
+              <h3 className="font-semibold mb-3">Free Word</h3>
+              <input 
+                type="text"
+                placeholder="Data entry receipt"
+                className="w-full px-3 py-2 border rounded-md"
+              />
+            </div>
+
+            {/* Checkboxes */}
+            <div className="space-y-3">
+              <label className="flex items-center gap-2">
+                <input type="checkbox" className="text-blue-500" />
+                <span>Show only open jobs</span>
+              </label>
+              <label className="flex items-center gap-2">
+                <input type="checkbox" className="text-blue-500" />
+                <span>Show only jobs with standing orders</span>
+              </label>
+            </div>
+
+            {/* Search Button */}
+            <button className="w-full mt-4 bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors">
+              Narrow your search
+            </button>
           </div>
         </div>
 
