@@ -9,7 +9,7 @@ const Navbar = () => {
         「主婦の働く」をサポートします！
       </header>
       
-      <nav className="bg-pink-500 text-white py-4 relative">
+      <nav className="bg-pink-500 text-white py-4 relative z-50">
         <div className="container mx-auto px-4">
           {/* Top bar with logo and hamburger */}
           <div className="flex justify-between items-center">
