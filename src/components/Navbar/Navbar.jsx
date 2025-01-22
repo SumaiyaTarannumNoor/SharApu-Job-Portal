@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="w-full">
       <header className="bg-white text-pink-600 py-1 text-center text-sm">
-        「主婦の働く」をサポートします！
+      We support working housewives!
       </header>
       
       <nav className="bg-pink-500 text-white py-4 relative z-50">
@@ -30,16 +30,16 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <div className="hidden lg:flex lg:items-center lg:justify-between lg:w-4/5">
               <div className="flex space-x-6">
-                <a href="#" className="hover:text-pink-200 transition-colors duration-200">仕事を探す</a>
-                <a href="#" className="hover:text-pink-200 transition-colors duration-200">仕事を発注したい方</a>
-                <a href="#" className="hover:text-pink-200 transition-colors duration-200">仕事を受注したい方</a>
+                <a href="#" className="hover:text-pink-200 transition-colors duration-200">Search for a Job</a>
+                <a href="#" className="hover:text-pink-200 transition-colors duration-200">If you want to order work</a>
+                <a href="#" className="hover:text-pink-200 transition-colors duration-200">Those who want to receive work</a>
               </div>
               <div className="flex space-x-4">
                 <button className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
-                  ログイン
+                  Log In 
                 </button>
                 <button className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
-                  会員登録（無料）
+                  Register as a Member (Free)
                 </button>
               </div>
             </div>
@@ -57,23 +57,23 @@ const Navbar = () => {
               {/* Navigation Links */}
               <div className="flex flex-col space-y-4">
                 <a href="#" className="text-lg hover:text-pink-200 transition-colors duration-200">
-                  仕事を探す
+                Search for a Job
                 </a>
                 <a href="#" className="text-lg hover:text-pink-200 transition-colors duration-200">
-                  仕事を発注したい方
+                If you want to order work
                 </a>
                 <a href="#" className="text-lg hover:text-pink-200 transition-colors duration-200">
-                  仕事を受注したい方
+                Those who want to receive work
                 </a>
               </div>
               
               {/* Buttons */}
               <div className="flex flex-col space-y-3 pt-4">
                 <button className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200">
-                  ログイン
+                  Log In
                 </button>
                 <button className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200">
-                  会員登録（無料）
+                Register as a Member (Free)）
                 </button>
               </div>
             </div>
