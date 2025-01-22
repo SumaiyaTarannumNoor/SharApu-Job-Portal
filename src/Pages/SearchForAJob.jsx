@@ -9,6 +9,8 @@ import webhero from '../../assets/RecruiterIconImage/webhero_logo_icon.png';
 const SearchForAJobPage = () => {
   const [expandedCategories, setExpandedCategories] = useState({});
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const jobsPerPage = 2; // Changed to 2 jobs per page
 
   const toggleCategory = (category) => {
     setExpandedCategories(prev => ({
@@ -16,7 +18,7 @@ const SearchForAJobPage = () => {
       [category]: !prev[category]
     }));
   };
-  
+
   const categories = [
     'Data entry and product registration',
     'lighting',
@@ -124,6 +126,14 @@ const SearchForAJobPage = () => {
       membersOnly: true
     }
   ];
+
+  // Pagination logic
+  const indexOfLastJob = currentPage * jobsPerPage;
+  const indexOfFirstJob = indexOfLastJob - jobsPerPage;
+  const currentJobs = jobs.slice(indexOfFirstJob, indexOfLastJob);
+  const totalPages = Math.ceil(jobs.length / jobsPerPage);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className="w-full min-h-screen bg-white">
@@ -272,7 +282,7 @@ const SearchForAJobPage = () => {
 
             {/* Job Listings */}
             <div className="space-y-4">
-              {jobs.map(job => (
+              {currentJobs.map(job => (
                 <div key={job.id} className="bg-orange-50 p-4 rounded-lg">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
                     <span className="bg-pink-500 text-white px-2 py-1 rounded text-sm">{job.type}</span>
@@ -329,6 +339,45 @@ const SearchForAJobPage = () => {
                   )}
                 </div>
               ))}
+            </div>
+
+            {/* Pagination */}
+            <div className="flex justify-center space-x-2 mt-6">
+              <button
+                onClick={() => paginate(currentPage - 1)}
+                disabled={currentPage === 1}
+                className={`px-4 py-2 rounded ${
+                  currentPage === 1 
+                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                    : 'bg-pink-500 text-white hover:bg-pink-600'
+                }`}
+              >
+                Previous
+              </button>
+              {[...Array(totalPages)].map((_, index) => (
+                <button
+                  key={index + 1}
+                  onClick={() => paginate(index + 1)}
+                  className={`px-4 py-2 rounded ${
+                    currentPage === index + 1
+                      ? 'bg-pink-500 text-white'
+                      : 'bg-gray-200 text-gray-700 hover:bg-pink-100'
+                  }`}
+                >
+                  {index + 1}
+                </button>
+              ))}
+              <button
+                onClick={() => paginate(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className={`px-4 py-2 rounded ${
+                  currentPage === totalPages
+                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                    : 'bg-pink-500 text-white hover:bg-pink-600'
+                }`}
+              >
+                Next
+              </button>
             </div>
           </div>
         </div>
