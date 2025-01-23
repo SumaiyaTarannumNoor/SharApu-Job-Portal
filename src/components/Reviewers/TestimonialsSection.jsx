@@ -33,7 +33,7 @@ const testimonials = [
     role: "Content Strategist",
     company: "Digital Solutions Co.",
     image: Reviewer3,
-    title: "Increase efficiency with Shufuti, with strong writing ability",
+    title: "Increase efficiency with SharApu, with strong writing ability",
     content: "The main job I am requesting is writing blog articles."
   },
   {
@@ -60,8 +60,8 @@ const testimonials = [
     role: "Digital Marketing Head",
     company: "Innovate Corp",
     image: Reviewer6,
-    title: "Effective use of Shufuti for inbound marketing",
-    content: "The good thing about Shufuti is that you can get quick responses."
+    title: "Effective use of SharApu for inbound marketing",
+    content: "The good thing about SharApu is that you can get quick responses."
   },
   {
     id: 7,
@@ -78,7 +78,7 @@ const testimonials = [
     role: "Creative Director",
     company: "Design Hub",
     image: Reviewer8,
-    title: "Create creative work with Shufuti!",
+    title: "Create creative work with SharApu!",
     content: "We are requesting you to enter the recruitment drawings."
   }
 ];
@@ -86,7 +86,7 @@ const testimonials = [
 const TestimonialsSection = () => {
   return (
     <div className="bg-pink-100 p-8 rounded-lg mt-12 mb-8">
-      <h2 className="text-2xl font-bold text-gray-800 mb-8">What customers say about Shufuti</h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-8">What customers say about SharApu</h2>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {testimonials.map((testimonial) => (
