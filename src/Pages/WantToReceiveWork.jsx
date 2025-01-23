@@ -9,7 +9,7 @@ const WantToReceiveWork = () => {
         <div className="flex items-center justify-between mb-8">
           <div className="flex-1">
             <h1 className="text-3xl font-bold text-pink-900 mb-2">
-              Shufuti Easy Guide for those who want to receive work
+              SharApu Easy Guide for those who want to receive work
             </h1>
             <p className="text-pink-700">
               Earn some extra cash in your spare time! Use your experience to work from home!
