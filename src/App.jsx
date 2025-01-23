@@ -161,6 +161,7 @@ const App = () => {
             <Route path="/personal-information" element={<PersonalInformationForm />} />
             <Route path="/search-for-a-job" element={<SearchForAJobPage />} />
             <Route path="/want-to-order-work" element={<WantToOrderWork />} />
+            <Route path="/want-to-receive-work" element={<WantToReceiveWork />} />
             <Route path="/login" element={<LoginForm />} />
           </Routes>
         </main>
