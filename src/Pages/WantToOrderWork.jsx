@@ -1,6 +1,7 @@
 import React from 'react';
 import { ClipboardList, Edit, FileSpreadsheet, MessageCircle } from 'lucide-react';
 import Penguine1 from '../../assets/LandingPageIconImage/Penguine1.png'
+import Penguine2 from '../../assets/LandingPageIconImage/Penguine2.png'
 import Worker1 from '../../assets/Workers/Worker1.png'
 import Worker2 from '../../assets/Workers/Worker2.png'
 
@@ -46,7 +47,7 @@ const WantToOrderWork = () => {
                         Please take advantage of Shufuti's unique response capabilities!
                     </p>
                 </div>
-                <img src="/api/placeholder/200/200" alt="Mascot" className="w-32 h-32" />
+                <img src={Penguine2} alt="Mascot" className="w-32 h-32" />
             </div>
             
             <div className="bg-gradient-to-r from-pink-600 via-pink-400 to-pink-200 p-8 mb-8 rounded-lg shadow-sm border border-pink-100">
