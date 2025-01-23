@@ -17,6 +17,10 @@ const Navbar = () => {
     navigate('/want-to-order-work')
   }
 
+  const handleWantToReceiveWork = () => {
+    navigate('/want-to-receive-work')
+  }
+
   const handleLoginClick = () => {
     navigate('/login');
   };
@@ -55,7 +59,7 @@ const Navbar = () => {
               <div className="flex space-x-6">
                 <button onClick={handleSearchForAJob} className="hover:text-pink-200 transition-colors duration-200">Search for a Job</button>
                 <button onClick={handleWantToOrderWork} className="hover:text-pink-200 transition-colors duration-200">If you want to order work</button>
-                <a href="#" className="hover:text-pink-200 transition-colors duration-200">Those who want to receive work</a>
+                <button onClick={handleWantToReceiveWork} className="hover:text-pink-200 transition-colors duration-200">Those who want to receive work</button>
               </div>
               <div className="flex space-x-4">
                 <button
@@ -88,9 +92,9 @@ const Navbar = () => {
                 <button onClick={handleWantToOrderWork} className="text-lg hover:text-pink-200 transition-colors duration-200">
                   If you want to order work
                 </button>
-                <a href="#" className="text-lg hover:text-pink-200 transition-colors duration-200">
+                <button onClick={handleWantToReceiveWork} className="text-lg hover:text-pink-200 transition-colors duration-200">
                   Those who want to receive work
-                </a>
+                </button>
               </div>
 
               {/* Buttons */}

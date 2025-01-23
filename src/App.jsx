@@ -15,6 +15,7 @@ import MembershipForm from './components/Authenticator/membershipform';
 import PersonalInformationForm from './components/Authenticator/personalInformationForm';
 import SearchForAJobPage from './Pages/SearchForAJob';
 import WantToOrderWork from './Pages/WantToOrderWork';
+import WantToReceiveWork from './Pages/WantToReceiveWork';
 import LoginForm from './components/Authenticator/loginform';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
