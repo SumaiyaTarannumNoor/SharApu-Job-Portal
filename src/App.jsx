@@ -14,6 +14,7 @@ import ReasonsSection from './components/UI/ReasonsSection';
 import MembershipForm from './components/Authenticator/membershipform';
 import PersonalInformationForm from './components/Authenticator/personalInformationForm';
 import SearchForAJobPage from './Pages/SearchForAJob';
+import WantToOrderWork from './Pages/WantToOrderWork';
 import LoginForm from './components/Authenticator/loginform';
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -158,6 +159,7 @@ const App = () => {
             <Route path="/membership-registration" element={<MembershipForm />} />
             <Route path="/personal-information" element={<PersonalInformationForm />} />
             <Route path="/search-for-a-job" element={<SearchForAJobPage />} />
+            <Route path="/want-to-order-work" element={<WantToOrderWork />} />
             <Route path="/login" element={<LoginForm />} />
           </Routes>
         </main>
