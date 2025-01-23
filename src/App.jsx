@@ -16,6 +16,7 @@ import PersonalInformationForm from './components/Authenticator/personalInformat
 import SearchForAJobPage from './Pages/SearchForAJob';
 import WantToOrderWork from './Pages/WantToOrderWork';
 import LoginForm from './components/Authenticator/loginform';
+
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
     <img src={imageSrc} alt={title} className="w-full h-48 object-cover" crossOrigin="anonymous" />
