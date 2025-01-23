@@ -1,5 +1,8 @@
 import React from 'react';
 import { Laptop } from 'lucide-react';
+import Person1 from '../../assets/People/Person1.jpg'
+import Person2 from '../../assets/People/Person2.jpg'
+import Penguine3 from '../../assets/LandingPageIconImage/Penguine3.png'
 
 const WantToReceiveWork = () => {
   return (
@@ -18,7 +21,7 @@ const WantToReceiveWork = () => {
               With a wide range of jobs and a comprehensive support system, working from home is the standard, making it easy to continue with a variety of work styles!
             </p>
           </div>
-          <Laptop className="text-pink-500 w-16 h-16" />
+          <div className="text-pink-500 w-16 h-16"><img src={Penguine3} alt="" /></div>
         </div>
 
         {/* Job Selection Banner */}
@@ -32,7 +35,7 @@ const WantToReceiveWork = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Left Column */}
           <div className="bg-white rounded-lg p-6 shadow-md">
-            <div className="mb-4 h-48 bg-pink-100 rounded-lg"></div>
+           <img src={Person1} alt="" />
             <h2 className="text-xl font-semibold text-pink-900 mb-3">
               It's okay if you're not confident in your skills or experience!
             </h2>
@@ -43,7 +46,7 @@ const WantToReceiveWork = () => {
 
           {/* Right Column */}
           <div className="bg-white rounded-lg p-6 shadow-md">
-            <div className="mb-4 h-48 bg-pink-100 rounded-lg"></div>
+            <img src={Person2} alt="" />
             <h2 className="text-xl font-semibold text-pink-900 mb-3">
               You can continue it even with an irregular lifestyle!
             </h2>
