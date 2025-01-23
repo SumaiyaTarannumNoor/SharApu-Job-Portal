@@ -38,13 +38,13 @@ const WantToOrderWork = () => {
             <div className="flex items-center gap-4 mb-8">
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">
-                        Shufuti Easy Guide for those who want to order work
+                        SharApu Easy Guide for those who want to order work
                     </h1>
                     <p className="mt-4 text-gray-600">
-                        No registration fee or brokerage fee!! Shufuti has many housewives working, so you can quickly respond to small tasks and sudden requests that are difficult to ask for on other crowdsourcing services.
+                        No registration fee or brokerage fee!! SharApu has many housewives working, so you can quickly respond to small tasks and sudden requests that are difficult to ask for on other crowdsourcing services.
                     </p>
                     <p className="mt-2 text-gray-600">
-                        Please take advantage of Shufuti's unique response capabilities!
+                        Please take advantage of SharApu's unique response capabilities!
                     </p>
                 </div>
                 <img src={Penguine2} alt="Mascot" className="w-32 h-32" />
@@ -53,7 +53,7 @@ const WantToOrderWork = () => {
             <div className="bg-gradient-to-r from-pink-600 via-pink-400 to-pink-200 p-8 mb-8 rounded-lg shadow-sm border border-pink-100">
                 <h2 className="text-2xl font-bold text-white flex items-center gap-2">
                     <span className="w-1 h-8 bg-white rounded-full"></span>
-                    The following types of work can be requested at Shufuti:
+                    The following types of work can be requested at SharApu:
                 </h2>
             </div>
 
@@ -72,7 +72,7 @@ const WantToOrderWork = () => {
             </div>
 
             <p className="text-center my-8 text-gray-600">
-                Small orders and small lots are OK, so it's easy to order! Please make use of Shufuti!
+                Small orders and small lots are OK, so it's easy to order! Please make use of SharApu!
             </p>
 
             <div className="text-center mb-12">
@@ -84,7 +84,7 @@ const WantToOrderWork = () => {
             <div className="bg-gradient-to-r from-pink-600 via-pink-400 to-pink-200 p-8 mb-8 rounded-lg shadow-sm border border-pink-100">
                 <h2 className="text-2xl font-bold text-white flex items-center gap-2">
                     <span className="w-1 h-8 bg-white rounded-full"></span>
-                    Shufuti employs many housewives who work from home!
+                    SharApu employs many housewives who work from home!
                 </h2>
             </div>
 
@@ -98,7 +98,7 @@ const WantToOrderWork = () => {
                 <div>
                     <img src={Worker1} alt="Professional woman" className="w-full h-64 object-cover rounded-lg mb-4" />
                     <h3 className="text-lg font-semibold mb-2">There are many excellent people</h3>
-                    <p className="text-gray-600">Many of our members have a wealth of business experience as working adults, and in the case of Shufuti, many of our registered members have worked primarily in clerical or customer service jobs.</p>
+                    <p className="text-gray-600">Many of our members have a wealth of business experience as working adults, and in the case of SharApu, many of our registered members have worked primarily in clerical or customer service jobs.</p>
                 </div>
             </div>
 
@@ -107,7 +107,7 @@ const WantToOrderWork = () => {
                 <div>
                     <p className="text-pink-400 mb-2">Since there are many housewives working, many of them concentrate on their work during the day or during the few hours at night, or use their smartphones in their spare time.</p>
                     <button className="text-pink-500 hover:text-pink-600 font-medium">
-                        See what customers who use Shufuti have to say
+                        See what customers who use SharApu have to say
                     </button>
                 </div>
             </div>
