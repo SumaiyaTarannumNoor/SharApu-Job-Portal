@@ -4,6 +4,15 @@ import Penguine1 from '../../assets/LandingPageIconImage/Penguine1.png'
 import Penguine2 from '../../assets/LandingPageIconImage/Penguine2.png'
 import Worker1 from '../../assets/Workers/Worker1.png'
 import Worker2 from '../../assets/Workers/Worker2.png'
+import Reviewer1 from '../../assets/Reviewers/Reviewer1.jpg'
+import Reviewer2 from '../../assets/Reviewers/Reviewer2.jpg'
+import Reviewer3 from '../../assets/Reviewers/Reviewer3.jpg'
+import Reviewer4 from '../../assets/Reviewers/Reviewer4.jpg'
+import Reviewer5 from '../../assets/Reviewers/Reviewer5.jpg'
+import Reviewer6 from '../../assets/Reviewers/Reviewer6.jpg'
+import Reviewer7 from '../../assets/Reviewers/Reviewer7.jpg'
+import Reviewer8 from '../../assets/Reviewers/Reviewer8.jpg'
+import TestimonialsSection from '../components/Reviewers/TestimonialsSection';
 
 const WantToOrderWork = () => {
     const workTypes = [
@@ -197,6 +206,8 @@ const WantToOrderWork = () => {
                     </button>
                 </div>
             </div>
+
+            <TestimonialsSection />
         </div>
         
     );
