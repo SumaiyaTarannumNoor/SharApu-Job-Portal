@@ -10,7 +10,7 @@ const Interview = () => {
           <div className="flex items-center justify-center">
             <div className="text-4xl font-bold text-pink-500 flex items-center gap-2">
               <span className="text-pink-300">•</span>
-              Shufuti Blog
+              SharApu Blog
               <span className="text-pink-300">•</span>
             </div>
           </div>
@@ -24,20 +24,20 @@ const Interview = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="p-4 bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-800">For those looking for work</h2>
+          <div className="p-4 bg-pink-400 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h2 className="text-lg font-semibold text-yellow-200">For those looking for work</h2>
           </div>
           
-          <div className="p-4 bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-800">For those who want to order work</h2>
+          <div className="p-4 bg-pink-400 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h2 className="text-lg font-semibold text-yellow-200">For those who want to order work</h2>
           </div>
           
-          <div className="p-4 bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-800">Beginner's Guide</h2>
+          <div className="p-4 bg-pink-400 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h2 className="text-lg font-semibold text-yellow-200">Beginner's Guide</h2>
           </div>
           
-          <div className="p-4 bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-800">Shufuti NEWS</h2>
+          <div className="p-4 bg-pink-400 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <h2 className="text-lg font-semibold text-yellow-200">SharApu NEWS</h2>
           </div>
         </div>
       </div>
