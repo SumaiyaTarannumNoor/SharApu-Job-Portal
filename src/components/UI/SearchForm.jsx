@@ -1,12 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { X } from 'lucide-react';
 
 const SearchForm = ({ isOpen, onClose }) => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedTags, setSelectedTags] = useState(new Set());
+
   if (!isOpen) return null;
+
+  const categories = [
+    'For those who want to order work',
+    'For those looking for work',
+    "Beginner's Guide",
+    'SharApu NEWS'
+  ];
+
+  const tags = [
+    'Home Refreshment Guide',
+    'Skill Development',
+    'Introduction to working from home',
+    'Popular Jobs',
+    'notice',
+    'Success stories',
+    'Worker Interview',
+    'Work from Home Guide',
+    'Job Introduction',
+    'Client Interview',
+    'Data Entry'
+  ];
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(selectedCategory === category ? null : category);
+  };
+
+  const handleTagClick = (tag) => {
+    const newSelectedTags = new Set(selectedTags);
+    if (newSelectedTags.has(tag)) {
+      newSelectedTags.delete(tag);
+    } else {
+      newSelectedTags.add(tag);
+    }
+    setSelectedTags(newSelectedTags);
+  };
 
   return (
     <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50">
-      <div className="bg-white min-h-screen w-full md:w-96 absolute right-0 top-0 shadow-xl">
+      <div className="bg-white min-h-screen w-full md:w-96 absolute right-0 top-0 shadow-xl overflow-y-auto">
         <div className="p-6">
           {/* Search Header */}
           <div className="flex justify-between items-center mb-6">
@@ -36,19 +74,23 @@ const SearchForm = ({ isOpen, onClose }) => {
             <h3 className="text-lg font-semibold mb-4 text-gray-800 border-b border-pink-200 pb-2">
               Category
             </h3>
-            <div className="space-y-2">
-              <div className="bg-pink-100 text-pink-800 inline-block px-3 py-1 rounded-full text-sm mr-2">
-                For those who want to order work
-              </div>
-              <div className="bg-purple-100 text-purple-800 inline-block px-3 py-1 rounded-full text-sm mr-2">
-                For those looking for work
-              </div>
-              <div className="bg-green-100 text-green-800 inline-block px-3 py-1 rounded-full text-sm mr-2">
-                Beginner's Guide
-              </div>
-              <div className="bg-pink-100 text-pink-800 inline-block px-3 py-1 rounded-full text-sm">
-                Shufuti NEWS
-              </div>
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => handleCategoryClick(category)}
+                  className={`
+                    px-3 py-1 rounded-full text-sm cursor-pointer
+                    transition-all duration-200 hover:scale-105
+                    ${selectedCategory === category 
+                      ? 'bg-pink-500 text-white' 
+                      : 'bg-pink-100 text-pink-800 hover:bg-pink-200'
+                    }
+                  `}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
 
@@ -58,22 +100,17 @@ const SearchForm = ({ isOpen, onClose }) => {
               Tags
             </h3>
             <div className="flex flex-wrap gap-2">
-              {[
-                'Home Refreshment Guide',
-                'Skill Development',
-                'Introduction to working from home',
-                'Popular Jobs',
-                'notice',
-                'Success stories',
-                'Worker Interview',
-                'Work from Home Guide',
-                'Job Introduction',
-                'Client Interview',
-                'Data Entry'
-              ].map((tag) => (
+              {tags.map((tag) => (
                 <button
                   key={tag}
-                  className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm transition-colors"
+                  onClick={() => handleTagClick(tag)}
+                  className={`
+                    px-3 py-1 rounded-full text-sm transition-all duration-200
+                    ${selectedTags.has(tag)
+                      ? 'bg-pink-500 text-white hover:bg-pink-600'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }
+                  `}
                 >
                   # {tag}
                 </button>
@@ -82,17 +119,17 @@ const SearchForm = ({ isOpen, onClose }) => {
           </div>
 
           {/* Author */}
-          <div>
+          <div className="mb-20">
             <h3 className="text-lg font-semibold mb-4 text-gray-800 border-b border-pink-200 pb-2">
               Author
             </h3>
-            <div className="text-gray-700">Shufuti Management Office</div>
+            <div className="text-gray-700">SharApu Management Office</div>
           </div>
 
           {/* Close Search Button */}
           <button
             onClick={onClose}
-            className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-white text-gray-700 px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow"
+            className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-white text-gray-700 px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:bg-gray-50"
           >
             Close search
           </button>
