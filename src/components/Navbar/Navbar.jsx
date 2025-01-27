@@ -36,7 +36,7 @@ const Navbar = () => {
         We support working housewives!
       </header>
 
-      <nav className="bg-pink-300 text-white py-4 relative z-50">
+      <nav className="bg-pink-500 text-white py-4 relative z-50">
         <div className="container mx-auto px-4">
           {/* Top bar with logo and hamburger */}
           <div className="flex justify-between items-center">

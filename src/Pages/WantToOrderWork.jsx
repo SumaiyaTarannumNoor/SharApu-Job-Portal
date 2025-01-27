@@ -22,6 +22,11 @@ const WantToOrderWork = () => {
     const handleRegisterClick = () => {
         navigate('/membership-registration');
       };
+    
+    const handleInterview = () => {
+    navigate('/interview');
+    };
+        
 
     const workTypes = [
         {
@@ -123,7 +128,7 @@ const WantToOrderWork = () => {
                 <img src={Penguine1} alt="Mascot" className="w-24 h-24" />
                 <div>
                     <p className="text-pink-400 mb-2">Since there are many housewives working, many of them concentrate on their work during the day or during the few hours at night, or use their smartphones in their spare time.</p>
-                    <button className="text-pink-500 hover:text-pink-600 font-medium">
+                    <button onClick={handleInterview} className="bg-pink-200 p-2 rounded-lg text-pink-500 hover:text-pink-600 font-medium">
                         See what customers who use SharApu have to say
                     </button>
                 </div>

@@ -17,6 +17,7 @@ import SearchForAJobPage from './Pages/SearchForAJob';
 import WantToOrderWork from './Pages/WantToOrderWork';
 import WantToReceiveWork from './Pages/WantToReceiveWork';
 import LoginForm from './components/Authenticator/loginform';
+import Interview from './Pages/Interview';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -58,6 +59,7 @@ const Homepage = ({ HeroImage }) => {
       <JobSectionCard1 />
       <JobSectionCard />
       <JobCategoriesCard />
+      <Interview />
     </>
   );
 };
@@ -163,6 +165,8 @@ const App = () => {
             <Route path="/search-for-a-job" element={<SearchForAJobPage />} />
             <Route path="/want-to-order-work" element={<WantToOrderWork />} />
             <Route path="/want-to-receive-work" element={<WantToReceiveWork />} />
+            <Route path="/interview" element={<Interview />} />
+
             <Route path="/login" element={<LoginForm />} />
           </Routes>
         </main>
