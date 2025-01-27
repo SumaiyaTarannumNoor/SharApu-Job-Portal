@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SharApuLogo from '../../../assets/Logo/sharapulogo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,17 +32,17 @@ const Navbar = () => {
 
   return (
     <div className="w-full">
-      <header className="bg-white text-pink-600 py-1 text-center text-sm">
+      <header className="bg-white text-pink-400 py-1 text-center text-sm">
         We support working housewives!
       </header>
 
-      <nav className="bg-pink-500 text-white py-4 relative z-50">
+      <nav className="bg-pink-300 text-white py-4 relative z-50">
         <div className="container mx-auto px-4">
           {/* Top bar with logo and hamburger */}
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <div onClick={handleHomeClick} className="text-2xl sm:text-3xl font-bold cursor-pointer">
-              sharApu
+            <div onClick={handleHomeClick} className="h-26 w-32 text-2xl sm:text-3xl font-bold cursor-pointer">
+              <img src={SharApuLogo} alt="" />
             </div>
             {/* Hamburger Button */}
             <button
