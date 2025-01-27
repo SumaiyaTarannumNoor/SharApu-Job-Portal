@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
-import SearchForm from '../components/UI/SearchForm';
+import SearchForm from '../../components/UI/SearchForm';
+import InterviewCards from './InterviewSections/InterviewCards';
 
 const Interview = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -21,7 +22,7 @@ const Interview = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Search Button */}
         <div className="flex justify-end mb-8">
           <button
@@ -33,15 +34,15 @@ const Interview = () => {
           </button>
         </div>
 
-        {/* Grid Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Category Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {[
             "For those looking for work",
             "For those who want to order work",
             "Beginner's Guide",
             "SharApu NEWS"
           ].map((title, index) => (
-            <div 
+            <div
               key={index}
               className="p-4 bg-pink-400 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer hover:translate-y-px"
             >
@@ -49,6 +50,9 @@ const Interview = () => {
             </div>
           ))}
         </div>
+
+        {/* Interview Cards Section */}
+        <InterviewCards />
       </div>
 
       {/* Search Form Modal */}
