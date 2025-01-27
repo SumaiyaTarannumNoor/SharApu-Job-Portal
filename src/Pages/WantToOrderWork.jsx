@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Add this import
 import { ClipboardList, Edit, FileSpreadsheet, MessageCircle } from 'lucide-react';
 import Penguine1 from '../../assets/LandingPageIconImage/Penguine1.png'
 import Penguine2 from '../../assets/LandingPageIconImage/Penguine2.png'
@@ -14,7 +15,14 @@ import Reviewer7 from '../../assets/Reviewers/Reviewer7.jpg'
 import Reviewer8 from '../../assets/Reviewers/Reviewer8.jpg'
 import TestimonialsSection from '../components/Reviewers/TestimonialsSection';
 
+// Rest of your code stays exactly the same...
+
 const WantToOrderWork = () => {
+    const navigate = useNavigate();
+    const handleRegisterClick = () => {
+        navigate('/membership-registration');
+      };
+
     const workTypes = [
         {
             icon: <FileSpreadsheet className="w-16 h-16 text-yellow-400" />,
@@ -85,7 +93,7 @@ const WantToOrderWork = () => {
             </p>
 
             <div className="text-center mb-12">
-                <button className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-full">
+                <button onClick={handleRegisterClick} className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-full">
                     Register a job now
                 </button>
             </div>
