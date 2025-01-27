@@ -17,7 +17,7 @@ import SearchForAJobPage from './Pages/SearchForAJob';
 import WantToOrderWork from './Pages/WantToOrderWork';
 import WantToReceiveWork from './Pages/WantToReceiveWork';
 import LoginForm from './components/Authenticator/loginform';
-import Interview from './Pages/Interview';
+import Interview from './Pages/Interview/Interview';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
