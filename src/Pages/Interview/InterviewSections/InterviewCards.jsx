@@ -1,0 +1,194 @@
+import React, { useState } from 'react';
+
+const InterviewCards = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 6;
+
+  const interviews = [
+    {
+      id: 1,
+      date: '2024/3/15',
+      category: 'For those looking for work',
+      title: 'Work from home and do what you love without changing your lifestyle or prioritizing childcare!',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 2,
+      date: '2024/3/14',
+      category: 'For those looking for work',
+      title: 'SharApu gave me the strength to live',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 3,
+      date: '2024/3/13',
+      category: 'For those looking for work',
+      title: 'SharApu is a work-from-home job that allows you to work at your own pace and in two different jobs!',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 4,
+      date: '2024/3/12',
+      category: 'For those looking for work',
+      title: 'Is it possible to have a side job without your company finding out?',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 5,
+      date: '2024/3/11',
+      category: 'For those looking for work',
+      title: 'What kind of jobs are available for working from home? Best ways to find work!',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 6,
+      date: '2024/3/10',
+      category: 'For those looking for work',
+      title: 'Your first work-from-home job! Survey work that requires no skills',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 7,
+      date: '2024/3/9',
+      category: 'For those looking for work',
+      title: 'Take on routine office work while working from home!',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 8,
+      date: '2024/3/8',
+      category: 'For those looking for work',
+      title: 'From registration to work, everything is done on your smartphone!',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 9,
+      date: '2024/3/7',
+      category: 'For those looking for work',
+      title: 'What is the job of answering corporate telephones?',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 10,
+      date: '2024/3/6',
+      category: 'For those looking for work',
+      title: 'Remote customer service jobs that anyone can do',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 11,
+      date: '2024/3/5',
+      category: 'For those looking for work',
+      title: 'Start your work-from-home journey with data entry',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 12,
+      date: '2024/3/4',
+      category: 'For those looking for work',
+      title: 'How to balance family life and remote work',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 13,
+      date: '2024/3/3',
+      category: 'For those looking for work',
+      title: 'Tips for successful online interviews',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 14,
+      date: '2024/3/2',
+      category: 'For those looking for work',
+      title: 'Setting up your perfect home office',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 15,
+      date: '2024/3/1',
+      category: 'For those looking for work',
+      title: 'Managing your time effectively when working remotely',
+      imageSrc: '/api/placeholder/400/300'
+    },
+    {
+      id: 16,
+      date: '2024/2/29',
+      category: 'For those looking for work',
+      title: 'Building a successful career from home',
+      imageSrc: '/api/placeholder/400/300'
+    }
+  ];
+
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = interviews.slice(indexOfFirstCard, indexOfLastCard);
+  const totalPages = Math.ceil(interviews.length / cardsPerPage);
+
+  return (
+    <div className="mb-12">
+      {/* Cards Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {currentCards.map((interview) => (
+          <div 
+            key={interview.id}
+            className="bg-pink-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
+          >
+            <div className="relative p-3 pb-0">
+              <div className="bg-pink-500 text-white text-sm px-4 py-1 rounded-full inline-block mb-3">
+                {interview.category}
+              </div>
+              <img
+                src={interview.imageSrc}
+                alt={interview.title}
+                className="w-full rounded-t-lg h-48 object-cover"
+              />
+            </div>
+
+            <div className="p-4">
+              <div className="text-gray-600 text-sm mb-2">{interview.date}</div>
+              <h3 className="text-xl font-medium text-gray-800 mb-3 line-clamp-2">
+                {interview.title}
+              </h3>
+              <div className="text-gray-600">SharApu Management Office</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Pagination */}
+      <div className="flex justify-center items-center gap-2">
+        <button
+          onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+          className="px-4 py-2 rounded-full border border-pink-200 text-pink-500 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-pink-50 transition-colors"
+        >
+          Previous
+        </button>
+        
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+          <button
+            key={page}
+            onClick={() => setCurrentPage(page)}
+            className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors
+              ${currentPage === page 
+                ? 'bg-pink-500 text-white' 
+                : 'text-gray-600 hover:bg-pink-50'
+              }`}
+          >
+            {page}
+          </button>
+        ))}
+
+        <button
+          onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+          disabled={currentPage === totalPages}
+          className="px-4 py-2 rounded-full border border-pink-200 text-pink-500 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-pink-50 transition-colors"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default InterviewCards;
