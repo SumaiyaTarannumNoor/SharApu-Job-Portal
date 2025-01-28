@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search } from 'lucide-react';
+import BlogWriter from '../../../assets/Blog/BlogWriter.png'
 
 const BlogWriterSection = () => {
   return (
@@ -10,7 +11,7 @@ const BlogWriterSection = () => {
           {/* Image Section */}
           <div className="relative w-full">
             <img 
-              src="/api/placeholder/600/400" 
+              src={BlogWriter} 
               alt="Writers working together" 
               className="w-full h-64 object-cover rounded-lg shadow-md"
             />

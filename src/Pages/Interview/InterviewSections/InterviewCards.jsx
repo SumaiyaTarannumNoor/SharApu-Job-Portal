@@ -1,4 +1,20 @@
 import React, { useState } from 'react';
+import Person1 from '../../../../assets/People/Person1.jpg'
+import Person2 from '../../../../assets/People/Person2.jpg'
+import Person3 from '../../../../assets/People/Person3.jpg'
+import Person4 from '../../../../assets/People/Person4.jpg'
+import Person5 from '../../../../assets/People/Person5.jpg'
+import Person6 from '../../../../assets/People/Person6.jpg'
+import Person7 from '../../../../assets/People/Person7.jpg'
+import Person8 from '../../../../assets/People/Person8.jpg'
+import Person9 from '../../../../assets/People/Person9.jpg'
+import Person10 from '../../../../assets/People/Person10.jpg'
+import Person11 from '../../../../assets/People/Person11.jpg'
+import Person12 from '../../../../assets/People/Person12.jpg'
+import Person13 from '../../../../assets/People/Person13.jpg'
+import Person14 from '../../../../assets/People/Person14.jpg'
+import Person15 from '../../../../assets/People/Person15.jpg'
+import Person16 from '../../../../assets/People/Person16.jpg'
 
 const InterviewCards = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -10,112 +26,112 @@ const InterviewCards = () => {
       date: '2024/3/15',
       category: 'For those looking for work',
       title: 'Work from home and do what you love without changing your lifestyle or prioritizing childcare!',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person1
     },
     {
       id: 2,
       date: '2024/3/14',
       category: 'For those looking for work',
       title: 'SharApu gave me the strength to live',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person2
     },
     {
       id: 3,
       date: '2024/3/13',
       category: 'For those looking for work',
       title: 'SharApu is a work-from-home job that allows you to work at your own pace and in two different jobs!',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person3
     },
     {
       id: 4,
       date: '2024/3/12',
       category: 'For those looking for work',
       title: 'Is it possible to have a side job without your company finding out?',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person4
     },
     {
       id: 5,
       date: '2024/3/11',
       category: 'For those looking for work',
       title: 'What kind of jobs are available for working from home? Best ways to find work!',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person5
     },
     {
       id: 6,
       date: '2024/3/10',
       category: 'For those looking for work',
       title: 'Your first work-from-home job! Survey work that requires no skills',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person6
     },
     {
       id: 7,
       date: '2024/3/9',
       category: 'For those looking for work',
       title: 'Take on routine office work while working from home!',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person7
     },
     {
       id: 8,
       date: '2024/3/8',
       category: 'For those looking for work',
       title: 'From registration to work, everything is done on your smartphone!',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person8
     },
     {
       id: 9,
       date: '2024/3/7',
       category: 'For those looking for work',
       title: 'What is the job of answering corporate telephones?',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person9
     },
     {
       id: 10,
       date: '2024/3/6',
       category: 'For those looking for work',
       title: 'Remote customer service jobs that anyone can do',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person10
     },
     {
       id: 11,
       date: '2024/3/5',
       category: 'For those looking for work',
       title: 'Start your work-from-home journey with data entry',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person11
     },
     {
       id: 12,
       date: '2024/3/4',
       category: 'For those looking for work',
       title: 'How to balance family life and remote work',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person12
     },
     {
       id: 13,
       date: '2024/3/3',
       category: 'For those looking for work',
       title: 'Tips for successful online interviews',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person13
     },
     {
       id: 14,
       date: '2024/3/2',
       category: 'For those looking for work',
       title: 'Setting up your perfect home office',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person14
     },
     {
       id: 15,
       date: '2024/3/1',
       category: 'For those looking for work',
       title: 'Managing your time effectively when working remotely',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person15
     },
     {
       id: 16,
       date: '2024/2/29',
       category: 'For those looking for work',
       title: 'Building a successful career from home',
-      imageSrc: '/api/placeholder/400/300'
+      imageSrc: Person16
     }
   ];
 
