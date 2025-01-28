@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+
+// SearchForm.jsx
+import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
-const SearchForm = ({ isOpen, onClose }) => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [selectedTags, setSelectedTags] = useState(new Set());
+const SearchForm = ({ 
+  isOpen, 
+  onClose, 
+  selectedCategory, 
+  onCategorySelect,
+  selectedTags,
+  onTagsSelect
+}) => {
+  const [searchText, setSearchText] = useState('');
+  const [localSelectedTags, setLocalSelectedTags] = useState(new Set(selectedTags));
+
+  // Sync local tags with parent tags when component mounts or selectedTags changes
+  useEffect(() => {
+    setLocalSelectedTags(new Set(selectedTags));
+  }, [selectedTags]);
 
   if (!isOpen) return null;
 
@@ -28,18 +42,19 @@ const SearchForm = ({ isOpen, onClose }) => {
     'Data Entry'
   ];
 
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(selectedCategory === category ? null : category);
-  };
-
   const handleTagClick = (tag) => {
-    const newSelectedTags = new Set(selectedTags);
+    const newSelectedTags = new Set(localSelectedTags);
     if (newSelectedTags.has(tag)) {
       newSelectedTags.delete(tag);
     } else {
       newSelectedTags.add(tag);
     }
-    setSelectedTags(newSelectedTags);
+    setLocalSelectedTags(newSelectedTags);
+  };
+
+  const handleSearch = () => {
+    onTagsSelect(localSelectedTags);
+    onClose();
   };
 
   return (
@@ -61,10 +76,15 @@ const SearchForm = ({ isOpen, onClose }) => {
           <div className="relative mb-8">
             <input
               type="text"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
               placeholder="Search..."
               className="w-full px-4 py-2 border-2 border-pink-200 rounded-lg focus:border-pink-400 focus:outline-none"
             />
-            <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-pink-500 text-white px-4 py-1 rounded-full text-sm hover:bg-pink-600 transition-colors">
+            <button 
+              onClick={handleSearch}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-pink-500 text-white px-4 py-1 rounded-full text-sm hover:bg-pink-600 transition-colors"
+            >
               Search
             </button>
           </div>
@@ -78,7 +98,7 @@ const SearchForm = ({ isOpen, onClose }) => {
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => handleCategoryClick(category)}
+                  onClick={() => onCategorySelect(category)}
                   className={`
                     px-3 py-1 rounded-full text-sm cursor-pointer
                     transition-all duration-200 hover:scale-105
@@ -106,7 +126,7 @@ const SearchForm = ({ isOpen, onClose }) => {
                   onClick={() => handleTagClick(tag)}
                   className={`
                     px-3 py-1 rounded-full text-sm transition-all duration-200
-                    ${selectedTags.has(tag)
+                    ${localSelectedTags.has(tag)
                       ? 'bg-pink-500 text-white hover:bg-pink-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }

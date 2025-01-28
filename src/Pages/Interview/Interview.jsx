@@ -7,6 +7,19 @@ import BlogWriterSection from '../Blog/BlogWriterSection';
 const Interview = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedTags, setSelectedTags] = useState(new Set());
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category === selectedCategory ? null : category);
+    setIsSearchOpen(false); // Close search form when category is selected
+  };
+
+  // Handler for tags selection
+  const handleTagsSelect = (tags) => {
+    setSelectedTags(tags);
+    setIsSearchOpen(false); // Close search form when tags are selected
+  };
+
 
   return (
     <div className="w-full min-h-screen bg-white py-4 px-6">
@@ -56,9 +69,11 @@ const Interview = () => {
           ))}
         </div>
 
-         {/* Interview Cards Section */}
-         <InterviewCards selectedCategory={selectedCategory} />
-         
+        <InterviewCards 
+          selectedCategory={selectedCategory} 
+          selectedTags={selectedTags}
+        />
+
         <BlogWriterSection />
       </div>
 
@@ -66,6 +81,10 @@ const Interview = () => {
       <SearchForm 
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
+        selectedCategory={selectedCategory}
+        onCategorySelect={handleCategorySelect}
+        selectedTags={selectedTags}
+        onTagsSelect={handleTagsSelect}
       />
     </div>
   );
