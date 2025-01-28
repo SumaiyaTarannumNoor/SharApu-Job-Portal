@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search } from 'lucide-react';
-import BlogWriter from '../../../assets/Blog/BlogWriter.png'
+import BlogWriter from '../../../../assets/Blog/BlogWriter.png'
 
 const BlogWriterSection = () => {
   return (

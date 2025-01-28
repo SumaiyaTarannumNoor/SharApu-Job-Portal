@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import SearchForm from '../../components/UI/SearchForm';
 import InterviewCards from './InterviewSections/InterviewCards';
-import BlogWriterSection from '../Blog/BlogWriterSection';
+import BlogWriterSection from '../Blog/BlogRelated/BlogWriterSection';
 import { useNavigate, Link } from 'react-router-dom';
 
 const Interview = () => {
