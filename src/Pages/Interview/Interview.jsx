@@ -3,11 +3,18 @@ import { Search } from 'lucide-react';
 import SearchForm from '../../components/UI/SearchForm';
 import InterviewCards from './InterviewSections/InterviewCards';
 import BlogWriterSection from '../Blog/BlogWriterSection';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Interview = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedTags, setSelectedTags] = useState(new Set());
+
+  const navigate = useNavigate();
+
+  const handleBlog = () => {
+    navigate('/blog');
+  };
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category === selectedCategory ? null : category);
@@ -29,14 +36,22 @@ const Interview = () => {
           <h1 className="text-base text-gray-700 mb-2">
             Your guide to working from home success
           </h1>
+
           <div className="flex items-center justify-center">
             <div className="text-4xl font-bold text-pink-500 flex items-center gap-2">
               <span className="text-pink-300">•</span>
-              SharApu Blog
+              SharApu Interviews
               <span className="text-pink-300">•</span>
             </div>
           </div>
         </div>
+        <p className="text-pink-300">
+          Find more interesting takeaways in{' '}
+          <Link to="/blog" className="text-pink-500 cursor-pointer text-2xl">
+            SharApu Blog
+          </Link>
+        </p>
+
 
         {/* Search Button */}
         <div className="flex justify-end mb-8">

@@ -1,0 +1,200 @@
+import React, { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+const Blog = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const featuredArticles = [
+    {
+      id: 1,
+      date: '2024/3/15',
+      category: 'For those who want to order work',
+      title: 'The best part of crowdsourcing! Bulk ordering for 50 or more workers',
+      image: '/api/placeholder/400/300'
+    },
+    {
+      id: 2,
+      date: '2024/3/14',
+      category: 'For those who want to order work',
+      title: 'Effective use of Shufuti for inbound marketing',
+      image: '/api/placeholder/400/300'
+    },
+    {
+      id: 3,
+      date: '2024/3/7',
+      category: 'For those looking for work',
+      title: 'Is it possible to have a side job without your company finding out?',
+      image: '/api/placeholder/400/300'
+    },
+    {
+      id: 4,
+      date: '2024/3/7',
+      category: 'For those looking for work',
+      title: 'What kind of jobs are available for working from home?',
+      image: '/api/placeholder/400/300'
+    },
+    {
+      id: 5,
+      date: '2024/3/7',
+      category: 'For those looking for work',
+      title: 'From registration to work, everything is done on your smartphone!',
+      image: '/api/placeholder/400/300'
+    }
+  ];
+
+  const latestArticles = [
+    {
+      id: 1,
+      date: '2024/3/7',
+      category: 'For those looking for work',
+      title: 'Work from home and do what you love without changing your lifestyle!',
+      image: '/api/placeholder/300/200'
+    },
+    {
+      id: 2,
+      date: '2024/3/1',
+      category: 'For those who want to order work',
+      title: 'I want my employees to focus on more creative work, Shufuti is necessary for that purpose.',
+      image: '/api/placeholder/300/200'
+    }
+  ];
+
+  const tags = [
+    'Home Refreshment Guide',
+    'Skill Development',
+    'Introduction to working from home',
+    'Popular Jobs',
+    'Success stories',
+    'Worker Interview',
+    'Work from Home Guide',
+    'Job Introduction',
+    'Client Interview',
+    'Data Entry'
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4">
+          <ul className="flex justify-center space-x-8">
+            <li className="py-4 text-pink-500 border-b-2 border-pink-500">
+              For those looking for work
+            </li>
+            <li className="py-4 text-gray-500 hover:text-pink-500">
+              For those who want to order work
+            </li>
+            <li className="py-4 text-gray-500 hover:text-pink-500">
+              Beginner's Guide
+            </li>
+            <li className="py-4 text-gray-500 hover:text-pink-500">
+              Shufuti NEWS
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Featured Articles Slider */}
+      <div className="relative max-w-6xl mx-auto px-4 py-8">
+        <div className="overflow-hidden">
+          <div 
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {featuredArticles.map((article) => (
+              <div key={article.id} className="min-w-full px-2">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <div className="text-sm text-gray-500 mb-2">{article.date}</div>
+                    <div className="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm inline-block mb-2">
+                      {article.category}
+                    </div>
+                    <h2 className="text-xl font-semibold text-gray-800">{article.title}</h2>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Slider Controls */}
+        <button 
+          onClick={() => setCurrentSlide(prev => Math.max(0, prev - 1))}
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md"
+          disabled={currentSlide === 0}
+        >
+          <ChevronLeft className="w-6 h-6 text-gray-600" />
+        </button>
+        <button 
+          onClick={() => setCurrentSlide(prev => Math.min(featuredArticles.length - 1, prev + 1))}
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md"
+          disabled={currentSlide === featuredArticles.length - 1}
+        >
+          <ChevronRight className="w-6 h-6 text-gray-600" />
+        </button>
+
+        {/* Slider Dots */}
+        <div className="flex justify-center mt-4 gap-2">
+          {featuredArticles.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full ${
+                currentSlide === index ? 'bg-pink-500' : 'bg-gray-300'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Latest Articles Section */}
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <h2 className="text-2xl font-semibold mb-6 flex items-center">
+          Latest
+          <span className="text-sm text-gray-500 ml-2">Latest Articles</span>
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-6">
+          {latestArticles.map((article) => (
+            <div key={article.id} className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+              <img
+                src={article.image}
+                alt={article.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <div className="text-sm text-gray-500 mb-2">{article.date}</div>
+                <div className="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm inline-block mb-2">
+                  {article.category}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800">{article.title}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Tags Section */}
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <h2 className="text-2xl font-semibold mb-6">Tags</h2>
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <button
+              key={tag}
+              className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm"
+            >
+              # {tag}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Blog;
