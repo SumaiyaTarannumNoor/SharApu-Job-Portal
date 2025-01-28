@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Person1 from '../../../../assets/People/Person1.jpg'
 import Person2 from '../../../../assets/People/Person2.jpg'
 import Person3 from '../../../../assets/People/Person3.jpg'
@@ -16,7 +16,7 @@ import Person14 from '../../../../assets/People/Person14.jpg'
 import Person15 from '../../../../assets/People/Person15.jpg'
 import Person16 from '../../../../assets/People/Person16.jpg'
 
-const InterviewCards = () => {
+const InterviewCards = ({ selectedCategory }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 6;
 
@@ -135,10 +135,20 @@ const InterviewCards = () => {
     }
   ];
 
+  // Filter interviews based on selected category
+  const filteredInterviews = selectedCategory
+    ? interviews.filter(interview => interview.category === selectedCategory)
+    : interviews;
+
+  // Reset to first page when category changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory]);
+
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
-  const currentCards = interviews.slice(indexOfFirstCard, indexOfLastCard);
-  const totalPages = Math.ceil(interviews.length / cardsPerPage);
+  const currentCards = filteredInterviews.slice(indexOfFirstCard, indexOfLastCard);
+  const totalPages = Math.ceil(filteredInterviews.length / cardsPerPage);
 
   return (
     <div className="mb-12">
@@ -172,37 +182,39 @@ const InterviewCards = () => {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center items-center gap-2">
-        <button
-          onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-          disabled={currentPage === 1}
-          className="px-4 py-2 rounded-full border border-pink-200 text-pink-500 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-pink-50 transition-colors"
-        >
-          Previous
-        </button>
-        
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+      {filteredInterviews.length > cardsPerPage && (
+        <div className="flex justify-center items-center gap-2">
           <button
-            key={page}
-            onClick={() => setCurrentPage(page)}
-            className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors
-              ${currentPage === page 
-                ? 'bg-pink-500 text-white' 
-                : 'text-gray-600 hover:bg-pink-50'
-              }`}
+            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+            className="px-4 py-2 rounded-full border border-pink-200 text-pink-500 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-pink-50 transition-colors"
           >
-            {page}
+            Previous
           </button>
-        ))}
+          
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+            <button
+              key={page}
+              onClick={() => setCurrentPage(page)}
+              className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors
+                ${currentPage === page 
+                  ? 'bg-pink-500 text-white' 
+                  : 'text-gray-600 hover:bg-pink-50'
+                }`}
+            >
+              {page}
+            </button>
+          ))}
 
-        <button
-          onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-          disabled={currentPage === totalPages}
-          className="px-4 py-2 rounded-full border border-pink-200 text-pink-500 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-pink-50 transition-colors"
-        >
-          Next
-        </button>
-      </div>
+          <button
+            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+            disabled={currentPage === totalPages}
+            className="px-4 py-2 rounded-full border border-pink-200 text-pink-500 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-pink-50 transition-colors"
+          >
+            Next
+          </button>
+        </div>
+      )}
     </div>
   );
 };

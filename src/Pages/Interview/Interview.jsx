@@ -6,6 +6,7 @@ import BlogWriterSection from '../Blog/BlogWriterSection';
 
 const Interview = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
     <div className="w-full min-h-screen bg-white py-4 px-6">
@@ -45,15 +46,19 @@ const Interview = () => {
           ].map((title, index) => (
             <div
               key={index}
-              className="p-4 bg-pink-400 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer hover:translate-y-px"
+              className={`p-4 bg-pink-400 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer hover:translate-y-px ${
+                selectedCategory === title ? 'ring-2 ring-yellow-300' : ''
+              }`}
+              onClick={() => setSelectedCategory(title === selectedCategory ? null : title)}
             >
               <h2 className="text-lg font-semibold text-yellow-200">{title}</h2>
             </div>
           ))}
         </div>
 
-        {/* Interview Cards Section */}
-        <InterviewCards />
+         {/* Interview Cards Section */}
+         <InterviewCards selectedCategory={selectedCategory} />
+         
         <BlogWriterSection />
       </div>
 
