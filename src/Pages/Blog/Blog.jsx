@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Blog = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const featuredArticles = [
     {
@@ -72,38 +73,65 @@ const Blog = () => {
     'Data Entry'
   ];
 
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => 
+      prev === featuredArticles.length - 1 ? 0 : prev + 1
+    );
+  }, [featuredArticles.length]);
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => 
+      prev === 0 ? featuredArticles.length - 1 : prev - 1
+    );
+  };
+
+  // Auto-scroll effect
+  useEffect(() => {
+    let interval;
+    if (!isPaused) {
+      interval = setInterval(() => {
+        nextSlide();
+      }, 5000); // Change slide every 5 seconds
+    }
+    return () => clearInterval(interval);
+  }, [isPaused, nextSlide]);
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-pink-200">
       {/* Navigation */}
-      <nav className="border-b border-gray-200">
+      <nav className="bg-white border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4">
           <ul className="flex justify-center space-x-8">
             <li className="py-4 text-pink-500 border-b-2 border-pink-500">
               For those looking for work
             </li>
-            <li className="py-4 text-gray-500 hover:text-pink-500">
+            <li className="py-4 text-gray-500 hover:text-pink-500 cursor-pointer">
               For those who want to order work
             </li>
-            <li className="py-4 text-gray-500 hover:text-pink-500">
+            <li className="py-4 text-gray-500 hover:text-pink-500 cursor-pointer">
               Beginner's Guide
             </li>
-            <li className="py-4 text-gray-500 hover:text-pink-500">
+            <li className="py-4 text-gray-500 hover:text-pink-500 cursor-pointer">
               Shufuti NEWS
             </li>
           </ul>
         </div>
       </nav>
 
-      {/* Featured Articles Slider */}
+      {/* Featured Articles Carousel */}
       <div className="relative max-w-6xl mx-auto px-4 py-8">
-        <div className="overflow-hidden">
+        <div 
+          className="overflow-hidden rounded-xl"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           <div 
-            className="flex transition-transform duration-300 ease-in-out"
+            className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {featuredArticles.map((article) => (
               <div key={article.id} className="min-w-full px-2">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300">
                   <img
                     src={article.image}
                     alt={article.title}
@@ -114,7 +142,9 @@ const Blog = () => {
                     <div className="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm inline-block mb-2">
                       {article.category}
                     </div>
-                    <h2 className="text-xl font-semibold text-gray-800">{article.title}</h2>
+                    <h2 className="text-xl font-semibold text-gray-800 line-clamp-2">
+                      {article.title}
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -122,31 +152,34 @@ const Blog = () => {
           </div>
         </div>
         
-        {/* Slider Controls */}
+        {/* Carousel Controls */}
         <button 
-          onClick={() => setCurrentSlide(prev => Math.max(0, prev - 1))}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md"
-          disabled={currentSlide === 0}
+          onClick={prevSlide}
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white transition-colors"
+          aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6 text-gray-600" />
         </button>
         <button 
-          onClick={() => setCurrentSlide(prev => Math.min(featuredArticles.length - 1, prev + 1))}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md"
-          disabled={currentSlide === featuredArticles.length - 1}
+          onClick={nextSlide}
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white transition-colors"
+          aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6 text-gray-600" />
         </button>
 
-        {/* Slider Dots */}
+        {/* Progress Indicators */}
         <div className="flex justify-center mt-4 gap-2">
           {featuredArticles.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full ${
-                currentSlide === index ? 'bg-pink-500' : 'bg-gray-300'
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                currentSlide === index 
+                  ? 'w-6 bg-pink-500' 
+                  : 'bg-gray-300 hover:bg-pink-300'
               }`}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
@@ -161,7 +194,7 @@ const Blog = () => {
         
         <div className="grid md:grid-cols-2 gap-6">
           {latestArticles.map((article) => (
-            <div key={article.id} className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+            <div key={article.id} className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300">
               <img
                 src={article.image}
                 alt={article.title}
@@ -172,7 +205,9 @@ const Blog = () => {
                 <div className="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm inline-block mb-2">
                   {article.category}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800">{article.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-800 line-clamp-2">
+                  {article.title}
+                </h3>
               </div>
             </div>
           ))}
@@ -186,7 +221,7 @@ const Blog = () => {
           {tags.map((tag) => (
             <button
               key={tag}
-              className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm"
+              className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm transition-colors duration-200"
             >
               # {tag}
             </button>
