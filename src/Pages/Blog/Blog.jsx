@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Person11 from '../../../assets/People/Person11.jpg'
+import Person12 from '../../../assets/People/Person12.jpg'
+import Person13 from '../../../assets/People/Person13.jpg'
+import Person14 from '../../../assets/People/Person14.jpg'
+import Person15 from '../../../assets/People/Person15.jpg'
+import Person16 from '../../../assets/People/Person16.jpg'
+
 
 const Blog = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,36 +18,43 @@ const Blog = () => {
       date: '2024/3/15',
       category: 'For those who want to order work',
       title: 'The best part of crowdsourcing! Bulk ordering for 50 or more workers',
-      image: '/api/placeholder/400/300'
+      image: Person11
     },
     {
       id: 2,
       date: '2024/3/14',
       category: 'For those who want to order work',
       title: 'Effective use of Shufuti for inbound marketing',
-      image: '/api/placeholder/400/300'
+      image: Person12
     },
     {
       id: 3,
       date: '2024/3/7',
       category: 'For those looking for work',
       title: 'Is it possible to have a side job without your company finding out?',
-      image: '/api/placeholder/400/300'
+      image: Person13
     },
     {
       id: 4,
       date: '2024/3/7',
       category: 'For those looking for work',
       title: 'What kind of jobs are available for working from home?',
-      image: '/api/placeholder/400/300'
+      image: Person14
     },
     {
       id: 5,
       date: '2024/3/7',
       category: 'For those looking for work',
       title: 'From registration to work, everything is done on your smartphone!',
-      image: '/api/placeholder/400/300'
-    }
+      image: Person15
+    },
+    {
+        id: 5,
+        date: '2024/3/7',
+        category: 'For those looking for work',
+        title: 'From registration to work, everything is done on your own!',
+        image: Person16
+      }
   ];
 
   const latestArticles = [
@@ -49,14 +63,14 @@ const Blog = () => {
       date: '2024/3/7',
       category: 'For those looking for work',
       title: 'Work from home and do what you love without changing your lifestyle!',
-      image: '/api/placeholder/300/200'
+      image: Person13
     },
     {
       id: 2,
       date: '2024/3/1',
       category: 'For those who want to order work',
       title: 'I want my employees to focus on more creative work, Shufuti is necessary for that purpose.',
-      image: '/api/placeholder/300/200'
+      image: Person14
     }
   ];
 
