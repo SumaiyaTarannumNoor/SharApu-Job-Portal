@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import SearchForm from '../../components/UI/SearchForm';
 import InterviewCards from './InterviewSections/InterviewCards';
+import BlogWriterSection from '../Blog/BlogWriterSection';
 
 const Interview = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -53,6 +54,7 @@ const Interview = () => {
 
         {/* Interview Cards Section */}
         <InterviewCards />
+        <BlogWriterSection />
       </div>
 
       {/* Search Form Modal */}
