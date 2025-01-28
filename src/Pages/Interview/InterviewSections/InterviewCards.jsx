@@ -31,7 +31,7 @@ const InterviewCards = ({ selectedCategory }) => {
     {
       id: 2,
       date: '2024/3/14',
-      category: 'For those looking for work',
+      category: 'SharApu NEWS',
       title: 'SharApu gave me the strength to live',
       imageSrc: Person2
     },
@@ -45,7 +45,7 @@ const InterviewCards = ({ selectedCategory }) => {
     {
       id: 4,
       date: '2024/3/12',
-      category: 'For those looking for work',
+      category: 'SharApu NEWS',
       title: 'Is it possible to have a side job without your company finding out?',
       imageSrc: Person4
     },
@@ -80,7 +80,7 @@ const InterviewCards = ({ selectedCategory }) => {
     {
       id: 9,
       date: '2024/3/7',
-      category: 'For those looking for work',
+      category: "Beginner's Guide",
       title: 'What is the job of answering corporate telephones?',
       imageSrc: Person9
     },
@@ -94,7 +94,7 @@ const InterviewCards = ({ selectedCategory }) => {
     {
       id: 11,
       date: '2024/3/5',
-      category: 'For those looking for work',
+      category: 'For those who want to order work',
       title: 'Start your work-from-home journey with data entry',
       imageSrc: Person11
     },
@@ -115,7 +115,7 @@ const InterviewCards = ({ selectedCategory }) => {
     {
       id: 14,
       date: '2024/3/2',
-      category: 'For those looking for work',
+      category: 'For those who want to order work',
       title: 'Setting up your perfect home office',
       imageSrc: Person14
     },
@@ -129,7 +129,7 @@ const InterviewCards = ({ selectedCategory }) => {
     {
       id: 16,
       date: '2024/2/29',
-      category: 'For those looking for work',
+      category: "Beginner's Guide",
       title: 'Building a successful career from home',
       imageSrc: Person16
     }
