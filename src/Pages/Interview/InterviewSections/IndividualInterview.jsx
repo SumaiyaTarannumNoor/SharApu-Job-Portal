@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 // Import all person images
 import Person1 from '../../../../assets/People/Person1.jpg';
 import Person2 from '../../../../assets/People/Person2.jpg';
@@ -19,6 +21,11 @@ import Person15 from '../../../../assets/People/Person15.jpg';
 import Person16 from '../../../../assets/People/Person16.jpg';
 
 const IndividualInterview = () => {
+    const navigate = useNavigate();
+
+    const handleManagementBlog = () => {
+      navigate('/management-blog');
+    };
     const { id } = useParams();
 
     // Scroll to top when component mounts
@@ -268,6 +275,7 @@ That's what I've learned through my work at SharApu.`}
                     Back to Interviews
                 </Link>
             </div>
+            <span onClick={handleManagementBlog} class="text-2xt bg-pink-500 text-white cursor-pointer p-2 rounded-lg">SharApu Management Office Blog</span>
         </div>
     );
 };
