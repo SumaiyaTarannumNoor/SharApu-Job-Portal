@@ -205,7 +205,7 @@ const IndividualInterview = () => {
       <div className="space-y-6 mt-12">
         <div className="bg-yellow-50 p-6 rounded-xl">
           <h3 className="text-lg font-semibold text-yellow-800 mb-4">
-            What are some of the happiest moments working at ShufulY?
+            What are some of the happiest moments working at SharApu?
           </h3>
           <p className="text-gray-700 whitespace-pre-line">
             {`Even though I didn't anticipate that I would, it makes me happy when a case mom friend happens to read the article and personally told me, "That was great."
@@ -222,7 +222,7 @@ It makes me really happy to see that this work has such value.`}
             What kind of work are you currently trying out? Also, is there any work you would like to try in the future?
           </h3>
           <p className="text-gray-700 whitespace-pre-line">
-            {`The good thing about ShufulY is that if you find a project that interests you, you can apply relatively easily.
+            {`The good thing about SharApu is that if you find a project that interests you, you can apply relatively easily.
 
 There are a variety of writing projects available, and being able to work on multiple projects at the same time.
 
