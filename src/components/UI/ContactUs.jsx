@@ -25,7 +25,7 @@ const ContactUs = () => {
         <nav className="flex items-center mb-8">
           <div className="flex items-center text-pink-500 hover:text-pink-600">
             <ArrowLeft className="w-5 h-5 mr-2" />
-            <span className="text-lg">Shufuti Support</span>
+            <span className="text-lg">SharApu Support</span>
             <span><img src={Penguine2} alt="Penguin" /></span>
           </div>
           <div className="ml-auto">
@@ -69,7 +69,7 @@ const ContactUs = () => {
               </p>
               
               <p className="text-gray-600">
-                If you want to return to the Shufuti site, please click{' '}
+                If you want to return to the SharApu site, please click{' '}
                 <button className="text-pink-500 hover:text-pink-600 font-medium">
                   here
                 </button>
