@@ -9,6 +9,7 @@ const Interview = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedTags, setSelectedTags] = useState(new Set());
+  const [searchQuery, setSearchQuery] = useState('');
 
   const navigate = useNavigate();
 
@@ -18,15 +19,16 @@ const Interview = () => {
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category === selectedCategory ? null : category);
-    setIsSearchOpen(false); // Close search form when category is selected
   };
 
-  // Handler for tags selection
   const handleTagsSelect = (tags) => {
     setSelectedTags(tags);
-    setIsSearchOpen(false); // Close search form when tags are selected
   };
 
+  // This function will be called whenever the search input changes
+  const handleSearchChange = (query) => {
+    setSearchQuery(query);
+  };
 
   return (
     <div className="w-full min-h-screen bg-white py-4 px-6">
@@ -36,7 +38,6 @@ const Interview = () => {
           <h1 className="text-base text-gray-700 mb-2">
             Your guide to working from home success
           </h1>
-
           <div className="flex items-center justify-center">
             <div className="text-4xl font-bold text-pink-500 flex items-center gap-2">
               <span className="text-pink-300">•</span>
@@ -45,13 +46,14 @@ const Interview = () => {
             </div>
           </div>
         </div>
+
+        {/* Blog Link */}
         <p className="text-pink-300">
           Find more interesting takeaways in{' '}
           <Link to="/blog" className="text-pink-500 cursor-pointer text-2xl">
             SharApu Blog
           </Link>
         </p>
-
 
         {/* Search Button */}
         <div className="flex justify-end mb-8">
@@ -77,16 +79,18 @@ const Interview = () => {
               className={`p-4 bg-pink-400 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer hover:translate-y-px ${
                 selectedCategory === title ? 'ring-2 ring-yellow-300' : ''
               }`}
-              onClick={() => setSelectedCategory(title === selectedCategory ? null : title)}
+              onClick={() => handleCategorySelect(title)}
             >
               <h2 className="text-lg font-semibold text-yellow-200">{title}</h2>
             </div>
           ))}
         </div>
 
+        {/* Interview Cards with search query */}
         <InterviewCards 
           selectedCategory={selectedCategory} 
           selectedTags={selectedTags}
+          searchQuery={searchQuery}
         />
 
         <BlogWriterSection />
@@ -100,6 +104,8 @@ const Interview = () => {
         onCategorySelect={handleCategorySelect}
         selectedTags={selectedTags}
         onTagsSelect={handleTagsSelect}
+        onSearchChange={handleSearchChange}
+        searchQuery={searchQuery}
       />
     </div>
   );

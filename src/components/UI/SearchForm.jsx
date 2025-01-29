@@ -1,5 +1,3 @@
-
-// SearchForm.jsx
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
@@ -9,9 +7,10 @@ const SearchForm = ({
   selectedCategory, 
   onCategorySelect,
   selectedTags,
-  onTagsSelect
+  onTagsSelect,
+  onSearchChange,
+  searchQuery
 }) => {
-  const [searchText, setSearchText] = useState('');
   const [localSelectedTags, setLocalSelectedTags] = useState(new Set(selectedTags));
 
   // Sync local tags with parent tags when component mounts or selectedTags changes
@@ -50,11 +49,12 @@ const SearchForm = ({
       newSelectedTags.add(tag);
     }
     setLocalSelectedTags(newSelectedTags);
+    onTagsSelect(newSelectedTags);
   };
 
-  const handleSearch = () => {
-    onTagsSelect(localSelectedTags);
-    onClose();
+  // Handle real-time search input changes
+  const handleSearchInput = (e) => {
+    onSearchChange(e.target.value);
   };
 
   return (
@@ -76,17 +76,11 @@ const SearchForm = ({
           <div className="relative mb-8">
             <input
               type="text"
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
+              value={searchQuery}
+              onChange={handleSearchInput}
               placeholder="Search..."
               className="w-full px-4 py-2 border-2 border-pink-200 rounded-lg focus:border-pink-400 focus:outline-none"
             />
-            <button 
-              onClick={handleSearch}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-pink-500 text-white px-4 py-1 rounded-full text-sm hover:bg-pink-600 transition-colors"
-            >
-              Search
-            </button>
           </div>
 
           {/* Categories */}
