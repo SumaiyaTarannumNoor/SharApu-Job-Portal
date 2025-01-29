@@ -21,6 +21,7 @@ import Interview from './Pages/Interview/Interview';
 import Blog from './Pages/Blog/Blog';
 import IndividualInterview from './Pages/Interview/InterviewSections/IndividualInterview';
 import ManagementBlog from './Pages/Management/ManagementBlog';
+import ContactUs from './components/UI/ContactUs'
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -172,6 +173,7 @@ const App = () => {
             <Route path="/interview/:id" element={<IndividualInterview />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/management-blog" element={<ManagementBlog />} />
+            <Route path="/contact-us" element={<ContactUs />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>

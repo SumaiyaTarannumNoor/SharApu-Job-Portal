@@ -1,11 +1,17 @@
 import React from 'react';
 import { ShieldCheck, Banknote, HeartHandshake } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; // Add this import
 import Person1 from '../../assets/People/Person1.jpg';
 import Person2 from '../../assets/People/Person2.jpg';
 import Penguine3 from '../../assets/LandingPageIconImage/Penguine3.png';
 import TestimonialsSection from '../components/Reviewers/TestimonialsSection';
 
 const WantToReceiveWork = () => {
+  
+  const navigate = useNavigate();
+  const handleContactUs = () => {
+    navigate('/contact-us');
+  };
   return (
     <div className="bg-pink-50 min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
@@ -123,13 +129,15 @@ const WantToReceiveWork = () => {
               {/* Contact Text with Animation */}
               <p className="text-pink-700 text-sm mt-2">
                 If you have any problems, please feel free to{' '}
-                <span
-                  className="inline-block text-2xl text-pink-600 animate-bounce [animation-delay:6s] [animation-duration:4s] [animation-timing-function:cubic-bezier(0.28,0,0.74,1)] cursor-pointer"
+                <button
+                  onClick={handleContactUs}
+                  className="inline-block text-2xl text-pink-600 animate-bounce cursor-pointer border-none bg-transparent p-0 font-inherit"
                 >
                   CONTACT
-                </span>
+                </button>
                 {' '}support.
               </p>
+
             </div>
           </div>
         </div>
