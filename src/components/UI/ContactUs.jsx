@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, HelpCircle } from 'lucide-react';
 import Penguine2 from '../../../assets/LandingPageIconImage/Penguine2.png';
+import { useNavigate } from 'react-router-dom'; // Add this import
 
 const ContactUs = () => {
   const [selectedIssue, setSelectedIssue] = useState('');
+  const navigate = useNavigate();
+  const handleSupport = () => {
+    navigate('/support');
+};
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,7 +30,7 @@ const ContactUs = () => {
         <nav className="flex items-center mb-8">
           <div className="flex items-center text-pink-500 hover:text-pink-600">
             <ArrowLeft className="w-5 h-5 mr-2" />
-            <span className="text-lg">SharApu Support</span>
+            <span onClick={handleSupport} className="text-3xl cursor-pointer"><span class="rounded-lg text-white text-bold bg-pink-600 p-2 mr-1">SharApu</span>Support</span>
             <span><img src={Penguine2} alt="Penguin" /></span>
           </div>
           <div className="ml-auto">
