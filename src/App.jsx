@@ -19,6 +19,7 @@ import WantToReceiveWork from './Pages/WantToReceiveWork';
 import LoginForm from './components/Authenticator/loginform';
 import Interview from './Pages/Interview/Interview';
 import Blog from './Pages/Blog/Blog';
+import IndividualInterview from './Pages/Interview/InterviewSections/IndividualInterview';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -167,6 +168,7 @@ const App = () => {
             <Route path="/want-to-order-work" element={<WantToOrderWork />} />
             <Route path="/want-to-receive-work" element={<WantToReceiveWork />} />
             <Route path="/interview" element={<Interview />} />
+            <Route path="/interview/:id" element={<IndividualInterview />} />
             <Route path="/blog" element={<Blog />} />
 
             <Route path="/login" element={<LoginForm />} />

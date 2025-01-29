@@ -1,24 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import Person1 from '../../../../assets/People/Person1.jpg'
-import Person2 from '../../../../assets/People/Person2.jpg'
-import Person3 from '../../../../assets/People/Person3.jpg'
-import Person4 from '../../../../assets/People/Person4.jpg'
-import Person5 from '../../../../assets/People/Person5.jpg'
-import Person6 from '../../../../assets/People/Person6.jpg'
-import Person7 from '../../../../assets/People/Person7.jpg'
-import Person8 from '../../../../assets/People/Person8.jpg'
-import Person9 from '../../../../assets/People/Person9.jpg'
-import Person10 from '../../../../assets/People/Person10.jpg'
-import Person11 from '../../../../assets/People/Person11.jpg'
-import Person12 from '../../../../assets/People/Person12.jpg'
-import Person13 from '../../../../assets/People/Person13.jpg'
-import Person14 from '../../../../assets/People/Person14.jpg'
-import Person15 from '../../../../assets/People/Person15.jpg'
-import Person16 from '../../../../assets/People/Person16.jpg'
+import { useNavigate } from 'react-router-dom';
+import Person1 from '../../../../assets/People/Person1.jpg';
+import Person2 from '../../../../assets/People/Person2.jpg';
+import Person3 from '../../../../assets/People/Person3.jpg';
+import Person4 from '../../../../assets/People/Person4.jpg';
+import Person5 from '../../../../assets/People/Person5.jpg';
+import Person6 from '../../../../assets/People/Person6.jpg';
+import Person7 from '../../../../assets/People/Person7.jpg';
+import Person8 from '../../../../assets/People/Person8.jpg';
+import Person9 from '../../../../assets/People/Person9.jpg';
+import Person10 from '../../../../assets/People/Person10.jpg';
+import Person11 from '../../../../assets/People/Person11.jpg';
+import Person12 from '../../../../assets/People/Person12.jpg';
+import Person13 from '../../../../assets/People/Person13.jpg';
+import Person14 from '../../../../assets/People/Person14.jpg';
+import Person15 from '../../../../assets/People/Person15.jpg';
+import Person16 from '../../../../assets/People/Person16.jpg';
 
 const InterviewCards = ({ selectedCategory, selectedTags, searchQuery }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 6;
+  const navigate = useNavigate();
+
+  const handleCardClick = (interviewId) => {
+    navigate(`/interview/${interviewId}`);
+  };
 
   const interviews = [
     {
@@ -27,7 +33,18 @@ const InterviewCards = ({ selectedCategory, selectedTags, searchQuery }) => {
       category: 'For those looking for work',
       title: 'Work from home and do what you love without changing your lifestyle or prioritizing childcare!',
       imageSrc: Person1,
-      tags: ['Work from Home Guide', 'Success stories']
+      author: 'Suki Bell',
+      authorDescription: 'She is a mother of two kindergarten-aged children, ages 4 and 3. She moved to Tokyo after graduating from university and was a human resources professional in charge of recruitment and employee training, but have left that job after having her first child and have been working under the SharApu system ever since.',
+      tags: ['Work from Home Guide', 'Success stories'],
+      content: [
+        {
+          type: 'section',
+          title: 'What made you start ShufulY?',
+          content: `I was looking for an IT company and loved my job, but I had decided that I would quit my job once I got married and had children.
+
+I love doing art by all kinds of places, and when my children were born I would go out looking for fun spots to go to with them, but I started to think that since we were having so much fun, I wanted to write about it.`
+        }
+      ]
     },
     {
       id: 2,
@@ -197,6 +214,7 @@ const InterviewCards = ({ selectedCategory, selectedTags, searchQuery }) => {
         {currentCards.map((interview) => (
           <div 
             key={interview.id}
+            onClick={() => handleCardClick(interview.id)}
             className="bg-pink-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
           >
             <div className="relative p-3 pb-0">
@@ -220,6 +238,9 @@ const InterviewCards = ({ selectedCategory, selectedTags, searchQuery }) => {
                   <span 
                     key={index}
                     className="text-xs bg-pink-200 text-pink-700 px-2 py-1 rounded-full"
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent card click when clicking tag
+                    }}
                   >
                     #{tag}
                   </span>
