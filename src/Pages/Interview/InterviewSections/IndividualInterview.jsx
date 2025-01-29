@@ -21,7 +21,7 @@ import Person16 from '../../../../assets/People/Person16.jpg';
 const IndividualInterview = () => {
   const { id } = useParams();
   
-  // Exact same interview data as in InterviewCards
+  // Interview data
   const interviews = [
     {
       id: 1,
@@ -201,10 +201,63 @@ const IndividualInterview = () => {
         </div>
       </div>
 
-      {/* Back to Interviews Link */}
+      {/* Q&A Section */}
+      <div className="space-y-6 mt-12">
+        <div className="bg-yellow-50 p-6 rounded-xl">
+          <h3 className="text-lg font-semibold text-yellow-800 mb-4">
+            What are some of the happiest moments working at ShufulY?
+          </h3>
+          <p className="text-gray-700 whitespace-pre-line">
+            {`Even though I didn't anticipate that I would, it makes me happy when a case mom friend happens to read the article and personally told me, "That was great."
+
+I'm also happy to get emails from moms who have read my articles saying, "I read your article and found it useful." I see these kind of the clients told me, "I used your article as a reference and went out with my kids!"
+
+The reason I wanted to write about working this way was not only because it allowed me to get to have a reward for myself, but also to share information with other moms and dads who are having children. 
+It makes me really happy to see that this work has such value.`}
+          </p>
+        </div>
+
+        <div className="bg-yellow-50 p-6 rounded-xl">
+          <h3 className="text-lg font-semibold text-yellow-800 mb-4">
+            What kind of work are you currently trying out? Also, is there any work you would like to try in the future?
+          </h3>
+          <p className="text-gray-700 whitespace-pre-line">
+            {`The good thing about ShufulY is that if you find a project that interests you, you can apply relatively easily.
+
+There are a variety of writing projects available, and being able to work on multiple projects at the same time.
+
+I would like to offer specific pieces of content to help develop my business skills, and I would like to gradually expand the scope of my work.
+
+Until now, I have mainly been writing about company life, but recently I was chosen to write about M&A, which was very interesting. I would like to participate much more in writing about business experiences.
+
+I've always wanted to work with numbers, so I'm really excited about this.
+
+If you just steadily maintain a little courage and put in the effort, your path will open up. 
+That's what I've learned through my work at ShufulY.`}
+          </p>
+        </div>
+
+        <div className="bg-gray-50 p-6 rounded-xl">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            Contact SharApu:
+          </h3>
+          <div className="space-y-2 text-gray-600">
+            <p>Operating company: SharApu</p>
+            <p>Support email: <a href="mailto:contact@sharapu.my" className="text-pink-500 hover:text-pink-600">contact@sharapu.my</a></p>
+            <p>Operating hours: 24/7</p>
+            <p>Operating days: Monday-Friday</p>
+            <p>Location: {`YNetwork Building W 1-10-1 Higashi-Gotanya, Ohnuku-ku, Tokyo`}</p>
+          </div>
+          <div className="mt-4 text-right text-sm text-gray-500">
+            © SharApu Management Office
+          </div>
+        </div>
+      </div>
+
+      {/* Back to Articles Link */}
       <div className="mt-12 text-center">
         <Link
-          to="/interview"
+          to="/interviews"
           className="inline-block px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors"
         >
           Back to Interviews
