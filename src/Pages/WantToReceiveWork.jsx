@@ -116,20 +116,27 @@ const WantToReceiveWork = () => {
           {/* Support Message */}
           <div className="mt-12 text-center">
             <div className="inline-block">
-              <img src={Penguine3} alt="Mascot" className="w-12 h-12 mx-auto mb-4" />
+              <img src={Penguine3} alt="Mascot" className="w-24 h-24 mx-auto mb-4" />
               <p className="text-pink-800 text-sm">
                 We strive to improve our services every day so that workers can continue working with peace of mind!
               </p>
+              {/* Contact Text with Animation */}
               <p className="text-pink-700 text-sm mt-2">
-                If you have any problems, please feel free to contact support.
+                If you have any problems, please feel free to{' '}
+                <span
+                  className="inline-block text-2xl text-pink-600 animate-bounce [animation-delay:6s] [animation-duration:4s] [animation-timing-function:cubic-bezier(0.28,0,0.74,1)] cursor-pointer"
+                >
+                  CONTACT
+                </span>
+                {' '}support.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <TestimonialsSection/>
+      <TestimonialsSection />
     </div>
-    
+
   );
 };
 
