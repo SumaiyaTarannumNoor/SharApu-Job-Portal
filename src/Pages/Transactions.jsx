@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Transactions = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const transactionQuestions = [
     {
       id: 1,
@@ -81,6 +88,21 @@ const Transactions = () => {
     }
   ];
 
+  // Filter questions based on search query
+  const filteredQuestions = useMemo(() => {
+    if (!searchQuery.trim()) return transactionQuestions;
+    
+    const query = searchQuery.toLowerCase().trim();
+    return transactionQuestions.filter(question =>
+      question.text.toLowerCase().includes(query)
+    );
+  }, [searchQuery]);
+
+  // Handle search input change
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-6">
       {/* Breadcrumb */}
@@ -104,6 +126,8 @@ const Transactions = () => {
         <div className="relative">
           <input
             type="text"
+            value={searchQuery}
+            onChange={handleSearchChange}
             placeholder="How to write job details"
             className="w-full p-3 pr-10 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
           />
@@ -120,21 +144,27 @@ const Transactions = () => {
       </h1>
 
       {/* Questions List */}
-      <div className="space-y-4">
-        {transactionQuestions.map((question) => (
-          <div
-            key={question.id}
-            className="border-b border-gray-200 pb-4"
-          >
-            <Link
-              to={question.link}
-              className="text-pink-500 hover:text-pink-600 hover:underline block"
+      {filteredQuestions.length === 0 ? (
+        <div className="text-center text-gray-600 py-8">
+          No results found for "{searchQuery}"
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {filteredQuestions.map((question) => (
+            <div
+              key={question.id}
+              className="border-b border-gray-200 pb-4"
             >
-              {question.text}
-            </Link>
-          </div>
-        ))}
-      </div>
+              <Link
+                to={question.link}
+                className="text-pink-500 hover:text-pink-600 hover:underline block"
+              >
+                {question.text}
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Contact Section */}
       <div className="mt-12 text-center text-gray-600">
