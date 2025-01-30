@@ -1,7 +1,13 @@
 import React from 'react';
 import { Search } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; 
+
 
 const Support = () => {
+  const navigate = useNavigate();
+    const handleFAQ = () => {
+    navigate('/faq');
+    };
   const categories = [
     { title: 'Transaction flow (for first-time users)', id: 1 },
     { title: 'Job registration/search', id: 2 },
@@ -71,7 +77,8 @@ const Support = () => {
       </div>
 
       <div className="bg-pink-50 p-8 rounded-lg">
-        <h2 className="text-2xl font-semibold mb-6 text-pink-700">FAQ</h2>
+        <h2 className="text-xl font-semibold mb-6 text-pink-700">FAQ </h2> 
+        <p class="mb-2"><span class="text-pink-400 text-md">Visit <span onClick={handleFAQ} class="cursor-pointer rounded-lg text-white text-bold bg-pink-600 p-2 mr-1">SharApu Support</span></span></p>
         <div className="space-y-4 mb-8">
           {faqItems.map((item, index) => (
             <a

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Banknote, HeartHandshake } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; // Add this import
+import { useNavigate } from 'react-router-dom'; 
 import Person1 from '../../assets/People/Person1.jpg';
 import Person2 from '../../assets/People/Person2.jpg';
 import Penguine3 from '../../assets/LandingPageIconImage/Penguine3.png';
