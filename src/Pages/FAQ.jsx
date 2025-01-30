@@ -1,7 +1,13 @@
 import React from 'react';
 import { Search } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const FAQ = () => {
+  const navigate = useNavigate();
+
+  const handleShowMore = () => {
+    navigate('/transactions');
+  };
 
   const faqSections = [
     {
@@ -63,7 +69,8 @@ const FAQ = () => {
         { text: 'About the blocking function (formerly known as the blacklist)', link: '#' },
         { text: 'I lost contact with the other party during the transaction', link: '#' },
         { text: 'I want to continue trading with the same worker (regarding the "Continuous Ordering and Receiving Function")', link: '#' }
-      ]
+      ],
+      showMore: true  // Added to identify this section for the show more button
     },
     {
       title: 'About registration information',
@@ -125,26 +132,36 @@ const FAQ = () => {
                 </li>
               ))}
             </ul>
+            {section.showMore && (
+              <div className="mt-4 text-right">
+                <button
+                  onClick={handleShowMore}
+                  className="text-sm text-white bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg transition-colors duration-200"
+                >
+                  Show More
+                </button>
+              </div>
+            )}
           </div>
         ))}
       </div>
 
       <div className="text-center text-gray-600 mt-8">
-          <p className="mb-4">
-            If you can't find what you're looking for or the problem persists, please{' '}
-            <a href="#" className="text-pink-600 hover:text-pink-700 hover:underline">
-              contact us here
-            </a>
-            .
-          </p>
-          <p>
-            If you want to return to the Shufuti site, please{' '}
-            <a href="#" className="text-pink-600 hover:text-pink-700 hover:underline">
-              click here
-            </a>
-            .
-          </p>
-        </div>
+        <p className="mb-4">
+          If you can't find what you're looking for or the problem persists, please{' '}
+          <a href="#" className="text-pink-600 hover:text-pink-700 hover:underline">
+            contact us here
+          </a>
+          .
+        </p>
+        <p>
+          If you want to return to the Shufuti site, please{' '}
+          <a href="#" className="text-pink-600 hover:text-pink-700 hover:underline">
+            click here
+          </a>
+          .
+        </p>
+      </div>
     </div>
   );
 };

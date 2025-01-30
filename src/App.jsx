@@ -24,6 +24,7 @@ import ManagementBlog from './Pages/Management/ManagementBlog';
 import ContactUs from './components/UI/ContactUs'
 import Support from './Pages/Support';
 import FAQ from './Pages/FAQ';
+import Transactions from './Pages/Transactions';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -178,6 +179,7 @@ const App = () => {
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/support" element={<Support />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/transactions" element={<Transactions />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>
