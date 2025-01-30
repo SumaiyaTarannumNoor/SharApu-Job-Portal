@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const FAQ = () => {
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleShowMore = () => {
     navigate('/transactions');
@@ -70,7 +71,7 @@ const FAQ = () => {
         { text: 'I lost contact with the other party during the transaction', link: '#' },
         { text: 'I want to continue trading with the same worker (regarding the "Continuous Ordering and Receiving Function")', link: '#' }
       ],
-      showMore: true  // Added to identify this section for the show more button
+      showMore: true
     },
     {
       title: 'About registration information',
@@ -101,6 +102,32 @@ const FAQ = () => {
     }
   ];
 
+  // Filter sections based on search query
+  const filteredSections = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return faqSections;
+    }
+
+    const query = searchQuery.toLowerCase().trim();
+    
+    return faqSections.map(section => {
+      // Filter items within each section
+      const filteredItems = section.items.filter(item =>
+        item.text.toLowerCase().includes(query) ||
+        section.title.toLowerCase().includes(query)
+      );
+
+      // Only return sections that have matching items
+      if (filteredItems.length > 0) {
+        return {
+          ...section,
+          items: filteredItems
+        };
+      }
+      return null;
+    }).filter(Boolean); // Remove null sections
+  }, [searchQuery, faqSections]);
+
   return (
     <div className="max-w-6xl mx-auto p-8">
       <h1 className="text-3xl font-semibold mb-6 text-pink-600">Q&A List</h1>
@@ -108,43 +135,51 @@ const FAQ = () => {
       <div className="relative mb-8">
         <input
           type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search for the keyword you want to find"
           className="w-full p-4 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 pl-12"
         />
         <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-400" size={20} />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {faqSections.map((section, index) => (
-          <div key={index} className="border-b border-pink-100 pb-6 mb-6">
-            <h2 className="text-lg font-semibold mb-4 text-pink-700">
-              {section.title}
-            </h2>
-            <ul className="space-y-3">
-              {section.items.map((item, itemIndex) => (
-                <li key={itemIndex}>
-                  <a
-                    href={item.link}
-                    className="text-pink-600 hover:text-pink-800 hover:underline block transition-colors duration-200"
+      {filteredSections.length === 0 ? (
+        <div className="text-center text-gray-600 py-8">
+          No results found for "{searchQuery}"
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {filteredSections.map((section, index) => (
+            <div key={index} className="border-b border-pink-100 pb-6 mb-6">
+              <h2 className="text-lg font-semibold mb-4 text-pink-700">
+                {section.title}
+              </h2>
+              <ul className="space-y-3">
+                {section.items.map((item, itemIndex) => (
+                  <li key={itemIndex}>
+                    <a
+                      href={item.link}
+                      className="text-pink-600 hover:text-pink-800 hover:underline block transition-colors duration-200"
+                    >
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              {section.showMore && (
+                <div className="mt-4 text-right">
+                  <button
+                    onClick={handleShowMore}
+                    className="text-sm text-white bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg transition-colors duration-200"
                   >
-                    {item.text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            {section.showMore && (
-              <div className="mt-4 text-right">
-                <button
-                  onClick={handleShowMore}
-                  className="text-sm text-white bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg transition-colors duration-200"
-                >
-                  Show More
-                </button>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+                    Show More
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="text-center text-gray-600 mt-8">
         <p className="mb-4">
