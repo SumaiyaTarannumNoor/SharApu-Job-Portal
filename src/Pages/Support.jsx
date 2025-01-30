@@ -17,6 +17,27 @@ const Support = () => {
     { title: 'Remuneration/Payment Management', id: 12 }
   ];
 
+  const faqItems = [
+    { title: "I can't log in", link: "#" },
+    { title: "I lost contact with the other party during the transaction", link: "#" },
+    { title: 'I want to continue trading with the same worker (regarding the "Continuous Ordering and Receiving Function")', link: "#" },
+    { title: "How to refund the budget you paid for a job", link: "#" }
+  ];
+
+  const guidelines = [
+    { title: "Job Request Guidelines", link: "#" },
+    { title: "Work Participation Guidelines", link: "#" },
+    { title: "Announcement from Shufuti", link: "#" }
+  ];
+
+  const usage = [
+    { title: "Task-type job request usage examples", link: "#" }
+  ];
+
+  const userSupport = [
+    { title: "About selling recycled computers", link: "#" }
+  ];
+
   return (
     <div className="max-w-6xl mx-auto p-8">
       <h1 className="text-3xl font-semibold mb-6 bg-gradient-to-r from-pink-500 to-pink-600 bg-clip-text text-transparent">
@@ -36,7 +57,7 @@ const Support = () => {
         <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-400" size={20} />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
         {categories.map((category) => (
           <button
             key={category.id}
@@ -47,6 +68,77 @@ const Support = () => {
             </span>
           </button>
         ))}
+      </div>
+
+      <div className="bg-pink-50 p-8 rounded-lg">
+        <h2 className="text-2xl font-semibold mb-6 text-pink-700">FAQ</h2>
+        <div className="space-y-4 mb-8">
+          {faqItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              className="block text-pink-600 hover:text-pink-700 hover:underline"
+            >
+              {item.title}
+            </a>
+          ))}
+        </div>
+
+        <h2 className="text-2xl font-semibold mb-6 text-pink-700">Guidelines, Services, and More</h2>
+        <div className="space-y-4 mb-8">
+          {guidelines.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              className="block text-pink-600 hover:text-pink-700 hover:underline"
+            >
+              {item.title}
+            </a>
+          ))}
+        </div>
+
+        <h2 className="text-2xl font-semibold mb-6 text-pink-700">Shufuti usage examples</h2>
+        <div className="space-y-4 mb-8">
+          {usage.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              className="block text-pink-600 hover:text-pink-700 hover:underline"
+            >
+              {item.title}
+            </a>
+          ))}
+        </div>
+
+        <h2 className="text-2xl font-semibold mb-6 text-pink-700">User Support Services</h2>
+        <div className="space-y-4 mb-8">
+          {userSupport.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              className="block text-pink-600 hover:text-pink-700 hover:underline"
+            >
+              {item.title}
+            </a>
+          ))}
+        </div>
+
+        <div className="text-center text-gray-600 mt-8">
+          <p className="mb-4">
+            If you can't find what you're looking for or the problem persists, please{' '}
+            <a href="#" className="text-pink-600 hover:text-pink-700 hover:underline">
+              contact us here
+            </a>
+            .
+          </p>
+          <p>
+            If you want to return to the Shufuti site, please{' '}
+            <a href="#" className="text-pink-600 hover:text-pink-700 hover:underline">
+              click here
+            </a>
+            .
+          </p>
+        </div>
       </div>
     </div>
   );
