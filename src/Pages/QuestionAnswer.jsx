@@ -1,6 +1,4 @@
 import React from 'react';
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search } from "lucide-react";
 
 const QuestionAnswer = () => {
@@ -8,22 +6,22 @@ const QuestionAnswer = () => {
     <div className="max-w-3xl mx-auto p-4 space-y-6">
       {/* Search Section */}
       <div className="relative">
-        <Input 
+        <input 
           type="text"
-          placeholder="Type to enter your keywork..."
-          className="pl-10 w-full border-pink-200 focus:border-pink-300"
+          placeholder="Type to enter your keyword..."
+          className="w-full px-10 py-2 border rounded-md border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-pink-300"
         />
         <Search className="absolute left-3 top-2.5 h-5 w-5 text-pink-400" />
       </div>
 
-      {/* Business Hours Card */}
-      <Card className="border-pink-100">
-        <CardHeader>
-          <CardTitle className="text-xl text-pink-800">
+      {/* Business Hours Section */}
+      <div className="bg-white border border-pink-100 rounded-lg shadow-sm">
+        <div className="p-4 border-b border-pink-100">
+          <h2 className="text-xl font-semibold text-pink-800">
             SharApu's business days and business hours
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
+          </h2>
+        </div>
+        <div className="p-4 space-y-4">
           <p className="text-gray-700">
             SharApu's business days and business hours are 
             <span className="font-semibold"> from 10:00AM to 7:00PM on weekdays, excluding Saturdays, Sundays, and holidays</span>
@@ -35,17 +33,17 @@ const QuestionAnswer = () => {
           <p className="text-gray-700">
             In addition, we will announce our closures during major holidays such as the New Year holidays and Golden Week in the "News" section.
           </p>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       {/* FAQ Section */}
-      <Card className="border-pink-100">
-        <CardHeader>
-          <CardTitle className="text-xl text-pink-800">
+      <div className="bg-white border border-pink-100 rounded-lg shadow-sm">
+        <div className="p-4 border-b border-pink-100">
+          <h2 className="text-xl font-semibold text-pink-800">
             Frequently Asked Questions
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
+          </h2>
+        </div>
+        <div className="p-4 space-y-4">
           <div className="space-y-2">
             <h3 className="font-semibold text-pink-700">
               ▼ I registered a job on Saturday, has it been published yet?
@@ -54,17 +52,17 @@ const QuestionAnswer = () => {
               For jobs received on weekends and holidays, we will process them from the next business day, Monday, and notify you of the results. This will take longer than usual, so please register well in advance.
             </p>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       {/* Related Articles */}
-      <Card className="border-pink-100">
-        <CardHeader>
-          <CardTitle className="text-xl text-pink-800">
+      <div className="bg-white border border-pink-100 rounded-lg shadow-sm">
+        <div className="p-4 border-b border-pink-100">
+          <h2 className="text-xl font-semibold text-pink-800">
             Related articles
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
+          </h2>
+        </div>
+        <div className="p-4">
           <ul className="space-y-2">
             {[
               'Get paid',
@@ -80,8 +78,8 @@ const QuestionAnswer = () => {
               </li>
             ))}
           </ul>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       {/* Footer Links */}
       <div className="text-center space-y-2 text-sm">
