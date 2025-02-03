@@ -26,6 +26,7 @@ import Support from './Pages/Support';
 import FAQ from './Pages/FAQ';
 import Transactions from './Pages/Transactions';
 import QuestionAnswer from './Pages/QuestionAnswer';
+import MainProfile from './components/Profile/MainProfile';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -182,6 +183,7 @@ const App = () => {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/question-answer" element={<QuestionAnswer />} />
+            <Route path="/main-profile" element={<MainProfile />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>
