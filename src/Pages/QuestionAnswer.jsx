@@ -20,12 +20,12 @@ const QuestionAnswer = () => {
       <Card className="border-pink-100">
         <CardHeader>
           <CardTitle className="text-xl text-pink-800">
-            Shufuti's business days and business hours
+            SharApu's business days and business hours
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-gray-700">
-            Shufuti's business days and business hours are 
+            SharApu's business days and business hours are 
             <span className="font-semibold"> from 10:00AM to 7:00PM on weekdays, excluding Saturdays, Sundays, and holidays</span>
           </p>
           <p className="text-gray-700">
@@ -90,7 +90,7 @@ const QuestionAnswer = () => {
           <a href="#" className="text-pink-600 hover:text-pink-800 hover:underline">contact us</a> here.
         </p>
         <p className="text-gray-600">
-          If you want to return to the Shufuti site, please{' '}
+          If you want to return to the SharApu site, please{' '}
           <a href="#" className="text-pink-600 hover:text-pink-800 hover:underline">click here</a>.
         </p>
       </div>
