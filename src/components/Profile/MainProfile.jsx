@@ -4,6 +4,7 @@ import { User, ChevronDown } from 'lucide-react';
 import MiniProfileCard from './MiniProfileCard';
 import UserSettingsSection from './UserSettingsSection';
 import DrawerNavigation from './DrawerNavigation';
+import SearchForAJobPage from '../../Pages/SearchForAJob';
 
 const MainProfile = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -79,6 +80,8 @@ const MainProfile = () => {
             </div>
 
             <UserSettingsSection />
+
+            <SearchForAJobPage />
           </div>
 
 
@@ -92,6 +95,41 @@ const MainProfile = () => {
             </div>
           </div>
         </div>
+        {/* Profile Navigation Section */}
+<div className="bg-pink-50 p-6 mt-10">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {/* Work and Client Management */}
+    <div>
+      <h3 className="font-semibold text-pink-700">Work and Client Management</h3>
+      <hr className="border-pink-300 my-2" />
+      <ul className="space-y-2">
+        <li><Link to="#" className="text-pink-600 hover:underline">Work Management</Link></li>
+        <li><Link to="#" className="text-pink-600 hover:underline">Client Management</Link></li>
+        <li><Link to="#" className="text-pink-600 hover:underline">Search for a job</Link></li>
+      </ul>
+    </div>
+
+    {/* Compensation Management */}
+    <div>
+      <h3 className="font-semibold text-pink-700">Compensation Management</h3>
+      <hr className="border-pink-300 my-2" />
+      <ul className="space-y-2">
+        <li><Link to="#" className="text-pink-600 hover:underline">Reward receiving account</Link></li>
+      </ul>
+    </div>
+
+    {/* Others */}
+    <div>
+      <h3 className="font-semibold text-pink-700">Others</h3>
+      <hr className="border-pink-300 my-2" />
+      <ul className="space-y-2">
+        <li><Link to="#" className="text-pink-600 hover:underline">User Settings</Link></li>
+        <li><Link to="#" className="text-pink-600 hover:underline">User Guide</Link></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
       </main>
     </div>
   );
