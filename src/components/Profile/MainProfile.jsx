@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { User, ChevronDown } from 'lucide-react';
 import MiniProfileCard from './MiniProfileCard';
+import UserSettingsSection from './UserSettingsSection';
 
 const MainProfile = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -75,7 +76,10 @@ const MainProfile = () => {
                 Search for a job
               </button>
             </div>
+
+            <UserSettingsSection />
           </div>
+
 
           {/* Messages Section */}
           <div>
