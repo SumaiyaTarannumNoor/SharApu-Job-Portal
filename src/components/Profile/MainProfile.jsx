@@ -1,26 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { User } from 'lucide-react';
+import { User, ChevronDown } from 'lucide-react';
+import MiniProfileCard from './MiniProfileCard';
 
 const MainProfile = () => {
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Top Navigation */}
       <header className="bg-white shadow-sm">
         <div className="flex justify-between items-center px-4 py-2">
           <Link to="/" className="text-2xl font-bold text-pink-600">SharApu</Link>
-          <div className="flex items-center gap-2">
-            <User className="w-6 h-6 text-white bg-pink-500 rounded-full p-1" />
-            <span className="text-gray-700">ahmedul</span>
-            <button className="ml-2">
-              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
+          <div className="relative">
+            <div 
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+            >
+              <User className="w-6 h-6 text-white bg-pink-500 rounded-full p-1" />
+              <span className="text-gray-700">ahmedul</span>
+              <ChevronDown className={`w-4 h-4 text-gray-600 transition-transform duration-200 ${isProfileOpen ? 'transform rotate-180' : ''}`} />
+            </div>
+            <MiniProfileCard isOpen={isProfileOpen} />
           </div>
         </div>
 
-        {/* Main Navigation */}
+        {/* Rest of the component remains unchanged */}
         <nav className="bg-pink-400">
           <div className="flex space-x-1 px-4">
             <NavLink>Home</NavLink>
@@ -31,7 +36,6 @@ const MainProfile = () => {
           </div>
         </nav>
 
-        {/* Warning Banner */}
         <div className="bg-green-50 p-2 text-sm text-green-800">
           If you do not register a financial institution account for withdrawals within 4 months of user registration, functionality will be restricted. 
           <button className="text-pink-600 hover:text-pink-700 ml-1">
@@ -90,9 +94,10 @@ const MainProfile = () => {
 
 // Navigation Link Component
 const NavLink = ({ children }) => (
-  <button className="px-4 py-2 text-white hover:bg-gray-700 transition-colors duration-200">
-    {children}
-  </button>
-);
+    <button className="px-4 py-2 text-white hover:bg-pink-500 transition-colors duration-200">
+      {children}
+    </button>
+  );
+  
 
 export default MainProfile;

@@ -1,18 +1,11 @@
 import React from 'react';
 import { ChevronDown, Home, User, Settings, BookOpen, LogOut, Bell } from 'lucide-react';
 
-const MiniProfileCard = () => {
+const MiniProfileCard = ({ isOpen }) => {
+  if (!isOpen) return null;
+  
   return (
-    <div className="w-48 bg-white rounded-lg shadow-lg overflow-hidden">
-      {/* Header with profile info */}
-      <div className="bg-pink-500 p-3 flex items-center gap-2">
-        <div className="w-8 h-8 rounded-full bg-pink-200 flex items-center justify-center">
-          <User className="w-4 h-4 text-pink-500" />
-        </div>
-        <span className="text-white font-medium">ahmedul</span>
-        <ChevronDown className="w-4 h-4 text-white ml-auto" />
-      </div>
-
+    <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-50">
       {/* Menu items */}
       <nav className="py-2">
         <a href="#" className="flex items-center gap-3 px-4 py-2 hover:bg-pink-50 text-gray-700">
