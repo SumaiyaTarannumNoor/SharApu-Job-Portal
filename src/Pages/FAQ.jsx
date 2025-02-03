@@ -6,8 +6,10 @@ const FAQ = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
 
-  const handleShowMore = () => {
-    navigate('/transactions');
+  const handleQuestionClick = (questionText) => {
+    // Encode the question text to handle special characters in the URL
+    const encodedQuestion = encodeURIComponent(questionText);
+    navigate(`/question-answer?question=${encodedQuestion}`);
   };
 
   const faqSections = [
@@ -102,8 +104,8 @@ const FAQ = () => {
     }
   ];
 
-  // Filter sections based on search query
-  const filteredSections = useMemo(() => {
+   // Filter sections based on search query
+   const filteredSections = useMemo(() => {
     if (!searchQuery.trim()) {
       return faqSections;
     }
@@ -111,13 +113,11 @@ const FAQ = () => {
     const query = searchQuery.toLowerCase().trim();
     
     return faqSections.map(section => {
-      // Filter items within each section
       const filteredItems = section.items.filter(item =>
         item.text.toLowerCase().includes(query) ||
         section.title.toLowerCase().includes(query)
       );
 
-      // Only return sections that have matching items
       if (filteredItems.length > 0) {
         return {
           ...section,
@@ -125,7 +125,7 @@ const FAQ = () => {
         };
       }
       return null;
-    }).filter(Boolean); // Remove null sections
+    }).filter(Boolean);
   }, [searchQuery, faqSections]);
 
   return (
@@ -157,25 +157,15 @@ const FAQ = () => {
               <ul className="space-y-3">
                 {section.items.map((item, itemIndex) => (
                   <li key={itemIndex}>
-                    <a
-                      href={item.link}
-                      className="text-pink-600 hover:text-pink-800 hover:underline block transition-colors duration-200"
+                    <button
+                      onClick={() => handleQuestionClick(item.text)}
+                      className="text-left w-full text-pink-600 hover:text-pink-800 hover:underline block transition-colors duration-200"
                     >
                       {item.text}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
-              {section.showMore && (
-                <div className="mt-4 text-right">
-                  <button
-                    onClick={handleShowMore}
-                    className="text-sm text-white bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg transition-colors duration-200"
-                  >
-                    Show More
-                  </button>
-                </div>
-              )}
             </div>
           ))}
         </div>
