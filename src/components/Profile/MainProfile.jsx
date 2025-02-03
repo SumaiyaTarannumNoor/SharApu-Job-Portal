@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { User, ChevronDown } from 'lucide-react';
 import MiniProfileCard from './MiniProfileCard';
 import UserSettingsSection from './UserSettingsSection';
+import DrawerNavigation from './DrawerNavigation';
 
 const MainProfile = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -12,7 +13,15 @@ const MainProfile = () => {
       {/* Top Navigation */}
       <header className="bg-white shadow-sm">
         <div className="flex justify-between items-center px-4 py-2">
-          <Link to="/" className="text-2xl font-bold text-pink-600">SharApu</Link>
+          <div className="flex items-center gap-2">
+            {/* Only show drawer trigger on mobile */}
+            {/* <div className="lg:hidden">
+              <DrawerNavigation />
+            </div> */}
+            <Link to="/" className="text-2xl font-bold text-pink-600">
+              SharApu
+            </Link>
+          </div>
           <div className="relative">
             <div 
               className="flex items-center gap-2 cursor-pointer"
@@ -26,16 +35,8 @@ const MainProfile = () => {
           </div>
         </div>
 
-        {/* Rest of the component remains unchanged */}
-        <nav className="bg-pink-400">
-          <div className="flex space-x-1 px-4">
-            <NavLink>Home</NavLink>
-            <NavLink>Search for a job</NavLink>
-            <NavLink>Work Management</NavLink>
-            <NavLink>Interesting! List</NavLink>
-            <NavLink>Client Management</NavLink>
-          </div>
-        </nav>
+        {/* Desktop navigation will be hidden on mobile */}
+        <DrawerNavigation />
 
         <div className="bg-green-50 p-2 text-sm text-green-800">
           If you do not register a financial institution account for withdrawals within 4 months of user registration, functionality will be restricted. 
