@@ -1,14 +1,19 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Transactions = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleQuestionClick = (questionText) => {
+    const encodedQuestion = encodeURIComponent(questionText);
+    navigate(`/question-answer?question=${encodedQuestion}`);
+  };
 
   const transactionQuestions = [
     {
@@ -88,7 +93,6 @@ const Transactions = () => {
     }
   ];
 
-  // Filter questions based on search query
   const filteredQuestions = useMemo(() => {
     if (!searchQuery.trim()) return transactionQuestions;
     
@@ -98,7 +102,6 @@ const Transactions = () => {
     );
   }, [searchQuery]);
 
-  // Handle search input change
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
@@ -155,12 +158,12 @@ const Transactions = () => {
               key={question.id}
               className="border-b border-gray-200 pb-4"
             >
-              <Link
-                to={question.link}
-                className="text-pink-500 hover:text-pink-600 hover:underline block"
+              <button
+                onClick={() => handleQuestionClick(question.text)}
+                className="text-left w-full text-pink-500 hover:text-pink-600 hover:underline block"
               >
                 {question.text}
-              </Link>
+              </button>
             </div>
           ))}
         </div>

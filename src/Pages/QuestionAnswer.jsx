@@ -1,25 +1,40 @@
 import React from 'react';
 import { Search } from "lucide-react";
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams, useNavigate, Link } from 'react-router-dom';
 
 const QuestionAnswer = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const questionTitle = decodeURIComponent(searchParams.get('question') || "Shufuti's business days and business hours");
+  const questionTitle = decodeURIComponent(searchParams.get('question') || "");
 
   const handleBack = () => {
-    navigate('/faq');
+    // Check if we came from transactions page
+    if (document.referrer.includes('transactions')) {
+      navigate('/transactions');
+    } else {
+      navigate('/faq');
+    }
   };
 
   return (
     <div className="max-w-3xl mx-auto p-4 space-y-6">
-      {/* Back Button */}
-      <button 
-        onClick={handleBack}
-        className="text-pink-600 hover:text-pink-800 flex items-center gap-2 mb-4"
-      >
-        ← Back to FAQ
-      </button>
+      {/* Breadcrumb */}
+      <nav className="flex items-center space-x-2 text-sm mb-6">
+        <Link to="/support" className="text-pink-500 hover:text-pink-600">
+          Shufuti Support
+        </Link>
+        <span className="text-gray-400">›</span>
+        <Link to="/qanda" className="text-pink-500 hover:text-pink-600">
+          Q&A List
+        </Link>
+        <span className="text-gray-400">›</span>
+        <button 
+          onClick={handleBack}
+          className="text-pink-500 hover:text-pink-600"
+        >
+          Back
+        </button>
+      </nav>
 
       {/* Search Section */}
       <div className="relative">
@@ -40,14 +55,7 @@ const QuestionAnswer = () => {
         </div>
         <div className="p-4 space-y-4">
           <p className="text-gray-700">
-            {questionTitle === "Shufuti's business days and business hours" ? (
-              <>
-                Shufuti's business days and business hours are 
-                <span className="font-semibold"> from 10:00AM to 7:00PM on weekdays, excluding Saturdays, Sundays, and holidays</span>
-              </>
-            ) : (
-              "Answer content for this question will be displayed here."
-            )}
+            Answer content for "{questionTitle}" will be displayed here.
           </p>
         </div>
       </div>
@@ -56,7 +64,9 @@ const QuestionAnswer = () => {
       <div className="text-center space-y-2 text-sm">
         <p className="text-gray-600">
           If you can't find what you're looking for or the problem persists, please{' '}
-          <a href="#" className="text-pink-600 hover:text-pink-800 hover:underline">contact us</a> here.
+          <Link to="/contact" className="text-pink-600 hover:text-pink-800 hover:underline">
+            contact us
+          </Link> here.
         </p>
         <p className="text-gray-600">
           If you want to return to the Shufuti site, please{' '}
