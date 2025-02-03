@@ -7,9 +7,12 @@ const FAQ = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleQuestionClick = (questionText) => {
-    // Encode the question text to handle special characters in the URL
     const encodedQuestion = encodeURIComponent(questionText);
     navigate(`/question-answer?question=${encodedQuestion}`);
+  };
+
+  const handleShowMore = () => {
+    navigate('/transactions');
   };
 
   const faqSections = [
@@ -104,8 +107,7 @@ const FAQ = () => {
     }
   ];
 
-   // Filter sections based on search query
-   const filteredSections = useMemo(() => {
+    const filteredSections = useMemo(() => {
     if (!searchQuery.trim()) {
       return faqSections;
     }
@@ -121,7 +123,8 @@ const FAQ = () => {
       if (filteredItems.length > 0) {
         return {
           ...section,
-          items: filteredItems
+          items: filteredItems,
+          showMore: section.showMore // Preserve the showMore property
         };
       }
       return null;
@@ -166,6 +169,16 @@ const FAQ = () => {
                   </li>
                 ))}
               </ul>
+              {section.showMore && (
+                <div className="mt-4 text-right">
+                  <button
+                    onClick={handleShowMore}
+                    className="text-sm text-white bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg transition-colors duration-200"
+                  >
+                    Show More
+                  </button>
+                </div>
+              )}
             </div>
           ))}
         </div>
