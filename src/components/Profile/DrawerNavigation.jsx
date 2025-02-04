@@ -190,8 +190,8 @@ const DrawerNavigation = () => {
           {/* Desktop Reward History Button */}
           <button
             onClick={handleRewardHistory}
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 
-              rounded-md px-4 py-2 flex items-center gap-2
+            className="bg-white border-4 border-indigo-500 hover:bg-pink-500 text-black 
+              rounded-md px-4 py-1 flex items-center gap-2
               transition-all duration-200 transform hover:scale-105
               shadow-md hover:shadow-lg"
           >
