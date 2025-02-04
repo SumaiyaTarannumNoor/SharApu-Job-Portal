@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Social from '../Authenticator/socialLogin';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,6 +13,13 @@ const LoginForm = () => {
     e.preventDefault();
     // Handle login submission
   };
+
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate('/main-profile');
+  };
+
 
   return (
     <div className="max-w-xl mx-auto px-4 py-8">
@@ -61,7 +69,7 @@ const LoginForm = () => {
           </div>
 
           {/* Login Button */}
-          <button
+          <button onClick={handleLogin}
             type="submit"
             className="w-full bg-pink-500 text-white py-2.5 rounded hover:bg-pink-600 transition-colors duration-300"
           >
