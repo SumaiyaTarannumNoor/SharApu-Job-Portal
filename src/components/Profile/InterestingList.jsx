@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckSquare } from 'lucide-react';
+import DrawerNavigation from './DrawerNavigation';
 
 const InterestingList = () => {
   const [activeTab, setActiveTab] = useState('interesting');
@@ -14,6 +15,7 @@ const InterestingList = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
+      <DrawerNavigation />
       <nav className="text-sm mb-8">
         <Link to="/" className="text-pink-500 hover:underline">Work from home Shufuti</Link>
         <span className="mx-2 text-gray-500">&gt;</span>
