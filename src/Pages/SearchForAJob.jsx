@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
+import { User, ChevronDown, X } from 'lucide-react';
 import DrawerNavigation from '../components/Profile/DrawerNavigation';
+import MiniProfileCard from '../components/Profile/MiniProfileCard';
 import legssystem from '../../assets/RecruiterIconImage/legssystem.png';
 import logoazw from '../../assets/RecruiterIconImage/logoazw.png';
 import lpemake from '../../assets/RecruiterIconImage/lpe_mark.jpg';
@@ -9,10 +11,12 @@ import mishonna from '../../assets/RecruiterIconImage/mishonna.jpg';
 import webhero from '../../assets/RecruiterIconImage/webhero_logo_icon.png';
 
 const SearchForAJobPage = () => {
+  // Location and navigation state
   const location = useLocation();
   const showNav = location.state?.from === 'mainProfile';
 
-  // State management
+  // Component states
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState({});
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,15 +27,8 @@ const SearchForAJobPage = () => {
     onlyStandingOrders: false
   });
 
+  // Constants
   const jobsPerPage = 8;
-
-  const toggleCategory = (category) => {
-    setExpandedCategories(prev => ({
-      ...prev,
-      [category]: !prev[category]
-    }));
-  };
-
   const categories = [
     'Data entry and product registration',
     'lighting',
@@ -508,6 +505,32 @@ const SearchForAJobPage = () => {
         hasStandingOrder: true
       },
   ];
+
+  // Filter and search handlers
+  const toggleCategory = (category) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [category]: !prev[category]
+    }));
+  };
+
+  const handleJobTypeChange = (type) => {
+    setSelectedJobType(type);
+    setCurrentPage(1);
+  };
+
+  const handleFilterChange = (filterName) => {
+    setFilters(prev => ({
+      ...prev,
+      [filterName]: !prev[filterName]
+    }));
+    setCurrentPage(1);
+  };
+
+  const handleSearch = () => {
+    setCurrentPage(1);
+  };
+
   // Filter jobs based on selected criteria
   const filteredJobs = jobs.filter(job => {
     if (selectedJobType !== 'all' && job.type !== selectedJobType) return false;
@@ -528,29 +551,38 @@ const SearchForAJobPage = () => {
     window.scrollTo(0, 0);
   };
 
-  const handleJobTypeChange = (type) => {
-    setSelectedJobType(type);
-    setCurrentPage(1);
-  };
-
-  const handleFilterChange = (filterName) => {
-    setFilters(prev => ({
-      ...prev,
-      [filterName]: !prev[filterName]
-    }));
-    setCurrentPage(1);
-  };
-
-  const handleSearch = () => {
-    setCurrentPage(1);
-  };
-
   return (
-    <div className="w-full min-h-screen bg-white">
-      {/* Show navigation only if coming from MainProfile */}
+    <div className="min-h-screen bg-gray-50">
+      {/* Conditional Navigation */}
       {showNav && (
-        <header className="bg-white shadow-sm mb-4">
+        <header className="bg-white shadow-sm mb-8">
+          <div className="flex justify-between items-center px-4 py-2">
+            <div className="flex items-center gap-2">
+              <Link to="/" className="text-2xl font-bold text-pink-600">
+                SharApu
+              </Link>
+            </div>
+            <div className="relative">
+              <div 
+                className="flex items-center gap-2 cursor-pointer"
+                onClick={() => setIsProfileOpen(!isProfileOpen)}
+              >
+                <User className="w-6 h-6 text-white bg-pink-500 rounded-full p-1" />
+                <span className="text-gray-700">ahmedul</span>
+                <ChevronDown className={`w-4 h-4 text-gray-600 transition-transform duration-200 ${isProfileOpen ? 'transform rotate-180' : ''}`} />
+              </div>
+              <MiniProfileCard isOpen={isProfileOpen} />
+            </div>
+          </div>
+
           <DrawerNavigation />
+
+          <div className="bg-green-50 p-2 text-sm text-green-800">
+            If you do not register a financial institution account for withdrawals within 4 months of user registration, functionality will be restricted. 
+            <button className="text-pink-600 hover:text-pink-700 ml-1">
+              Click here to register your account information &gt;
+            </button>
+          </div>
         </header>
       )}
 
@@ -562,18 +594,18 @@ const SearchForAJobPage = () => {
         />
       )}
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Breadcrumb Navigation */}
-        <nav className="text-sm py-4 mb-4 flex items-center">
-          <Link to="/" className="text-pink-500">Work from home SharApu</Link>
-          <span className="mx-2">&gt;</span>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Breadcrumb */}
+        <nav className="text-sm mb-4 flex items-center">
+          <Link to="/" className="text-pink-500 hover:underline">Work from home SharApu</Link>
+          <span className="mx-2 text-gray-500">&gt;</span>
           <span className="text-gray-600">Search Jobs</span>
         </nav>
 
+        {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-xl sm:text-2xl font-bold">List of work-from-home jobs</h1>
           
-          {/* Mobile Filter Button */}
           <button 
             className="lg:hidden px-4 py-2 bg-pink-500 text-white rounded-md"
             onClick={() => setIsSidebarOpen(true)}
@@ -593,24 +625,27 @@ const SearchForAJobPage = () => {
             z-50 lg:z-0
             p-6 lg:p-0
           `}>
-            {/* Close button for mobile */}
+            {/* Mobile close button */}
             <button 
               className="lg:hidden absolute top-4 right-4 text-gray-500"
               onClick={() => setIsSidebarOpen(false)}
             >
-              ✕
+              <X className="w-6 h-6" />
             </button>
 
             <div className="space-y-6">
-              {/* Popular Tags Section */}
+              {/* Popular Tags */}
               <div className="bg-gray-100 p-4 rounded-lg">
                 <h2 className="font-bold mb-4">Popular Tags</h2>
                 <div className="space-y-2">
                   {popularTags.map((tag, index) => (
                     <div key={index} className="text-sm">
                       <button 
-                        onClick={() => setSearchTerm(tag)}
-                        className="text-blue-400 hover:underline"
+                        onClick={() => {
+                          setSearchTerm(tag);
+                          setCurrentPage(1);
+                        }}
+                        className="text-pink-500 hover:underline"
                       >
                         #{tag}
                       </button>
@@ -619,43 +654,25 @@ const SearchForAJobPage = () => {
                 </div>
               </div>
 
-              {/* Job Type & Free Word Section */}
+              {/* Job Type & Search */}
               <div className="bg-gray-100 p-4 rounded-lg">
                 <h2 className="font-bold mb-4">Job type / Free word</h2>
                 
                 <div className="mb-6">
                   <h3 className="font-semibold mb-3">Job Type</h3>
                   <div className="space-y-2">
-                    <label className="flex items-center gap-2">
-                      <input 
-                        type="radio" 
-                        name="jobType" 
-                        value="all" 
-                        checked={selectedJobType === 'all'}
-                        onChange={() => handleJobTypeChange('all')}
-                      />
-                      <span>all</span>
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input 
-                        type="radio" 
-                        name="jobType" 
-                        value="project"
-                        checked={selectedJobType === 'project'}
-                        onChange={() => handleJobTypeChange('project')}
-                      />
-                      <span>project</span>
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input 
-                        type="radio" 
-                        name="jobType" 
-                        value="task"
-                        checked={selectedJobType === 'task'}
-                        onChange={() => handleJobTypeChange('task')}
-                      />
-                      <span>task</span>
-                    </label>
+                    {['all', 'project', 'task'].map(type => (
+                      <label key={type} className="flex items-center gap-2">
+                        <input 
+                          type="radio" 
+                          name="jobType" 
+                          value={type}
+                          checked={selectedJobType === type}
+                          onChange={() => handleJobTypeChange(type)}
+                        />
+                        <span className="capitalize">{type}</span>
+                      </label>
+                    ))}
                   </div>
                 </div>
 
@@ -671,41 +688,37 @@ const SearchForAJobPage = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <label className="flex items-center gap-2">
-                    <input 
-                      type="checkbox"
-                      checked={filters.onlyOpenJobs}
-                      onChange={() => handleFilterChange('onlyOpenJobs')}
-                    />
-                    <span>Show only open jobs</span>
-                  </label>
-                  <label className="flex items-center gap-2">
-                    <input 
-                      type="checkbox"
-                      checked={filters.onlyStandingOrders}
-                      onChange={() => handleFilterChange('onlyStandingOrders')}
-                    />
-                    <span>Show only jobs with standing orders</span>
-                  </label>
+                  {['onlyOpenJobs', 'onlyStandingOrders'].map((filterName) => (
+                    <label key={filterName} className="flex items-center gap-2">
+                      <input 
+                        type="checkbox"
+                        checked={filters[filterName]}
+                        onChange={() => handleFilterChange(filterName)}
+                      />
+                      <span>
+                        {filterName === 'onlyOpenJobs' ? 'Show only open jobs' : 'Show only jobs with standing orders'}
+                      </span>
+                    </label>
+                  ))}
                 </div>
 
                 <button 
                   onClick={handleSearch}
-                  className="w-full mt-4 bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
+                  className="w-full mt-4 bg-pink-500 text-white py-2 px-4 rounded-md hover:bg-pink-600 transition-colors"
                 >
-                  Narrow your search
+                  Search
                 </button>
               </div>
 
-              {/* Categories Section */}
+              {/* Categories */}
               <div className="bg-gray-100 p-4 rounded-lg">
-                <h2 className="font-bold mb-4">category</h2>
+                <h2 className="font-bold mb-4">Categories</h2>
                 <div className="space-y-2">
                   {categories.map((category) => (
                     <div key={category} className="border-b border-gray-200 py-2 last:border-b-0">
                       <button
                         onClick={() => toggleCategory(category)}
-                        className="w-full flex items-center justify-between text-left hover:text-blue-600"
+                        className="w-full flex items-center justify-between text-left hover:text-pink-500"
                       >
                         <span className="text-sm">{category}</span>
                         <span className="text-xl font-bold">
@@ -726,6 +739,7 @@ const SearchForAJobPage = () => {
 
           {/* Main Content */}
           <div className="lg:w-3/4">
+            {/* Sort Options */}
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-lg sm:text-xl">Search Results</h2>
               <select className="border rounded p-2">
@@ -738,7 +752,7 @@ const SearchForAJobPage = () => {
             {/* Job Listings */}
             <div className="space-y-4">
               {currentJobs.map(job => (
-                <div key={job.id} className="bg-pink-50 p-4 rounded-lg">
+                <div key={job.id} className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:border-pink-200 transition-colors">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
                     <span className="bg-pink-500 text-white px-2 py-1 rounded text-sm">{job.type}</span>
                     {job.hasStandingOrder && (
@@ -748,24 +762,26 @@ const SearchForAJobPage = () => {
                     )}
                     <div className="flex flex-wrap gap-2">
                       {job.tags.map((tag, index) => (
-                        <span key={index} className="text-pink-600 text-sm">#{tag}</span>
+                        <span key={index} className="text-pink-500 text-sm">#{tag}</span>
                       ))}
                     </div>
                     <span className="ml-auto text-gray-600 text-sm">Views: {job.views}</span>
                   </div>
 
-                  <h3 className="text-blue-400 text-base sm:text-lg mb-2">[PR] {job.title}</h3>
+                  <h3 className="text-pink-600 text-base sm:text-lg mb-2 hover:underline cursor-pointer">
+                    [PR] {job.title}
+                  </h3>
 
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                     <div>
                       <div className="mb-2">
-                        <span className="block sm:inline">Reward amount: </span>
-                        <span className="text-red-600 font-bold">{job.reward} yen</span>
-                        <span className="text-gray-600 ml-2">(Price: {job.price} yen)</span>
+                        <span className="text-gray-600">Reward amount: </span>
+                        <span className="text-pink-600 font-bold">{job.reward.toLocaleString()} yen</span>
+                        <span className="text-gray-600 ml-2">(Price: {job.price.toLocaleString()} yen)</span>
                       </div>
                       <div>
-                        <span className="block sm:inline">Estimated hourly rate: </span>
-                        <span className="font-bold">{job.estimatedHourlyRate} yen</span>
+                        <span className="text-gray-600">Estimated hourly rate: </span>
+                        <span className="font-bold">{job.estimatedHourlyRate.toLocaleString()} yen</span>
                       </div>
                     </div>
                     
@@ -774,7 +790,7 @@ const SearchForAJobPage = () => {
                         <div className="text-red-600">{job.daysLeft} days left</div>
                       )}
                       {job.membersOnly && (
-                        <div className="font-bold">Members Only</div>
+                        <div className="font-bold text-gray-700">Members Only</div>
                       )}
                     </div>
                   </div>
@@ -788,7 +804,9 @@ const SearchForAJobPage = () => {
                       />
                       <div>
                         <div className="font-bold text-sm sm:text-base">{job.company.name}</div>
-                        <div className="text-sm">Average hourly rate: {job.company.averageHourlyRate} yen</div>
+                        <div className="text-sm text-gray-600">
+                          Average hourly rate: {job.company.averageHourlyRate.toLocaleString()} yen
+                        </div>
                       </div>
                     </div>
                   )}
@@ -809,6 +827,7 @@ const SearchForAJobPage = () => {
               >
                 Previous
               </button>
+              
               {[...Array(totalPages)].map((_, index) => (
                 <button
                   key={index + 1}
@@ -822,6 +841,7 @@ const SearchForAJobPage = () => {
                   {index + 1}
                 </button>
               ))}
+              
               <button
                 onClick={() => paginate(currentPage + 1)}
                 disabled={currentPage === totalPages}
