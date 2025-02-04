@@ -22,6 +22,11 @@ const DrawerNavigation = () => {
     setIsOpen(false);
   };
 
+  const handleInterestingList = () => {
+    navigate('/interesting-list');
+    setIsOpen(false);
+  };
+
   // Close drawer when screen size becomes large
   useEffect(() => {
     const handleResize = () => {
@@ -104,7 +109,7 @@ const DrawerNavigation = () => {
             >
               Work Management
             </MobileNavLink>
-            <MobileNavLink onClick={() => setIsOpen(false)}>
+            <MobileNavLink onClick={handleInterestingList}>
               Interesting! List
             </MobileNavLink>
             <MobileNavLink onClick={() => setIsOpen(false)}>
@@ -135,7 +140,8 @@ const DrawerNavigation = () => {
           >
             Work Management
           </NavLink>
-          <NavLink>Interesting! List</NavLink>
+          <NavLink onClick={handleInterestingList}
+            isActive={location.pathname === '/interesting-list'}>Interesting! List</NavLink>
           <NavLink>Client Management</NavLink>
         </div>
       </nav>
