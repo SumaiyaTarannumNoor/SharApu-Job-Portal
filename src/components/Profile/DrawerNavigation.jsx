@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const DrawerNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleMainProfile = () => {
     navigate('/main-profile');
@@ -13,6 +14,11 @@ const DrawerNavigation = () => {
 
   const handleSearchForAJob = () => {
     navigate('/search-for-a-job', { state: { from: 'mainProfile' } });
+    setIsOpen(false);
+  };
+
+  const handleWorkManagement = () => {
+    navigate('/work-management');
     setIsOpen(false);
   };
 
@@ -80,11 +86,30 @@ const DrawerNavigation = () => {
 
         <nav className="bg-pink-400 h-full">
           <div className="flex flex-col space-y-1">
-            <MobileNavLink onClick={handleMainProfile}>Home</MobileNavLink>
-            <MobileNavLink onClick={handleSearchForAJob}>Search for a job</MobileNavLink>
-            <MobileNavLink onClick={() => setIsOpen(false)}>Work Management</MobileNavLink>
-            <MobileNavLink onClick={() => setIsOpen(false)}>Interesting! List</MobileNavLink>
-            <MobileNavLink onClick={() => setIsOpen(false)}>Client Management</MobileNavLink>
+            <MobileNavLink 
+              onClick={handleMainProfile}
+              isActive={location.pathname === '/main-profile'}
+            >
+              Home
+            </MobileNavLink>
+            <MobileNavLink 
+              onClick={handleSearchForAJob}
+              isActive={location.pathname === '/search-for-a-job'}
+            >
+              Search for a job
+            </MobileNavLink>
+            <MobileNavLink 
+              onClick={handleWorkManagement}
+              isActive={location.pathname === '/work-management'}
+            >
+              Work Management
+            </MobileNavLink>
+            <MobileNavLink onClick={() => setIsOpen(false)}>
+              Interesting! List
+            </MobileNavLink>
+            <MobileNavLink onClick={() => setIsOpen(false)}>
+              Client Management
+            </MobileNavLink>
           </div>
         </nav>
       </div>
@@ -92,9 +117,24 @@ const DrawerNavigation = () => {
       {/* Desktop Navigation */}
       <nav className="bg-pink-400 hidden lg:block w-full">
         <div className="flex space-x-1 px-4">
-          <NavLink onClick={handleMainProfile}>Home</NavLink>
-          <NavLink onClick={handleSearchForAJob}>Search for a job</NavLink>
-          <NavLink>Work Management</NavLink>
+          <NavLink 
+            onClick={handleMainProfile}
+            isActive={location.pathname === '/main-profile'}
+          >
+            Home
+          </NavLink>
+          <NavLink 
+            onClick={handleSearchForAJob}
+            isActive={location.pathname === '/search-for-a-job'}
+          >
+            Search for a job
+          </NavLink>
+          <NavLink 
+            onClick={handleWorkManagement}
+            isActive={location.pathname === '/work-management'}
+          >
+            Work Management
+          </NavLink>
           <NavLink>Interesting! List</NavLink>
           <NavLink>Client Management</NavLink>
         </div>
@@ -104,9 +144,10 @@ const DrawerNavigation = () => {
 };
 
 // Mobile Navigation Link
-const MobileNavLink = ({ children, onClick }) => (
+const MobileNavLink = ({ children, onClick, isActive }) => (
   <button 
-    className="px-4 py-3 text-white text-left w-full hover:bg-pink-500 transition-colors duration-200"
+    className={`px-4 py-3 text-white text-left w-full transition-colors duration-200
+      ${isActive ? 'bg-pink-500' : 'hover:bg-pink-500'}`}
     onClick={onClick}
   >
     {children}
@@ -114,9 +155,10 @@ const MobileNavLink = ({ children, onClick }) => (
 );
 
 // Desktop Navigation Link
-const NavLink = ({ children, onClick }) => (
+const NavLink = ({ children, onClick, isActive }) => (
   <button 
-    className="px-4 py-2 text-white hover:bg-pink-500 transition-colors duration-200"
+    className={`px-4 py-2 text-white transition-colors duration-200
+      ${isActive ? 'bg-pink-500' : 'hover:bg-pink-500'}`}
     onClick={onClick}
   >
     {children}
