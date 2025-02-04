@@ -30,6 +30,7 @@ import MainProfile from './components/Profile/MainProfile';
 import WorkManagement from './components/Profile/WorkManagement';
 import InterestingList from './components/Profile/InterestingList';
 import ClientManagement from './components/Profile/ClientManagement';
+import RewardHistory from './components/Profile/RewardHistory';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -190,6 +191,7 @@ const App = () => {
             <Route path="/work-management" element={<WorkManagement />} />
             <Route path="/interesting-list" element={<InterestingList />} />
             <Route path="/client-management" element={<ClientManagement />} />
+            <Route path="/reward-history" element={<RewardHistory />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>
