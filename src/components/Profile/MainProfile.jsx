@@ -6,8 +6,11 @@ import UserSettingsSection from './UserSettingsSection';
 import DrawerNavigation from './DrawerNavigation';
 import SearchForAJobPage from '../../Pages/SearchForAJob';
 
+
 const MainProfile = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+
 
   return (
     <div className="min-h-screen bg-gray-50">

@@ -31,6 +31,7 @@ import WorkManagement from './components/Profile/WorkManagement';
 import InterestingList from './components/Profile/InterestingList';
 import ClientManagement from './components/Profile/ClientManagement';
 import RewardHistory from './components/Profile/RewardHistory';
+import JobPreferences from './components/Profile/JobPreferences';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -192,6 +193,7 @@ const App = () => {
             <Route path="/interesting-list" element={<InterestingList />} />
             <Route path="/client-management" element={<ClientManagement />} />
             <Route path="/reward-history" element={<RewardHistory />} />
+            <Route path="/job-preferences" element={<JobPreferences />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>

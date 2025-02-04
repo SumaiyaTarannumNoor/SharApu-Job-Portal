@@ -1,8 +1,13 @@
 import React from 'react';
-import { Briefcase, FileText, Building, Code } from 'lucide-react';
+import { FileText, Building, Code } from 'lucide-react';
+import { FaBriefcase } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
-const SettingItem = ({ icon: Icon, title, description }) => (
-  <div className="flex items-start justify-between p-4 border-b border-gray-100">
+const SettingItem = ({ icon: Icon, onClick, title, description }) => (
+  <div 
+    className="flex items-start justify-between p-4 border-b border-gray-100 cursor-pointer"
+    onClick={onClick}
+  >
     <div className="flex gap-3">
       <div className="mt-1">
         <Icon className="w-5 h-5 text-pink-500" />
@@ -19,6 +24,11 @@ const SettingItem = ({ icon: Icon, title, description }) => (
 );
 
 const UserSettingsSection = () => {
+  const navigate = useNavigate();
+  const handleJobPreferences = () => {
+    navigate('/job-preferences');
+  };
+      
   return (
     <div className="bg-white rounded-lg shadow-sm mt-6">
       <div className="bg-blue-50 px-4 py-3 rounded-t-lg">
@@ -27,8 +37,9 @@ const UserSettingsSection = () => {
       
       <div className="divide-y divide-gray-50">
         <SettingItem 
-          icon={Briefcase}
-          title="Set your job hopes"
+          icon={FaBriefcase}
+          onClick={handleJobPreferences}
+          title="Set your job preferences"
           description="This makes it easier to match with jobs that match your desired working style."
         />
         
