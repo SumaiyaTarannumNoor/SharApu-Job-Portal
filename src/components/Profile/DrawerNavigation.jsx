@@ -1,8 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const DrawerNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleMainProfile = () => {
+    navigate('/main-profile');
+    setIsOpen(false);
+  };
+
+  const handleSearchForAJob = () => {
+    navigate('/search-for-a-job', { state: { from: 'mainProfile' } });
+    setIsOpen(false);
+  };
 
   // Close drawer when screen size becomes large
   useEffect(() => {
@@ -29,14 +41,16 @@ const DrawerNavigation = () => {
   }, [isOpen]);
 
   return (
-    <>
-      {/* Mobile Drawer Trigger */}
-      <button 
-        className="p-2 text-pink-600 lg:hidden"
-        onClick={() => setIsOpen(true)}
-      >
-        <Menu className="w-6 h-6" />
-      </button>
+    <div className="w-full">
+      <div className="flex justify-between items-center px-4 py-2">
+        {/* Mobile Drawer Trigger */}
+        <button 
+          className="p-2 text-pink-600 lg:hidden"
+          onClick={() => setIsOpen(true)}
+        >
+          <Menu className="w-6 h-6" />
+        </button>
+      </div>
 
       {/* Backdrop */}
       {isOpen && (
@@ -66,8 +80,8 @@ const DrawerNavigation = () => {
 
         <nav className="bg-pink-400 h-full">
           <div className="flex flex-col space-y-1">
-            <MobileNavLink onClick={() => setIsOpen(false)}>Home</MobileNavLink>
-            <MobileNavLink onClick={() => setIsOpen(false)}>Search for a job</MobileNavLink>
+            <MobileNavLink onClick={handleMainProfile}>Home</MobileNavLink>
+            <MobileNavLink onClick={handleSearchForAJob}>Search for a job</MobileNavLink>
             <MobileNavLink onClick={() => setIsOpen(false)}>Work Management</MobileNavLink>
             <MobileNavLink onClick={() => setIsOpen(false)}>Interesting! List</MobileNavLink>
             <MobileNavLink onClick={() => setIsOpen(false)}>Client Management</MobileNavLink>
@@ -78,14 +92,14 @@ const DrawerNavigation = () => {
       {/* Desktop Navigation */}
       <nav className="bg-pink-400 hidden lg:block w-full">
         <div className="flex space-x-1 px-4">
-          <NavLink>Home</NavLink>
-          <NavLink>Search for a job</NavLink>
+          <NavLink onClick={handleMainProfile}>Home</NavLink>
+          <NavLink onClick={handleSearchForAJob}>Search for a job</NavLink>
           <NavLink>Work Management</NavLink>
           <NavLink>Interesting! List</NavLink>
           <NavLink>Client Management</NavLink>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
@@ -100,8 +114,11 @@ const MobileNavLink = ({ children, onClick }) => (
 );
 
 // Desktop Navigation Link
-const NavLink = ({ children }) => (
-  <button className="px-4 py-2 text-white hover:bg-pink-500 transition-colors duration-200">
+const NavLink = ({ children, onClick }) => (
+  <button 
+    className="px-4 py-2 text-white hover:bg-pink-500 transition-colors duration-200"
+    onClick={onClick}
+  >
     {children}
   </button>
 );

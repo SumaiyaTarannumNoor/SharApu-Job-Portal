@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import DrawerNavigation from '../components/Profile/DrawerNavigation';
 import legssystem from '../../assets/RecruiterIconImage/legssystem.png';
 import logoazw from '../../assets/RecruiterIconImage/logoazw.png';
 import lpemake from '../../assets/RecruiterIconImage/lpe_mark.jpg';
@@ -7,10 +9,21 @@ import mishonna from '../../assets/RecruiterIconImage/mishonna.jpg';
 import webhero from '../../assets/RecruiterIconImage/webhero_logo_icon.png';
 
 const SearchForAJobPage = () => {
+  const location = useLocation();
+  const showNav = location.state?.from === 'mainProfile';
+
+  // State management
   const [expandedCategories, setExpandedCategories] = useState({});
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const jobsPerPage = 8; // Changed to 2 jobs per page
+  const [selectedJobType, setSelectedJobType] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filters, setFilters] = useState({
+    onlyOpenJobs: false,
+    onlyStandingOrders: false
+  });
+
+  const jobsPerPage = 8;
 
   const toggleCategory = (category) => {
     setExpandedCategories(prev => ({
@@ -495,17 +508,52 @@ const SearchForAJobPage = () => {
         hasStandingOrder: true
       },
   ];
+  // Filter jobs based on selected criteria
+  const filteredJobs = jobs.filter(job => {
+    if (selectedJobType !== 'all' && job.type !== selectedJobType) return false;
+    if (searchTerm && !job.title.toLowerCase().includes(searchTerm.toLowerCase())) return false;
+    if (filters.onlyStandingOrders && !job.hasStandingOrder) return false;
+    if (filters.onlyOpenJobs && job.daysLeft === 0) return false;
+    return true;
+  });
 
   // Pagination logic
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
-  const currentJobs = jobs.slice(indexOfFirstJob, indexOfLastJob);
-  const totalPages = Math.ceil(jobs.length / jobsPerPage);
+  const currentJobs = filteredJobs.slice(indexOfFirstJob, indexOfLastJob);
+  const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo(0, 0);
+  };
+
+  const handleJobTypeChange = (type) => {
+    setSelectedJobType(type);
+    setCurrentPage(1);
+  };
+
+  const handleFilterChange = (filterName) => {
+    setFilters(prev => ({
+      ...prev,
+      [filterName]: !prev[filterName]
+    }));
+    setCurrentPage(1);
+  };
+
+  const handleSearch = () => {
+    setCurrentPage(1);
+  };
 
   return (
     <div className="w-full min-h-screen bg-white">
+      {/* Show navigation only if coming from MainProfile */}
+      {showNav && (
+        <header className="bg-white shadow-sm mb-4">
+          <DrawerNavigation />
+        </header>
+      )}
+
       {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
         <div 
@@ -515,11 +563,11 @@ const SearchForAJobPage = () => {
       )}
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Navigation */}
+        {/* Breadcrumb Navigation */}
         <nav className="text-sm py-4 mb-4 flex items-center">
-          <a href="#" className="text-pink-500">Work from home SharApu</a>
+          <Link to="/" className="text-pink-500">Work from home SharApu</Link>
           <span className="mx-2">&gt;</span>
-          <span className="text-gray-600">Log in</span>
+          <span className="text-gray-600">Search Jobs</span>
         </nav>
 
         <div className="flex justify-between items-center mb-6">
@@ -560,7 +608,12 @@ const SearchForAJobPage = () => {
                 <div className="space-y-2">
                   {popularTags.map((tag, index) => (
                     <div key={index} className="text-sm">
-                      <a href="#" className="text-blue-400 hover:underline">#{tag}</a>
+                      <button 
+                        onClick={() => setSearchTerm(tag)}
+                        className="text-blue-400 hover:underline"
+                      >
+                        #{tag}
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -574,15 +627,33 @@ const SearchForAJobPage = () => {
                   <h3 className="font-semibold mb-3">Job Type</h3>
                   <div className="space-y-2">
                     <label className="flex items-center gap-2">
-                      <input type="radio" name="jobType" value="all" defaultChecked />
+                      <input 
+                        type="radio" 
+                        name="jobType" 
+                        value="all" 
+                        checked={selectedJobType === 'all'}
+                        onChange={() => handleJobTypeChange('all')}
+                      />
                       <span>all</span>
                     </label>
                     <label className="flex items-center gap-2">
-                      <input type="radio" name="jobType" value="project" />
+                      <input 
+                        type="radio" 
+                        name="jobType" 
+                        value="project"
+                        checked={selectedJobType === 'project'}
+                        onChange={() => handleJobTypeChange('project')}
+                      />
                       <span>project</span>
                     </label>
                     <label className="flex items-center gap-2">
-                      <input type="radio" name="jobType" value="task" />
+                      <input 
+                        type="radio" 
+                        name="jobType" 
+                        value="task"
+                        checked={selectedJobType === 'task'}
+                        onChange={() => handleJobTypeChange('task')}
+                      />
                       <span>task</span>
                     </label>
                   </div>
@@ -592,6 +663,8 @@ const SearchForAJobPage = () => {
                   <h3 className="font-semibold mb-3">Free Word</h3>
                   <input 
                     type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Data entry receipt"
                     className="w-full px-3 py-2 border rounded-md"
                   />
@@ -599,16 +672,27 @@ const SearchForAJobPage = () => {
 
                 <div className="space-y-3">
                   <label className="flex items-center gap-2">
-                    <input type="checkbox" />
+                    <input 
+                      type="checkbox"
+                      checked={filters.onlyOpenJobs}
+                      onChange={() => handleFilterChange('onlyOpenJobs')}
+                    />
                     <span>Show only open jobs</span>
                   </label>
                   <label className="flex items-center gap-2">
-                    <input type="checkbox" />
+                    <input 
+                      type="checkbox"
+                      checked={filters.onlyStandingOrders}
+                      onChange={() => handleFilterChange('onlyStandingOrders')}
+                    />
                     <span>Show only jobs with standing orders</span>
                   </label>
                 </div>
 
-                <button className="w-full mt-4 bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors">
+                <button 
+                  onClick={handleSearch}
+                  className="w-full mt-4 bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
+                >
                   Narrow your search
                 </button>
               </div>
@@ -646,6 +730,8 @@ const SearchForAJobPage = () => {
               <h2 className="text-lg sm:text-xl">Search Results</h2>
               <select className="border rounded p-2">
                 <option>Newest</option>
+                <option>Highest Paying</option>
+                <option>Most Viewed</option>
               </select>
             </div>
 
