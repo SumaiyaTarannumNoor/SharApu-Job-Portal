@@ -18,7 +18,7 @@ const WorkManagement = () => {
       {/* Breadcrumb */}
       <DrawerNavigation />
       <nav className="text-sm mb-8">
-        <Link to="/" className="text-pink-400 hover:underline">Work from home Shufuti</Link>
+        <Link to="/" className="text-pink-400 hover:underline">Work from home SharApu</Link>
         <span className="mx-2 text-gray-500">&gt;</span>
         <span className="text-gray-600">Search for a job</span>
       </nav>

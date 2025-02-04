@@ -16,7 +16,7 @@ const ClientManagement = () => {
       {/* Breadcrumb */}
       <nav className="text-sm mb-8">
         <Link to="/" className="text-pink-500 hover:underline">
-          Work from home Shufuti
+          Work from home SharApu
         </Link>
         <span className="mx-2 text-gray-500">&gt;</span>
         <Link to="/client-management" className="text-pink-500 hover:underline">
