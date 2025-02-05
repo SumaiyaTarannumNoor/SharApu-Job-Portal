@@ -133,8 +133,8 @@ const JobPreferences = () => {
                 <button
                   onClick={handleSubmit}
                   className="mt-8 px-8 py-2 bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-lg 
-                           hover:from-pink-600 hover:to-pink-700 transition-all duration-200 
-                           shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                            hover:from-pink-600 hover:to-pink-700 transition-all duration-200 
+                            shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                 >
                   Update
                 </button>
