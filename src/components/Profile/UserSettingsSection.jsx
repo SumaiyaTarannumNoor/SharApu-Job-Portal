@@ -36,6 +36,10 @@ const UserSettingsSection = () => {
   const handleJobExpertises = () => {
     navigate('/job-expertises')
   }
+
+  const handleJobSkills = () => {
+    navigate('/job-skills')
+  }
       
   return (
     <div className="min-h-screen bg-pink-50">
@@ -69,6 +73,7 @@ const UserSettingsSection = () => {
             
             <SettingItem 
               icon={FaHandshake}
+              onClick={handleJobSkills}
               title="Let's set up the skills"
               description="This will make it easier to match you with jobs that require the skills you can bring to the table."
             />
