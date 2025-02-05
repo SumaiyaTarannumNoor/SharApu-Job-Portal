@@ -35,6 +35,7 @@ import JobPreferences from './components/Profile/JobPreferences';
 import PreferredJobs from './components/Profile/PreferredJobs';
 import JobExpertises from './components/Profile/JobExpertises';
 import JobSkills from './components/Profile/JobSkills';
+import UserSettings from './components/Profile/UserSettings';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -200,6 +201,7 @@ const App = () => {
             <Route path="/preferred-job" element={<PreferredJobs />} />
             <Route path="/job-expertises" element={<JobExpertises />} />
             <Route path="/job-skills" element={<JobSkills />} />
+            <Route path="/user-settings" element={<UserSettings />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>

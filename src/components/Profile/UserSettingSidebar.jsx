@@ -1,9 +1,15 @@
 import { FaUser, FaBell, FaBriefcase, FaCog, FaLock, FaGift, FaCreditCard, FaEnvelope, FaEye, FaTools, FaClock, FaCheckCircle, FaFileInvoice } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const UserSettingSidebar = () => {
+  const navigate = useNavigate();
+  const handleUserSettings = () => {
+    navigate('/user-settings');
+  };
+
   return (
     <div className="w-64 bg-pink-100 text-pink-900 p-4 rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold mb-4">User Settings</h2>
+      <h2 onClick={handleUserSettings} className="text-xl font-semibold mb-4 cursor-pointer">User Settings</h2>
       
       {/* General Settings */}
       <div>
