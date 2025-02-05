@@ -181,6 +181,97 @@ const JobDetails = () => {
             </div>
           </div>
         </div>
+        
+        
+          {/* Job Requirements Section */}
+          <div className="p-6 border-t border-gray-100">
+            <div className="relative mb-8">
+              <h2 className="text-2xl font-bold text-pink-600 inline-block">Job Requirements</h2>
+              <div className="absolute bottom-0 left-0 w-32 h-1 bg-gradient-to-r from-pink-500 to-pink-300"></div>
+            </div>
+            
+            {/* Required Location */}
+            <div className="mb-8 bg-gradient-to-r from-pink-50 to-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+              <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
+                <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center mr-3">
+                  <MapPin className="w-5 h-5 text-pink-500" />
+                </div>
+                Required Location</h3>
+              <div className="flex items-center space-x-2 text-gray-600">
+                <MapPin className="w-4 h-4" />
+                <span>No deadline. The number of characters is calculated automatically and displayed in order at the end of each line.</span>
+              </div>
+            </div>
+
+            {/* Work Procedure */}
+            <div className="mb-8 bg-gradient-to-r from-pink-50 to-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+              <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
+                <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center mr-3">
+                  <Clock className="w-5 h-5 text-pink-500" />
+                </div>
+                Work Procedure</h3>
+              <div className="space-y-2 text-gray-600">
+                <p>1. Please write your details using our system.</p>
+                <p>2. Delivery is checked automatically by our system, so there is no need for you to complete any delivery completion notice we receive.</p>
+                <p>3. Made at the beginning of the following month</p>
+              </div>
+            </div>
+
+            {/* Required Skills */}
+            <div className="mb-8 bg-gradient-to-r from-pink-50 to-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+              <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
+                <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center mr-3">
+                  <Star className="w-5 h-5 text-pink-500" />
+                </div>
+                Required Skills</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-center p-3 bg-white rounded-lg border border-pink-100 hover:border-pink-200 transition-colors">
+                  <div className="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mr-3">
+                    <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  </div>
+                  <span className="text-gray-700">Writing and administrative work</span>
+                </div>
+                <div className="flex items-center p-3 bg-white rounded-lg border border-pink-100 hover:border-pink-200 transition-colors">
+                  <div className="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mr-3">
+                    <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  </div>
+                  <span className="text-gray-700">PC operation</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Welcome Experience */}
+            <div className="mb-8 bg-gradient-to-r from-pink-50 to-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+              <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
+                <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center mr-3">
+                  <Users className="w-5 h-5 text-pink-500" />
+                </div>
+                Welcome Experience</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <span className="text-gray-700">Administration</span>
+                </div>
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <span className="text-gray-700">General Affairs / Sales Administration / General Affairs / Accounting / Administrative Assistant / Others</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Area Description */}
+            <div className="mb-8 bg-gradient-to-r from-pink-50 to-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+              <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
+                <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center mr-3">
+                  <MapPin className="w-5 h-5 text-pink-500" />
+                </div>
+                Area Description</h3>
+              <div className="bg-pink-50 rounded-lg p-4">
+                <div className="flex items-center space-x-2">
+                  <AlertTriangle className="w-4 h-4 text-pink-600" />
+                  <span className="text-gray-700">Information about specific areas will be provided after matching.</span>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   );
