@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { User, ChevronDown } from 'lucide-react';
 import { 
   FaUser, 
   FaImage, 
@@ -16,6 +18,9 @@ import {
   FaBan,
   FaFileInvoiceDollar
 } from 'react-icons/fa';
+
+import MiniProfileCard from './MiniProfileCard';
+import DrawerNavigation from './DrawerNavigation';
 
 const SettingItem = ({ icon: Icon, label, notSet = false }) => (
   <div className="bg-white p-4 rounded-lg shadow-sm border border-pink-100 hover:border-pink-200 transition-all duration-200 group">
@@ -44,17 +49,45 @@ const SectionHeader = ({ title }) => (
 );
 
 const UserSettings = () => {
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-white">
-      {/* Alert Banner */}
-      <div className="bg-yellow-50 p-3 text-sm text-yellow-700 border-b border-yellow-100">
-        <p className="max-w-7xl mx-auto">
+      {/* Header */}
+      <header className="bg-white shadow-sm">
+        <div className="flex justify-between items-center px-4 py-2">
+          <div className="flex items-center gap-2">
+            <Link to="/" className="text-2xl font-bold text-pink-600">
+              SharApu
+            </Link>
+          </div>
+          <div className="relative">
+            <div 
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+            >
+              <User className="w-6 h-6 text-white bg-pink-500 rounded-full p-1" />
+              <span className="text-gray-700">ahmedul</span>
+              <ChevronDown 
+                className={`w-4 h-4 text-gray-600 transition-transform duration-200 ${
+                  isProfileOpen ? 'transform rotate-180' : ''
+                }`} 
+              />
+            </div>
+            <MiniProfileCard isOpen={isProfileOpen} />
+          </div>
+        </div>
+
+        <DrawerNavigation />
+
+        {/* Alert Banner */}
+        <div className="bg-green-50 p-2 text-sm text-green-800">
           If you do not register a financial institution account for withdrawals within 4 months of user registration, functionality will be restricted. 
-          <a href="#" className="text-pink-600 hover:text-pink-700 ml-1">
+          <button className="text-pink-600 hover:text-pink-700 ml-1">
             Click here to register your account information &gt;
-          </a>
-        </p>
-      </div>
+          </button>
+        </div>
+      </header>
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 py-3 text-sm">
