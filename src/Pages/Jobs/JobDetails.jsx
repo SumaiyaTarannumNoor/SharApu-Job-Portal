@@ -14,11 +14,17 @@ import {
 } from 'lucide-react';
 import MiniProfileCard from '../../components/Profile/MiniProfileCard';
 import DrawerNavigation from '../../components/Profile/DrawerNavigation';
+import JobApplicationForm from './JobApplicationForm';
 
 const JobDetails = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const location = useLocation();
   const job = location.state?.job;
+  const formRef = React.useRef(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   if (!job) {
     return <div>No job details available</div>;
@@ -159,7 +165,9 @@ const JobDetails = () => {
 
             {/* Right Column - Action Buttons */}
             <div className="space-y-4">
-              <button className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 rounded-lg font-medium
+              <button 
+                onClick={scrollToForm}
+                className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 rounded-lg font-medium
                              hover:from-pink-600 hover:to-pink-700 transition-all duration-200 
                              shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                 Apply Now
@@ -262,8 +270,7 @@ const JobDetails = () => {
               <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
                 <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center mr-3">
                   <MapPin className="w-5 h-5 text-pink-500" />
-                </div>
-                Area Description</h3>
+                </div>Area Description</h3>
               <div className="bg-pink-50 rounded-lg p-4">
                 <div className="flex items-center space-x-2">
                   <AlertTriangle className="w-4 h-4 text-pink-600" />
@@ -271,6 +278,9 @@ const JobDetails = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div ref={formRef}>
+            <JobApplicationForm />
           </div>
       </div>
     </div>
