@@ -1,6 +1,57 @@
 import React, { useState } from 'react';
-import UserSettingSidebar from './UserSettingSidebar'; // Adjust the path if needed
+import { FaUser, FaBell, FaBriefcase, FaCog, FaTools, FaWrench } from "react-icons/fa";
 
+// Sidebar Component
+const UserSettingSidebar = () => {
+  return (
+    <div className="w-64 h-full bg-pink-50 p-6">
+      <h2 className="text-pink-800 text-2xl font-semibold mb-6">User Settings</h2>
+      
+      {/* General Settings */}
+      <div className="mb-6">
+        <h3 className="text-pink-600 font-medium mb-3">General Settings</h3>
+        <ul className="space-y-3">
+          <li className="flex items-center gap-2 text-pink-800">
+            <FaUser className="w-4 h-4" /> Username
+          </li>
+          <li className="flex items-center gap-2 text-pink-800">
+            <FaUser className="w-4 h-4" /> Icon
+          </li>
+          <li className="flex items-center gap-2 text-pink-800">
+            <FaUser className="w-4 h-4" /> Self-Introduction
+          </li>
+          <li className="flex items-center gap-2 text-pink-800">
+            <FaBell className="w-4 h-4" /> Notification
+          </li>
+        </ul>
+      </div>
+
+      {/* Work-related Settings */}
+      <div className="mb-6">
+        <h3 className="text-pink-600 font-medium mb-3">Work-related Settings</h3>
+        <ul className="space-y-3">
+          <li className="flex items-center gap-2 text-pink-800">
+            <FaBriefcase className="w-4 h-4" /> Work facilities and environment
+          </li>
+          <li className="flex items-center gap-2 text-pink-800">
+            <FaCog className="w-4 h-4" /> Interesting Job
+          </li>
+          <li className="flex items-center gap-2 text-pink-800">
+            <FaTools className="w-4 h-4" /> Skill
+          </li>
+          <li className="flex items-center gap-2 text-pink-800">
+            <FaWrench className="w-4 h-4" /> Available tools
+          </li>
+          <li className="flex items-center gap-2 text-pink-800">
+            <FaBriefcase className="w-4 h-4" /> Occupations experienced
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+// Main Content Component
 const JobPreferences = () => {
   const [selectedOption, setSelectedOption] = useState('');
 
@@ -12,83 +63,75 @@ const JobPreferences = () => {
     console.log('Selected preference:', selectedOption);
   };
 
-  const options = [
-    {
-      value: 'continuous',
-      label: 'Desire to continue working: I want to work continuously and can devote a certain amount of time to my work.'
-    },
-    {
-      value: 'oneOff',
-      label: 'One-off: I want to work at my own pace.'
-    },
-    {
-      value: 'both',
-      label: "Doesn't matter: Can be used for both continuous and one-off work"
-    }
-  ];
-
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-white">
       {/* Sidebar */}
-      <div className="w-1/4 bg-pink-100 p-4">
-        <UserSettingSidebar />
-      </div>
-
+      <UserSettingSidebar />
+      
       {/* Main Content */}
-      <div className="w-3/4 p-6 mx-auto">
-        <div className="bg-white rounded-lg shadow-sm">
-          {/* Header */}
-          <div className="bg-gray-100 px-6 py-4 rounded-t-lg">
-            <h2 className="text-lg font-semibold text-gray-800">
-              Desire to continue working
-            </h2>
-          </div>
-
-          {/* Content */}
-          <div className="p-6">
-            <p className="text-gray-700 mb-2">
+      <div className="flex-1 p-8">
+        <div className="max-w-3xl">
+          <h1 className="text-2xl font-semibold text-gray-800 mb-6">
+            Desire to continue working
+          </h1>
+          
+          <div className="space-y-4">
+            <p className="text-gray-700 text-lg">
               Please choose the option that best describes your current situation.
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600">
               This will help us match you with the job you desire.
             </p>
 
             {/* Radio Options */}
-            <div className="space-y-4">
-              {options.map(option => (
-                <label 
-                  key={option.value}
-                  className="flex items-start gap-3 cursor-pointer group"
-                >
-                  <div className="relative flex items-center pt-1">
-                    <input
-                      type="radio"
-                      name="workPreference"
-                      value={option.value}
-                      checked={selectedOption === option.value}
-                      onChange={handleOptionChange}
-                      className="appearance-none w-5 h-5 border-2 border-gray-300 rounded-full 
-                        checked:border-pink-500 checked:border-8 transition-all duration-200
-                        focus:outline-none focus:ring-2 focus:ring-pink-500/20"
-                    />
-                  </div>
-                  <span className="text-gray-700 group-hover:text-gray-900">
-                    {option.label}
-                  </span>
-                </label>
-              ))}
+            <div className="space-y-4 mt-8">
+              <label className="flex items-start gap-4 cursor-pointer">
+                <input
+                  type="radio"
+                  name="workPreference"
+                  value="continuous"
+                  checked={selectedOption === 'continuous'}
+                  onChange={handleOptionChange}
+                  className="mt-1 w-5 h-5 text-pink-600 border-gray-300 focus:ring-pink-500"
+                />
+                <span className="text-gray-700">
+                  Desire to continue working: I want to work continuously and can devote a certain amount of time to my work.
+                </span>
+              </label>
+
+              <label className="flex items-start gap-4 cursor-pointer">
+                <input
+                  type="radio"
+                  name="workPreference"
+                  value="oneOff"
+                  checked={selectedOption === 'oneOff'}
+                  onChange={handleOptionChange}
+                  className="mt-1 w-5 h-5 text-pink-600 border-gray-300 focus:ring-pink-500"
+                />
+                <span className="text-gray-700">
+                  One-off: I want to work at my own pace.
+                </span>
+              </label>
+
+              <label className="flex items-start gap-4 cursor-pointer">
+                <input
+                  type="radio"
+                  name="workPreference"
+                  value="both"
+                  checked={selectedOption === 'both'}
+                  onChange={handleOptionChange}
+                  className="mt-1 w-5 h-5 text-pink-600 border-gray-300 focus:ring-pink-500"
+                />
+                <span className="text-gray-700">
+                  Doesn't matter: Can be used for both continuous and one-off work
+                </span>
+              </label>
             </div>
 
-            {/* Submit Button */}
+            {/* Update Button */}
             <button
               onClick={handleSubmit}
-              disabled={!selectedOption}
-              className={`mt-8 w-full sm:w-auto px-8 py-3 rounded-md text-center transition-all duration-200
-                ${selectedOption 
-                  ? 'bg-pink-500 text-white hover:bg-pink-600' 
-                  : 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                }
-              `}
+              className="mt-8 px-8 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors"
             >
               Update
             </button>
