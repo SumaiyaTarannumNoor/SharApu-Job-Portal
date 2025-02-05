@@ -25,7 +25,7 @@ const JobSkills = () => {
     {
       title: "translation",
       items: [
-        "Korean Translation",
+        "Spanish Translation",
         "Chinese Translation",
         "English Translation",
         "Other translations"
