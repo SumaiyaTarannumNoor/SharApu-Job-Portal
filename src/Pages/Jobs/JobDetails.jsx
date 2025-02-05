@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { 
   Star, 
   Clock, 
@@ -7,52 +8,109 @@ import {
   MapPin, 
   AlertTriangle,
   Heart,
-  MessageCircle
+  MessageCircle,
+  User,
+  ChevronDown
 } from 'lucide-react';
+import MiniProfileCard from '../../components/Profile/MiniProfileCard';
+import DrawerNavigation from '../../components/Profile/DrawerNavigation';
 
 const JobDetails = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-white py-6 px-4 sm:px-6 lg:px-8">
-      {/* Breadcrumb */}
-      <div className="max-w-7xl mx-auto text-sm mb-6">
-        <nav className="flex space-x-2 text-gray-500">
-          <a href="#" className="hover:text-pink-600">Work from home Shuful</a>
-          <span>&gt;</span>
-          <a href="#" className="hover:text-pink-600">Search for a job</a>
-          <span>&gt;</span>
-          <a href="#" className="hover:text-pink-600">Data entry and product registration</a>
-          <span>&gt;</span>
-          <span className="text-gray-700">Survey Project</span>
-        </nav>
-      </div>
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const location = useLocation();
+  const job = location.state?.job;
 
-      <div className="max-w-7xl mx-auto">
+  if (!job) {
+    return <div>No job details available</div>;
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-white">
+      {/* Header */}
+      <header className="bg-white shadow-sm">
+        <div className="flex justify-between items-center px-4 py-2">
+          <div className="flex items-center gap-2">
+            <Link to="/" className="text-2xl font-bold text-pink-600">
+              SharApu
+            </Link>
+          </div>
+          <div className="relative">
+            <div
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+            >
+              <User className="w-6 h-6 text-white bg-pink-500 rounded-full p-1" />
+              <span className="text-gray-700">ahmedul</span>
+              <ChevronDown 
+                className={`w-4 h-4 text-gray-600 transition-transform duration-200 ${
+                  isProfileOpen ? 'transform rotate-180' : ''
+                }`} 
+              />
+            </div>
+            <MiniProfileCard isOpen={isProfileOpen} />
+          </div>
+        </div>
+
+        <DrawerNavigation />
+
+        <div className="bg-green-50 p-2 text-sm text-green-800">
+          If you do not register a financial institution account for withdrawals within 4 months of user registration, functionality will be restricted.
+          <button className="text-pink-600 hover:text-pink-700 ml-1">
+            Click here to register your account information &gt;
+          </button>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Breadcrumb */}
+        <nav className="flex space-x-2 text-sm mb-6">
+          <Link to="/" className="text-gray-500 hover:text-pink-600">Work from home Shuful</Link>
+          <span className="text-gray-500">&gt;</span>
+          <Link to="/search" className="text-gray-500 hover:text-pink-600">Search for a job</Link>
+          <span className="text-gray-500">&gt;</span>
+          <span className="text-gray-700">{job.title}</span>
+        </nav>
+
         <div className="bg-white rounded-xl shadow-sm overflow-hidden">
           {/* Header Section */}
           <div className="border-b border-gray-100">
             <div className="p-6">
               <div className="flex items-center space-x-4">
-                <div className="w-24 h-24 bg-emerald-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-xl font-bold">Y2</span>
+                <div className="flex-shrink-0">
+                  <img 
+                    src={job.company.logo} 
+                    alt={job.company.name}
+                    className="w-24 h-24 rounded-lg object-cover"
+                  />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-2">
-                    <span className="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-medium">project</span>
-                    <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Standing order</span>
-                    <span className="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Beginners welcome</span>
-                    <span className="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">No skills required</span>
+                    <span className="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-medium">
+                      {job.type}
+                    </span>
+                    {job.hasStandingOrder && (
+                      <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">
+                        Standing order
+                      </span>
+                    )}
+                    {job.tags.map((tag, index) => (
+                      <span key={index} className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                   <h1 className="text-xl font-semibold text-gray-900 mb-2">
-                    [Side job/Work from home] We are looking for people who don't know where to start or what suits them best! Please participate in our survey!
+                    {job.title}
                   </h1>
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center">
                       <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                      <span className="ml-1 text-gray-700">4.9</span>
+                      <span className="ml-1 text-gray-700">{job.company.averageHourlyRate}</span>
                     </div>
                     <div className="flex items-center text-gray-600">
                       <Clock className="w-4 h-4 mr-1" />
-                      <span>Average hourly rate: ¥864</span>
+                      <span>Average hourly rate: ¥{job.company.averageHourlyRate}</span>
                     </div>
                   </div>
                 </div>
@@ -73,34 +131,27 @@ const JobDetails = () => {
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Reward amount</span>
-                    <span className="font-semibold text-pink-600">1,000 yen</span>
+                    <span className="font-semibold text-pink-600">{job.reward.toLocaleString()} yen</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Estimated hourly rate</span>
-                    <span className="text-gray-800">Approximately 1,000 yen</span>
+                    <span className="text-gray-800">{job.estimatedHourlyRate.toLocaleString()} yen</span>
                   </div>
-                  <div className="text-xs text-gray-500">*We cannot guarantee the hourly rate.</div>
                 </div>
               </div>
 
               {/* Job Details */}
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {job.daysLeft && (
+                    <div className="bg-white rounded-lg border border-gray-100 p-4">
+                      <div className="text-gray-600 mb-2">Days Left</div>
+                      <div className="font-medium text-pink-600">{job.daysLeft} days</div>
+                    </div>
+                  )}
                   <div className="bg-white rounded-lg border border-gray-100 p-4">
-                    <div className="text-gray-600 mb-2">Required working hours per day</div>
-                    <div className="font-medium">Less than 1 hour</div>
-                  </div>
-                  <div className="bg-white rounded-lg border border-gray-100 p-4">
-                    <div className="text-gray-600 mb-2">Work Environment</div>
-                    <div className="font-medium">Any</div>
-                  </div>
-                  <div className="bg-white rounded-lg border border-gray-100 p-4">
-                    <div className="text-gray-600 mb-2">Application Period</div>
-                    <div className="font-medium text-pink-600">13 days left</div>
-                  </div>
-                  <div className="bg-white rounded-lg border border-gray-100 p-4">
-                    <div className="text-gray-600 mb-2">Number of people needed</div>
-                    <div className="font-medium">50 people</div>
+                    <div className="text-gray-600 mb-2">Views</div>
+                    <div className="font-medium">{job.views} views</div>
                   </div>
                 </div>
               </div>
@@ -124,7 +175,7 @@ const JobDetails = () => {
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Clock className="w-4 h-4 mr-2" />
-                  <span>205 views</span>
+                  <span>{job.views} views</span>
                 </div>
               </div>
             </div>

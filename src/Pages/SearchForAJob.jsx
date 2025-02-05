@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { User, ChevronDown, X } from 'lucide-react';
 import DrawerNavigation from '../components/Profile/DrawerNavigation';
 import MiniProfileCard from '../components/Profile/MiniProfileCard';
@@ -13,6 +13,7 @@ import webhero from '../../assets/RecruiterIconImage/webhero_logo_icon.png';
 const SearchForAJobPage = () => {
   // Location and navigation state
   const location = useLocation();
+  const navigate = useNavigate();
   const showNav = location.state?.from === 'mainProfile';
 
   // Component states
@@ -506,6 +507,11 @@ const SearchForAJobPage = () => {
       },
   ];
 
+  // Navigation handler
+  const handleJobClick = (job) => {
+    navigate('/job-details', { state: { job } });
+  };
+
   // Filter and search handlers
   const toggleCategory = (category) => {
     setExpandedCategories(prev => ({
@@ -605,7 +611,7 @@ const SearchForAJobPage = () => {
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-xl sm:text-2xl font-bold">List of work-from-home jobs</h1>
-          
+
           <button 
             className="lg:hidden px-4 py-2 bg-pink-500 text-white rounded-md"
             onClick={() => setIsSidebarOpen(true)}
@@ -657,7 +663,7 @@ const SearchForAJobPage = () => {
               {/* Job Type & Search */}
               <div className="bg-gray-100 p-4 rounded-lg">
                 <h2 className="font-bold mb-4">Job type / Free word</h2>
-                
+
                 <div className="mb-6">
                   <h3 className="font-semibold mb-3">Job Type</h3>
                   <div className="space-y-2">
@@ -752,7 +758,11 @@ const SearchForAJobPage = () => {
             {/* Job Listings */}
             <div className="space-y-4">
               {currentJobs.map(job => (
-                <div key={job.id} className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:border-pink-200 transition-colors">
+                <div 
+                  key={job.id} 
+                  onClick={() => handleJobClick(job)}
+                  className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:border-pink-200 transition-colors cursor-pointer"
+                >
                   <div className="flex flex-wrap items-center gap-2 mb-2">
                     <span className="bg-pink-500 text-white px-2 py-1 rounded text-sm">{job.type}</span>
                     {job.hasStandingOrder && (
@@ -768,7 +778,7 @@ const SearchForAJobPage = () => {
                     <span className="ml-auto text-gray-600 text-sm">Views: {job.views}</span>
                   </div>
 
-                  <h3 className="text-pink-600 text-base sm:text-lg mb-2 hover:underline cursor-pointer">
+                  <h3 className="text-pink-600 text-base sm:text-lg mb-2">
                     [PR] {job.title}
                   </h3>
 
@@ -784,7 +794,7 @@ const SearchForAJobPage = () => {
                         <span className="font-bold">{job.estimatedHourlyRate.toLocaleString()} yen</span>
                       </div>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2 items-center">
                       {job.daysLeft && (
                         <div className="text-red-600">{job.daysLeft} days left</div>
@@ -827,7 +837,7 @@ const SearchForAJobPage = () => {
               >
                 Previous
               </button>
-              
+
               {[...Array(totalPages)].map((_, index) => (
                 <button
                   key={index + 1}
@@ -841,7 +851,7 @@ const SearchForAJobPage = () => {
                   {index + 1}
                 </button>
               ))}
-              
+
               <button
                 onClick={() => paginate(currentPage + 1)}
                 disabled={currentPage === totalPages}
