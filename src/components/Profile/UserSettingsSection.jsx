@@ -1,6 +1,7 @@
 import React from 'react';
 import { FileText, Building, Code } from 'lucide-react';
 import { FaBriefcase } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
 const SettingItem = ({ icon: Icon, onClick, title, description }) => (
@@ -25,8 +26,13 @@ const SettingItem = ({ icon: Icon, onClick, title, description }) => (
 
 const UserSettingsSection = () => {
   const navigate = useNavigate();
+  
   const handleJobPreferences = () => {
     navigate('/job-preferences');
+  };
+
+  const handlePreferredJobs = () => {
+    navigate('/preferred-job');
   };
       
   return (
@@ -44,7 +50,8 @@ const UserSettingsSection = () => {
         />
         
         <SettingItem 
-          icon={FileText}
+          icon={FaCode}
+          onClick={handlePreferredJobs}
           title="Define the job you are interested in"
           description="This will make it easier to match you with jobs that are similar to the settings you have made."
         />
