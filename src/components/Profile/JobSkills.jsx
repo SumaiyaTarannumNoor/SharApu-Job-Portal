@@ -20,7 +20,7 @@ const JobSkills = () => {
     {
       title: "translation",
       items: [
-        "Spanish Translation",
+        "Korean Translation",
         "Chinese Translation",
         "English Translation",
         "Other translations"
@@ -75,7 +75,7 @@ const JobSkills = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-pink-50">
+    <div className="flex min-h-screen bg-gradient-to-br from-pink-50 to-white">
       {/* Sidebar */}
       <div className="w-64 p-4">
         <UserSettingSidebar />
@@ -83,37 +83,51 @@ const JobSkills = () => {
 
       {/* Main Content */}
       <div className="flex-1 p-8">
-        <div className="max-w-4xl">
-          <h1 className="text-xl font-semibold text-gray-800 mb-2">Skills</h1>
-          <p className="text-sm text-gray-600 mb-2">
-            You can set the skills you possess.
-          </p>
-          <p className="text-sm text-gray-600 mb-6">
-            By setting the skills, you will be able to display suitable recommended jobs, and you will be more likely to be selected by clients when applying.
-          </p>
+        <div className="max-w-4xl mx-auto">
+          {/* Header Section */}
+          <div className="bg-gradient-to-r from-pink-100 to-pink-50 p-4 rounded-lg shadow-sm mb-6">
+            <h1 className="text-xl font-semibold text-gray-800">Skill</h1>
+            <div className="mt-3 space-y-2">
+              <p className="text-sm text-gray-600">
+                You can set the skills you possess.
+              </p>
+              <p className="text-sm text-gray-600">
+                By setting the skills, you will be able to display suitable recommended jobs, and you will be more likely to be selected by clients when applying.
+              </p>
+              <p className="text-sm text-pink-600 font-medium">
+                so please set it.
+              </p>
+            </div>
+          </div>
 
+          {/* Skills Categories */}
           <div className="space-y-6">
             {skillCategories.map((category, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-lg shadow-sm overflow-hidden"
+                className="bg-white rounded-lg shadow-sm overflow-hidden border border-pink-100"
               >
-                <h2 className="font-medium text-gray-800 mb-3 bg-gray-100 p-2">
-                  {category.title}
-                </h2>
-                <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <div className="bg-gradient-to-r from-pink-100 via-pink-50 to-pink-100 p-3">
+                  <h2 className="font-medium text-pink-800">
+                    {category.title}
+                  </h2>
+                </div>
+                <div className="p-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-center">
+                    <div 
+                      key={itemIndex} 
+                      className="flex items-center group hover:bg-pink-50 p-2 rounded-md transition-colors"
+                    >
                       <input
                         type="checkbox"
                         id={`skill-${index}-${itemIndex}`}
                         checked={selectedSkills.includes(item)}
                         onChange={() => handleSkillSelection(item)}
-                        className="h-4 w-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
+                        className="h-4 w-4 text-pink-500 border-pink-300 rounded focus:ring-pink-500 transition-colors"
                       />
                       <label
                         htmlFor={`skill-${index}-${itemIndex}`}
-                        className="ml-2 text-sm text-gray-700"
+                        className="ml-2 text-sm text-gray-600 group-hover:text-pink-700 transition-colors cursor-pointer"
                       >
                         {item}
                       </label>
@@ -124,24 +138,31 @@ const JobSkills = () => {
             ))}
           </div>
 
-          {selectedSkills.length > 0 && (
-            <div className="mt-8 bg-white rounded-lg shadow-sm p-4">
-              <h2 className="font-medium text-gray-800 mb-3">Previously registered skills</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                {selectedSkills.map((skill, index) => (
-                  <div key={index} className="text-sm text-gray-700">
-                    • {skill}
-                  </div>
-                ))}
+          {/* Set Skills Button */}
+          <div className="flex justify-center mt-8">
+            <button 
+              className="px-8 py-3 bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-lg 
+                         hover:from-pink-600 hover:to-pink-700 transition-all duration-200 
+                         shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+              Set skills
+            </button>
+          </div>
+
+          {/* Previously Registered Skills */}
+          <div className="mt-12">
+            <div className="bg-gradient-to-r from-pink-100 to-pink-50 p-4 rounded-t-lg">
+              <h2 className="text-lg font-medium text-gray-800">Previously registered skills</h2>
+            </div>
+            <div className="p-6 bg-white rounded-b-lg shadow-sm border border-pink-100">
+              <p className="text-sm text-gray-600">You have no registered skills.</p>
+              <div className="mt-4 space-y-3 text-xs">
+                <p className="text-pink-600/80">※This skills cannot be edited or edited. Also, the settings will not be reflected in the recommended jobs display, so we recommend setting skill one more time.</p>
+                <p className="text-pink-600/80">※If you include the text you have entered in the comments section in your profile, you will be more likely to be selected by clients.</p>
+                <p className="text-pink-600/80">※The old skills are scheduled to be discontinued after September 2019, so please migrate the skills.</p>
               </div>
             </div>
-          )}
-
-          <button 
-            className="mt-6 px-6 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition-colors"
-          >
-            Set skills
-          </button>
+          </div>
         </div>
       </div>
     </div>
