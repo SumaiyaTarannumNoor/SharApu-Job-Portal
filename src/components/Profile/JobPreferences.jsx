@@ -1,57 +1,6 @@
 import React, { useState } from 'react';
-import { FaUser, FaBell, FaBriefcase, FaCog, FaTools, FaWrench } from "react-icons/fa";
+import UserSettingSidebar from './UserSettingSidebar'; // Make sure path is correct
 
-// Sidebar Component
-const UserSettingSidebar = () => {
-  return (
-    <div className="w-64 h-full bg-pink-50 p-6">
-      <h2 className="text-pink-800 text-2xl font-semibold mb-6">User Settings</h2>
-      
-      {/* General Settings */}
-      <div className="mb-6">
-        <h3 className="text-pink-600 font-medium mb-3">General Settings</h3>
-        <ul className="space-y-3">
-          <li className="flex items-center gap-2 text-pink-800">
-            <FaUser className="w-4 h-4" /> Username
-          </li>
-          <li className="flex items-center gap-2 text-pink-800">
-            <FaUser className="w-4 h-4" /> Icon
-          </li>
-          <li className="flex items-center gap-2 text-pink-800">
-            <FaUser className="w-4 h-4" /> Self-Introduction
-          </li>
-          <li className="flex items-center gap-2 text-pink-800">
-            <FaBell className="w-4 h-4" /> Notification
-          </li>
-        </ul>
-      </div>
-
-      {/* Work-related Settings */}
-      <div className="mb-6">
-        <h3 className="text-pink-600 font-medium mb-3">Work-related Settings</h3>
-        <ul className="space-y-3">
-          <li className="flex items-center gap-2 text-pink-800">
-            <FaBriefcase className="w-4 h-4" /> Work facilities and environment
-          </li>
-          <li className="flex items-center gap-2 text-pink-800">
-            <FaCog className="w-4 h-4" /> Interesting Job
-          </li>
-          <li className="flex items-center gap-2 text-pink-800">
-            <FaTools className="w-4 h-4" /> Skill
-          </li>
-          <li className="flex items-center gap-2 text-pink-800">
-            <FaWrench className="w-4 h-4" /> Available tools
-          </li>
-          <li className="flex items-center gap-2 text-pink-800">
-            <FaBriefcase className="w-4 h-4" /> Occupations experienced
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-// Main Content Component
 const JobPreferences = () => {
   const [selectedOption, setSelectedOption] = useState('');
 
@@ -64,9 +13,11 @@ const JobPreferences = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="flex min-h-screen bg-gray-50">
       {/* Sidebar */}
-      <UserSettingSidebar />
+      <div className="w-64 p-4">
+        <UserSettingSidebar />
+      </div>
       
       {/* Main Content */}
       <div className="flex-1 p-8">
