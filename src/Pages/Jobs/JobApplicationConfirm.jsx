@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const JobApplicationConfirm = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const navigate = useNavigate();
+
+  const handleApply = () => {
+    if (isChecked) {
+      navigate('/job-application-complete');
+    }
+  };
 
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
@@ -80,6 +88,7 @@ const JobApplicationConfirm = () => {
           </label>
 
           <button
+            onClick={handleApply}
             className={`w-full py-3 rounded-md text-white font-medium transition-colors
               ${isChecked 
                 ? 'bg-pink-500 hover:bg-pink-600' 
