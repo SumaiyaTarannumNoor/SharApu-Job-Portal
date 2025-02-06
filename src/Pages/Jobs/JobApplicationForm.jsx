@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const JobApplicationForm = () => {
   const [message, setMessage] = useState('');
+  const [amount, setAmount] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    // You can add validation here if needed
+    navigate('/job-application-confirm', { 
+      state: { 
+        message: message,
+        amount: amount 
+      }
+    });
+  };
 
   return (
     <div id="apply-section" className="p-6 border-t border-gray-100">
@@ -22,6 +35,8 @@ const JobApplicationForm = () => {
               <div className="flex items-center">
                 <input
                   type="number"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
                   className="form-input p-4 border-pink-500 border-2 w-32 rounded-lg border-gray-200 focus:border-pink-500 focus:ring focus:ring-pink-200"
                   min="1"
                 />
@@ -61,9 +76,12 @@ const JobApplicationForm = () => {
             </div>
           </div>
 
-          <button className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 px-6 rounded-lg font-medium
-                           hover:from-pink-600 hover:to-pink-700 transition-all duration-200 
-                           shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          <button 
+            onClick={handleSubmit}
+            className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 px-6 rounded-lg font-medium 
+                     hover:from-pink-600 hover:to-pink-700 transition-all duration-200 
+                     shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+          >
             Next (Confirm the contents)
           </button>
         </div>
