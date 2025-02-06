@@ -17,48 +17,52 @@ import MiniProfileCard from '../../components/Profile/MiniProfileCard';
 import DrawerNavigation from '../../components/Profile/DrawerNavigation';
 import JobApplicationForm from './JobApplicationForm';
 
-// New JobSidebar Component
-const JobSidebar = ({ scrollToForm }) => {
+const JobSidebar = ({ job, scrollToForm }) => {
   return (
     <div className="bg-gradient-to-b from-pink-50 to-white rounded-xl shadow-md p-6 space-y-6 sticky top-4">
       {/* Profile Section */}
       <div className="flex flex-col items-center space-y-4">
         {/* Profile Image */}
-        <div className="w-28 h-28 bg-pink-50 rounded-xl overflow-hidden ring-4 ring-pink-100">
-          <img
-            src="/api/placeholder/112/112"
-            alt="User working at computer"
-            className="w-full h-full object-cover"
-          />
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-pink-300 to-pink-500 rounded-xl blur-md opacity-20"></div>
+          <div className="relative w-28 h-28 bg-pink-50 rounded-xl overflow-hidden ring-4 ring-pink-100">
+            <img
+              src={job.company?.logo || "/api/placeholder/112/112"}
+              alt={job.company?.name || "Company Logo"}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
         
-        {/* Username */}
+        {/* Username with Decorative Element */}
         <div className="relative">
-          <div className="text-lg font-semibold text-gray-900">kawa_to</div>
+          <div className="text-lg font-semibold text-gray-900">{job.company?.name || "kawa_to"}</div>
           <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-pink-300 to-pink-500 rounded-full"></div>
         </div>
-
+        
         {/* Rating */}
-        <div className="flex items-center space-x-1 bg-pink-50 px-3 py-1 rounded-full">
-          <div className="flex">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                className={`w-4 h-4 ${i < 4 ? 'text-pink-500 fill-current' : 'text-pink-200'}`}
-              />
-            ))}
+        <div className="flex flex-col items-center space-y-1">
+          <div className="flex items-center space-x-1 bg-pink-50 px-3 py-1 rounded-full">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className={`w-4 h-4 ${i < 4 ? 'text-pink-500 fill-current' : 'text-pink-200'}`}
+                />
+              ))}
+            </div>
+            <span className="text-pink-600 font-medium ml-1">4.5</span>
           </div>
-          <span className="text-pink-600 font-medium ml-1">4.5</span>
         </div>
 
         {/* Average Rate */}
         <div className="bg-white px-4 py-2 rounded-full shadow-sm border border-pink-100">
-          <span className="text-gray-700 font-medium">¥262</span>
+          <span className="text-gray-700 font-medium">¥{job.company?.averageHourlyRate || 262}</span>
           <span className="text-gray-500 text-sm ml-1">/ hour</span>
         </div>
       </div>
 
-      {/* Stats */}
+      {/* Job Stats */}
       <div className="bg-white p-4 rounded-lg border border-pink-100">
         <div className="space-y-3">
           <div className="flex justify-between items-center">
@@ -69,7 +73,7 @@ const JobSidebar = ({ scrollToForm }) => {
             <span className="text-gray-600">Est. hourly rate</span>
             <div className="text-gray-800">~60 yen</div>
           </div>
-          <div className="text-xs text-gray-500">
+          <div className="text-xs text-gray-500 mt-2">
             (estimated work time per item: ~1 minute)
           </div>
         </div>
@@ -92,7 +96,7 @@ const JobSidebar = ({ scrollToForm }) => {
         <div className="space-y-3">
           <div className="flex items-center text-gray-600">
             <Users className="w-4 h-4 mr-2" />
-            <span>40 applied / 31 ordered</span>
+            <span>45 applied / 31 ordered</span>
           </div>
           <div className="flex items-center text-gray-600">
             <Info className="w-4 h-4 mr-2" />
@@ -197,7 +201,7 @@ const JobDetails = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Left Sidebar */}
           <div className="lg:col-span-1">
-            <JobSidebar scrollToForm={scrollToForm} />
+            <JobSidebar job={job} scrollToForm={scrollToForm} />
           </div>
 
           {/* Main Content Area */}
@@ -217,14 +221,12 @@ const JobDetails = () => {
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
                         <span className="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-medium">
-                          {job.type}
+                          project
                         </span>
-                        {job.hasStandingOrder && (
-                          <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">
-                            Standing order
-                          </span>
-                        )}
-                        {job.tags.map((tag, index) => (
+                        <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">
+                          Standing order
+                        </span>
+                        {job.tags?.map((tag, index) => (
                           <span key={index} className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">
                             {tag}
                           </span>
@@ -244,15 +246,15 @@ const JobDetails = () => {
                         </div>
                       </div>
                     </div>
-                    <button className="flex items-center justify-center w-12 h-12 rounded-full border border-pink-200 hover:bg-pink-50 transition-colors">
-                      <Heart className="w-6 h-6 text-pink-500" />
+                    <button className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-pink-50 transition-colors">
+                      <Heart className="w-8 h-8 text-pink-500" />
                     </button>
                   </div>
                 </div>
               </div>
 
               {/* Job Requirements Section */}
-              <div className="p-6">
+              <div className="p-6 border-t border-gray-100">
                 <div className="relative mb-8">
                   <h2 className="text-2xl font-bold text-pink-600 inline-block">Job Requirements</h2>
                   <div className="absolute bottom-0 left-0 w-32 h-1 bg-gradient-to-r from-pink-500 to-pink-300"></div>
@@ -289,7 +291,7 @@ const JobDetails = () => {
 
                 {/* Required Skills */}
                 <div className="mb-8 bg-gradient-to-r from-pink-50 to-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
-                  <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
+                <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
                     <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center mr-3">
                       <Star className="w-5 h-5 text-pink-500" />
                     </div>
