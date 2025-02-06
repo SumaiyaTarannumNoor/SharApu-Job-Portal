@@ -1,7 +1,14 @@
 import React from 'react';
 import { CheckCircle, Clock } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const JobApplicationComplete = () => {
+  const navigate = useNavigate();
+
+  const handleSearchMore = () => {
+    navigate('/search-for-a-job');
+  };
+
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       {/* Breadcrumb */}
@@ -68,7 +75,9 @@ const JobApplicationComplete = () => {
                            hover:bg-pink-700 transition-colors duration-200">
               View My Applications
             </button>
-            <button className="flex-1 border-2 border-pink-600 text-pink-600 py-3 px-6 rounded-lg font-medium 
+            <button 
+              onClick={handleSearchMore}
+              className="flex-1 border-2 border-pink-600 text-pink-600 py-3 px-6 rounded-lg font-medium 
                            hover:bg-pink-50 transition-colors duration-200">
               Search More Jobs
             </button>
