@@ -17,7 +17,7 @@ import MiniProfileCard from '../../components/Profile/MiniProfileCard';
 import DrawerNavigation from '../../components/Profile/DrawerNavigation';
 import JobApplicationForm from './JobApplicationForm';
 
-const JobSidebar = ({ job, scrollToForm }) => {
+const JobSidebar = ({ job, scrollToForm, isFollowed, onFollowToggle }) => {
   return (
     <div className="bg-gradient-to-b from-pink-50 to-white rounded-xl shadow-md p-6 space-y-6 sticky top-4">
       {/* Profile Section */}
@@ -118,10 +118,16 @@ const JobSidebar = ({ job, scrollToForm }) => {
                        hover:bg-pink-50 transition-all duration-200">
           Ask a Question
         </button>
-        <button className="w-full flex items-center justify-center gap-2 text-gray-600 hover:text-pink-600 py-3 rounded-lg
-                       border border-gray-200 hover:border-pink-200 transition-colors">
-          <Heart className="w-4 h-4" />
-          <span>Follow</span>
+        <button 
+          onClick={onFollowToggle}
+          className={`w-full flex items-center justify-center gap-2 py-3 rounded-lg
+                     border transition-colors ${
+                       isFollowed 
+                       ? 'bg-pink-50 border-pink-300 text-pink-600' 
+                       : 'border-gray-200 text-gray-600 hover:text-pink-600 hover:border-pink-200'
+                     }`}>
+          <Heart className={`w-4 h-4 ${isFollowed ? 'fill-current' : ''}`} />
+          <span>{isFollowed ? 'Following' : 'Follow'}</span>
         </button>
       </div>
 
@@ -137,12 +143,17 @@ const JobSidebar = ({ job, scrollToForm }) => {
 
 const JobDetails = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isFollowed, setIsFollowed] = useState(false);
   const location = useLocation();
   const job = location.state?.job;
   const formRef = useRef(null);
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleFollowToggle = () => {
+    setIsFollowed(!isFollowed);
   };
 
   if (!job) {
@@ -201,7 +212,12 @@ const JobDetails = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Left Sidebar */}
           <div className="lg:col-span-1">
-            <JobSidebar job={job} scrollToForm={scrollToForm} />
+            <JobSidebar 
+              job={job} 
+              scrollToForm={scrollToForm} 
+              isFollowed={isFollowed}
+              onFollowToggle={handleFollowToggle}
+            />
           </div>
 
           {/* Main Content Area */}
@@ -246,8 +262,12 @@ const JobDetails = () => {
                         </div>
                       </div>
                     </div>
-                    <button className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-pink-50 transition-colors">
-                      <Heart className="w-8 h-8 text-pink-500" />
+                    <button 
+                      onClick={handleFollowToggle}
+                      className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-pink-50 transition-colors">
+                      <Heart 
+                        className={`w-8 h-8 text-pink-500 ${isFollowed ? 'fill-current' : ''}`} 
+                      />
                     </button>
                   </div>
                 </div>
@@ -291,7 +311,7 @@ const JobDetails = () => {
 
                 {/* Required Skills */}
                 <div className="mb-8 bg-gradient-to-r from-pink-50 to-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
+                  <h3 className="text-lg font-semibold text-pink-700 mb-4 flex items-center">
                     <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center mr-3">
                       <Star className="w-5 h-5 text-pink-500" />
                     </div>
