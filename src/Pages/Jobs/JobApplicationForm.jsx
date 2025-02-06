@@ -22,7 +22,7 @@ const JobApplicationForm = () => {
               <div className="flex items-center">
                 <input
                   type="number"
-                  className="form-input w-32 rounded-lg border-gray-200 focus:border-pink-500 focus:ring focus:ring-pink-200"
+                  className="form-input p-4 border-pink-500 border-2 w-32 rounded-lg border-gray-200 focus:border-pink-500 focus:ring focus:ring-pink-200"
                   min="1"
                 />
                 <span className="ml-2 text-gray-600">yen</span>
@@ -37,12 +37,12 @@ const JobApplicationForm = () => {
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full h-40 rounded-lg border-gray-200 focus:border-pink-500 focus:ring focus:ring-pink-200"
+                className="p-4 border-pink-500 border-2 w-full h-40 rounded-lg border-gray-200 focus:border-pink-500 focus:ring focus:ring-pink-200"
                 placeholder="Many clients judge the job based on the message you send when applying, so the content is very important. Make sure to write down your enthusiasm, past experience, and how you can contribute to the job!"
               />
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-4">
+            <div className="bg-blue-50 rounded-lg p-4 p-4 border-blue-500 border-2">
               <div className="flex items-start space-x-3">
                 <AlertCircle className="w-5 h-5 text-blue-500 mt-0.5" />
                 <div className="text-sm text-blue-700">
