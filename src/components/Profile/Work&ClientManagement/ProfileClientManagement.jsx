@@ -8,9 +8,9 @@ const ProfileClientManagement = () => {
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-sm">
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center space-x-2 text-sm mb-6">
-        <a href="#" className="text-blue-500 hover:underline">Work from home Shufti</a>
+        <a href="#" className="text-pink-500 hover:underline">Work from home Shufti</a>
         <ChevronRight className="w-4 h-4 text-gray-400" />
-        <a href="#" className="text-blue-500 hover:underline">Client Management</a>
+        <a href="#" className="text-pink-500 hover:underline">Client Management</a>
         <ChevronRight className="w-4 h-4 text-gray-400" />
         <span className="text-gray-600">Follow list</span>
       </nav>
