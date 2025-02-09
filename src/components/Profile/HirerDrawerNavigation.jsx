@@ -7,23 +7,28 @@ const HirerDrawerNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleMainProfile = () => {
-    navigate('/hirer-profile');
+  const handleHome = () => {
+    navigate('/home');
     setIsOpen(false);
   };
 
-  const handlePostJob = () => {
-    navigate('/post-job', { state: { from: 'hirerProfile' } });
+  const handleFindWorker = () => {
+    navigate('/find-a-worker');
     setIsOpen(false);
   };
 
-  const handleJobManagement = () => {
-    navigate('/job-management');
+  const handleWorkManagement = () => {
+    navigate('/work-management');
     setIsOpen(false);
   };
 
-  const handleWorkerList = () => {
-    navigate('/worker-list');
+  const handleWorkerManagement = () => {
+    navigate('/worker-management');
+    setIsOpen(false);
+  };
+
+  const handlePaidOptions = () => {
+    navigate('/paid-options');
     setIsOpen(false);
   };
 
@@ -99,28 +104,34 @@ const HirerDrawerNavigation = () => {
         <nav className="bg-pink-400 h-full">
           <div className="flex flex-col space-y-1 p-2">
             <MobileNavLink 
-              onClick={handleMainProfile}
-              isActive={location.pathname === '/hirer-profile'}
+              onClick={handleHome}
+              isActive={location.pathname === '/home'}
             >
               Home
             </MobileNavLink>
             <MobileNavLink 
-              onClick={handlePostJob}
-              isActive={location.pathname === '/post-job'}
+              onClick={handleFindWorker}
+              isActive={location.pathname === '/find-a-worker'}
             >
-              Post a Job
+              Find a Worker
             </MobileNavLink>
             <MobileNavLink 
-              onClick={handleJobManagement}
-              isActive={location.pathname === '/job-management'}
+              onClick={handleWorkManagement}
+              isActive={location.pathname === '/work-management'}
             >
-              Job Management
+              Work Management
             </MobileNavLink>
             <MobileNavLink 
-              onClick={handleWorkerList}
-              isActive={location.pathname === '/worker-list'}
+              onClick={handleWorkerManagement}
+              isActive={location.pathname === '/worker-management'}
             >
-              Worker List
+              Worker Management
+            </MobileNavLink>
+            <MobileNavLink 
+              onClick={handlePaidOptions}
+              isActive={location.pathname === '/paid-options'}
+            >
+              Paid options
             </MobileNavLink>
             
             {/* Mobile Payment History Button */}
@@ -145,28 +156,34 @@ const HirerDrawerNavigation = () => {
         <div className="flex items-center justify-between px-4">
           <div className="flex space-x-1">
             <NavLink 
-              onClick={handleMainProfile}
-              isActive={location.pathname === '/hirer-profile'}
+              onClick={handleHome}
+              isActive={location.pathname === '/home'}
             >
               Home
             </NavLink>
             <NavLink 
-              onClick={handlePostJob}
-              isActive={location.pathname === '/post-job'}
+              onClick={handleFindWorker}
+              isActive={location.pathname === '/find-a-worker'}
             >
-              Post a Job
+              Find a Worker
             </NavLink>
             <NavLink 
-              onClick={handleJobManagement}
-              isActive={location.pathname === '/job-management'}
+              onClick={handleWorkManagement}
+              isActive={location.pathname === '/work-management'}
             >
-              Job Management
+              Work Management
             </NavLink>
             <NavLink 
-              onClick={handleWorkerList}
-              isActive={location.pathname === '/worker-list'}
+              onClick={handleWorkerManagement}
+              isActive={location.pathname === '/worker-management'}
             >
-              Worker List
+              Worker Management
+            </NavLink>
+            <NavLink 
+              onClick={handlePaidOptions}
+              isActive={location.pathname === '/paid-options'}
+            >
+              Paid options
             </NavLink>
           </div>
 
