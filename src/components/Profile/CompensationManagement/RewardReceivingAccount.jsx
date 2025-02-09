@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const RewardReceivingAccount = () => {
-  const [bankType, setBankType] = useState('banks-and-shohin-banks');
+  const [bankType, setBankType] = useState('private-and-public');
   const [accountType, setAccountType] = useState('regular-deposit');
 
   const radioStyle = "accent-pink-500 h-4 w-4 cursor-pointer focus:outline-none";
@@ -10,8 +10,8 @@ const RewardReceivingAccount = () => {
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg border border-gray-200">
       {/* Header */}
-      <div className="px-6 py-4 bg-gray-50 border-b border-gray-200 rounded-t-lg">
-        <h2 className="text-lg font-semibold text-gray-800">
+      <div className="px-6 py-4 bg-pink-400 border-b border-gray-200 rounded-t-lg">
+        <h2 className="text-lg font-semibold text-white">
           Reward receiving account
         </h2>
       </div>
@@ -30,24 +30,24 @@ const RewardReceivingAccount = () => {
                   type="radio"
                   id="banks"
                   name="bankType"
-                  value="banks-and-shohin-banks"
-                  checked={bankType === 'banks-and-shohin-banks'}
+                  value="private-and-public"
+                  checked={bankType === 'private-and-public'}
                   onChange={(e) => setBankType(e.target.value)}
                   className={radioStyle}
                 />
-                <label htmlFor="banks" className="text-sm cursor-pointer">Banks and Shinkin Banks</label>
+                <label htmlFor="banks" className="text-sm cursor-pointer">Private and Public Bank</label>
               </div>
               <div className="flex items-center space-x-2">
                 <input
                   type="radio"
                   id="post"
                   name="bankType"
-                  value="japan-post-bank"
-                  checked={bankType === 'japan-post-bank'}
+                  value="bangladesh-post-bank"
+                  checked={bankType === 'bangladesh-post-bank'}
                   onChange={(e) => setBankType(e.target.value)}
                   className={radioStyle}
                 />
-                <label htmlFor="post" className="text-sm cursor-pointer">Japan Post Bank</label>
+                <label htmlFor="post" className="text-sm cursor-pointer">Bangladesh Post Bank</label>
               </div>
             </div>
           </div>
