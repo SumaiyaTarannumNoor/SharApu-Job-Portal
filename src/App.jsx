@@ -39,6 +39,7 @@ import UserSettings from './components/Profile/UserSettings';
 import JobDetails from './Pages/Jobs/JobDetails';
 import JobApplicationConfirm from './Pages/Jobs/JobApplicationConfirm';
 import JobApplicationComplete from './Pages/Jobs/JobApplicationComplete';
+import ProfileWorkManagement from './components/Profile/Work&ClientManagement/ProfileWorkManagement';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -208,6 +209,7 @@ const App = () => {
             <Route path="/job-details" element={<JobDetails />} />
             <Route path="/job-application-confirm" element={<JobApplicationConfirm />} />
             <Route path="/job-application-complete" element={<JobApplicationComplete />} />
+            <Route path="/profile-work-management" element={<ProfileWorkManagement />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>
