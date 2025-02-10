@@ -47,6 +47,7 @@ import HirerProfile from './components/Profile/HirerProfile/HirerProfile';
 import FindAWorker from './components/Profile/HirerProfile/FindAWorker'
 import WorkerManagement from './components/Profile/HirerProfile/WorkerManagement';
 import PaymentOptions from './components/Profile/HirerProfile/PaymentOptions';
+import HirerWorkManagement from './components/Profile/HirerProfile/HirerWorkManagement';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -222,7 +223,7 @@ const App = () => {
             <Route path="/choose-role" element={<ChooseRole />} />
             <Route path="/hirer-profile" element={<HirerProfile />} />
             <Route path="/find-a-worker" element={<FindAWorker />} />
-            <Route path="/work-management" element={<WorkManagement />} />
+            <Route path="/hirer-work-management" element={<HirerWorkManagement />} />
             <Route path="/worker-management" element={<WorkerManagement />} />
             <Route path="/payment-options" element={<PaymentOptions />} />
 

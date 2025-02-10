@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { User, ChevronDown } from 'lucide-react';
 
-const WorkManagement = () => {
+const HirerWorkManagement = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('inProgress');
   
@@ -132,4 +132,4 @@ const WorkManagement = () => {
   );
 };
 
-export default WorkManagement;
+export default HirerWorkManagement;

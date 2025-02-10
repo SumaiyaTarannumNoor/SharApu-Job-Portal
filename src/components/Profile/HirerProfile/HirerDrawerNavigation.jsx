@@ -17,8 +17,8 @@ const HirerDrawerNavigation = () => {
     setIsOpen(false);
   };
 
-  const handleWorkManagement = () => {
-    navigate('/work-management');
+  const handleHirerWorkManagement = () => {
+    navigate('/hirer-work-management');
     setIsOpen(false);
   };
 
@@ -116,8 +116,8 @@ const HirerDrawerNavigation = () => {
               Find a Worker
             </MobileNavLink>
             <MobileNavLink 
-              onClick={handleWorkManagement}
-              isActive={location.pathname === '/work-management'}
+              onClick={handleHirerWorkManagement}
+              isActive={location.pathname === '/hirer-work-management'}
             >
               Work Management
             </MobileNavLink>
@@ -157,7 +157,7 @@ const HirerDrawerNavigation = () => {
           <div className="flex space-x-1">
             <NavLink 
               onClick={handleHome}
-              isActive={location.pathname === '/home'}
+              isActive={location.pathname === '/hirer-profile'}
             >
               Home
             </NavLink>
@@ -168,8 +168,8 @@ const HirerDrawerNavigation = () => {
               Find a Worker
             </NavLink>
             <NavLink 
-              onClick={handleWorkManagement}
-              isActive={location.pathname === '/work-management'}
+              onClick={handleHirerWorkManagement}
+              isActive={location.pathname === '/hirer-work-management'}
             >
               Work Management
             </NavLink>
