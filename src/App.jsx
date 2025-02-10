@@ -43,7 +43,8 @@ import ProfileWorkManagement from './components/Profile/Work&ClientManagement/Pr
 import ProfileClientManagement from './components/Profile/Work&ClientManagement/ProfileClientManagement';
 import RewardReceivingAccount from './components/Profile/CompensationManagement/RewardReceivingAccount';
 import ChooseRole from './components/Profile/ChooseRole';
-import HirerProfile from './components/Profile/HirerProfile';
+import HirerProfile from './components/Profile/HirerProfile/HirerProfile';
+import FindAWorker from './components/Profile/HirerProfile/FindAWorker'
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -218,6 +219,7 @@ const App = () => {
             <Route path="/reward-receiving-account" element={<RewardReceivingAccount />} />
             <Route path="/choose-role" element={<ChooseRole />} />
             <Route path="/hirer-profile" element={<HirerProfile />} />
+            <Route path="/find-a-worker" element={<FindAWorker />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>

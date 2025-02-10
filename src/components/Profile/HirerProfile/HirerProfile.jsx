@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, ChevronDown, AlertCircle } from 'lucide-react';
-import MiniProfileCard from './MiniProfileCard';
-import UserSettingsSection from './UserSettingsSection';
+import MiniProfileCard from '../MiniProfileCard';
+import UserSettingsSection from '../UserSettingsSection';
 import HirerDrawerNavigation from './HirerDrawerNavigation';
-import Penguine from '../../../assets/LandingPageIconImage/Penguine1.png'
+import Penguine from '../../../../assets/LandingPageIconImage/Penguine1.png'
 
 const HirerProfile = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
