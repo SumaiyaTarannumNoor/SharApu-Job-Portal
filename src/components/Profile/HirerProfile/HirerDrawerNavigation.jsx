@@ -8,7 +8,7 @@ const HirerDrawerNavigation = () => {
   const location = useLocation();
 
   const handleHome = () => {
-    navigate('/home');
+    navigate('/hirer-profile');
     setIsOpen(false);
   };
 
@@ -105,7 +105,7 @@ const HirerDrawerNavigation = () => {
           <div className="flex flex-col space-y-1 p-2">
             <MobileNavLink 
               onClick={handleHome}
-              isActive={location.pathname === '/home'}
+              isActive={location.pathname === '/hirer-profile'}
             >
               Home
             </MobileNavLink>
