@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { User, ChevronDown } from 'lucide-react';
+import HirerDrawerNavigation from './HirerDrawerNavigation';
 
 const HirerWorkManagement = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('inProgress');
   
   const handleSwitchRole = () => {
-    // Handle role switching logic
-    console.log('Switching role...');
+    navigate('/choose-role');
   };
 
   const MiniProfileCard = ({ isOpen }) => {
@@ -22,25 +22,10 @@ const HirerWorkManagement = () => {
     );
   };
 
-  const HirerDrawerNavigation = () => (
-    <nav className="hidden md:flex border-b border-gray-200">
-      <div className="flex px-4 gap-6">
-        <Link to="/dashboard" className="px-4 py-3 text-pink-600 border-b-2 border-pink-600">
-          Work Management
-        </Link>
-        <Link to="/jobs" className="px-4 py-3 text-gray-600 hover:text-pink-600">
-          Job Listings
-        </Link>
-        <Link to="/workers" className="px-4 py-3 text-gray-600 hover:text-pink-600">
-          Find Workers
-        </Link>
-      </div>
-    </nav>
-  );
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
+      {/* Top Navigation */}
       <header className="bg-white shadow-sm">
         <div className="flex justify-between items-center px-4 py-2">
           <div className="flex items-center gap-2">
@@ -81,6 +66,7 @@ const HirerWorkManagement = () => {
           </div>
         </div>
 
+        {/* Desktop navigation will be hidden on mobile */}
         <HirerDrawerNavigation />
 
         <div className="bg-green-50 p-2 text-sm text-green-800">
