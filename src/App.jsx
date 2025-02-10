@@ -220,6 +220,7 @@ const App = () => {
             <Route path="/choose-role" element={<ChooseRole />} />
             <Route path="/hirer-profile" element={<HirerProfile />} />
             <Route path="/find-a-worker" element={<FindAWorker />} />
+            <Route path="/work-management" element={<WorkManagement />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>
