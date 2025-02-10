@@ -27,8 +27,8 @@ const HirerDrawerNavigation = () => {
     setIsOpen(false);
   };
 
-  const handlePaidOptions = () => {
-    navigate('/paid-options');
+  const handlePaymentOptions = () => {
+    navigate('/payment-options');
     setIsOpen(false);
   };
 
@@ -128,10 +128,10 @@ const HirerDrawerNavigation = () => {
               Worker Management
             </MobileNavLink>
             <MobileNavLink 
-              onClick={handlePaidOptions}
+              onClick={handlePaymentOptions}
               isActive={location.pathname === '/paid-options'}
             >
-              Paid options
+              Payment options
             </MobileNavLink>
             
             {/* Mobile Payment History Button */}
@@ -180,10 +180,10 @@ const HirerDrawerNavigation = () => {
               Worker Management
             </NavLink>
             <NavLink 
-              onClick={handlePaidOptions}
+              onClick={handlePaymentOptions}
               isActive={location.pathname === '/paid-options'}
             >
-              Paid options
+              Payment options
             </NavLink>
           </div>
 
