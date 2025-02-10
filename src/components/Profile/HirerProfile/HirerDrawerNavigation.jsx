@@ -38,7 +38,7 @@ const HirerDrawerNavigation = () => {
   };
 
   const handleRegisterJob = () => {
-    navigate('/register-job');
+    navigate('/register-a-job');
     setIsOpen(false);
   };
 
