@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { User, ChevronDown, Check } from 'lucide-react';
-import HirerDrawerNavigation from './HirerDrawerNavigation';
+import HirerDrawerNavigation from '../HirerDrawerNavigation';
+import Step2RegisterAJob from './Step2RegisterAJob';
 
 const RegisterAJob = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
+  const [selectedProjectType, setSelectedProjectType] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
+
+  const handleNextStep = () => {
+    if (selectedProjectType && selectedCategory) {
+      setCurrentStep(2);
+    } else {
+      alert('Please select a project type and category before proceeding');
+    }
+  };
 
   const handleSwitchRole = () => {
-    // Handle role switching logic
     console.log('Switching role...');
   };
 
@@ -30,6 +40,11 @@ const RegisterAJob = () => {
     { number: 4, title: 'Other Settings' },
     { number: 5, title: 'Check the contents' },
   ];
+
+  // If we're on step 2, render Step2RegisterAJob
+  if (currentStep === 2) {
+    return <Step2RegisterAJob currentStep={currentStep} setCurrentStep={setCurrentStep} />;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -143,56 +158,75 @@ const RegisterAJob = () => {
                   </div>
                   <h3 className="font-medium">Project Types</h3>
                 </div>
-                <ul className="space-y-3 text-sm text-gray-600">
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-600">•</span>
-                    This type of system accepts applications from workers and allows for communication from ordering to delivery.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-600">•</span>
-                    You can give instructions and negotiate with the worker you are requesting via the communication board.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-600">•</span>
-                    Recommended for those who want to work slowly and steadily.
-                  </li>
-                </ul>
+                <div className="space-y-3">
+                  <label className="flex items-center space-x-2">
+                    <input
+                      type="radio"
+                      name="projectType"
+                      value="project"
+                      className="text-pink-600 focus:ring-pink-500"
+                      checked={selectedProjectType === 'project'}
+                      onChange={(e) => setSelectedProjectType(e.target.value)}
+                    />
+                    <span className="text-sm text-gray-700">Project Type</span>
+                  </label>
+                  <ul className="space-y-3 text-sm text-gray-600 ml-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600">•</span>
+                      This type of system accepts applications from workers and allows for communication from ordering to delivery.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600">•</span>
+                      You can give instructions and negotiate with the worker you are requesting via the communication board.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600">•</span>
+                      Recommended for those who want to work slowly and steadily.
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               {/* Task Type */}
               <div className="border rounded-lg p-4">
-                <h3 className="font-medium mb-4">Task Type</h3>
-                <ul className="space-y-3 text-sm text-gray-600">
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-600">•</span>
-                    This is a simple type that does not require any applications and simply evaluates the deliveries made by workers.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-600">•</span>
-                    You will not be able to communicate with the worker you are requesting via the message board.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-600">•</span>
-                    Recommended for those who want to collect a large amount of deliveries at once.
-                  </li>
-                </ul>
+                <div className="flex items-center gap-2 mb-4">
+                  <h3 className="font-medium">Task Type</h3>
+                </div>
+                <div className="space-y-3">
+                  <label className="flex items-center space-x-2">
+                    <input
+                      type="radio"
+                      name="projectType"
+                      value="task"
+                      className="text-pink-600 focus:ring-pink-500"
+                      checked={selectedProjectType === 'task'}
+                      onChange={(e) => setSelectedProjectType(e.target.value)}
+                    />
+                    <span className="text-sm text-gray-700">Task Type</span>
+                  </label>
+                  <ul className="space-y-3 text-sm text-gray-600 ml-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600">•</span>
+                      This is a simple type that does not require any applications and simply evaluates the deliveries made by workers.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600">•</span>
+                      You will not be able to communicate with the worker you are requesting via the message board.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600">•</span>
+                      Recommended for those who want to collect a large amount of deliveries at once.
+                    </li>
+                  </ul>
+                </div>
                 <button className="mt-4 text-pink-600 text-sm hover:text-pink-700">
                   Task type usage examples
                 </button>
               </div>
             </div>
 
-            {/* Navigation Buttons */}
-            {/* <div className="flex justify-end mt-8 gap-4">
-              <button className="px-6 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors">
-                Back
-              </button>
-              <button className="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors">
-                Next Step
-              </button>
-            </div> */}
             {/* Job Categories Section */}
-            <div className="mt-8 bg-white rounded-lg shadow-lg p-6">
+            <div className="mt-8">
               <div className="mb-6">
                 <h3 className="text-xl font-semibold text-gray-800">Job Category</h3>
                 <p className="text-sm text-pink-600 mt-2">
@@ -209,15 +243,36 @@ const RegisterAJob = () => {
                   <h4 className="font-medium text-gray-800 mb-3">Data entry and product registration</h4>
                   <div className="space-y-2">
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="data_entry"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'data_entry'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Data entry and data check</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="data_collection"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'data_collection'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Data collection and classification</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="product_registration"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'product_registration'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Product Registration</span>
                     </label>
                   </div>
@@ -228,15 +283,36 @@ const RegisterAJob = () => {
                   <h4 className="font-medium text-gray-800 mb-3">Sales, customer support, research</h4>
                   <div className="space-y-2">
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="sales"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'sales'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Sales/Telemarketing</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="customer_support"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'customer_support'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Customer Support</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="research"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'research'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Monitor, Survey, Research</span>
                     </label>
                   </div>
@@ -247,15 +323,36 @@ const RegisterAJob = () => {
                   <h4 className="font-medium text-gray-800 mb-3">Web production, Web design and development</h4>
                   <div className="space-y-2">
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="web_design"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'web_design'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Web Design</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="html_css"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'html_css'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>HTML and CSS coding</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="website_test"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'website_test'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Website check/ups test</span>
                     </label>
                   </div>
@@ -266,15 +363,36 @@ const RegisterAJob = () => {
                   <h4 className="font-medium text-gray-800 mb-3">Writing</h4>
                   <div className="space-y-2">
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="article_creation"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'article_creation'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Article/blog creation</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="reviews"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'reviews'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Customer reviews and testimonials</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="transcription"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'transcription'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Text and transcription</span>
                     </label>
                   </div>
@@ -285,16 +403,37 @@ const RegisterAJob = () => {
                   <h4 className="font-medium text-gray-800 mb-3">Design, photography, and video</h4>
                   <div className="space-y-2">
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="illustrations"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'illustrations'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Illustrations, logos, and graphics</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
-                      <span>Photo retouching, photo editing, image processing</span>
+                      <input
+                        type="radio"
+                        name="category"
+                        value="photo_editing"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'photo_editing'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
+                      <span>Photo retouching, photo editing</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
-                      <span>Video shooting, video editing, video processing</span>
+                      <input
+                        type="radio"
+                        name="category"
+                        value="video_editing"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'video_editing'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
+                      <span>Video shooting, video editing</span>
                     </label>
                   </div>
                 </div>
@@ -304,11 +443,25 @@ const RegisterAJob = () => {
                   <h4 className="font-medium text-gray-800 mb-3">Translation</h4>
                   <div className="space-y-2">
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="english_translation"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'english_translation'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>English Translation</span>
                     </label>
                     <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <input
+                        type="radio"
+                        name="category"
+                        value="other_translation"
+                        className="text-pink-600 focus:ring-pink-500"
+                        checked={selectedCategory === 'other_translation'}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                      />
                       <span>Other translations</span>
                     </label>
                   </div>
@@ -317,8 +470,16 @@ const RegisterAJob = () => {
 
               {/* Navigation Buttons */}
               <div className="flex justify-end mt-8 gap-4">
-                <button className="px-8 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors">
-                  Next (Enter job details)
+                <button
+                  className="px-6 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors"
+                >
+                  Back
+                </button>
+                <button 
+                  onClick={handleNextStep}
+                  className="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors"
+                >
+                  Next Step
                 </button>
               </div>
             </div>

@@ -48,7 +48,7 @@ import FindAWorker from './components/Profile/HirerProfile/FindAWorker'
 import WorkerManagement from './components/Profile/HirerProfile/WorkerManagement';
 import PaymentOptions from './components/Profile/HirerProfile/PaymentOptions';
 import HirerWorkManagement from './components/Profile/HirerProfile/HirerWorkManagement';
-import RegisterAJob from './components/Profile/HirerProfile/RegisterAJob';
+import RegisterAJob from './components/Profile/HirerProfile/RegisterAJob/RegisterAJob';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
