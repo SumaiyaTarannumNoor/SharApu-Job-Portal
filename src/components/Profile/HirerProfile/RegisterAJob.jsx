@@ -183,13 +183,144 @@ const RegisterAJob = () => {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="flex justify-end mt-8 gap-4">
+            {/* <div className="flex justify-end mt-8 gap-4">
               <button className="px-6 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors">
                 Back
               </button>
               <button className="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors">
                 Next Step
               </button>
+            </div> */}
+            {/* Job Categories Section */}
+            <div className="mt-8 bg-white rounded-lg shadow-lg p-6">
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-gray-800">Job Category</h3>
+                <p className="text-sm text-pink-600 mt-2">
+                  Please select the correct job category to avoid skill mismatches.
+                  <span className="text-gray-500 ml-1">
+                    If the correct category is not selectable, your application may be rejected.
+                  </span>
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Data entry and product registration */}
+                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                  <h4 className="font-medium text-gray-800 mb-3">Data entry and product registration</h4>
+                  <div className="space-y-2">
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Data entry and data check</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Data collection and classification</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Product Registration</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Sales and Support */}
+                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                  <h4 className="font-medium text-gray-800 mb-3">Sales, customer support, research</h4>
+                  <div className="space-y-2">
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Sales/Telemarketing</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Customer Support</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Monitor, Survey, Research</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Web Development */}
+                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                  <h4 className="font-medium text-gray-800 mb-3">Web production, Web design and development</h4>
+                  <div className="space-y-2">
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Web Design</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>HTML and CSS coding</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Website check/ups test</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Writing */}
+                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                  <h4 className="font-medium text-gray-800 mb-3">Writing</h4>
+                  <div className="space-y-2">
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Article/blog creation</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Customer reviews and testimonials</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Text and transcription</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Design and Media */}
+                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                  <h4 className="font-medium text-gray-800 mb-3">Design, photography, and video</h4>
+                  <div className="space-y-2">
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Illustrations, logos, and graphics</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Photo retouching, photo editing, image processing</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Video shooting, video editing, video processing</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Translation */}
+                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                  <h4 className="font-medium text-gray-800 mb-3">Translation</h4>
+                  <div className="space-y-2">
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>English Translation</span>
+                    </label>
+                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                      <input type="radio" name="category" className="text-pink-600 focus:ring-pink-500" />
+                      <span>Other translations</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              {/* Navigation Buttons */}
+              <div className="flex justify-end mt-8 gap-4">
+                <button className="px-8 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors">
+                  Next (Enter job details)
+                </button>
+              </div>
             </div>
           </div>
         </div>
