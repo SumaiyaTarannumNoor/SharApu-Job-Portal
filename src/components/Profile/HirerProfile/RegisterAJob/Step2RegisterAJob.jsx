@@ -161,6 +161,112 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
                   Next Step
                 </button>
               </div>
+              {/* Tag Configuration */}
+              <div className="space-y-4 border-t pt-6 mt-6">
+                <div className="flex items-center gap-2">
+                  <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
+                  <h3 className="text-gray-700 font-medium">Tag Configuration</h3>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {[
+                    'Beginners Welcome',
+                    'No skills required',
+                    'Salary increase available',
+                    'Manual included',
+                    'Work time: 10 minutes or less',
+                    'questionnaire',
+                    'Product registration',
+                    'Data Entry',
+                    'transcription',
+                    'Limited to specific users'
+                  ].map((tag) => (
+                    <label key={tag} className="flex items-center space-x-2 bg-pink-50 p-3 rounded-lg border border-pink-100 hover:border-pink-300 cursor-pointer transition-colors">
+                      <input
+                        type="checkbox"
+                        className="rounded text-pink-600 focus:ring-pink-500"
+                      />
+                      <span className="text-sm text-gray-700">#{tag}</span>
+                    </label>
+                  ))}
+                </div>
+                
+                <p className="text-sm text-gray-500 mt-2">
+                  *You can set up to three tags that match the characteristics of your work.
+                </p>
+                <p className="text-sm text-gray-500">
+                  *If there are any discrepancies with the job description, the secretariat may make corrections.
+                </p>
+              </div>
+
+              {/* Work Schedule */}
+              <div className="space-y-4 border-t pt-6 mt-6">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-medium text-gray-800 mb-2">Please set the work schedule</h3>
+                  <p className="text-sm text-gray-600">
+                    If there are any specifications for the days of the week or times that the worker will work, select "Yes" and enter the specifications in the text area.
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    *Even if you select "None," you can enter additional information in the text area below.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
+                    <label className="text-gray-700 font-medium">Specify work date and time</label>
+                  </div>
+                  
+                  <div className="flex items-center gap-6">
+                    <label className="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="work_schedule"
+                        value="can_be"
+                        className="text-pink-600 focus:ring-pink-500"
+                      />
+                      <span className="text-gray-700">can be</span>
+                    </label>
+                    <label className="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="work_schedule"
+                        value="none"
+                        className="text-pink-600 focus:ring-pink-500"
+                      />
+                      <span className="text-gray-700">none</span>
+                    </label>
+                  </div>
+
+                  <div className="relative">
+                    <textarea
+                      className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent min-h-[100px]"
+                      placeholder="Example: 4 hours between 10:00 and 17:00 on Mondays, Wednesdays, and Fridays"
+                    />
+                    <div className="absolute top-3 right-3 text-gray-400 text-sm">
+                      <span className="text-pink-600">*</span> Optional
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Navigation Buttons */}
+              <div className="flex justify-between pt-6">
+                <button
+                  type="button"
+                  onClick={handleBack}
+                  className="px-6 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors"
+                >
+                  Back
+                </button>
+                <button
+                  type="button"
+                  onClick={handleNext}
+                  className="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors"
+                >
+                  Next Step
+                </button>
+              </div>
             </form>
           </div>
         </div>
