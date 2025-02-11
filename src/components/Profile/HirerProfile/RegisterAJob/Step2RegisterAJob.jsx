@@ -10,7 +10,7 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
   const handleNext = () => {
     setCurrentStep(3);
   };
-  
+
   const steps = [
     { number: 1, title: 'Selecting a Job Type and Category' },
     { number: 2, title: 'Enter your job description' },
@@ -21,7 +21,6 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumb */}
@@ -55,34 +54,21 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
             </div>
           </div>
 
-          {/* Form Section */}
+          {/* Main Content */}
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-6">
               STEP 2. Enter your job details
             </h2>
 
-            <form className="space-y-6">
-              {/* Job Title */}
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
-                  <label className="text-gray-700 font-medium">Job Title</label>
-                </div>
-                <input
-                  type="text"
-                  placeholder="Beginners welcome! Please let me help to type time and headwords"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                />
-              </div>
-
+            <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
               {/* Job Description */}
-              <div className="space-y-2">
+              <div className="space-y-6">
                 <div className="flex items-center gap-2">
                   <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
-                  <label className="text-gray-700 font-medium">Job Description</label>
+                  <label className="text-gray-700 font-medium">Job Description Details</label>
                 </div>
+                
                 <div className="border border-gray-300 rounded-lg overflow-hidden">
-                  {/* Text Editor Toolbar */}
                   <div className="bg-gray-50 px-4 py-2 border-b border-gray-300 flex items-center gap-4">
                     <button type="button" className="p-1 hover:bg-gray-200 rounded">
                       <Bold className="w-4 h-4 text-gray-600" />
@@ -99,14 +85,213 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
                       </button>
                     </div>
                   </div>
-                  <textarea
-                    rows="10"
-                    className="w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                  />
+                  
+                  <div className="p-4 space-y-6">
+                    {/* Reason for Request */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Reason for Request</label>
+                      <textarea 
+                        className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        rows="3"
+                        placeholder="Enter the reason for the data entry work request"
+                        defaultValue="To support data entry work. We are recruiting to improve operational efficiency and accuracy."
+                      />
+                    </div>
+
+                    {/* Background */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Background</label>
+                      <textarea 
+                        className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        rows="3"
+                        placeholder="Describe the project background"
+                        defaultValue="With the launch of a new project, a large amount of data entry work has occurred. We are looking for someone who can work accurately in a short period of time."
+                      />
+                    </div>
+
+                    {/* Estimated Number of Tasks */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Estimated Number of Tasks</label>
+                      <div className="flex items-center gap-2">
+                        <input 
+                          type="number"
+                          className="w-32 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                          defaultValue="100"
+                        />
+                        <span className="text-gray-600">items</span>
+                      </div>
+                    </div>
+
+                    {/* Data Entry Fields */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Data Entry Fields</label>
+                      <div className="flex flex-wrap gap-2">
+                        {[
+                          'Name',
+                          'Address',
+                          'Phone Number',
+                          'Email',
+                          'Product Name',
+                          'Price',
+                          'Quantity'
+                        ].map((field) => (
+                          <label key={field} className="flex items-center bg-gray-50 px-3 py-1 rounded-full">
+                            <input 
+                              type="checkbox"
+                              className="mr-2 h-4 w-4 accent-pink-600 rounded focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                              defaultChecked
+                            />
+                            <span className="text-sm">{field}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Compensation */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Compensation</label>
+                      <div className="flex items-center gap-2">
+                        <input 
+                          type="number"
+                          className="w-32 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                          defaultValue="13"
+                        />
+                        <span className="text-gray-600">yen per item</span>
+                      </div>
+                    </div>
+
+                    {/* File Format */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">File Format for Submission</label>
+                      <div className="flex gap-4">
+                        <label className="flex items-center">
+                          <input 
+                            type="checkbox"
+                            className="mr-2 h-4 w-4 accent-pink-600 rounded focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                            defaultChecked
+                          />
+                          <span>Excel (.xlsx)</span>
+                        </label>
+                        <label className="flex items-center">
+                          <input 
+                            type="checkbox"
+                            className="mr-2 h-4 w-4 accent-pink-600 rounded focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                            defaultChecked
+                          />
+                          <span>CSV (.csv)</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    {/* Delivery Method */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Delivery Method</label>
+                      <select className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option>Using Shufti's delivery system</option>
+                      </select>
+                    </div>
+
+                    {/* Work Procedure */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Work Procedure</label>
+                      <div className="space-y-2">
+                        {[
+                          'Enter data according to the specified format',
+                          'Verify data accuracy after entry',
+                          'Save the delivery file in the specified format (Excel or CSV)',
+                          'Deliver through the system'
+                        ].map((step, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <span className="text-pink-600 font-medium">{index + 1}.</span>
+                            <input 
+                              type="text"
+                              className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                              defaultValue={step}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Deadline */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Deadline</label>
+                      <select className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option>Within 7 days from order date</option>
+                        <option>Within 14 days from order date</option>
+                        <option>Within 30 days from order date</option>
+                      </select>
+                    </div>
+
+                    {/* Communication Tools */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Communication Tools</label>
+                      <select className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option>Shufti's Communication Board</option>
+                      </select>
+                      <p className="text-sm text-pink-600">
+                        *The use of external communication tools before ordering is prohibited. Please use Shufti's communication board before ordering.
+                      </p>
+                    </div>
+
+                    {/* Interview */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Interview for Selection</label>
+                      <div className="flex gap-4">
+                        <label className="flex items-center">
+                          <input 
+                            type="radio"
+                            name="interview"
+                            className="mr-2 h-4 w-4 accent-pink-600 focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                            defaultChecked
+                          />
+                          <span>None (Messages will be exchanged as needed)</span>
+                        </label>
+                        <label className="flex items-center">
+                          <input 
+                            type="radio"
+                            name="interview"
+                            className="mr-2 h-4 w-4 accent-pink-600 focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                          />
+                          <span>Required</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    {/* Preferred Qualifications */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Preferred Qualifications</label>
+                      <div className="space-y-2">
+                        {[
+                          'Experience in data entry',
+                          'Good at detailed work',
+                          'Able to meet deadlines'
+                        ].map((qual, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <input 
+                              type="text"
+                              className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                              defaultValue={qual}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Application Message */}
+                    <div className="space-y-2">
+                      <label className="block text-gray-700 font-medium">Application Message Example</label>
+                      <textarea 
+                        className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        rows="4"
+                        defaultValue="Hello. I am interested in the data entry job. I am committed to meeting deadlines and ensuring accurate work. I look forward to working with you."
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Required working hours */}
+              {/* Required Working Hours Section */}
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
@@ -121,7 +306,7 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
                 </select>
               </div>
 
-              {/* Standing Orders */}
+              {/* Standing Orders Section */}
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
@@ -129,11 +314,19 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
                 </div>
                 <div className="flex items-center gap-4">
                   <label className="flex items-center gap-2">
-                    <input type="radio" name="standing_orders" className="text-pink-600 focus:ring-pink-500" />
+                    <input 
+                      type="radio" 
+                      name="standing_orders" 
+                      className="h-4 w-4 accent-pink-600 focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                    />
                     <span className="text-gray-700">can be</span>
                   </label>
                   <label className="flex items-center gap-2">
-                    <input type="radio" name="standing_orders" className="text-pink-600 focus:ring-pink-500" />
+                    <input 
+                      type="radio" 
+                      name="standing_orders" 
+                      className="h-4 w-4 accent-pink-600 focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                    />
                     <span className="text-gray-700">none</span>
                   </label>
                 </div>
@@ -144,148 +337,18 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
                 </p>
               </div>
 
-              {/* Reward Section */}
-              <div className="space-y-4 border-t pt-6 mt-6">
-                <div className="bg-pink-50 rounded-lg p-4 flex justify-between items-center">
-                  <h3 className="text-lg font-medium text-gray-800">Set your reward</h3>
-                  <a href="#" className="text-pink-600 hover:text-pink-700 text-sm flex items-center">
-                    Click here for a list of job rates
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
+              {/* Tag Configuration Section */}
+              <div className="space-y-4">
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800">Tag Configuration</h3>
+                  <p className="text-sm text-pink-600 mt-2">
+                    Please select tags that match your job characteristics
+                    <span className="text-gray-500 ml-1">
+                      (You can select up to 3 tags)
+                    </span>
+                  </p>
                 </div>
 
-                <div className="space-y-6">
-                  {/* Unit Price */}
-                  <div className="flex flex-wrap items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
-                      <label className="text-gray-700 font-medium">Unit price per item</label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input
-                        type="number"
-                        className="w-32 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                      />
-                      <span className="text-gray-600">circle</span>
-                    </div>
-                  </div>
-
-                  {/* Estimated Time */}
-                  <div className="flex flex-wrap items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
-                      <label className="text-gray-700 font-medium">Estimated time per item</label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input
-                        type="number"
-                        className="w-32 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                      />
-                      <select className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
-                        <option>Please select</option>
-                        <option>minutes</option>
-                        <option>hours</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-1">
-                    <p className="text-pink-600">The estimated hourly rate displayed in the job information is - yen .</p>
-                    <p className="text-pink-600">The average estimated hourly rate for work traded on Shufuti in the past month is 861 yen.</p>
-                    <p className="text-sm text-gray-500 italic">*If the expected hourly rate is low, it tends to be difficult to attract workers.</p>
-                  </div>
-
-                  {/* Number of Orders */}
-                  <div className="flex flex-wrap items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
-                      <label className="text-gray-700 font-medium">Number of orders per person</label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input
-                        type="number"
-                        className="w-32 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                      />
-                      <span className="text-gray-600">subject</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Recruitment Section */}
-              <div className="space-y-4 border-t pt-6 mt-6">
-                <div className="bg-pink-50 rounded-lg p-4">
-                  <h3 className="text-lg font-medium text-gray-800">Please set the number of people you plan to recruit and the recruitment period.</h3>
-                </div>
-
-                <div className="space-y-6">
-                  {/* Number of People */}
-                  <div className="flex flex-wrap items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
-                      <label className="text-gray-700 font-medium">Number of people expected to be recruited</label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <input
-                        type="number"
-                        className="w-32 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                      />
-                      <span className="text-gray-600">people</span>
-                    </div>
-                  </div>
-
-                  {/* Application Period */}
-                  <div className="flex flex-wrap items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
-                      <label className="text-gray-700 font-medium">Application period</label>
-                    </div>
-                    <select className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
-                      <option>Recruitment will end in 7 days (Tuesday, February 18, 2025)</option>
-                      <option>14 days</option>
-                      <option>30 days</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Error Message */}
-                <p className="text-red-500 text-sm">Please check that some items have not been entered correctly.</p>
-
-                {/* Save Button */}
-                <button
-                  type="button"
-                  className="w-full bg-gradient-to-r from-pink-400 to-pink-500 text-white py-3 rounded-lg hover:from-pink-500 hover:to-pink-600 transition-all duration-200 transform hover:-translate-y-0.5"
-                >
-                  Save the contents and go to the next step
-                </button>
-              </div>
-
-              {/* Navigation Buttons */}
-              <div className="flex justify-between pt-6">
-                <button
-                  type="button"
-                  onClick={handleBack}
-                  className="px-6 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors"
-                >
-                  Back
-                </button>
-                <button
-                  type="button"
-                  onClick={handleNext}
-                  className="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors"
-                >
-                  Next Step
-                </button>
-              </div>
-              {/* Tag Configuration */}
-              <div className="space-y-4 border-t pt-6 mt-6">
-                <div className="flex items-center gap-2">
-                  <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
-                  <h3 className="text-gray-700 font-medium">Tag Configuration</h3>
-                </div>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                   {[
                     'Beginners Welcome',
@@ -296,76 +359,21 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
                     'questionnaire',
                     'Product registration',
                     'Data Entry',
-                    'transcription',
-                    'Limited to specific users'
+                    'transcription'
                   ].map((tag) => (
                     <label key={tag} className="flex items-center space-x-2 bg-pink-50 p-3 rounded-lg border border-pink-100 hover:border-pink-300 cursor-pointer transition-colors">
                       <input
                         type="checkbox"
-                        className="rounded text-pink-600 focus:ring-pink-500"
+                        className="h-4 w-4 accent-pink-600 rounded focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
                       />
                       <span className="text-sm text-gray-700">#{tag}</span>
                     </label>
                   ))}
                 </div>
                 
-                <p className="text-sm text-gray-500 mt-2">
-                  *You can set up to three tags that match the characteristics of your work.
-                </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500 mt-4">
                   *If there are any discrepancies with the job description, the secretariat may make corrections.
                 </p>
-              </div>
-
-              {/* Work Schedule */}
-              <div className="space-y-4 border-t pt-6 mt-6">
-                <div className="bg-pink-50 p-4 rounded-lg">
-                  <h3 className="text-lg font-medium text-gray-800 mb-2">Please set the work schedule</h3>
-                  <p className="text-sm text-gray-600">
-                    If there are any specifications for the days of the week or times that the worker will work, select "Yes" and enter the specifications in the text area.
-                  </p>
-                  <p className="text-sm text-gray-500 mt-1">
-                    *Even if you select "None," you can enter additional information in the text area below.
-                  </p>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
-                    <label className="text-gray-700 font-medium">Specify work date and time</label>
-                  </div>
-                  
-                  <div className="flex items-center gap-6">
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="work_schedule"
-                        value="can_be"
-                        className="text-pink-600 focus:ring-pink-500"
-                      />
-                      <span className="text-gray-700">can be</span>
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="work_schedule"
-                        value="none"
-                        className="text-pink-600 focus:ring-pink-500"
-                      />
-                      <span className="text-gray-700">none</span>
-                    </label>
-                  </div>
-
-                  <div className="relative">
-                    <textarea
-                      className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent min-h-[100px]"
-                      placeholder="Example: 4 hours between 10:00 and 17:00 on Mondays, Wednesdays, and Fridays"
-                    />
-                    <div className="absolute top-3 right-3 text-gray-400 text-sm">
-                      <span className="text-pink-600">*</span> Optional
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Navigation Buttons */}
