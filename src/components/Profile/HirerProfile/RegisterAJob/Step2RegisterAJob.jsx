@@ -144,6 +144,124 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
                 </p>
               </div>
 
+              {/* Reward Section */}
+              <div className="space-y-4 border-t pt-6 mt-6">
+                <div className="bg-pink-50 rounded-lg p-4 flex justify-between items-center">
+                  <h3 className="text-lg font-medium text-gray-800">Set your reward</h3>
+                  <a href="#" className="text-pink-600 hover:text-pink-700 text-sm flex items-center">
+                    Click here for a list of job rates
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+
+                <div className="space-y-6">
+                  {/* Unit Price */}
+                  <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
+                      <label className="text-gray-700 font-medium">Unit price per item</label>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="number"
+                        className="w-32 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                      />
+                      <span className="text-gray-600">circle</span>
+                    </div>
+                  </div>
+
+                  {/* Estimated Time */}
+                  <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
+                      <label className="text-gray-700 font-medium">Estimated time per item</label>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="number"
+                        className="w-32 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                      />
+                      <select className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                        <option>Please select</option>
+                        <option>minutes</option>
+                        <option>hours</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <p className="text-pink-600">The estimated hourly rate displayed in the job information is - yen .</p>
+                    <p className="text-pink-600">The average estimated hourly rate for work traded on Shufuti in the past month is 861 yen.</p>
+                    <p className="text-sm text-gray-500 italic">*If the expected hourly rate is low, it tends to be difficult to attract workers.</p>
+                  </div>
+
+                  {/* Number of Orders */}
+                  <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
+                      <label className="text-gray-700 font-medium">Number of orders per person</label>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="number"
+                        className="w-32 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                      />
+                      <span className="text-gray-600">subject</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Recruitment Section */}
+              <div className="space-y-4 border-t pt-6 mt-6">
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <h3 className="text-lg font-medium text-gray-800">Please set the number of people you plan to recruit and the recruitment period.</h3>
+                </div>
+
+                <div className="space-y-6">
+                  {/* Number of People */}
+                  <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
+                      <label className="text-gray-700 font-medium">Number of people expected to be recruited</label>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="number"
+                        className="w-32 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                      />
+                      <span className="text-gray-600">people</span>
+                    </div>
+                  </div>
+
+                  {/* Application Period */}
+                  <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="bg-pink-600 text-white px-2 py-0.5 text-xs rounded">Required</div>
+                      <label className="text-gray-700 font-medium">Application period</label>
+                    </div>
+                    <select className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                      <option>Recruitment will end in 7 days (Tuesday, February 18, 2025)</option>
+                      <option>14 days</option>
+                      <option>30 days</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Error Message */}
+                <p className="text-red-500 text-sm">Please check that some items have not been entered correctly.</p>
+
+                {/* Save Button */}
+                <button
+                  type="button"
+                  className="w-full bg-gradient-to-r from-pink-400 to-pink-500 text-white py-3 rounded-lg hover:from-pink-500 hover:to-pink-600 transition-all duration-200 transform hover:-translate-y-0.5"
+                >
+                  Save the contents and go to the next step
+                </button>
+              </div>
+
               {/* Navigation Buttons */}
               <div className="flex justify-between pt-6">
                 <button
@@ -201,7 +319,7 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
 
               {/* Work Schedule */}
               <div className="space-y-4 border-t pt-6 mt-6">
-                <div className="bg-blue-50 p-4 rounded-lg">
+                <div className="bg-pink-50 p-4 rounded-lg">
                   <h3 className="text-lg font-medium text-gray-800 mb-2">Please set the work schedule</h3>
                   <p className="text-sm text-gray-600">
                     If there are any specifications for the days of the week or times that the worker will work, select "Yes" and enter the specifications in the text area.
