@@ -42,6 +42,11 @@ const HirerDrawerNavigation = () => {
     setIsOpen(false);
   };
 
+  const handleHirerPaymentHistory = () => {
+    navigate('/hirer-payment-history');
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -160,7 +165,7 @@ const HirerDrawerNavigation = () => {
 
               {/* Mobile Payment History Button */}
               <button
-                onClick={handlePaymentHistory}
+                onClick={handleHirerPaymentHistory}
                 className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-800 
                   rounded-md px-4 py-2 flex items-center justify-center gap-2
                   transition-all duration-200 transform hover:scale-105
@@ -233,7 +238,7 @@ const HirerDrawerNavigation = () => {
 
             {/* Desktop Payment History Button */}
             <button
-              onClick={handlePaymentHistory}
+              onClick={handleHirerPaymentHistory}
               className="bg-white border-4 border-pink-500 hover:bg-pink-500 text-black 
                 rounded-md px-4 py-1 flex items-center gap-2
                 transition-all duration-200 transform hover:scale-105
