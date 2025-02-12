@@ -8,7 +8,9 @@ import {
   LogOutIcon 
 } from 'lucide-react';
 
+
 const HirerUserSettingSidebar = () => {
+    
   const menuItems = [
     { 
       title: 'General settings', 
