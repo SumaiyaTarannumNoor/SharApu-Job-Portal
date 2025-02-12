@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { User, ChevronDown, Calendar } from 'lucide-react';
+import { User, ChevronDown } from 'lucide-react';
 import HirerDrawerNavigation from './HirerDrawerNavigation';
 
 const HirerPaymentHistory = () => {
@@ -26,13 +26,6 @@ const HirerPaymentHistory = () => {
   const months = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
-  ];
-
-  const tabs = [
-    { id: 'deposit', label: 'Deposit List' },
-    { id: 'refund', label: 'Refund List' },
-    { id: 'payout', label: 'Payout List' },
-    { id: 'fee', label: 'Fee payment list' }
   ];
 
   return (
@@ -101,22 +94,39 @@ const HirerPaymentHistory = () => {
         <h1 className="text-2xl font-bold text-gray-900 mb-8">Payment History</h1>
 
         {/* Tabs */}
-        <div className="border-b border-gray-200">
-          <div className="flex space-x-1">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`py-3 px-6 text-sm font-medium rounded-t-lg transition-colors ${
-                  activeTab === tab.id
-                    ? 'bg-pink-500 text-white'
-                    : 'text-gray-500 hover:text-pink-600 hover:bg-pink-50'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+        <div className="flex border-b border-gray-200">
+          <button
+            onClick={() => setActiveTab('deposit')}
+            className={`px-8 py-2 text-sm font-medium border-b-2 transition-colors ${
+              activeTab === 'deposit' ? 'border-pink-500 text-pink-600' : 'border-transparent text-gray-500 hover:text-pink-600'
+            }`}
+          >
+            Deposit List
+          </button>
+          <button
+            onClick={() => setActiveTab('refund')}
+            className={`px-8 py-2 text-sm font-medium border-b-2 transition-colors ${
+              activeTab === 'refund' ? 'border-pink-500 text-pink-600' : 'border-transparent text-gray-500 hover:text-pink-600'
+            }`}
+          >
+            Refund List
+          </button>
+          <button
+            onClick={() => setActiveTab('payout')}
+            className={`px-8 py-2 text-sm font-medium border-b-2 transition-colors ${
+              activeTab === 'payout' ? 'border-pink-500 text-pink-600' : 'border-transparent text-gray-500 hover:text-pink-600'
+            }`}
+          >
+            Payout List
+          </button>
+          <button
+            onClick={() => setActiveTab('fee')}
+            className={`px-8 py-2 text-sm font-medium border-b-2 transition-colors ${
+              activeTab === 'fee' ? 'border-pink-500 text-pink-600' : 'border-transparent text-gray-500 hover:text-pink-600'
+            }`}
+          >
+            Fee payment list
+          </button>
         </div>
 
         {/* Year and Month Selection */}
@@ -144,15 +154,101 @@ const HirerPaymentHistory = () => {
           </div>
         </div>
 
-        {/* No History Message */}
-        <div className="bg-pink-50 rounded-lg p-8 text-center">
-          <div className="text-pink-800 mb-4">There is no history</div>
-          <div className="text-sm text-pink-600 space-y-2">
-            <p>*Deposit information before September 4, 2019 does not support displaying worker names, order amounts, or balances.</p>
-            <p>Please check your usage history before we began providing storage services (before May 2016) under Usage Status.</p>
-            <p>Please check your bank transfer history <Link to="#" className="text-pink-500 hover:text-pink-700 underline">here</Link>.</p>
+        {/* Tab Content */}
+        {activeTab === 'deposit' && (
+          <div className="bg-pink-50 rounded-lg p-8 text-center">
+            <div className="text-pink-800 mb-4">There is no history</div>
+            <div className="text-sm text-pink-600 space-y-2">
+              <p>*Deposit information before September 4, 2019 does not support displaying worker names, order amounts, or balances.</p>
+              <p>Please check your usage history before we began providing storage services (before May 2016) under Usage Status.</p>
+              <p>Please check your bank transfer history <Link to="#" className="text-pink-500 hover:text-pink-700 underline">here</Link>.</p>
+            </div>
           </div>
-        </div>
+        )}
+
+        {activeTab === 'refund' && (
+          <div className="space-y-6">
+            {/* Refund Status */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <div className="bg-pink-500 px-4 py-2">
+                <h3 className="text-white font-medium">Refund Status</h3>
+              </div>
+              <div className="p-4 space-y-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-700">Current refund amount:</span>
+                  <span className="text-lg font-semibold text-pink-600">0 yen</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Apply for Transfer Section */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <div className="bg-pink-500 px-4 py-2">
+                <h3 className="text-white font-medium">Apply for a transfer</h3>
+              </div>
+              <div className="p-6 bg-pink-50">
+                <div className="space-y-3">
+                  <p className="text-pink-800">The application deadline is every Tuesday at 6:59am.</p>
+                  <p className="text-pink-800">After the deadline, all applications received up until the deadline for that week will be processed.</p>
+                  <p className="text-pink-600 text-sm italic">
+                    The transfer request cannot be made because the minimum transfer amount (583 yen or more) has not been reached.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Benefits Section */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <div className="bg-pink-500 px-4 py-2">
+                <h3 className="text-white font-medium">Benefits won by ahmedullp</h3>
+              </div>
+              <div className="p-4">
+                <div className="border rounded-lg overflow-hidden">
+                  <table className="w-full">
+                    <tbody>
+                      <tr className="border-b">
+                        <td className="px-4 py-3 bg-pink-50 text-pink-800">Transfer fee: Free</td>
+                        <td className="px-4 py-3 text-pink-600">0 times</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-3 bg-pink-50 text-pink-800">Transfer fee half price</td>
+                        <td className="px-4 py-3 text-pink-600">0 times</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="mt-3 space-y-2 text-sm text-pink-600">
+                  <p>*The following shows the rewards obtained in past campaigns.</p>
+                  <p>*There is currently no campaign running.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Refund History */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <div className="bg-pink-500 px-4 py-2">
+                <h3 className="text-white font-medium">Refund History</h3>
+              </div>
+              <div className="p-4">
+                <div className="text-center py-8 text-pink-600">
+                  There is no history
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'payout' && (
+          <div className="bg-pink-50 rounded-lg p-8 text-center">
+            <div className="text-pink-800">There is no history</div>
+          </div>
+        )}
+
+        {activeTab === 'fee' && (
+          <div className="bg-pink-50 rounded-lg p-8 text-center">
+            <div className="text-pink-800">There is no history</div>
+          </div>
+        )}
       </div>
     </div>
   );
