@@ -30,7 +30,7 @@ const HirerUserSettingsSection = () => {
         icon: ShieldIcon,
         title: "Verify your identity",
         description: "When you register for a job for the first time, you will need to verify your identity.",
-        onClick: () => navigate('/verify-identity')
+        onClick: () => navigate('/hirer-identity-verification')
       }
     ];
 
