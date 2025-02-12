@@ -4,6 +4,7 @@ import { User, ChevronDown, Check } from 'lucide-react';
 import HirerDrawerNavigation from '../HirerDrawerNavigation';
 import Step2RegisterAJob from './Step2RegisterAJob';
 import Step3RegisterAJob from './Step3RegisterAJob';
+import Step4RegisterAJob from './Step4RegisterAJob';
 
 const RegisterAJob = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -41,6 +42,10 @@ const RegisterAJob = () => {
     { number: 4, title: 'Other Settings' },
     { number: 5, title: 'Check the contents' },
   ];
+
+  if (currentStep === 4) {
+    return <Step4RegisterAJob currentStep={currentStep} setCurrentStep={setCurrentStep} />;
+  }
 
   // If we're on step 3, render Step3RegisterAJob
   if (currentStep === 3) {
