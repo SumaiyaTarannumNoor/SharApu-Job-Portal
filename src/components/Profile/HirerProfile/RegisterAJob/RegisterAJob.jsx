@@ -6,6 +6,7 @@ import Step2RegisterAJob from './Step2RegisterAJob';
 import Step3RegisterAJob from './Step3RegisterAJob';
 import Step4RegisterAJob from './Step4RegisterAJob';
 import Step5RegisterAJob from './Step5RegisterAJob';
+import JobRegistrationConfirmed from './JobReistrationConfirmed';
 
 const RegisterAJob = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -42,7 +43,12 @@ const RegisterAJob = () => {
     { number: 3, title: 'Attachment of reference materials' },
     { number: 4, title: 'Other Settings' },
     { number: 5, title: 'Check the contents' },
+    { number: 6, title: 'Job Registration Confirmed' },
   ];
+
+  if (currentStep === 6) {
+    return <JobRegistrationConfirmed currentStep={currentStep} setCurrentStep={setCurrentStep} />;
+  }
 
   if (currentStep === 5) {
     return <Step5RegisterAJob currentStep={currentStep} setCurrentStep={setCurrentStep} />;
