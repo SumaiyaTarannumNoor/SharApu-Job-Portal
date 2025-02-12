@@ -225,9 +225,8 @@ const Step5RegisterAJob = ({ currentStep, setCurrentStep }) => {
     </div>
   </div>
 </div>
-
-          {/* Step 3 Review */}
-          <div className="bg-pink-50 rounded-lg p-4">
+  {/* Step 3 Review */}
+  <div className="bg-pink-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
                 <span className="text-pink-500">STEP 3</span>
@@ -242,7 +241,12 @@ const Step5RegisterAJob = ({ currentStep, setCurrentStep }) => {
                 Fix it
               </button>
             </div>
-            {/* Add uploaded files list here */}
+            <div className="ml-8 space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="text-pink-800">Uploaded file:</span>
+                <span className="text-pink-600">Ok.png</span>
+              </div>
+            </div>
           </div>
 
           {/* Step 4 Review */}
@@ -261,7 +265,57 @@ const Step5RegisterAJob = ({ currentStep, setCurrentStep }) => {
                 Fix it
               </button>
             </div>
-            {/* Add other settings content here */}
+            <div className="ml-8 space-y-4">
+              {/* Settings Details */}
+              <div className="space-y-3">
+                <div className="flex gap-2">
+                  <span className="text-pink-800 min-w-[140px]">Publishing settings:</span>
+                  <span className="text-pink-600">Make it visible to everyone</span>
+                </div>
+                <div className="flex gap-2">
+                  <span className="text-pink-800 min-w-[140px]">Device:</span>
+                  <span className="text-pink-600">Android</span>
+                </div>
+                <div className="flex gap-2">
+                  <span className="text-pink-800 min-w-[140px]">Specifying skills:</span>
+                  <span className="text-pink-600">English Translation</span>
+                </div>
+                <div className="flex gap-2">
+                  <span className="text-pink-800 min-w-[140px]">Welcome Jobs:</span>
+                  <span className="text-pink-600">General affairs</span>
+                </div>
+                <div className="flex gap-2">
+                  <span className="text-pink-800 min-w-[140px]">Specifying an area:</span>
+                  <span className="text-pink-600">Hokkaido</span>
+                </div>
+              </div>
+
+              {/* Confirmation Checklist */}
+              <div className="bg-pink-50 rounded-lg border border-pink-100 p-4 mt-6">
+                <h4 className="text-pink-700 font-medium mb-4">[Please be sure to check]</h4>
+                <div className="space-y-3 ml-4">
+                  <p className="text-pink-800 text-sm">
+                    • There are no work specifications or instructions that conflict with the Pharmaceuticals and Medical Device Act or the Act against Unjustifiable Premiums and Misleading Representations.
+                  </p>
+                  <p className="text-pink-800 text-sm">
+                    • There are no work specifications or instructions that infringe on copyrights, trademarks, etc.
+                  </p>
+                  <p className="text-pink-800 text-sm">
+                    • In addition, we confirm that the request does not contain any content that violates laws and regulations, or that defames, libels or slanders any individual or corporation, or that contains false information about individuals or corporations, or obscene content, or any other content that goes against public order and morals.
+                  </p>
+                  <p className="text-pink-800 text-sm">
+                    • Description based on the Specified Commercial Transactions Act
+                  </p>
+                </div>
+                <div className="mt-4 flex items-center gap-2">
+                  <input 
+                    type="checkbox" 
+                    className="text-pink-500 rounded focus:ring-pink-400"
+                  />
+                  <span className="text-pink-800">I have confirmed and agree to the above.</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -270,7 +324,7 @@ const Step5RegisterAJob = ({ currentStep, setCurrentStep }) => {
           <div className="bg-pink-50 p-4 rounded-lg mb-6">
             <p className="text-pink-800">
               Please check all the information you entered.
-              After confirming that there are no errors, click the "Register" button below.
+              After confirming that there are no errors, click the "Request an initial review" button below.
             </p>
           </div>
           
@@ -286,7 +340,7 @@ const Step5RegisterAJob = ({ currentStep, setCurrentStep }) => {
               onClick={handleSubmit}
               className="px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-colors"
             >
-              Register
+              Request an initial review
             </button>
           </div>
         </div>
