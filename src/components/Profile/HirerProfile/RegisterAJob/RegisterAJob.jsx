@@ -6,7 +6,7 @@ import Step2RegisterAJob from './Step2RegisterAJob';
 import Step3RegisterAJob from './Step3RegisterAJob';
 import Step4RegisterAJob from './Step4RegisterAJob';
 import Step5RegisterAJob from './Step5RegisterAJob';
-import JobRegistrationConfirmed from './JobReistrationConfirmed';
+import JobRegistrationConfirmed from './JobRegistrationConfirmed';
 
 const RegisterAJob = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);

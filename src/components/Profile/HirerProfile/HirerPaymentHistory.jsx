@@ -238,10 +238,47 @@ const HirerPaymentHistory = () => {
           </div>
         )}
 
+        // Replace the payout list section in HirerPaymentHistory with this:
+
         {activeTab === 'payout' && (
-          <div className="bg-pink-50 rounded-lg p-8 text-center">
-            <div className="text-pink-800">There is no history</div>
-          </div>
+        <div className="space-y-6">
+            {/* Year and Month Selection */}
+            <div className="flex flex-wrap gap-4 items-center">
+            <div className="relative">
+                <select
+                value={selectedYear}
+                onChange={(e) => setSelectedYear(e.target.value)}
+                className="appearance-none px-4 py-2 pr-8 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 bg-white"
+                >
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                </select>
+                <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+                <ChevronDown className="w-5 h-5 text-pink-500" />
+                </div>
+            </div>
+            <div className="flex flex-wrap gap-2">
+                {months.map((month) => (
+                <button
+                    key={month}
+                    className="px-4 py-2 text-sm hover:bg-pink-100 text-pink-600 rounded-lg transition-colors"
+                >
+                    {month}
+                </button>
+                ))}
+            </div>
+            </div>
+
+            {/* No History Message */}
+            <div className="mt-8 text-center">
+            <div className="inline-block">
+                <div className="bg-pink-50 px-8 py-6 rounded-lg">
+                <p className="text-pink-800">There is no history</p>
+                </div>
+            </div>
+            </div>
+        </div>
         )}
 
         {activeTab === 'fee' && (
