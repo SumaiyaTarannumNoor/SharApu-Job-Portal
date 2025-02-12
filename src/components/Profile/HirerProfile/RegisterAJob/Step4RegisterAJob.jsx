@@ -25,7 +25,7 @@ const Step4RegisterAJob = ({ currentStep, setCurrentStep }) => {
     },
     {
       title: "translation",
-      skills: ["Korean Translation", "Chinese Translation", "English Translation", "Other translations"]
+      skills: ["Spanish Translation", "Chinese Translation", "English Translation", "Other translations"]
     },
     {
       title: "Web production and development",
@@ -96,54 +96,194 @@ const Step4RegisterAJob = ({ currentStep, setCurrentStep }) => {
 
         {/* Publication Range Section */}
         <div className="mb-8">
-          <div className="bg-blue-50 p-4 rounded-lg">
+          <div className="bg-pink-50 p-4 rounded-lg">
             <h3 className="font-medium mb-4">Please specify the scope of disclosure</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <div className="bg-pink-500 text-white text-xs px-2 py-1 rounded">Required</div>
-                <span className="text-gray-700 font-medium">Publication range</span>
+                <span className="text-pink-900 font-medium">Publication range</span>
               </div>
               <label className="flex items-center space-x-3 cursor-pointer">
                 <input type="radio" name="visibility" className="text-pink-500 focus:ring-pink-400" />
-                <span>Make it visible to everyone</span>
+                <span className="text-pink-800">Make it visible to everyone</span>
               </label>
               <label className="flex items-center space-x-3 cursor-pointer">
                 <input type="radio" name="visibility" className="text-pink-500 focus:ring-pink-400" />
-                <span>Restrict to logged-in users</span>
+                <span className="text-pink-800">Restrict to logged-in users</span>
               </label>
               <label className="flex items-center space-x-3 cursor-pointer">
                 <input type="radio" name="visibility" className="text-pink-500 focus:ring-pink-400" />
-                <span>Partners only (no partners)</span>
+                <span className="text-pink-800">Partners only (no partners)</span>
               </label>
             </div>
           </div>
         </div>
 
-        {/* Required Skills Section */}
+       {/* Required Skills Section */}
         <div className="mb-8">
-          <div className="bg-blue-50 p-4 rounded-lg">
+        <div className="bg-pink-50 p-4 rounded-lg">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">any</span>
-              <h3 className="font-medium">You can specify the required skills</h3>
+            <span className="bg-pink-500 text-white px-2 py-1 rounded text-sm">any</span>
+            <h3 className="font-medium text-pink-800">You can specify the required skills</h3>
             </div>
             
             <div className="space-y-6">
-              {skillCategories.map((category, index) => (
-                <div key={index} className="border-b border-gray-200 pb-4 last:border-0">
-                  <h4 className="font-medium text-gray-700 mb-3">{category.title}</h4>
-                  <div className="flex flex-wrap gap-3">
+            {skillCategories.map((category, index) => (
+                <div key={index} className="border-b border-pink-100 pb-4 last:border-0">
+                <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+                    <input
+                    type="checkbox"
+                    className="text-pink-500 rounded focus:ring-pink-400"
+                    />
+                    <span className="font-medium text-pink-800">{category.title}</span>
+                </label>
+                <div className="ml-8 flex flex-wrap gap-3">
                     {category.skills.map((skill, skillIndex) => (
-                      <label key={skillIndex} className="flex items-center space-x-2 bg-white px-3 py-2 rounded-full border border-gray-200 hover:border-pink-300 cursor-pointer transition-colors">
+                    <label 
+                        key={skillIndex} 
+                        className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer transition-colors"
+                    >
                         <input
-                          type="checkbox"
-                          className="text-pink-500 rounded focus:ring-pink-400"
+                        type="checkbox"
+                        className="text-pink-500 rounded focus:ring-pink-400"
                         />
-                        <span className="text-sm">{skill}</span>
-                      </label>
+                        <span className="text-pink-800 text-sm">{skill}</span>
+                    </label>
                     ))}
-                  </div>
                 </div>
+                </div>
+            ))}
+            </div>
+        </div>
+        </div>
+         {/* Welcome Jobs Section */}
+         <div className="mt-8 bg-pink-50 p-6 rounded-lg">
+          <h3 className="text-lg font-semibold text-pink-800 mb-4">
+            You can select the welcome occupation for which you want to apply.
+          </h3>
+          
+          {/* Administration */}
+          <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+              <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+              <span className="font-medium text-pink-800">Administration</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+              {['General affairs', 'Sales Administration', 'General Affairs', 'Accounting', 'Administrative Assistant', 'others'].map((job, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                  <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                  <span className="text-pink-800 text-sm">{job}</span>
+                </label>
               ))}
+            </div>
+          </div>
+           {/* Medical care */}
+           <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+              <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+              <span className="font-medium text-pink-800">Medical care and nursing care</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+              {['nurse', 'Nursing care', 'Medical Administration', 'pharmacist', 'Doctor', 'Dental hygienist/dental assistant', 'others'].map((job, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                  <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                  <span className="text-pink-800 text-sm">{job}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Sales/Service/Support */}
+          <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+              <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+              <span className="font-medium text-pink-800">Sales/Service/Support</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+              {['Store Staff', 'Store Manager', 'Area Manager', 'Beauty consultant', 'Hairdresser', 'Customer Support', 'Help Desk', 'others'].map((job, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                  <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                  <span className="text-pink-800 text-sm">{job}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Sales and Marketing */}
+          <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+              <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+              <span className="font-medium text-pink-800">Sales and Marketing / Call Center</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+              {['sales', 'Telemarketing Staff', 'consultant', 'marketing', 'public relations', 'plan', 'Teleoperator (receiving calls)', 'Teleoperator (caller)', 'others'].map((job, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                  <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                  <span className="text-pink-800 text-sm">{job}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* WEB/Creative/System */}
+          <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+              <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+              <span className="font-medium text-pink-800">WEB / Creative / System</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+              {['Web Designer', 'Web Director', 'Web Engineer', 'Illustrator', 'DTP Designer', 'Photographer', 'Video creator', 'writer', 'Proofreading', 'edit', 'Copywriter', 'programmer', 'Systems Engineer', 'Network Engineer', 'Operational Management', 'others'].map((job, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                  <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                  <span className="text-pink-800 text-sm">{job}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Language/Education */}
+          <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+              <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+              <span className="font-medium text-pink-800">Language/Education</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+              {['translation', 'interpretation', 'Nursery teacher/kindergarten teacher', 'Teachers (Elementary, Middle, and High School)', 'University Lecturer', 'others'].map((job, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                  <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                  <span className="text-pink-800 text-sm">{job}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Finance and Law */}
+          <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+              <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+              <span className="font-medium text-pink-800">Finance and Law</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+              {['Securities business', 'Banking', 'Financial Planner', 'Insurance Business', 'Administrative scrivener', 'Judicial scrivener', 'Social insurance and labor consultant', 'lawyer', 'others'].map((job, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                  <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                  <span className="text-pink-800 text-sm">{job}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Others */}
+          <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+              <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+              <span className="font-medium text-pink-800">others</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+              <label className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                <span className="text-pink-800 text-sm">others</span>
+              </label>
             </div>
           </div>
         </div>
