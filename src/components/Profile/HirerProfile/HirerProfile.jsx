@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, ChevronDown, AlertCircle } from 'lucide-react';
 import MiniProfileCard from '../MiniProfileCard';
-import UserSettingsSection from '../UserSettingsSection';
 import HirerDrawerNavigation from './HirerDrawerNavigation';
 import Penguine from '../../../../assets/LandingPageIconImage/Penguine1.png'
+import HirerUserSettingsSection from './HirerUserSettingsSection';
 
 const HirerProfile = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -125,7 +125,7 @@ const HirerProfile = () => {
               </div>
             </div>
 
-            <UserSettingsSection />
+            <HirerUserSettingsSection />
           </div>
 
           {/* Messages Section */}
