@@ -84,25 +84,147 @@ const Step5RegisterAJob = ({ currentStep, setCurrentStep }) => {
               </div>
             </div>
           </div>
+{/* Step 2 Review */}
+<div className="bg-pink-50 rounded-lg p-4">
+  <div className="flex items-center justify-between mb-4">
+    <div className="flex items-center gap-2">
+      <span className="text-pink-500">STEP 2</span>
+      <ChevronRight className="w-4 h-4 text-pink-500" />
+      <h3 className="font-medium text-pink-800">Job description</h3>
+    </div>
+    <button 
+      onClick={() => setCurrentStep(2)}
+      className="flex items-center text-pink-500 hover:text-pink-700"
+    >
+      <Edit className="w-4 h-4 mr-1" />
+      Fix it
+    </button>
+  </div>
 
-          {/* Step 2 Review */}
-          <div className="bg-pink-50 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-2">
-                <span className="text-pink-500">STEP 2</span>
-                <ChevronRight className="w-4 h-4 text-pink-500" />
-                <h3 className="font-medium text-pink-800">Job description</h3>
-              </div>
-              <button 
-                onClick={() => setCurrentStep(2)}
-                className="flex items-center text-pink-500 hover:text-pink-700"
-              >
-                <Edit className="w-4 h-4 mr-1" />
-                Fix it
-              </button>
-            </div>
-            {/* Add description content here */}
-          </div>
+  <div className="ml-8 space-y-4">
+    {/* Features List */}
+    <div className="space-y-3">
+      <h4 className="text-pink-700 font-medium">Features required</h4>
+      <div className="space-y-2 ml-4">
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[120px]">Deliver a list:</span>
+          <span className="text-pink-600">Excel (.xlsx)</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[120px]">Storage Drive:</span>
+          <span className="text-pink-600">Google Drive</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Features method */}
+    <div className="space-y-3">
+      <h4 className="text-pink-700 font-medium">Features method</h4>
+      <div className="space-y-2 ml-4">
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[120px]">Google docs/sheets:</span>
+          <span className="text-pink-600">Work according to the specified format</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[120px]">Cloud storage:</span>
+          <span className="text-pink-600">Google Drive, Dropbox, etc.</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Work procedure */}
+    <div className="space-y-3">
+      <h4 className="text-pink-700 font-medium">Work procedure</h4>
+      <div className="ml-4 text-pink-800">
+        <ul className="list-disc list-inside space-y-1">
+          <li>Work according to the specified format</li>
+          <li>Check calculations and data accuracy</li>
+          <li>Payment will be made after final delivery is completed</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Features time */}
+    <div className="space-y-3">
+      <h4 className="text-pink-700 font-medium">Features time</h4>
+      <div className="ml-4 text-pink-800">
+        <p>Within 3 days</p>
+      </div>
+    </div>
+
+    {/* Communication tools */}
+    <div className="space-y-3">
+      <h4 className="text-pink-700 font-medium">Communication tools to use after placing an order</h4>
+      <div className="ml-4 text-pink-800">
+        <ul className="list-disc list-inside space-y-1">
+          <li>Slack</li>
+          <li>Email</li>
+          <li>Direct messaging system</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Interview Content */}
+    <div className="space-y-3">
+      <h4 className="text-pink-700 font-medium">Interview Content</h4>
+      <div className="ml-4 text-pink-800">
+        <ul className="list-disc list-inside space-y-1">
+          <li>Schedule and set deadlines</li>
+          <li>File format discussion and confirm</li>
+          <li>Fixed fee negotiation</li>
+          <li>People who can communicate smoothly</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Job Details */}
+    <div className="space-y-3">
+      <h4 className="text-pink-700 font-medium">Job Details</h4>
+      <div className="space-y-2 ml-4">
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Required working hours per day:</span>
+          <span className="text-pink-600">Any</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Standing Orders:</span>
+          <span className="text-pink-600">none</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Tag configuration:</span>
+          <span className="text-pink-600">Beginners welcome - No skills required</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Specify work date and time:</span>
+          <span className="text-pink-600">Not specified</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Price per item:</span>
+          <span className="text-pink-600">500 yen</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Estimated time per item:</span>
+          <span className="text-pink-600">5 days</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Estimated hourly rate:</span>
+          <span className="text-pink-600">10,000 yen</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Number of orders per month:</span>
+          <span className="text-pink-600">20 Results</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Number of people expected to be recruited:</span>
+          <span className="text-pink-600">2 people</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-pink-800 min-w-[160px]">Application period:</span>
+          <span className="text-pink-600">7 day term (2023/3/21 - Thursday)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* Step 3 Review */}
           <div className="bg-pink-50 rounded-lg p-4">

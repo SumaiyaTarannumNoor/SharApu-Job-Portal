@@ -5,6 +5,7 @@ import HirerDrawerNavigation from '../HirerDrawerNavigation';
 import Step2RegisterAJob from './Step2RegisterAJob';
 import Step3RegisterAJob from './Step3RegisterAJob';
 import Step4RegisterAJob from './Step4RegisterAJob';
+import Step5RegisterAJob from './Step5RegisterAJob';
 
 const RegisterAJob = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -42,6 +43,10 @@ const RegisterAJob = () => {
     { number: 4, title: 'Other Settings' },
     { number: 5, title: 'Check the contents' },
   ];
+
+  if (currentStep === 5) {
+    return <Step5RegisterAJob currentStep={currentStep} setCurrentStep={setCurrentStep} />;
+  }
 
   if (currentStep === 4) {
     return <Step4RegisterAJob currentStep={currentStep} setCurrentStep={setCurrentStep} />;
