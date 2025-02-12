@@ -9,6 +9,10 @@ const HirerUserSettingsSection = () => {
       navigate('/hirer-self-introduction');
     };
 
+    const handleHirerIconSetting = () => {
+        navigate('/hirer-icon-setting');
+      };
+
     const settingItems = [
       {
         icon: FileTextIcon,
@@ -20,7 +24,7 @@ const HirerUserSettingsSection = () => {
         icon: ImageIcon,
         title: "Let's set the icon",
         description: "Setting an icon will make it easier for workers to recognize you.",
-        onClick: () => navigate('/set-icon')
+        onClick: () => navigate('/hirer-icon-setting')
       },
       {
         icon: ShieldIcon,
