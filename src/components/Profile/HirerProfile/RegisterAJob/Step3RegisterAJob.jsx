@@ -1,8 +1,23 @@
 import React, { useState } from 'react';
 import { Upload } from 'lucide-react';
 
-const Step3RegisterAJob = () => {
+const Step3RegisterAJob = ({ currentStep, setCurrentStep }) => {
   const [files, setFiles] = useState([]);
+
+  const handleFileChange = (e) => {
+    const fileList = Array.from(e.target.files);
+    if (fileList.length + files.length <= 3) {
+      setFiles(prev => [...prev, ...fileList]);
+    }
+  };
+
+  const handleBack = () => {
+    setCurrentStep(2);
+  };
+
+  const handleNext = () => {
+    setCurrentStep(4);
+  };
 
   const steps = [
     { number: 1, text: "Selecting a Job Type and Category" },
@@ -11,13 +26,6 @@ const Step3RegisterAJob = () => {
     { number: 4, text: "Other Settings" },
     { number: 5, text: "Check the contents" }
   ];
-
-  const handleFileChange = (e) => {
-    const fileList = Array.from(e.target.files);
-    if (fileList.length + files.length <= 3) {
-      setFiles(prev => [...prev, ...fileList]);
-    }
-  };
 
   return (
     <div className="max-w-4xl mx-auto p-6">
@@ -38,7 +46,10 @@ const Step3RegisterAJob = () => {
 
       {/* Back Button */}
       <div className="mb-8">
-        <button className="text-gray-600 hover:text-gray-800 flex items-center">
+        <button 
+          onClick={handleBack}
+          className="text-gray-600 hover:text-gray-800 flex items-center"
+        >
           ← STEP2 (Edit the job description)
         </button>
       </div>
@@ -85,7 +96,10 @@ const Step3RegisterAJob = () => {
 
         {/* Next Button */}
         <div className="mt-8">
-          <button className="w-full bg-pink-500 text-white py-3 rounded-lg hover:bg-pink-600 transition-colors">
+          <button 
+            onClick={handleNext}
+            className="w-full bg-pink-500 text-white py-3 rounded-lg hover:bg-pink-600 transition-colors"
+          >
             Next (Other Settings)
           </button>
         </div>

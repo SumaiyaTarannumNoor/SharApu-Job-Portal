@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { User, ChevronDown, Check } from 'lucide-react';
 import HirerDrawerNavigation from '../HirerDrawerNavigation';
 import Step2RegisterAJob from './Step2RegisterAJob';
+import Step3RegisterAJob from './Step3RegisterAJob';
 
 const RegisterAJob = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -40,6 +41,11 @@ const RegisterAJob = () => {
     { number: 4, title: 'Other Settings' },
     { number: 5, title: 'Check the contents' },
   ];
+
+  // If we're on step 3, render Step3RegisterAJob
+  if (currentStep === 3) {
+    return <Step3RegisterAJob currentStep={currentStep} setCurrentStep={setCurrentStep} />;
+  }
 
   // If we're on step 2, render Step2RegisterAJob
   if (currentStep === 2) {
@@ -299,195 +305,194 @@ const RegisterAJob = () => {
                         name="category"
                         value="customer_support"
                         className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'customer_support'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Customer Support</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="research"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'research'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Monitor, Survey, Research</span>
-                    </label>
+                        checked={selectedCategory === 'customer_support'}onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Customer Support</span>
+                      </label>
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="research"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'research'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Monitor, Survey, Research</span>
+                      </label>
+                    </div>
+                  </div>
+  
+                  {/* Web Development */}
+                  <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                    <h4 className="font-medium text-gray-800 mb-3">Web production, Web design and development</h4>
+                    <div className="space-y-2">
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="web_design"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'web_design'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Web Design</span>
+                      </label>
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="html_css"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'html_css'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>HTML and CSS coding</span>
+                      </label>
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="website_test"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'website_test'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Website check/ups test</span>
+                      </label>
+                    </div>
+                  </div>
+  
+                  {/* Writing */}
+                  <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                    <h4 className="font-medium text-gray-800 mb-3">Writing</h4>
+                    <div className="space-y-2">
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="article_creation"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'article_creation'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Article/blog creation</span>
+                      </label>
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="reviews"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'reviews'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Customer reviews and testimonials</span>
+                      </label>
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="transcription"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'transcription'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Text and transcription</span>
+                      </label>
+                    </div>
+                  </div>
+  
+                  {/* Design and Media */}
+                  <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                    <h4 className="font-medium text-gray-800 mb-3">Design, photography, and video</h4>
+                    <div className="space-y-2">
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="illustrations"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'illustrations'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Illustrations, logos, and graphics</span>
+                      </label>
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="photo_editing"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'photo_editing'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Photo retouching, photo editing</span>
+                      </label>
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="video_editing"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'video_editing'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Video shooting, video editing</span>
+                      </label>
+                    </div>
+                  </div>
+  
+                  {/* Translation */}
+                  <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
+                    <h4 className="font-medium text-gray-800 mb-3">Translation</h4>
+                    <div className="space-y-2">
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="english_translation"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'english_translation'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>English Translation</span>
+                      </label>
+                      <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value="other_translation"
+                          className="text-pink-600 focus:ring-pink-500"
+                          checked={selectedCategory === 'other_translation'}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        <span>Other translations</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
-
-                {/* Web Development */}
-                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
-                  <h4 className="font-medium text-gray-800 mb-3">Web production, Web design and development</h4>
-                  <div className="space-y-2">
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="web_design"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'web_design'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Web Design</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="html_css"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'html_css'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>HTML and CSS coding</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="website_test"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'website_test'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Website check/ups test</span>
-                    </label>
-                  </div>
+  
+                {/* Navigation Buttons */}
+                <div className="flex justify-end mt-8 gap-4">
+                  <button
+                    className="px-6 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors"
+                  >
+                    Back
+                  </button>
+                  <button 
+                    onClick={handleNextStep}
+                    className="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors"
+                  >
+                    Next Step
+                  </button>
                 </div>
-
-                {/* Writing */}
-                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
-                  <h4 className="font-medium text-gray-800 mb-3">Writing</h4>
-                  <div className="space-y-2">
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="article_creation"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'article_creation'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Article/blog creation</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="reviews"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'reviews'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Customer reviews and testimonials</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="transcription"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'transcription'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Text and transcription</span>
-                    </label>
-                  </div>
-                </div>
-
-                {/* Design and Media */}
-                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
-                  <h4 className="font-medium text-gray-800 mb-3">Design, photography, and video</h4>
-                  <div className="space-y-2">
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="illustrations"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'illustrations'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Illustrations, logos, and graphics</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="photo_editing"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'photo_editing'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Photo retouching, photo editing</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="video_editing"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'video_editing'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Video shooting, video editing</span>
-                    </label>
-                  </div>
-                </div>
-
-                {/* Translation */}
-                <div className="border rounded-lg p-4 hover:border-pink-300 transition-colors">
-                  <h4 className="font-medium text-gray-800 mb-3">Translation</h4>
-                  <div className="space-y-2">
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="english_translation"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'english_translation'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>English Translation</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="other_translation"
-                        className="text-pink-600 focus:ring-pink-500"
-                        checked={selectedCategory === 'other_translation'}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                      />
-                      <span>Other translations</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              {/* Navigation Buttons */}
-              <div className="flex justify-end mt-8 gap-4">
-                <button
-                  className="px-6 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors"
-                >
-                  Back
-                </button>
-                <button 
-                  onClick={handleNextStep}
-                  className="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors"
-                >
-                  Next Step
-                </button>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
-  );
-};
-
-export default RegisterAJob;
+        </main>
+      </div>
+    );
+  };
+  
+  export default RegisterAJob;
