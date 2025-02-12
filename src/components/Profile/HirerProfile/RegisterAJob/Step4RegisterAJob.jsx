@@ -288,6 +288,144 @@ const Step4RegisterAJob = ({ currentStep, setCurrentStep }) => {
           </div>
         </div>
 
+        {/* Location Selection Section */}
+        <div className="mt-8 bg-pink-50 p-6 rounded-lg">
+        <div className="flex items-center gap-2 mb-4">
+            <span className="bg-pink-500 text-white px-2 py-1 rounded text-sm">any</span>
+            <h3 className="font-medium text-pink-800">You can specify the location of the worker.</h3>
+        </div>
+
+        <div className="space-y-6">
+            {/* Dhaka Division */}
+            <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+                <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                <span className="font-medium text-pink-800">Dhaka Division</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+                {['Dhaka', 'Gazipur', 'Narayanganj', 'Tangail', 'Narsingdi', 'Kishoreganj', 'Manikganj', 'Munshiganj', 'Rajbari', 'Madaripur', 'Gopalganj', 'Faridpur', 'Shariatpur'].map((district, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                    <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                    <span className="text-pink-800 text-sm">{district}</span>
+                </label>
+                ))}
+            </div>
+            </div>
+
+            {/* Chittagong Division */}
+            <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+                <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                <span className="font-medium text-pink-800">Chittagong Division</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+                {['Chittagong', 'Cox\'s Bazar', 'Rangamati', 'Bandarban', 'Khagrachari', 'Feni', 'Lakshmipur', 'Comilla', 'Noakhali', 'Chandpur', 'Brahmanbaria'].map((district, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                    <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                    <span className="text-pink-800 text-sm">{district}</span>
+                </label>
+                ))}
+            </div>
+            </div>
+
+            {/* Rajshahi Division */}
+            <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+                <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                <span className="font-medium text-pink-800">Rajshahi Division</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+                {['Rajshahi', 'Chapainawabganj', 'Natore', 'Naogaon', 'Bogra', 'Joypurhat', 'Pabna', 'Sirajganj'].map((district, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                    <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                    <span className="text-pink-800 text-sm">{district}</span>
+                </label>
+                ))}
+            </div>
+            </div>
+
+            {/* Khulna Division */}
+            <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+                <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                <span className="font-medium text-pink-800">Khulna Division</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+                {['Khulna', 'Bagerhat', 'Satkhira', 'Jessore', 'Magura', 'Jhenaidah', 'Narail', 'Kushtia', 'Chuadanga', 'Meherpur'].map((district, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                    <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                    <span className="text-pink-800 text-sm">{district}</span>
+                </label>
+                ))}
+            </div>
+            </div>
+
+            {/* Barisal Division */}
+            <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+                <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                <span className="font-medium text-pink-800">Barisal Division</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+                {['Barisal', 'Bhola', 'Barguna', 'Pirojpur', 'Patuakhali', 'Jhalokati'].map((district, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                    <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                    <span className="text-pink-800 text-sm">{district}</span>
+                </label>
+                ))}
+            </div>
+            </div>
+
+            {/* Sylhet Division */}
+            <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+                <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                <span className="font-medium text-pink-800">Sylhet Division</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+                {['Sylhet', 'Moulvibazar', 'Habiganj', 'Sunamganj'].map((district, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                    <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                    <span className="text-pink-800 text-sm">{district}</span>
+                </label>
+                ))}
+            </div>
+            </div>
+
+            {/* Rangpur Division */}
+            <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+                <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                <span className="font-medium text-pink-800">Rangpur Division</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+                {['Rangpur', 'Dinajpur', 'Kurigram', 'Gaibandha', 'Nilphamari', 'Panchagarh', 'Thakurgaon', 'Lalmonirhat'].map((district, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                    <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                    <span className="text-pink-800 text-sm">{district}</span>
+                </label>
+                ))}
+            </div>
+            </div>
+
+            {/* Mymensingh Division */}
+            <div className="mb-6">
+            <label className="flex items-center space-x-3 mb-3 cursor-pointer hover:text-pink-700">
+                <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                <span className="font-medium text-pink-800">Mymensingh Division</span>
+            </label>
+            <div className="ml-8 flex flex-wrap gap-3">
+                {['Mymensingh', 'Jamalpur', 'Sherpur', 'Netrokona'].map((district, index) => (
+                <label key={index} className="flex items-center space-x-2 bg-pink-100 px-3 py-2 rounded-full hover:bg-pink-200 cursor-pointer">
+                    <input type="checkbox" className="text-pink-500 rounded focus:ring-pink-400" />
+                    <span className="text-pink-800 text-sm">{district}</span>
+                </label>
+                ))}
+            </div>
+            </div>
+        </div>
+        </div>
+
         {/* Navigation Buttons */}
         <div className="flex justify-end gap-4 mt-8">
           <button
@@ -300,7 +438,7 @@ const Step4RegisterAJob = ({ currentStep, setCurrentStep }) => {
             onClick={handleNext}
             className="px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-colors"
           >
-            Next (Check the contents)
+            CONFIRM
           </button>
         </div>
       </div>
