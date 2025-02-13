@@ -94,7 +94,7 @@ const HirerIconSetting = () => {
               <User className="w-6 h-6 text-white bg-pink-500 rounded-full p-1" />
               <span className="hidden sm:inline text-gray-700">ahmedul</span>
               <ChevronDown 
-                className={`w-4 h-4 text-gray-600 transition-transform duration-200 ${
+                className={`z-50 w-4 h-4 text-gray-600 transition-transform duration-200 ${
                   isProfileOpen ? 'transform rotate-180' : ''
                 }`} 
               />
