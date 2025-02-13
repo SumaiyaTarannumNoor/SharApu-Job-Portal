@@ -33,13 +33,11 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
 
 def decode_and_validate_token(token: str, db: Session) -> User:
     try:
-        # Decode the token
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         email = payload.get("sub")
         if email is None:
             raise HTTPException(status_code=401, detail="Invalid token")
         
-        # Fetch the user from the database
         user = db.query(User).filter(User.email == email).first()
         if user is None:
             raise HTTPException(status_code=401, detail="User not found")
