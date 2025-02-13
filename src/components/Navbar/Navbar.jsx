@@ -16,7 +16,17 @@ const Navbar = () => {
     '/mini-profile-card',
     '/reward-history',
     '/user-settings-section',
-    '/work-management'
+    '/work-management',
+    '/hirer-profile',
+    '/find-a-worker',
+    '/hirer-icon-setting',
+    '/hirer-identity-verification',
+    '/hirer-self-introduction',
+    '/hirer-settings',
+    '/register-a-job',
+    '/hirer-work-management',
+    '/worker-management',
+    '/hirer-payment-history'
   ].includes(location.pathname);
 
   // Additional check for search page when coming from main profile
