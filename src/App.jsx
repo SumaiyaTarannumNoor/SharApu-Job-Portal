@@ -53,6 +53,7 @@ import HirerPaymentHistory from './components/Profile/HirerProfile/HirerPaymentH
 import HirerSelfIntroduction from './components/Profile/HirerProfile/HirerSelfIntroduction';
 import HirerIconSetting from './components/Profile/HirerProfile/HirerIconSetting';
 import HirerIdentityVerification from './components/Profile/HirerProfile/HirerIdentityVerification';
+import HirerSettings from './components/Profile/HirerProfile/HirerSettings';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -236,6 +237,7 @@ const App = () => {
             <Route path="/hirer-self-introduction" element={<HirerSelfIntroduction />} />
             <Route path="/hirer-icon-setting" element={<HirerIconSetting />} />
             <Route path="/hirer-identity-verification" element={<HirerIdentityVerification />} />
+            <Route path="/hirer-settings" element={<HirerSettings />} />
 
             <Route path="/login" element={<LoginForm />} />
           </Routes>
