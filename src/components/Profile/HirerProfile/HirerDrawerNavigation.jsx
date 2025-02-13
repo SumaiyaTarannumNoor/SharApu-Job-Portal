@@ -146,18 +146,16 @@ const HirerDrawerNavigation = () => {
               {/* Mobile Register Job Button */}
               <button
                 onClick={handleRegisterJob}
-                className="w-full 
-                  bg-gradient-to-r from-blue-400 to-blue-600 
-                  hover:from-blue-500 hover:to-blue-700
-                  text-white font-semibold
-                  rounded-full px-6 py-2.5 
-                  flex items-center justify-center gap-2
-                  transition-all duration-300 
-                  transform hover:scale-105
-                  shadow-lg hover:shadow-xl
-                  border-2 border-blue-300
-                  hover:border-blue-400
-                  animate-pulse hover:animate-none
+                className="bg-white text-pink-600
+                hover:bg-pink-50
+                font-semibold
+                rounded-lg px-6 py-2.5
+                flex items-center gap-2
+                transition-all duration-300
+                transform hover:scale-102
+                shadow-lg hover:shadow-xl
+                border-2 border-pink-400
+                hover:border-pink-500
                 "
               >
                 <span className="font-medium">✨ Register a Job 💼</span>
@@ -220,17 +218,16 @@ const HirerDrawerNavigation = () => {
             <button
               onClick={handleRegisterJob}
               className="
-                bg-gradient-to-r from-blue-400 to-blue-600 
-                hover:from-blue-500 hover:to-blue-700
-                text-white font-semibold
-                rounded-full px-6 py-2 
+               bg-white text-pink-600
+                hover:bg-pink-50
+                font-semibold
+                rounded-lg px-6 py-2.5
                 flex items-center gap-2
-                transition-all duration-300 
-                transform hover:scale-105
+                transition-all duration-300
+                transform hover:scale-102
                 shadow-lg hover:shadow-xl
-                border-2 border-blue-300
-                hover:border-blue-400
-                animate-pulse hover:animate-none
+                border-2 border-pink-400
+                hover:border-pink-500
               "
             >
               ✨ Register a Job 💼
