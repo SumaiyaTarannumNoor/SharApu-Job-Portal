@@ -51,8 +51,8 @@ def decode_and_validate_token(token: str, db: Session) -> User:
 
 SMTP_HOST = "smtp.example.com"
 SMTP_PORT = 587
-SMTP_USERNAME = "your_email@example.com"
-SMTP_PASSWORD = "your_password"
+SMTP_USERNAME = "email@example.com"
+SMTP_PASSWORD = "password"
 
 async def send_verification_email(email: str, token: str):
     try:
