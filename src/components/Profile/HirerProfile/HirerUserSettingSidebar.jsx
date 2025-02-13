@@ -7,10 +7,14 @@ import {
   GiftIcon, 
   LogOutIcon 
 } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 const HirerUserSettingSidebar = () => {
-    
+  const navigate = useNavigate();
+  const handleHirerSettings = () => {
+    navigate('/hirer-settings');
+  };  
   const menuItems = [
     { 
       title: 'General settings', 
@@ -50,7 +54,7 @@ const HirerUserSettingSidebar = () => {
   return (
     <div className="w-64 bg-pink-50 h-full shadow-lg">
       <div className="p-4">
-        <h2 className="text-xl font-bold text-pink-800 mb-4">User Settings</h2>
+        <h2 onClick={handleHirerSettings} className="text-xl font-bold text-pink-800 mb-4">User Settings</h2>
         {menuItems.map((section, sectionIndex) => (
           <div key={sectionIndex} className="mb-4">
             <h3 className="text-sm font-semibold text-pink-600 mb-2 uppercase">
