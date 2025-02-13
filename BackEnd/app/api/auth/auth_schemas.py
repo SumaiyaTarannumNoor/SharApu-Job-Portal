@@ -29,5 +29,5 @@ class UserResponse(BaseModel):
         orm_mode = True
 
 class LoginSchema(BaseModel):
-    identifier: str  # Can be either email or username
+    identifier: str  
     password: PasswordConstr
