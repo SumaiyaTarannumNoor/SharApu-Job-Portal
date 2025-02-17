@@ -5,6 +5,7 @@ import DrawerNavigation from './DrawerNavigation';
 import MiniProfileCard from './MiniProfileCard';
 import WorkManagement_InProgress from './WorkManagement_InProgress';
 import WorkManagement_EndItem from './WorkManagement_EndItem';
+import WorkManagement_Applying from './WorkManagement_Applying';
 
 const WorkManagement = () => {
   const [selectedTab, setSelectedTab] = useState('in-progress');
@@ -98,7 +99,7 @@ const WorkManagement = () => {
       {/* Content Area */}
       {selectedTab === 'in-progress' && <WorkManagement_InProgress />}
       {selectedTab === 'end' && <WorkManagement_EndItem />}
-      {selectedTab === 'applying' && <WorkManagement_InProgress />}
+      {selectedTab === 'applying' && <WorkManagement_Applying />}
 
       {/* Input Core System Link */}
       <div className="mt-8 text-right">
