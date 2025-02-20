@@ -20,7 +20,7 @@ class User(Base):
     hashed_password = Column(String(255))
     is_active = Column(Boolean, default=True)
     is_verified = Column(Boolean, default=False)
-    
+    role = Column(String(25), unique=True, index=True)
     # New fields
     how_to_use = Column(Enum(HowToUseEnum))
     about_registration = Column(Enum(AboutRegistrationEnum))
