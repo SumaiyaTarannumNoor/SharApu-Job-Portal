@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, User } from 'lucide-react'; // Added User import
+import { ChevronDown, User } from 'lucide-react';
 import DrawerNavigation from './DrawerNavigation';
 import MiniProfileCard from './MiniProfileCard';
+import WorkManagement_InProgress from './WorkManagement_InProgress';
+import WorkManagement_EndItem from './WorkManagement_EndItem';
+import WorkManagement_Applying from './WorkManagement_Applying';
 
 const WorkManagement = () => {
   const [selectedTab, setSelectedTab] = useState('in-progress');
   const [displayNumber, setDisplayNumber] = useState('20');
-  const [isProfileOpen, setIsProfileOpen] = useState(false); // Added missing state
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   const tabs = [
     { id: 'applying', label: 'Currently applying', count: 0 },
     { id: 'in-progress', label: 'In progress', count: 0 },
-    { id: 'end', label: 'End', count: 0 }
+    { id: 'end', label: 'End', count: 1 }
   ];
 
   return (
@@ -94,9 +97,9 @@ const WorkManagement = () => {
       </div>
 
       {/* Content Area */}
-      <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-        <p className="text-gray-600">There is currently no work in progress.</p>
-      </div>
+      {selectedTab === 'in-progress' && <WorkManagement_InProgress />}
+      {selectedTab === 'end' && <WorkManagement_EndItem />}
+      {selectedTab === 'applying' && <WorkManagement_Applying />}
 
       {/* Input Core System Link */}
       <div className="mt-8 text-right">
