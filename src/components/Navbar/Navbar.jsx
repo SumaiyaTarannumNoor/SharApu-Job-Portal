@@ -26,40 +26,22 @@ const Navbar = () => {
     '/register-a-job',
     '/hirer-work-management',
     '/worker-management',
-    '/hirer-payment-history'
+    '/hirer-payment-history',
+    '/payment-options'
   ].includes(location.pathname);
 
-  // Additional check for search page when coming from main profile
   const isSearchFromProfile = 
     location.pathname === '/search-for-a-job' && 
     location.state?.from === 'mainProfile';
 
-  // Combined condition to hide auth buttons
   const hideAuthButtons = isProfileSection || isSearchFromProfile;
 
-  const handleRegisterClick = () => {
-    navigate('/membership-registration');
-  };
-
-  const handleSearchForAJob = () => {
-    navigate('/search-for-a-job');
-  };
-
-  const handleWantToOrderWork = () => {
-    navigate('/want-to-order-work');
-  };
-
-  const handleWantToReceiveWork = () => {
-    navigate('/want-to-receive-work');
-  };
-
-  const handleLoginClick = () => {
-    navigate('/login');
-  };
-
-  const handleHomeClick = () => {
-    navigate('/');
-  };
+  const handleRegisterClick = () => navigate('/membership-registration');
+  const handleSearchForAJob = () => navigate('/search-for-a-job');
+  const handleWantToOrderWork = () => navigate('/want-to-order-work');
+  const handleWantToReceiveWork = () => navigate('/want-to-receive-work');
+  const handleLoginClick = () => navigate('/login');
+  const handleHomeClick = () => navigate('/');
 
   return (
     <div className="w-full">
@@ -69,14 +51,11 @@ const Navbar = () => {
 
       <nav className="bg-pink-500 text-white py-4 relative z-50">
         <div className="container mx-auto px-4">
-          {/* Top bar with logo and hamburger */}
           <div className="flex justify-between items-center">
-            {/* Logo */}
             <div onClick={handleHomeClick} className="h-26 w-32 text-2xl sm:text-3xl font-bold cursor-pointer">
               <img src={SharApuLogo} alt="" />
             </div>
 
-            {/* Hamburger Button */}
             {(!hideAuthButtons || window.innerWidth >= 1024) && (
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -89,73 +68,27 @@ const Navbar = () => {
               </button>
             )}
 
-            {/* Desktop Menu */}
             <div className="hidden lg:flex lg:items-center lg:justify-between lg:w-4/5">
-              <div className="flex space-x-6">
-                <button onClick={handleSearchForAJob} className="hover:text-pink-200 transition-colors duration-200">
-                  Search for a Job
-                </button>
-                <button onClick={handleWantToOrderWork} className="hover:text-pink-200 transition-colors duration-200">
-                  If you want to order work
-                </button>
-                <button onClick={handleWantToReceiveWork} className="hover:text-pink-200 transition-colors duration-200">
-                  Those who want to receive work
-                </button>
-              </div>
-
-              {/* Only show auth buttons if not in profile section and not in search from profile */}
               {!hideAuthButtons && (
-                <div className="flex space-x-4">
-                  <button
-                    onClick={handleLoginClick}
-                    className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200"
-                  >
-                    Log In
+                <div className="flex space-x-6">
+                  <button onClick={handleSearchForAJob} className="hover:text-pink-200 transition-colors duration-200">
+                    Search for a Job
                   </button>
-                  <button
-                    onClick={handleRegisterClick}
-                    className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200"
-                  >
-                    Register as a Member (Free)
+                  <button onClick={handleWantToOrderWork} className="hover:text-pink-200 transition-colors duration-200">
+                    If you want to order work
+                  </button>
+                  <button onClick={handleWantToReceiveWork} className="hover:text-pink-200 transition-colors duration-200">
+                    Those who want to receive work
                   </button>
                 </div>
               )}
-            </div>
-          </div>
 
-          {/* Mobile Menu */}
-          <div
-            className={`lg:hidden absolute left-0 right-0 bg-pink-500 shadow-lg transition-all duration-300 ease-in-out ${
-              isMenuOpen ? 'opacity-100 top-full visible' : 'opacity-0 -top-96 invisible'
-            }`}
-          >
-            <div className="px-4 py-6 space-y-6 border-t border-pink-400">
-              {/* Navigation Links */}
-              <div className="flex flex-col space-y-4">
-                <button onClick={handleSearchForAJob} className="text-left text-lg hover:text-pink-200 transition-colors duration-200">
-                  Search for a Job
-                </button>
-                <button onClick={handleWantToOrderWork} className="text-lg hover:text-pink-200 transition-colors duration-200">
-                  If you want to order work
-                </button>
-                <button onClick={handleWantToReceiveWork} className="text-lg hover:text-pink-200 transition-colors duration-200">
-                  Those who want to receive work
-                </button>
-              </div>
-
-              {/* Only show auth buttons if not in profile section and not in search from profile */}
               {!hideAuthButtons && (
-                <div className="flex flex-col space-y-3 pt-4">
-                  <button
-                    onClick={handleLoginClick}
-                    className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200"
-                  >
+                <div className="flex space-x-4">
+                  <button onClick={handleLoginClick} className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
                     Log In
                   </button>
-                  <button
-                    onClick={handleRegisterClick}
-                    className="w-full bg-white text-pink-500 px-4 py-3 rounded text-lg font-medium hover:bg-pink-100 transition-colors duration-200"
-                  >
+                  <button onClick={handleRegisterClick} className="bg-white text-pink-500 px-4 py-2 rounded hover:bg-pink-100 transition-colors duration-200">
                     Register as a Member (Free)
                   </button>
                 </div>
