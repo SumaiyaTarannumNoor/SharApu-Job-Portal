@@ -533,16 +533,45 @@ const SearchForAJobPage = () => {
     setCurrentPage(1);
   };
 
+  // Updated search function
   const handleSearch = () => {
     setCurrentPage(1);
+    // The filtering logic is in the filteredJobs function
   };
 
-  // Filter jobs based on selected criteria
+  // Updated onChange handler for search input
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+    // If you want real-time filtering, uncomment the line below
+    // setCurrentPage(1);
+  };
+
+  // Updated filtering function with comprehensive keyword search
   const filteredJobs = jobs.filter(job => {
+    // Filter by job type (project, task, or all)
     if (selectedJobType !== 'all' && job.type !== selectedJobType) return false;
-    if (searchTerm && !job.title.toLowerCase().includes(searchTerm.toLowerCase())) return false;
+    
+    // Filter by search term (keywords)
+    if (searchTerm) {
+      const searchTermLower = searchTerm.toLowerCase();
+      // Check if the search term appears in the job title
+      const titleMatch = job.title.toLowerCase().includes(searchTermLower);
+      // Check if the search term matches any tags
+      const tagMatch = job.tags.some(tag => tag.toLowerCase().includes(searchTermLower));
+      // Check if the search term appears in the company name
+      const companyMatch = job.company.name.toLowerCase().includes(searchTermLower);
+      
+      // Return true only if the search term matches any of these fields
+      if (!(titleMatch || tagMatch || companyMatch)) return false;
+    }
+    
+    // Filter for standing orders
     if (filters.onlyStandingOrders && !job.hasStandingOrder) return false;
-    if (filters.onlyOpenJobs && job.daysLeft === 0) return false;
+    
+    // Filter for open jobs (those with days left)
+    if (filters.onlyOpenJobs && !job.daysLeft) return false;
+    
+    // If all filters pass, include this job
     return true;
   });
 
@@ -662,7 +691,7 @@ const SearchForAJobPage = () => {
 
               {/* Job Type & Search */}
               <div className="bg-gray-100 p-4 rounded-lg">
-                <h2 className="font-bold mb-4">Job type / Free word</h2>
+                <h2 className="font-bold mb-4">Job type / Key word</h2>
 
                 <div className="mb-6">
                   <h3 className="font-semibold mb-3">Job Type</h3>
@@ -683,11 +712,11 @@ const SearchForAJobPage = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h3 className="font-semibold mb-3">Free Word</h3>
+                  <h3 className="font-semibold mb-3">Key Word</h3>
                   <input 
                     type="text"
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={handleSearchChange}
                     placeholder="Data entry receipt"
                     className="w-full px-3 py-2 border rounded-md"
                   />
@@ -757,63 +786,60 @@ const SearchForAJobPage = () => {
 
             {/* Job Listings */}
             <div className="space-y-4">
-              {currentJobs.map(job => (
-                <div 
-                  key={job.id} 
-                  onClick={() => handleJobClick(job)}
-                  className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:border-pink-200 transition-colors cursor-pointer"
-                >
-                  <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <span className="bg-pink-500 text-white px-2 py-1 rounded text-sm">{job.type}</span>
-                    {job.hasStandingOrder && (
-                      <span className="bg-pink-600 text-white px-2 py-1 rounded text-sm">
-                        Standing order
-                      </span>
-                    )}
-                    <div className="flex flex-wrap gap-2">
-                      {job.tags.map((tag, index) => (
-                        <span key={index} className="text-pink-500 text-sm">#{tag}</span>
-                      ))}
-                    </div>
-                    <span className="ml-auto text-gray-600 text-sm">Views: {job.views}</span>
-                  </div>
-
-                  <h3 className="text-pink-600 text-base sm:text-lg mb-2">
-                    [PR] {job.title}
-                  </h3>
-
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <div>
-                      <div className="mb-2">
-                        <span className="text-gray-600">Reward amount: </span>
-                        <span className="text-pink-600 font-bold">{job.reward.toLocaleString()} yen</span>
-                        <span className="text-gray-600 ml-2">(Price: {job.price.toLocaleString()} yen)</span>
-                      </div>
-                      <div>
-                        <span className="text-gray-600">Estimated hourly rate: </span>
-                        <span className="font-bold">{job.estimatedHourlyRate.toLocaleString()} yen</span>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 items-center">
-                      {job.daysLeft && (
-                        <div className="text-red-600">{job.daysLeft} days left</div>
+              {currentJobs.length > 0 ? (
+                currentJobs.map(job => (
+                  <div 
+                    key={job.id} 
+                    onClick={() => handleJobClick(job)}
+                    className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:border-pink-200 transition-colors cursor-pointer"
+                  >
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <span className="bg-pink-500 text-white px-2 py-1 rounded text-sm">{job.type}</span>
+                      {job.hasStandingOrder && (
+                        <span className="bg-pink-600 text-white px-2 py-1 rounded text-sm">
+                          Standing order
+                        </span>
                       )}
-                      {job.membersOnly && (
-                        <div className="font-bold text-gray-700">Members Only</div>
-                      )}
+                      <div className="flex flex-wrap gap-2">
+                        {job.tags.map((tag, index) => (
+                          <span key={index} className="text-pink-500 text-sm">#{tag}</span>
+                        ))}
+                      </div>
+                      <span className="ml-auto text-gray-600 text-sm">Views: {job.views}</span>
                     </div>
-                  </div>
 
-                  {job.company && (
-                    <div className="flex items-center gap-3 mt-4 pt-4 border-t">
-                      <img 
-                        src={job.company.logo} 
-                        alt={job.company.name} 
-                        className="w-10 h-10 sm:w-12 sm:h-12 rounded object-cover"
-                      />
+                    <h3 className="text-pink-600 text-base sm:text-lg mb-2">
+                      [PR] {job.title}
+                    </h3>
+
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                       <div>
-                        <div className="font-bold text-sm sm:text-base">{job.company.name}</div>
+                        <div className="mb-2">
+                          <span className="text-gray-600">Reward amount: </span>
+                          <span className="text-pink-600 font-bold">{job.reward.toLocaleString()} yen</span>
+                          <span className="text-gray-600 ml-2">(Price: {job.price.toLocaleString()} yen)</span>
+                        </div>
+                        <div>
+                          <span className="text-gray-600">Estimated hourly rate: </span>
+                          <span className="font-bold">{job.estimatedHourlyRate.toLocaleString()} yen</span>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 items-center">
+                        {job.daysLeft && (
+                          <div className="text-red-600">{job.daysLeft} days left</div>
+                        )}
+                        {job.membersOnly && (
+                          <div className="font-bold text-gray-700">Members Only</div>
+                        )}
+                      </div>
+                    </div>
+
+                    {job.company && (
+                      <div className="flex items-center gap-3 mt-4">
+                      <img src={job.company.logo} alt={job.company.name} className="w-8 h-8 rounded-full object-cover" />
+                      <div>
+                        <div className="text-gray-900 font-medium">{job.company.name}</div>
                         <div className="text-sm text-gray-600">
                           Average hourly rate: {job.company.averageHourlyRate.toLocaleString()} yen
                         </div>
@@ -821,54 +847,57 @@ const SearchForAJobPage = () => {
                     </div>
                   )}
                 </div>
-              ))}
+              ))
+            ) : (
+              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center">
+                <p className="text-gray-600">No jobs found matching your criteria.</p>
+                <p className="text-gray-600 mt-2">Try adjusting your filters or search terms.</p>
+              </div>
+            )}
             </div>
-
+            
             {/* Pagination */}
-            <div className="flex justify-center space-x-2 mt-6">
-              <button
-                onClick={() => paginate(currentPage - 1)}
-                disabled={currentPage === 1}
-                className={`px-4 py-2 rounded ${
-                  currentPage === 1 
-                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-pink-500 text-white hover:bg-pink-600'
-                }`}
-              >
-                Previous
-              </button>
-
-              {[...Array(totalPages)].map((_, index) => (
-                <button
-                  key={index + 1}
-                  onClick={() => paginate(index + 1)}
-                  className={`px-4 py-2 rounded ${
-                    currentPage === index + 1
-                      ? 'bg-pink-500 text-white'
-                      : 'bg-gray-200 text-gray-700 hover:bg-pink-100'
-                  }`}
-                >
-                  {index + 1}
-                </button>
-              ))}
-
-              <button
-                onClick={() => paginate(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className={`px-4 py-2 rounded ${
-                  currentPage === totalPages
-                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-pink-500 text-white hover:bg-pink-600'
-                }`}
-              >
-                Next
-              </button>
+            {filteredJobs.length > jobsPerPage && (
+              <div className="mt-8 flex justify-center">
+                <nav>
+                  <ul className="flex items-center gap-2">
+                    <li>
+                      <button
+                        onClick={() => currentPage > 1 && paginate(currentPage - 1)}
+                        disabled={currentPage === 1}
+                        className={`px-3 py-1 rounded ${currentPage === 1 ? 'bg-gray-200 text-gray-500' : 'bg-pink-100 text-pink-600 hover:bg-pink-200'}`}
+                      >
+                        Prev
+                      </button>
+                    </li>
+                    {[...Array(totalPages).keys()].map(number => (
+                      <li key={number + 1}>
+                        <button
+                          onClick={() => paginate(number + 1)}
+                          className={`px-3 py-1 rounded ${currentPage === number + 1 ? 'bg-pink-500 text-white' : 'bg-pink-100 text-pink-600 hover:bg-pink-200'}`}
+                        >
+                          {number + 1}
+                        </button>
+                      </li>
+                    ))}
+                    <li>
+                      <button
+                        onClick={() => currentPage < totalPages && paginate(currentPage + 1)}
+                        disabled={currentPage === totalPages}
+                        className={`px-3 py-1 rounded ${currentPage === totalPages ? 'bg-gray-200 text-gray-500' : 'bg-pink-100 text-pink-600 hover:bg-pink-200'}`}
+                      >
+                        Next
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            )}
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default SearchForAJobPage;
+            </div>
+            </div>
+            </div>
+            );
+            };
+            
+            export default SearchForAJobPage;
