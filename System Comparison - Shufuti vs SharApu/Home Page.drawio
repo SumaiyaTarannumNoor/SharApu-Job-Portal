@@ -219,7 +219,7 @@
           <mxGeometry x="160" y="-2495" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7Wn31qUXqN-l_yLnbQtK-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Login for Hierer&lt;/h1&gt;&lt;p&gt;In Shufuti Hierer Login is co mpletely dependent on Registration. This is the main difference between Shufuti and SharApu.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="580" y="-2465" width="180" height="175" as="geometry" />
+          <mxGeometry x="560" y="-2465" width="180" height="175" as="geometry" />
         </mxCell>
         <mxCell id="7Wn31qUXqN-l_yLnbQtK-5" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=4;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
