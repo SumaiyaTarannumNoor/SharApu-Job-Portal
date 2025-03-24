@@ -56,13 +56,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="CFbLDCY4ZLuh2Sqyp-87-33" value="dispatch" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" parent="1" edge="1">
+        <mxCell id="CFbLDCY4ZLuh2Sqyp-87-33" value="Navbar Button" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" parent="1" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="490" y="-3210" as="sourcePoint" />
             <mxPoint x="570" y="-3210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CFbLDCY4ZLuh2Sqyp-87-34" value="dispatch" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" target="CFbLDCY4ZLuh2Sqyp-87-37">
+        <mxCell id="CFbLDCY4ZLuh2Sqyp-87-34" value="Navbar Button" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" target="CFbLDCY4ZLuh2Sqyp-87-37">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="490" y="-3210" as="sourcePoint" />
             <mxPoint x="570" y="-3170" as="targetPoint" />
@@ -166,6 +166,45 @@
         </mxCell>
         <mxCell id="LYz6bHiGzQ8iUIDvPR2v-26" value="Login As A Job Seeker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="730" y="-2700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-28" value="Login using Username/eamil address and passworrd" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="-2600" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-29" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="LYz6bHiGzQ8iUIDvPR2v-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="789.5" y="-2640" as="sourcePoint" />
+            <mxPoint x="789.5" y="-2610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-30" value="Login with SNS (Social Networking Service)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="-2700" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-31" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="619.5" y="-2600" as="sourcePoint" />
+            <mxPoint x="619.5" y="-2560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-32" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="-2560" as="sourcePoint" />
+            <mxPoint x="550" y="-2560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-33" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="LYz6bHiGzQ8iUIDvPR2v-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="619.5" y="-2560" as="sourcePoint" />
+            <mxPoint x="550" y="-2500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="620" y="-2480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-34" value="Login With Google" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="-2590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-35" value="Login With Japan ID" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="-2510" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
