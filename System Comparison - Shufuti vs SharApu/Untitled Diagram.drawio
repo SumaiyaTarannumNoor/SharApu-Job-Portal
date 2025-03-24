@@ -113,23 +113,59 @@
         <mxCell id="LYz6bHiGzQ8iUIDvPR2v-14" value="Register Account With" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="510" y="-3085" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="LYz6bHiGzQ8iUIDvPR2v-10">
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-15" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="70" y="-2850" as="sourcePoint" />
-            <mxPoint x="500" y="-2880" as="targetPoint" />
+            <mxPoint x="70" y="-2870" as="sourcePoint" />
+            <mxPoint x="750" y="-2910" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="750" y="-2850" />
+              <mxPoint x="750" y="-2870" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="LYz6bHiGzQ8iUIDvPR2v-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="CFbLDCY4ZLuh2Sqyp-87-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="70" y="-2850" as="sourcePoint" />
+            <mxPoint x="70" y="-2870" as="sourcePoint" />
             <mxPoint x="180" y="-2900" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LYz6bHiGzQ8iUIDvPR2v-17" value="Not IN SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="200" y="-2850" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="CFbLDCY4ZLuh2Sqyp-87-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="-3210" as="sourcePoint" />
+            <mxPoint x="760" y="-2750" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="830" y="-3215" />
+              <mxPoint x="830" y="-2890" />
+              <mxPoint x="830" y="-2840" />
+              <mxPoint x="760" y="-2840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-19" value="Default Login For Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="-2810" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-21" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="-2750" as="sourcePoint" />
+            <mxPoint x="800" y="-2700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-24" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="-2750" as="sourcePoint" />
+            <mxPoint x="800" y="-2750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-25" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="-2750" as="sourcePoint" />
+            <mxPoint x="620" y="-2700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-26" value="Login As A Job Seeker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="-2700" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
