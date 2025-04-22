@@ -55,6 +55,9 @@
         <mxCell id="Wp0PxfLAe2cL3ZSj69ka-16" value="Job Category" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="590" y="430" width="120" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="Wp0PxfLAe2cL3ZSj69ka-17" value="Users Can Search for as many job as they want." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="510" width="160" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
