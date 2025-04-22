@@ -56,30 +56,30 @@
           <mxGeometry x="415" y="640" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-16" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="310" y="700" width="290" height="370" as="geometry" />
+          <mxGeometry x="300" y="700" width="290" height="370" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-17" value="WorkFlow for a hirer" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="390" y="710" width="130" height="30" as="geometry" />
+          <mxGeometry x="380" y="710" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-18" value="1. Register a job" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="770" width="130" height="40" as="geometry" />
+          <mxGeometry x="380" y="770" width="130" height="40" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-19" value="2. Place an order to a worker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="850" width="130" height="45" as="geometry" />
+          <mxGeometry x="380" y="850" width="130" height="45" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-20" value="3. Easy Payment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="930" width="130" height="40" as="geometry" />
+          <mxGeometry x="380" y="930" width="130" height="40" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-23" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="450" y="815" as="sourcePoint" />
-            <mxPoint x="450" y="845" as="targetPoint" />
+            <mxPoint x="440" y="815" as="sourcePoint" />
+            <mxPoint x="440" y="845" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-26" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="449.5" y="900" as="sourcePoint" />
-            <mxPoint x="449.5" y="930" as="targetPoint" />
+            <mxPoint x="439.5" y="900" as="sourcePoint" />
+            <mxPoint x="439.5" y="930" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
