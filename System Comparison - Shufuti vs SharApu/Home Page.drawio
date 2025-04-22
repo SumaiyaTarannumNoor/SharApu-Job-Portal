@@ -253,22 +253,46 @@
           <mxGeometry x="60" y="-2100" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yBFr3Lubx84lgWoSp2jj-3" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="60" y="-1870" width="60" height="30" as="geometry" />
+          <mxGeometry x="60" y="-1850" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yBFr3Lubx84lgWoSp2jj-4" value="Interviews from the Housewives and other users who found the earning ways from the system." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="180" y="-2000" width="180" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="yBFr3Lubx84lgWoSp2jj-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="yBFr3Lubx84lgWoSp2jj-4">
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="yBFr3Lubx84lgWoSp2jj-3" target="yBFr3Lubx84lgWoSp2jj-4">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="130" y="-1870" as="sourcePoint" />
             <mxPoint x="450" y="-2080" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yBFr3Lubx84lgWoSp2jj-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.408;entryY=-0.067;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="yBFr3Lubx84lgWoSp2jj-4">
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="yBFr3Lubx84lgWoSp2jj-4">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="100" y="-2080" as="sourcePoint" />
             <mxPoint x="150" y="-2130" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-7" value="+" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="-1970" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-8" value="3 Reasons to choose the System." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="-1985" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-9" value="+" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="545" y="-1970" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-10" value="Projects and Task Showcase; Start now for free" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="-1990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-11" value="+" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="635" y="-1890" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-12" value="Job Category List" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="-1850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-13" value="+" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="635" y="-1750" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-14" value="Footer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="-1680" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
