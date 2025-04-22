@@ -283,16 +283,16 @@
           <mxGeometry x="600" y="-1990" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yBFr3Lubx84lgWoSp2jj-11" value="+" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="635" y="-1890" width="50" height="20" as="geometry" />
+          <mxGeometry x="635" y="-1910" width="50" height="20" as="geometry" />
         </mxCell>
         <mxCell id="yBFr3Lubx84lgWoSp2jj-12" value="Job Category List" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="-1850" width="120" height="60" as="geometry" />
+          <mxGeometry x="600" y="-1880" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yBFr3Lubx84lgWoSp2jj-13" value="+" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="635" y="-1750" width="50" height="20" as="geometry" />
+          <mxGeometry x="630" y="-1800" width="50" height="20" as="geometry" />
         </mxCell>
         <mxCell id="yBFr3Lubx84lgWoSp2jj-14" value="Footer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="-1680" width="120" height="60" as="geometry" />
+          <mxGeometry x="600" y="-1770" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
