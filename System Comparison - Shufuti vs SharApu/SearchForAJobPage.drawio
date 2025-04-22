@@ -40,6 +40,21 @@
         <mxCell id="Wp0PxfLAe2cL3ZSj69ka-11" value="Based On" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="440" y="200" width="60" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="Wp0PxfLAe2cL3ZSj69ka-12" value="Most Popularity/Lates" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="150" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Wp0PxfLAe2cL3ZSj69ka-13" value="Popular Tags" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="210" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Wp0PxfLAe2cL3ZSj69ka-14" value="Job Type" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="280" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Wp0PxfLAe2cL3ZSj69ka-15" value="Free Word" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Wp0PxfLAe2cL3ZSj69ka-16" value="Job Category" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="430" width="120" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
