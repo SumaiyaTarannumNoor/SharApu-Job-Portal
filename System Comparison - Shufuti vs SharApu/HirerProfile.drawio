@@ -58,7 +58,7 @@
         <mxCell id="2xJDy2vzHo2qy_MCAPui-14" value="To-do List" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="525" y="450" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-15" value="1. Define&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;the job you are interested in&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;div&gt;2. Set he job type you have experience in&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3.Let&#39;s set up the skills&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-15" value="1. Setup your self-introduction&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;2. Let&#39;s set the icon&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. Verify your identity&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="510" y="480" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-16" value="New Message" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -70,7 +70,7 @@
             <mxPoint x="410" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-18" value="User Settings Page &amp;gt; Interesting jobs" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-18" value="User Settings Page &amp;gt; self-introduction" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="200" y="490" width="210" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
@@ -79,7 +79,7 @@
             <mxPoint x="400" y="559.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-20" value="User Settings Page &amp;gt; Occupations Experienced" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-20" value="User Settings Page &amp;gt; icon" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="140" y="540" width="260" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-21" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
@@ -88,7 +88,7 @@
             <mxPoint x="390" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-22" value="Users Settings Page &amp;gt; skill" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-22" value="Users Settings Page &amp;gt; verify your identity" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="170" y="590" width="220" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.53;exitY=0.986;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2xJDy2vzHo2qy_MCAPui-13">
