@@ -159,7 +159,7 @@
         <mxCell id="2xJDy2vzHo2qy_MCAPui-40" value="Interesting List" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="580" y="1450" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-41" value="Client Management" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-41" value="Worker Management" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="585" y="1540" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-42" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
@@ -222,13 +222,13 @@
             <mxPoint x="950" y="1380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-55" value="All about job application" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-55" value="All about Posting a Job" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="735" y="1350" width="195" height="30" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-56" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="950" y="1337.5" width="310" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-57" value="It shows four tabs for : Currently applying, In progress, End 1 item and display all jobs ---&lt;b&gt; This is not done in detailed in SharApu&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-57" value="It shows four tabs for : items that the user kept in draft and needs to be posted, In progress, End Item, and display all the jobs by the user.&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="950" y="1338" width="310" height="82" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-58" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
