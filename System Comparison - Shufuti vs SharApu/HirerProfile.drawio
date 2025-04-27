@@ -138,7 +138,7 @@
         <mxCell id="2xJDy2vzHo2qy_MCAPui-36" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="580" y="1180" as="sourcePoint" />
-            <mxPoint x="500" y="1960" as="targetPoint" />
+            <mxPoint x="500" y="2071" as="targetPoint" />
             <Array as="points">
               <mxPoint x="500" y="1180" />
             </Array>
@@ -192,7 +192,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-47" value="Reward History Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-47" value="Payment History Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="580" y="1660" width="180" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-48" value="A Full Functionality; Not Yet Done in SharApu" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -204,17 +204,14 @@
             <mxPoint x="1010" y="210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-50" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-50" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.006;entryY=0.113;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="2xJDy2vzHo2qy_MCAPui-51">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="760" y="1690" as="sourcePoint" />
             <mxPoint x="830" y="1690" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-51" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="840" y="1660" width="160" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-52" value="1. Reward History - It&#39;s basically payment history&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Withdrawal List - Payment withdrawal history&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="860" y="1675" width="120" height="125" as="geometry" />
+          <mxGeometry x="975" y="1660" width="205" height="280" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-54" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -259,40 +256,52 @@
           <mxGeometry x="40" y="380" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-66" value="Switch Role Button" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="580" y="1780" width="120" height="80" as="geometry" />
+          <mxGeometry x="580" y="1890" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-67" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="2xJDy2vzHo2qy_MCAPui-66">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="500" y="1820" as="sourcePoint" />
+            <mxPoint x="500" y="1930" as="sourcePoint" />
             <mxPoint x="550" y="1770" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-68" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.383;exitY=0.933;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2xJDy2vzHo2qy_MCAPui-64">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="60" y="550" as="sourcePoint" />
-            <mxPoint x="500" y="1820" as="targetPoint" />
+            <mxPoint x="500" y="1930" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="70" y="1820" />
+              <mxPoint x="70" y="1930" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-69" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Only in SharApu&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="130" y="1770" width="300" height="30" as="geometry" />
+          <mxGeometry x="125" y="1890" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-70" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="555" y="1930" width="180" height="180" as="geometry" />
+          <mxGeometry x="555" y="2040" width="180" height="180" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-71" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="2xJDy2vzHo2qy_MCAPui-70">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="640" y="1860" as="sourcePoint" />
-            <mxPoint x="690" y="1810" as="targetPoint" />
+            <mxPoint x="640" y="1970" as="sourcePoint" />
+            <mxPoint x="690" y="1920" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-72" value="HIRER PROFILE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="580" y="1960" width="130" height="110" as="geometry" />
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-72" value="JOB SEEKER PROFILE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="2070" width="130" height="110" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-73" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Find a Worker Page&lt;/h1&gt;&lt;p&gt;This page shows the job seeker users, &lt;b&gt;in SharApu this page will show all the users of the system.&amp;nbsp;&lt;/b&gt;&amp;nbsp;This page needs to be updated in SharApu.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="770" y="1210" width="350" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-74" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1810" as="sourcePoint" />
+            <mxPoint x="570" y="1810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-75" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-76" value="1. Deposit List - Shows the deposit history based on selected month and year.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Refund History - Shows the refund history based on the selected month and year.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. Payout List - Shows payout list based on the selected month and year.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;4. Fee Payment List&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1670" width="180" height="250" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
