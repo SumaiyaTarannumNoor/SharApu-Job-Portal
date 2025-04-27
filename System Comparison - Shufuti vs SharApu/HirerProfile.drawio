@@ -1,9 +1,308 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.14">
   <diagram name="Page-1" id="TyWXDQuNBMaXKYd9NQ9m">
-    <mxGraphModel>
+    <mxGraphModel dx="872" dy="473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;System Comparison - Shufuti vs SharApu&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Logging Into Hirer Profile&lt;/h1&gt;&lt;p&gt;This is one of the key system comparisons between Shufuti and SharApu. In Shufuti, after logging into the system, the user is generally led to a job seeker profile. To get into the hirer profile, Shufuti needs to depend entirely on the registration system. However, in SharApu, this is much easier as a user only needs to register once.&amp;nbsp;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="10" width="570" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-3" value="Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-4" value="LogIn" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="254.5" as="sourcePoint" />
+            <mxPoint x="140" y="254.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-6" value="Log in using Username and email address" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="280" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="250" as="sourcePoint" />
+            <mxPoint x="520" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-8" value="Getting into the profile" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="210" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-9" value="Profile" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="2xJDy2vzHo2qy_MCAPui-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="330" as="sourcePoint" />
+            <mxPoint x="590" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-11" value="Notice Section&lt;div&gt;&lt;b&gt;(New Addition in Shufuti, Not Done yet in SharApu)&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="320" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.475;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2xJDy2vzHo2qy_MCAPui-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="460" as="sourcePoint" />
+            <mxPoint x="584" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-13" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="440" width="230" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-14" value="To-do List" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="525" y="450" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-15" value="1. Define&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;the job you are interested in&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;div&gt;2. Set he job type you have experience in&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3.Let&#39;s set up the skills&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="480" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-16" value="New Message" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="320" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.013;exitY=0.318;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2xJDy2vzHo2qy_MCAPui-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="520" as="sourcePoint" />
+            <mxPoint x="410" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-18" value="User Settings Page &amp;gt; Interesting jobs" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="490" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="559.5" as="sourcePoint" />
+            <mxPoint x="400" y="559.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-20" value="User Settings Page &amp;gt; Occupations Experienced" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="540" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-21" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="610" as="sourcePoint" />
+            <mxPoint x="390" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-22" value="Users Settings Page &amp;gt; skill" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="590" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.53;exitY=0.986;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2xJDy2vzHo2qy_MCAPui-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="760" as="sourcePoint" />
+            <mxPoint x="592" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-24" value="Job Information Section" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="710" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-25" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="810" width="560" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-26" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="584.5" y="770" as="sourcePoint" />
+            <mxPoint x="584.5" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-27" value="Footer inside of the profile" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="810" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-28" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="860" width="170" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-29" value="&lt;b&gt;Work and Client Management&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Work management&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Client management&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. Search for a job&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="880" width="150" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-30" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="860" width="160" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-31" value="&lt;b&gt;Compensation management&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Reward Receiving Account&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="550" y="900" width="100" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-32" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="860" width="130" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-33" value="&lt;b&gt;Others&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;User Settings&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;User Guide&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="880" width="110" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-34" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="250" as="sourcePoint" />
+            <mxPoint x="720" y="1180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="870" y="250" />
+              <mxPoint x="870" y="310" />
+              <mxPoint x="870" y="1180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-35" value="Navbar Pages" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-36" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="1180" as="sourcePoint" />
+            <mxPoint x="500" y="1960" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="1180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-37" value="Search for a job" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1250" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-38" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1280" as="sourcePoint" />
+            <mxPoint x="580" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-39" value="Work Management" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1350" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-40" value="Interesting List" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1450" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-41" value="Client Management" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="1540" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-42" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1380" as="sourcePoint" />
+            <mxPoint x="580" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-43" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="2xJDy2vzHo2qy_MCAPui-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1480" as="sourcePoint" />
+            <mxPoint x="550" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-44" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.014;entryY=0.617;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="2xJDy2vzHo2qy_MCAPui-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1580" as="sourcePoint" />
+            <mxPoint x="550" y="1530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-45" value="&lt;b&gt;Important Notice:&lt;/b&gt; If you do not register a financial institution account for withdrawals within 4 months of user registration, functionality will be restricted, Click here to register your account information &amp;gt; Leads to &amp;gt;&lt;b&gt; User Settings &amp;gt; Reward Receiving Account&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="150" width="490" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-46" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1690" as="sourcePoint" />
+            <mxPoint x="580" y="1690" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="1690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-47" value="Reward History Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1660" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-48" value="A Full Functionality; Not Yet Done in SharApu" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-49" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.802;entryY=1.067;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="2xJDy2vzHo2qy_MCAPui-45">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="960" y="260" as="sourcePoint" />
+            <mxPoint x="1010" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-50" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="1690" as="sourcePoint" />
+            <mxPoint x="830" y="1690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-51" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="1660" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-52" value="1. Reward History - It&#39;s basically payment history&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Withdrawal List - Payment withdrawal history&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1675" width="120" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-53" value="Complete general Search For A Job Page" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1250" width="155" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-54" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="1380" as="sourcePoint" />
+            <mxPoint x="950" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-55" value="All about job application" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1350" width="195" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-56" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1337.5" width="310" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-57" value="It shows four tabs for : Currently applying, In progress, End 1 item and display all jobs ---&lt;b&gt; This is not done in detailed in SharApu&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1338" width="310" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-58" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="1480" as="sourcePoint" />
+            <mxPoint x="880" y="1480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-59" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="1440" width="340" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-60" value="This page shows all the jobs the user found interesting, they can also check the client&#39;s work that they may have followed." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="895" y="1440" width="330" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-61" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="730" y="1570" as="sourcePoint" />
+            <mxPoint x="880" y="1570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-62" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="1540" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-63" value="Shows the people the user is following, Shows the partners list and contracted bands for user.&lt;div&gt;&lt;b&gt;This detailed work flow is not yet done in SharApu&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="880" y="1540" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-64" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-66" value="Switch Role Button" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1780" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-67" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="2xJDy2vzHo2qy_MCAPui-66">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1820" as="sourcePoint" />
+            <mxPoint x="550" y="1770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-68" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.383;exitY=0.933;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2xJDy2vzHo2qy_MCAPui-64">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="550" as="sourcePoint" />
+            <mxPoint x="500" y="1820" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="70" y="1820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-69" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Only in SharApu&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1770" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-70" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="555" y="1930" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-71" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="2xJDy2vzHo2qy_MCAPui-70">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="1860" as="sourcePoint" />
+            <mxPoint x="690" y="1810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-72" value="HIRER PROFILE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1960" width="130" height="110" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
