@@ -7,8 +7,17 @@
         <mxCell id="A7O0k4JukA3mzkTsGUJ9-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;System Comparison - Shufuti vs SharApu&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="20" y="30" width="380" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A7O0k4JukA3mzkTsGUJ9-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Logging In As A Job Seeker&lt;/h1&gt;&lt;p&gt;This is one of the key system comparisons between Shufuti and SharApu. In Shufuti, after logging into the system, the user is generally led to a job seeker profile. To get into the hirer profile, Shufuti needs to depend entirely on the registration system. However, in SharApu, this is much easier as a user only needs to register once.&amp;nbsp;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Logging In&lt;/h1&gt;&lt;p&gt;This is one of the key system comparisons between Shufuti and SharApu. In Shufuti, after logging into the system, the user is generally led to a job seeker profile. To get into the hirer profile, Shufuti needs to depend entirely on the registration system. However, in SharApu, this is much easier as a user only needs to register once.&amp;nbsp;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="370" y="10" width="440" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-3" value="Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-4" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="580" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="215" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
