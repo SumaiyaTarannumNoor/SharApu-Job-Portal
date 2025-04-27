@@ -332,10 +332,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-82" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="970" y="1990" width="220" height="230" as="geometry" />
+          <mxGeometry x="970" y="1990" width="210" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-83" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="990" y="2010" width="180" height="190" as="geometry" />
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-83" value="Leads to the Job Registration Page. This page helps the user to post a job step by step.&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="990" y="2010" width="170" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
