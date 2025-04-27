@@ -91,23 +91,14 @@
         <mxCell id="2xJDy2vzHo2qy_MCAPui-22" value="Users Settings Page &amp;gt; verify your identity" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="170" y="590" width="220" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.53;exitY=0.986;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2xJDy2vzHo2qy_MCAPui-13">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.379;entryY=-0.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2xJDy2vzHo2qy_MCAPui-13" target="2xJDy2vzHo2qy_MCAPui-27">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="600" y="760" as="sourcePoint" />
             <mxPoint x="592" y="710" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-24" value="Job Information Section" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="710" width="180" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-25" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="300" y="810" width="560" height="310" as="geometry" />
-        </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-26" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="584.5" y="770" as="sourcePoint" />
-            <mxPoint x="584.5" y="800" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-27" value="Footer inside of the profile" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="490" y="810" width="190" height="30" as="geometry" />
@@ -115,14 +106,14 @@
         <mxCell id="2xJDy2vzHo2qy_MCAPui-28" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="340" y="860" width="170" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-29" value="&lt;b&gt;Work and Client Management&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Work management&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Client management&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. Search for a job&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-29" value="&lt;b&gt;Job/Worker Management&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Work management&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Worker management&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. Search for a job&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="350" y="880" width="150" height="170" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-30" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="520" y="860" width="160" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-31" value="&lt;b&gt;Compensation management&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Reward Receiving Account&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="550" y="900" width="100" height="130" as="geometry" />
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-31" value="&lt;b&gt;Payment Management&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Payment history&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Refund History&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="550" y="880" width="100" height="150" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-32" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="700" y="860" width="130" height="200" as="geometry" />
@@ -153,7 +144,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-37" value="Search for a job" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-37" value="Find a Worker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="580" y="1250" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-38" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
@@ -224,9 +215,6 @@
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-52" value="1. Reward History - It&#39;s basically payment history&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Withdrawal List - Payment withdrawal history&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="860" y="1675" width="120" height="125" as="geometry" />
-        </mxCell>
-        <mxCell id="2xJDy2vzHo2qy_MCAPui-53" value="Complete general Search For A Job Page" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="735" y="1250" width="155" height="70" as="geometry" />
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-54" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -302,6 +290,9 @@
         </mxCell>
         <mxCell id="2xJDy2vzHo2qy_MCAPui-72" value="HIRER PROFILE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="580" y="1960" width="130" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="2xJDy2vzHo2qy_MCAPui-73" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Find a Worker Page&lt;/h1&gt;&lt;p&gt;This page shows the job seeker users, &lt;b&gt;in SharApu this page will show all the users of the system.&amp;nbsp;&lt;/b&gt;&amp;nbsp;This page needs to be updated in SharApu.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1210" width="350" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
