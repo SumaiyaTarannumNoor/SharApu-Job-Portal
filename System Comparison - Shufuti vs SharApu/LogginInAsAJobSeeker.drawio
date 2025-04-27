@@ -11,13 +11,16 @@
           <mxGeometry x="370" y="10" width="440" height="150" as="geometry" />
         </mxCell>
         <mxCell id="A7O0k4JukA3mzkTsGUJ9-3" value="Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="230" width="60" height="30" as="geometry" />
+          <mxGeometry x="40" y="240" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A7O0k4JukA3mzkTsGUJ9-4" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="580" width="60" height="30" as="geometry" />
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-5" value="LogIn" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="220" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="A7O0k4JukA3mzkTsGUJ9-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="140" y="215" width="120" height="60" as="geometry" />
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="254.5" as="sourcePoint" />
+            <mxPoint x="140" y="254.5" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
