@@ -73,6 +73,24 @@
         <mxCell id="A7O0k4JukA3mzkTsGUJ9-19" value="User Settings Page &amp;gt; Interesting jobs" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="200" y="490" width="210" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-21" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="559.5" as="sourcePoint" />
+            <mxPoint x="400" y="559.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-22" value="User Settings Page &amp;gt; Occupations Experienced" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="540" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-23" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="610" as="sourcePoint" />
+            <mxPoint x="390" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-24" value="Users Settings Page &amp;gt; skill" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="590" width="220" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
