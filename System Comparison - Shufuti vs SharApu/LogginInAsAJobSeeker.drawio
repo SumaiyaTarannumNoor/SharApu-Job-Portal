@@ -225,6 +225,24 @@
         <mxCell id="A7O0k4JukA3mzkTsGUJ9-59" value="1. Reward History - It&#39;s basically payment history&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Withdrawal List - Payment withdrawal history&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="860" y="1675" width="120" height="125" as="geometry" />
         </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-60" value="Complete general Search For A Job Page" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1250" width="155" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-61" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="1380" as="sourcePoint" />
+            <mxPoint x="950" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-63" value="All about job application" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1350" width="195" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-65" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1337.5" width="310" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-66" value="It shows four tabs for : Currently applying, In progress, End 1 item and display all jobs --- This is not done in detailed in SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1338" width="310" height="82" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
