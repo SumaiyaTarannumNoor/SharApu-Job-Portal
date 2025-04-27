@@ -240,7 +240,7 @@
         <mxCell id="A7O0k4JukA3mzkTsGUJ9-65" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="950" y="1337.5" width="310" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="A7O0k4JukA3mzkTsGUJ9-66" value="It shows four tabs for : Currently applying, In progress, End 1 item and display all jobs --- This is not done in detailed in SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-66" value="It shows four tabs for : Currently applying, In progress, End 1 item and display all jobs ---&lt;b&gt; This is not done in detailed in SharApu&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="950" y="1338" width="310" height="82" as="geometry" />
         </mxCell>
         <mxCell id="A7O0k4JukA3mzkTsGUJ9-68" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
@@ -254,6 +254,18 @@
         </mxCell>
         <mxCell id="A7O0k4JukA3mzkTsGUJ9-70" value="This page shows all the jobs the user found interesting, they can also check the client&#39;s work that they may have followed." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="895" y="1440" width="330" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-71" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="730" y="1570" as="sourcePoint" />
+            <mxPoint x="880" y="1570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-72" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="1540" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="A7O0k4JukA3mzkTsGUJ9-73" value="Shows the people the user is following, Shows the partners list and contracted bands for user.&lt;div&gt;&lt;b&gt;This detailed work flow is not yet done in SharApu&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="880" y="1540" width="350" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
