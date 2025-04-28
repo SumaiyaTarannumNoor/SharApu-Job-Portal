@@ -130,6 +130,21 @@
             <mxPoint x="150" y="1234.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="0-7v_5kUD4jxx0amRcqz-39" value="Job Title" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="1205" width="110" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="0-7v_5kUD4jxx0amRcqz-46" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="555" y="1232" as="sourcePoint" />
+            <mxPoint x="585" y="1232" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0-7v_5kUD4jxx0amRcqz-47" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="644.5" y="1250" as="sourcePoint" />
+            <mxPoint x="644.5" y="1290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
