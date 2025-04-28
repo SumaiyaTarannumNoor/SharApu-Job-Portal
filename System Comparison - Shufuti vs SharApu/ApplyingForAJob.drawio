@@ -61,11 +61,26 @@
         <mxCell id="0-7v_5kUD4jxx0amRcqz-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="0-7v_5kUD4jxx0amRcqz-15">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="490" y="770" as="sourcePoint" />
-            <mxPoint x="490" y="790.7106781186548" as="targetPoint" />
+            <mxPoint x="490" y="760" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-17" value="Apply for this job" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="790" width="120" height="60" as="geometry" />
+          <mxGeometry x="430" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0-7v_5kUD4jxx0amRcqz-18" value="1. Amount per item in Yen&lt;div&gt;2. Message&lt;/div&gt;&lt;div&gt;3. Next Button (Confirm the contents)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="860" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="0-7v_5kUD4jxx0amRcqz-19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="489.5" y="820" as="sourcePoint" />
+            <mxPoint x="489.5" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0-7v_5kUD4jxx0amRcqz-20" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="489.5" y="980" as="sourcePoint" />
+            <mxPoint x="489.5" y="1020" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
