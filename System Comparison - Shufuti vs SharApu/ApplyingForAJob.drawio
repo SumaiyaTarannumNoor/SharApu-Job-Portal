@@ -42,63 +42,63 @@
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-12" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="280" as="sourcePoint" />
-            <mxPoint x="480" y="330" as="targetPoint" />
+            <mxPoint x="482" y="260" as="sourcePoint" />
+            <mxPoint x="482" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-13" value="&lt;font size=&quot;3&quot; face=&quot;Georgia&quot;&gt;1. Application Period&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot; face=&quot;Georgia&quot;&gt;2. About the work hours of this job&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot; face=&quot;Georgia&quot;&gt;3. Views of this Job&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot; face=&quot;Georgia&quot;&gt;4. Number of people expected to be recruited&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot; face=&quot;Georgia&quot;&gt;5. Specify work date and time&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot; face=&quot;Georgia&quot;&gt;6. Work Environment&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot; face=&quot;Georgia&quot;&gt;7. Application Status&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot; face=&quot;Georgia&quot;&gt;8. Required skills&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot; face=&quot;Georgia&quot;&gt;9. Welcome Experience&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="330" width="240" height="260" as="geometry" />
+          <mxGeometry x="370" y="310" width="240" height="260" as="geometry" />
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-14" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="490" y="600" as="sourcePoint" />
-            <mxPoint x="490" y="650" as="targetPoint" />
+            <mxPoint x="489.5" y="570" as="sourcePoint" />
+            <mxPoint x="489.5" y="620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-15" value="Some more Description" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="660" width="120" height="60" as="geometry" />
+          <mxGeometry x="430" y="620" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="0-7v_5kUD4jxx0amRcqz-15">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="490" y="770" as="sourcePoint" />
-            <mxPoint x="490" y="760" as="targetPoint" />
+            <mxPoint x="490" y="730" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-17" value="Apply for this job" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="760" width="120" height="60" as="geometry" />
+          <mxGeometry x="430" y="730" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-18" value="1. Amount per item in Yen&lt;div&gt;2. Message&lt;/div&gt;&lt;div&gt;3. Next Button (Confirm the contents)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="410" y="860" width="160" height="120" as="geometry" />
+          <mxGeometry x="410" y="830" width="160" height="120" as="geometry" />
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="489.5" y="820" as="sourcePoint" />
-            <mxPoint x="489.5" y="860" as="targetPoint" />
+            <mxPoint x="489.5" y="790" as="sourcePoint" />
+            <mxPoint x="489.5" y="830" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-20" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="489.5" y="980" as="sourcePoint" />
-            <mxPoint x="489.5" y="1020" as="targetPoint" />
+            <mxPoint x="489.5" y="950" as="sourcePoint" />
+            <mxPoint x="489.5" y="990" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-21" value="Check box for &quot;I have confirmed and agree to the above.&quot;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="1020" width="260" height="40" as="geometry" />
+          <mxGeometry x="370" y="990" width="260" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-22" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="489.5" y="1060" as="sourcePoint" />
-            <mxPoint x="489.5" y="1100" as="targetPoint" />
+            <mxPoint x="489.5" y="1030" as="sourcePoint" />
+            <mxPoint x="489.5" y="1070" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-23" value="Apply Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="1100" width="120" height="60" as="geometry" />
+          <mxGeometry x="430" y="1070" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-24" value="+" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="575" y="1108" width="30" height="30" as="geometry" />
+          <mxGeometry x="560" y="1080" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-25" value="Fix it Button for editing the application info." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="620" y="1100" width="90" height="50" as="geometry" />
+          <mxGeometry x="610" y="1070" width="90" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
