@@ -1,161 +1,170 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.14">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="26.2.14">
   <diagram name="Page-1" id="pchpu7Tx-HEGYEnVaKcF">
     <mxGraphModel dx="1722" dy="473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="I_DcxKmEr029iQ1eixn9-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;System Comparison - Shufuti vs SharApu&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;System Comparison - Shufuti vs SharApu&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-540" y="50" width="300" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Those who want to receive work page&lt;/h1&gt;&lt;p&gt;This page is aimed towards the job seeker community. It is basically a descriptive guide for the job seeker about how they can start finding their suitable jobs.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Those who want to receive work page&lt;/h1&gt;&lt;p&gt;This page is aimed towards the job seeker community. It is basically a descriptive guide for the job seeker about how they can start finding their suitable jobs.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-200" y="30" width="430" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-3" value="Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-3" value="Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-530" y="230" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-5" value="Motivational Speech" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-5" value="Motivational Speech" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-490" y="340" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="I_DcxKmEr029iQ1eixn9-3" target="I_DcxKmEr029iQ1eixn9-5">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="I_DcxKmEr029iQ1eixn9-3" target="I_DcxKmEr029iQ1eixn9-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-470" y="240" as="sourcePoint" />
             <mxPoint x="-420" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.433;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="I_DcxKmEr029iQ1eixn9-4" target="I_DcxKmEr029iQ1eixn9-5">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.433;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="I_DcxKmEr029iQ1eixn9-4" target="I_DcxKmEr029iQ1eixn9-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-480" y="460" as="sourcePoint" />
             <mxPoint x="-390" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-8" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-350" y="350" as="sourcePoint" />
             <mxPoint x="-300" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-9" value="Find a job Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-9" value="Find a job Button" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-290" y="320" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-11" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Yet to be done in SharApu&lt;/h1&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;This Leads to Search for a job page. But this button is still not connected to the Search For A Job Page in SharApu. Undone.&lt;/span&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-11" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Yet to be done in SharApu&lt;/h1&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;This Leads to Search for a job page. But this button is still not connected to the Search For A Job Page in SharApu. Undone.&lt;/span&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-350" y="390" width="270" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-12" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-12" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-160" y="349.5" as="sourcePoint" />
             <mxPoint x="-90" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-13" value="Small Descriptive Section" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-13" value="Small Descriptive Section" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-80" y="320" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-14" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-14" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="40" y="349.5" as="sourcePoint" />
             <mxPoint x="90" y="349.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-15" value="Mascot + &lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Contact Page Button&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-15" value="Mascot + &lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Contact Page Button&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="100" y="300" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="I_DcxKmEr029iQ1eixn9-20">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="I_DcxKmEr029iQ1eixn9-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="159.5" y="390" as="sourcePoint" />
             <mxPoint x="160" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-17" value="&lt;b&gt;Contact Page Button leads to contact-us page, Done&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-17" value="&lt;b&gt;Contact Page Button leads to contact-us page, Done&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="10" y="410" width="120" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.433;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="I_DcxKmEr029iQ1eixn9-4">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.433;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="I_DcxKmEr029iQ1eixn9-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-500" y="500" as="sourcePoint" />
             <mxPoint x="-438" y="372" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-4" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-4" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-520" y="470" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-20" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-20" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-60" y="550" width="295" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-21" value="Work Flow for a Job Seeker" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-21" value="Work Flow for a Job Seeker" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry y="560" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-22" value="1. Search for a job" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-22" value="1. Search for a job" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="10" y="620" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-23" value="2. Apply for a job" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-23" value="2. Apply for a job" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="10" y="700" width="160" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-24" value="3. Get Paid" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-24" value="3. Get Paid" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="10" y="780" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-25" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-25" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="80" y="665" as="sourcePoint" />
             <mxPoint x="80" y="695" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-26" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-26" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="79.5" y="750" as="sourcePoint" />
             <mxPoint x="79.5" y="780" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-28" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Yet to be done in SharApu&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;p style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;This section shows the work flow for a job seeker. This section is not yet designed in SharApu. Undone.&lt;/span&gt;&lt;/p&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-28" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Yet to be done in SharApu&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;p style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;This section shows the work flow for a job seeker. This section is not yet designed in SharApu. Undone.&lt;/span&gt;&lt;/p&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-250" y="625" width="170" height="155" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-30" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="I_DcxKmEr029iQ1eixn9-20">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-30" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="I_DcxKmEr029iQ1eixn9-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="84.5" y="850" as="sourcePoint" />
             <mxPoint x="85" y="900" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-31" value="&lt;b&gt;SEE DETAILED USEAGE BUTTON&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-31" value="&lt;b&gt;SEE DETAILED USEAGE BUTTON&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2.5" y="900" width="167.5" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-32" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Yet to be done in SharApu&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;p style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;This Button leads to this page flow in Shufuti --&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ol style=&quot;background-color: transparent; box-sizing: border-box; margin: 16px 0px; padding: 0px; color: rgb(85, 85, 85); font-family: &amp;quot;Noto Sans CJK JP&amp;quot;, sans-serif; letter-spacing: 1.5px; display: inline !important;&quot; class=&quot;breadcrumbs&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;li style=&quot;box-sizing: border-box; display: inline-block;&quot; title=&quot;Shufuti Support&quot;&gt;&lt;a style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(51, 167, 204); text-decoration-line: none;&quot; href=&quot;https://support.shufti.jp/hc/ja&quot;&gt;Shufuti Support&lt;/a&gt;&lt;/li&gt;&amp;nbsp;&amp;nbsp;&lt;li style=&quot;box-sizing: border-box; display: inline-block;&quot; title=&quot;Transaction flow (for first-time users)&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;a style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(51, 167, 204); text-decoration-line: none;&quot; href=&quot;https://support.shufti.jp/hc/ja/categories/360000004081-%E3%81%8A%E5%8F%96%E5%BC%95%E3%81%AE%E6%B5%81%E3%82%8C-%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%96%B9%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89&quot;&gt;Transaction flow (for first-time users)&lt;/a&gt;&lt;/li&gt;&amp;nbsp;&lt;li style=&quot;box-sizing: border-box; display: inline-block;&quot; title=&quot;Transaction flow&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;a style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(51, 167, 204); text-decoration-line: none;&quot; href=&quot;https://support.shufti.jp/hc/ja/sections/360000006521-%E3%81%8A%E5%8F%96%E5%BC%95%E3%81%AE%E6%B5%81%E3%82%8C&quot;&gt;Transaction flow&lt;/a&gt;&lt;/li&gt;&lt;/font&gt;&lt;/ol&gt;&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&amp;nbsp;In SharApu we have not implemented it in this way. However, we have the support page in SharApu that can be reached through Contact Us Page. This workflow needs to be implemented in &lt;/span&gt;SharApu.&lt;/span&gt;&lt;/p&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-32" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Yet to be done in SharApu&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;p style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;This Button leads to this page flow in Shufuti --&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ol style=&quot;background-color: transparent; box-sizing: border-box; margin: 16px 0px; padding: 0px; color: rgb(85, 85, 85); font-family: &amp;quot;Noto Sans CJK JP&amp;quot;, sans-serif; letter-spacing: 1.5px; display: inline !important;&quot; class=&quot;breadcrumbs&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;li style=&quot;box-sizing: border-box; display: inline-block;&quot; title=&quot;Shufuti Support&quot;&gt;&lt;a style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(51, 167, 204); text-decoration-line: none;&quot; href=&quot;https://support.shufti.jp/hc/ja&quot;&gt;Shufuti Support&lt;/a&gt;&lt;/li&gt;&amp;nbsp;&amp;nbsp;&lt;li style=&quot;box-sizing: border-box; display: inline-block;&quot; title=&quot;Transaction flow (for first-time users)&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;a style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(51, 167, 204); text-decoration-line: none;&quot; href=&quot;https://support.shufti.jp/hc/ja/categories/360000004081-%E3%81%8A%E5%8F%96%E5%BC%95%E3%81%AE%E6%B5%81%E3%82%8C-%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%96%B9%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89&quot;&gt;Transaction flow (for first-time users)&lt;/a&gt;&lt;/li&gt;&amp;nbsp;&lt;li style=&quot;box-sizing: border-box; display: inline-block;&quot; title=&quot;Transaction flow&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;a style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(51, 167, 204); text-decoration-line: none;&quot; href=&quot;https://support.shufti.jp/hc/ja/sections/360000006521-%E3%81%8A%E5%8F%96%E5%BC%95%E3%81%AE%E6%B5%81%E3%82%8C&quot;&gt;Transaction flow&lt;/a&gt;&lt;/li&gt;&lt;/font&gt;&lt;/ol&gt;&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&amp;nbsp;In SharApu we have not implemented it in this way. However, we have the support page in SharApu that can be reached through Contact Us Page. This workflow needs to be implemented in &lt;/span&gt;SharApu.&lt;/span&gt;&lt;/p&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-630" y="840" width="620" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-33" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-33" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-500" y="940" as="sourcePoint" />
             <mxPoint x="-480" y="940" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-34" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-34" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-175" y="940" as="sourcePoint" />
             <mxPoint x="-155" y="940" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="I_DcxKmEr029iQ1eixn9-36">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="I_DcxKmEr029iQ1eixn9-36" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="85.75" y="940" as="sourcePoint" />
             <mxPoint x="85.75" y="980" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-36" value="Interviews" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-36" value="Interviews" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="20" y="1010" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-37" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-37" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="20" y="1039.5" as="sourcePoint" />
             <mxPoint x="-70" y="1039.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-38" value="&lt;b&gt;&amp;nbsp;Start for free &lt;/b&gt;button, leads to registration page." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-38" value="&lt;b&gt;&amp;nbsp;Start for free &lt;/b&gt;button, leads to registration page." style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-290" y="1010" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-39" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-39" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-300" y="1039.5" as="sourcePoint" />
             <mxPoint x="-390" y="1039.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I_DcxKmEr029iQ1eixn9-40" value="Footer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="I_DcxKmEr029iQ1eixn9-40" value="Footer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-520" y="1025" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eEWNl7cs7uzwFRL2Ayzl-5" value="&lt;font size=&quot;3&quot;&gt;&lt;b&gt;DONE&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-250" y="540" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eEWNl7cs7uzwFRL2Ayzl-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-180.5" y="590" as="sourcePoint" />
+            <mxPoint x="-180.5" y="630" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
