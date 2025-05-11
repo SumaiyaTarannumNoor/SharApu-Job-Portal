@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Transactions = () => {
+const TransactionFlowFirstTime = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -14,10 +14,6 @@ const Transactions = () => {
     const encodedQuestion = encodeURIComponent(questionText);
     navigate(`/question-answer?question=${encodedQuestion}`);
   };
-
-  const handleTransactionFlowFirstTime = () => {
-    navigate('/transaction-flow-first-time');
-    };
 
   const transactionQuestions = [
     {
@@ -144,21 +140,11 @@ const Transactions = () => {
           />
         </div>
       </div>
-      {/* Transaction Flow Button - Moved up for better visibility */}
-      <div className="mb-8">
-        <button 
-          onClick={handleTransactionFlowFirstTime}
-          className="px-6 py-3 bg-pink-500 text-white rounded-lg font-medium hover:bg-pink-600 shadow-md"
-        >
-          See Transaction Flow
-        </button>
-      </div>
 
       {/* Main Title */}
       <h1 className="text-2xl font-semibold text-gray-800 mb-8">
         About the transaction
-      </h1> 
-      
+      </h1>
 
       {/* Questions List */}
       {filteredQuestions.length === 0 ? (
@@ -197,4 +183,4 @@ const Transactions = () => {
   );
 };
 
-export default Transactions;
+export default TransactionFlowFirstTime;
