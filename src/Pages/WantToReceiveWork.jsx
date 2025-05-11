@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Banknote, HeartHandshake } from 'lucide-react';
+import { ShieldCheck, Banknote, HeartHandshake, Search, FileText, CreditCard } from 'lucide-react';
 import { useNavigate } from 'react-router-dom'; 
 import Person1 from '../../assets/People/Person1.jpg';
 import Person2 from '../../assets/People/Person2.jpg';
@@ -72,6 +72,92 @@ const WantToReceiveWork = () => {
           </button>
         </div>
 
+        {/* WORK FLOW SECTION */}
+        <div className="bg-pink-50 p-8 rounded-lg mt-12 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-8">Work flow</h2>
+          
+          <div className="space-y-8">
+            {/* Step 1 */}
+            <div className="flex items-start gap-6">
+              <div className="bg-pink-500 rounded-full p-4 relative min-w-[64px] min-h-[64px] flex items-center justify-center">
+                <span className="text-white text-sm font-medium absolute top-1 left-2 ml-1 mt-1">STEP</span>
+                <span className="text-2xl font-bold text-white mt-1">1</span>
+              </div>
+              <div className="flex-1">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Search for a job</h3>
+                    <p className="text-gray-600">You can narrow down your search by popular tags and job types.</p>
+                    <p className="text-gray-600">We have jobs to suit your needs, from beginners to those looking to utilize their skills!</p>
+                  </div>
+                  <div className="text-pink-500">
+                    <Search className="w-12 h-12" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Diamond Dividers */}
+            <div className="flex justify-center">
+              <div className="space-y-1">
+                {[1,2,3].map((_, i) => (
+                  <div key={i} className="w-4 h-4 bg-pink-200 transform rotate-45"></div>
+                ))}
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex items-start gap-6">
+              <div className="bg-pink-500 rounded-full p-4 relative min-w-[64px] min-h-[64px] flex items-center justify-center">
+                <span className="text-white text-sm font-medium absolute top-1 left-2 ml-1 mt-1">STEP</span>
+                <span className="text-2xl font-bold text-white mt-1">2</span>
+              </div>
+              <div className="flex-1">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Apply for a job</h3>
+                    <p className="text-gray-600">If you choose a task type that doesn't require application, you can join immediately when you have an idea.</p>
+                    <p className="text-gray-600">We have a safe and secure support system to back you up if you have any trouble with transactions!</p>
+                  </div>
+                  <div className="text-pink-500">
+                    <FileText className="w-12 h-12" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Diamond Dividers */}
+            <div className="flex justify-center">
+              <div className="space-y-1">
+                {[1,2,3].map((_, i) => (
+                  <div key={i} className="w-4 h-4 bg-pink-200 transform rotate-45"></div>
+                ))}
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex items-start gap-6">
+              <div className="bg-pink-500 rounded-full p-4 relative min-w-[64px] min-h-[64px] flex items-center justify-center">
+                <span className="text-white text-sm font-medium absolute top-1 left-2 ml-1 mt-1">STEP</span>
+                <span className="text-2xl font-bold text-white mt-1">3</span>
+              </div>
+              <div className="flex-1">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Get Paid</h3>
+                    <p className="text-gray-600">SharApu will pay your fees on your behalf, so you don't have to worry about not getting paid.</p>
+                    <p className="text-gray-600">Once the delivery is approved, receipt of payment will be confirmed.</p>
+                  </div>
+                  <div className="text-pink-500">
+                    <CreditCard className="w-12 h-12" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* END WORK FLOW SECTION */}
+
         {/* Support System Section */}
         <div className="bg-gray-100 p-8 rounded-lg">
           <h2 className="text-2xl font-bold text-pink-900 text-center mb-12">
@@ -118,7 +204,7 @@ const WantToReceiveWork = () => {
               </p>
             </div>
           </div>
-
+          
           {/* Support Message */}
           <div className="mt-12 text-center">
             <div className="inline-block">
@@ -137,14 +223,12 @@ const WantToReceiveWork = () => {
                 </button>
                 {' '}support.
               </p>
-
             </div>
           </div>
         </div>
       </div>
       <TestimonialsSection />
     </div>
-
   );
 };
 
