@@ -12,6 +12,9 @@ const WantToReceiveWork = () => {
   const handleContactUs = () => {
     navigate('/contact-us');
   };
+  const handlefindajob = () => {
+    navigate('/search-for-a-job');
+  };
   return (
     <div className="bg-pink-50 min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
@@ -67,7 +70,7 @@ const WantToReceiveWork = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-8 mb-16">
-          <button className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+          <button onClick={handlefindajob} className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
             Find a job now
           </button>
         </div>
