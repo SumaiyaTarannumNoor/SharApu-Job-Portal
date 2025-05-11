@@ -54,7 +54,6 @@ import HirerSelfIntroduction from './components/Profile/HirerProfile/HirerSelfIn
 import HirerIconSetting from './components/Profile/HirerProfile/HirerIconSetting';
 import HirerIdentityVerification from './components/Profile/HirerProfile/HirerIdentityVerification';
 import HirerSettings from './components/Profile/HirerProfile/HirerSettings';
-import TransactionFlowFirstTime from './Pages/TransactionFlowFirstTime';
 
 const WorkerCard = ({ imageSrc, title, description }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -210,7 +209,6 @@ const App = () => {
             <Route path="/support" element={<Support />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/transactions" element={<Transactions />} />
-            <Route path="/transaction-flow-first-time" element={<TransactionFlowFirstTime />} />
             <Route path="/question-answer" element={<QuestionAnswer />} />
             <Route path="/main-profile" element={<MainProfile />} />
             <Route path="/work-management" element={<WorkManagement />} />
