@@ -4,13 +4,13 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="6gc3YSvHJvTKcixmaC72-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;System Comparison - Shufuti vs SharApu&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="6gc3YSvHJvTKcixmaC72-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;System Comparison - SharApu vs SharApu&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="50" y="40" width="270" height="30" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-3" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;If You Want To Order Work Page&lt;/h1&gt;&lt;p&gt;This page is aimed at the hirer searching for the perfect person to finish their project/task. It is like a guide page for understanding the system to find the right candidate.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="400" y="20" width="380" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="6gc3YSvHJvTKcixmaC72-4" value="Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="6gc3YSvHJvTKcixmaC72-4" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="40" y="140" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-5" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
@@ -49,7 +49,7 @@
         <mxCell id="6gc3YSvHJvTKcixmaC72-13" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;+&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="390" y="390" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="6gc3YSvHJvTKcixmaC72-14" value="Mascot and link to show what customers say about Shufuti and SharApu." style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="6gc3YSvHJvTKcixmaC72-14" value="Mascot and link to show what customers say about SharApu and SharApu." style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="215" y="420" width="420" height="100" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-15" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;+&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
@@ -85,7 +85,7 @@
         <mxCell id="6gc3YSvHJvTKcixmaC72-27" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;+&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="390" y="900" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="6gc3YSvHJvTKcixmaC72-28" value="What Customers say about Shufuti and SharApu (Interviews)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="6gc3YSvHJvTKcixmaC72-28" value="What Customers say about SharApu and SharApu (Interviews)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="225" y="930" width="410" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6gc3YSvHJvTKcixmaC72-29" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;+&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
