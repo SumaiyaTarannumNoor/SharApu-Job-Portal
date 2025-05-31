@@ -200,7 +200,7 @@ const HirerSettings = () => {
                   <Info className="w-5 h-5 text-pink-400 absolute left-3 top-3" />
                   <input
                     type="text"
-                    placeholder="Introducing Shufuti"
+                    placeholder="Introducing SharApu"
                     className="pl-10 w-full border border-pink-200 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-pink-300"
                   />
                 </div>
