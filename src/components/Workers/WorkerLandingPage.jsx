@@ -62,7 +62,7 @@ const WorkerLandingPage = () => {
     },
     {
       imageSrc: Worker7,
-      title: "Increase efficiency with Shufuti, whose strength is writing.",
+      title: "Increase efficiency with SharApu, whose strength is writing.",
       description: "The main job I am asked to do is write blog articles, which involves a large amount of..."
     },
     {
