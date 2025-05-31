@@ -18,7 +18,7 @@ const JobRegistrationConfirmed = () => {
       {/* Breadcrumb */}
       <div className="max-w-4xl mx-auto px-4 py-4">
         <div className="flex items-center text-sm">
-          <Link to="/" className="text-pink-600 hover:text-pink-700">Work from home Shufuti</Link>
+          <Link to="/" className="text-pink-600 hover:text-pink-700">Work from home SharApu</Link>
           <span className="mx-2 text-pink-300">&gt;</span>
           <span className="text-pink-800">Job registration</span>
         </div>
@@ -47,7 +47,7 @@ const JobRegistrationConfirmed = () => {
                 <AlertCircle className="w-5 h-5 text-pink-500 mt-0.5" />
                 <div className="space-y-2 text-pink-800">
                   <p>During the initial review process, you will not be able to request new work or edit the work content.</p>
-                  <p>Once the review is complete, we will notify you by email and on Shufuti, so please wait until the review is complete.</p>
+                  <p>Once the review is complete, we will notify you by email and on SharApu, so please wait until the review is complete.</p>
                   <p className="text-pink-600">*The initial review takes 1-3 business days.</p>
                 </div>
               </div>
