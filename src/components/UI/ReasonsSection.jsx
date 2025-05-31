@@ -4,6 +4,7 @@ import Penguine1 from '../../../assets/LandingPageIconImage/Penguine1.png';
 import Ok from '../../../assets/LandingPageIconImage/Ok.png';
 import Work_Time from '../../../assets/LandingPageIconImage/Work_Time.png';
 import Safety from '../../../assets/LandingPageIconImage/Safety.png';
+import { useNavigate } from 'react-router-dom';
 
 const AdaptiveText = ({ text, baseSize = 'sm' }) => {
   const [fontSize, setFontSize] = useState(baseSize);
@@ -14,21 +15,20 @@ const AdaptiveText = ({ text, baseSize = 'sm' }) => {
     const checkTextFit = () => {
       const textElement = textRef.current;
       const container = containerRef.current;
-      
       if (!textElement || !container) return;
 
       const sizes = ['base', 'sm', 'xs', '2xs'];
       const baseIndex = sizes.indexOf(baseSize);
       let currentSizeIndex = baseIndex;
 
-      // Reset to original size
+      // Reset all sizes
       textElement.classList.remove(...sizes.map(size => `text-${size}`));
       textElement.classList.add(`text-${sizes[currentSizeIndex]}`);
 
       while (
-        currentSizeIndex < sizes.length - 1 && 
+        currentSizeIndex < sizes.length - 1 &&
         (textElement.scrollHeight > container.clientHeight ||
-         textElement.scrollWidth > container.clientWidth)
+          textElement.scrollWidth > container.clientWidth)
       ) {
         textElement.classList.remove(`text-${sizes[currentSizeIndex]}`);
         currentSizeIndex++;
@@ -39,7 +39,7 @@ const AdaptiveText = ({ text, baseSize = 'sm' }) => {
     };
 
     checkTextFit();
-    
+
     const resizeObserver = new ResizeObserver(checkTextFit);
     if (containerRef.current) {
       resizeObserver.observe(containerRef.current);
@@ -77,25 +77,29 @@ const ReasonCard = ({ title, description, icon, subtitle }) => (
 );
 
 const ReasonsSection = () => {
+  const navigate = useNavigate();
+  const handleLoginClick = () => navigate('/login');
+
   const reasons = [
     {
-      title: "High Quality Service",
-      description: "We provide the highest quality service and propose solutions tailored to your needs.",
+      title: 'High Quality Service',
+      description:
+        'We provide the highest quality service and propose solutions tailored to your needs.',
       icon: Ok,
-      subtitle: "OK"
+      subtitle: 'OK',
     },
     {
-      title: "24 Hour support",
-      description: "Our expert staff is available 24/7 to provide prompt support.",
+      title: '24 Hour support',
+      description: 'Our expert staff is available 24/7 to provide prompt support.',
       icon: Work_Time,
-      subtitle: "Work Time"
+      subtitle: 'Work Time',
     },
     {
-      title: "Reasonable price",
-      description: "We provide high quality services at competitive prices.",
+      title: 'Reasonable price',
+      description: 'We provide high quality services at competitive prices.',
       icon: Safety,
-      subtitle: "Safety"
-    }
+      subtitle: 'Safety',
+    },
   ];
 
   return (
@@ -104,7 +108,8 @@ const ReasonsSection = () => {
         <img src={Check1} alt="Check" className="w-16 h-16" />
         <div className="flex flex-col space-y-1 text-center sm:text-left">
           <h2 className="text-2xl sm:text-3xl font-bold text-pink-500">
-            <span className="text-blue-400">3 </span>reasons to choose SharApu
+            <span className="text-blue-400">3 </span>
+            reasons to choose SharApu
           </h2>
           <h4 className="text-sm text-gray-600 text-center">
             Even if you are new to working from home, you can use this service safely and securely!
@@ -118,7 +123,10 @@ const ReasonsSection = () => {
         ))}
       </div>
       <div className="text-center mt-12">
-        <button className="bg-pink-500 text-white px-8 py-3 rounded-lg text-md hover:bg-pink-600 transition duration-300">
+        <button
+          onClick={handleLoginClick}
+          className="bg-pink-500 text-white px-8 py-3 rounded-lg text-md hover:bg-pink-600 transition duration-300"
+        >
           Start Now For Free
         </button>
       </div>
