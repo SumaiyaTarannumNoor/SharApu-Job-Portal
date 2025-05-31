@@ -37,7 +37,7 @@ const SearchForAJobPage = () => {
     'Design, photography, and video',
     'Web production, Web design and development',
     'translation',
-    'Shufuti outing'
+    'SharApu outing'
   ];
 
   const popularTags = [
