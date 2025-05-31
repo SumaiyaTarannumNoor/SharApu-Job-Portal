@@ -26,8 +26,8 @@ const WantToOrderWork = () => {
     const handleInterview = () => {
     navigate('/interview');
     };
-        
-
+     
+    const handleLoginClick = () => navigate('/login');
 
 
     const workTypes = [
@@ -216,7 +216,7 @@ const WantToOrderWork = () => {
                 </div>
 
                 <div className="text-center mt-12">
-                    <button className="border border-pink-500 text-pink-500 hover:bg-pink-50 px-8 py-3 rounded-full text-lg font-medium transition-colors">
+                    <button onClick={handleLoginClick} className="border border-pink-500 text-pink-500 hover:bg-pink-50 px-8 py-3 rounded-full text-lg font-medium transition-colors">
                         See detailed usage
                     </button>
                 </div>
