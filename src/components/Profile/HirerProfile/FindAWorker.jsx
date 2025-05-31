@@ -270,7 +270,7 @@ const FindAWorker = () => {
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto p-6 bg-white mt-6">
-        <h1 className="text-2xl font-bold mb-6 text-gray-800">Work from home Shufuti's list of work from home</h1>
+        <h1 className="text-2xl font-bold mb-6 text-gray-800">Work from home SharApu's list of work from home</h1>
         
         <div className="flex gap-6">
           {/* Skills Sidebar */}
