@@ -126,7 +126,7 @@ const RegisterAJob = () => {
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumb */}
           <div className="text-sm text-gray-600 mb-6">
-            <Link to="/" className="text-pink-600 hover:text-pink-700">Work from home Shufuti</Link>
+            <Link to="/" className="text-pink-600 hover:text-pink-700">Work from home SharApu</Link>
             <span className="mx-2">&gt;</span>
             <span>Job registration</span>
           </div>
@@ -136,7 +136,7 @@ const RegisterAJob = () => {
             <h1 className="text-2xl font-bold text-gray-800 mb-4">Job registration</h1>
             <div className="bg-pink-50 border border-pink-200 rounded-lg p-4 text-pink-800">
               <p className="font-medium mb-2">Please cooperate with the initial review to continue using the service.</p>
-              <p className="text-sm">When you register a job for the first time, Shufuti will conduct an examination to ensure that you can continue to use the service.</p>
+              <p className="text-sm">When you register a job for the first time, SharApu will conduct an examination to ensure that you can continue to use the service.</p>
               <p className="text-sm text-pink-600">*The initial examination takes 1 to 3 business days.</p>
             </div>
           </div>
