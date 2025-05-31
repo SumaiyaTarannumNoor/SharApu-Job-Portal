@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const JobCategoriesCard = () => {
   const categories = {
@@ -44,6 +45,9 @@ const JobCategoriesCard = () => {
     ]
   };
 
+  const navigate = useNavigate();
+  const handleLoginClick = () => navigate('/login');
+
   return (
     <div className="mt-16 bg-white shadow-lg rounded-lg overflow-hidden">
       <h2 className="text-2xl font-bold text-center py-6 bg-pink-500 text-white">Job Category List</h2>
@@ -67,7 +71,7 @@ const JobCategoriesCard = () => {
         ))}
       </div>
       <div className="text-center py-8 bg-gray-50">
-        <button className="bg-pink-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-pink-600 transition duration-300">
+        <button onClick={handleLoginClick} className="bg-pink-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-pink-600 transition duration-300">
           Start Free Now
         </button>
       </div>
