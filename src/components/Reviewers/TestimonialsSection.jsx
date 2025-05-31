@@ -7,6 +7,7 @@ import Reviewer5 from '../../../assets/Reviewers/Reviewer5.jpg';
 import Reviewer6 from '../../../assets/Reviewers/Reviewer6.jpg';
 import Reviewer7 from '../../../assets/Reviewers/Reviewer7.jpg';
 import Reviewer8 from '../../../assets/Reviewers/Reviewer8.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const testimonials = [
   {
@@ -84,6 +85,12 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
   return (
     <div className="bg-pink-100 p-8 rounded-lg mt-12 mb-8">
       <h2 className="text-2xl font-bold text-gray-800 mb-8">What customers say about SharApu</h2>
@@ -110,7 +117,7 @@ const TestimonialsSection = () => {
           See other use cases
         </button>
         <div>
-          <button className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-full">
+          <button onClick={handleLoginClick} className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-full">
             Start now for free
           </button>
         </div>
