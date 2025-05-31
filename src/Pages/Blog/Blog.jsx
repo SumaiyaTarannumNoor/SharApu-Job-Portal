@@ -24,7 +24,7 @@ const Blog = () => {
       id: 2,
       date: '2024/3/14',
       category: 'For those who want to order work',
-      title: 'Effective use of Shufuti for inbound marketing',
+      title: 'Effective use of SharApu for inbound marketing',
       image: Person12
     },
     {
@@ -69,7 +69,7 @@ const Blog = () => {
       id: 2,
       date: '2024/3/1',
       category: 'For those who want to order work',
-      title: 'I want my employees to focus on more creative work, Shufuti is necessary for that purpose.',
+      title: 'I want my employees to focus on more creative work, SharApu is necessary for that purpose.',
       image: Person14
     }
   ];
@@ -84,7 +84,7 @@ const Blog = () => {
     {
       id: 2,
       date: '2024/3/14',
-      title: 'Effective use of Shufuti for inbound marketing',
+      title: 'Effective use of SharApu for inbound marketing',
       image: Person12
     },
     {
@@ -111,7 +111,7 @@ const Blog = () => {
     "For those looking for work",
     "For those who want to order work",
     "Beginner's Guide",
-    "Shufuti NEWS"
+    "SharApu NEWS"
   ];
 
   const tags = [
