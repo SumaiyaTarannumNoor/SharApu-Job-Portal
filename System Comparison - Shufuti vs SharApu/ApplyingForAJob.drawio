@@ -4,13 +4,13 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="AzqbW0Qeyta-qpVPFegX-1" value="System Comparison - Shufuti vs SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="AzqbW0Qeyta-qpVPFegX-1" value="System Comparison - SharApu vs SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="60" y="30" width="250" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="AzqbW0Qeyta-qpVPFegX-3" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Applying For A Job Page&lt;/h1&gt;&lt;p&gt;This is the dedicated page for applying for a job. The designs of Shufuti and SharApu are quite different. However, the fields are similar.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="AzqbW0Qeyta-qpVPFegX-3" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Applying For A Job Page&lt;/h1&gt;&lt;p&gt;This is the dedicated page for applying for a job. The designs of SharApu and SharApu are quite different. However, the fields are similar.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="370" y="20" width="410" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="0-7v_5kUD4jxx0amRcqz-1" value="Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="0-7v_5kUD4jxx0amRcqz-1" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="360" y="255" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0-7v_5kUD4jxx0amRcqz-6" value="List of Jobs" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
