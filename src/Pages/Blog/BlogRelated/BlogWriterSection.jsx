@@ -21,13 +21,13 @@ const BlogWriterSection = () => {
           <div className="space-y-4">
             <div className="bg-pink-50 p-6 rounded-lg shadow-sm">
               <h2 className="text-2xl font-bold text-pink-600 mb-4">
-                Shufuti Blog Writer Recruitment
+                SharApu Blog Writer Recruitment
               </h2>
               
               <div className="space-y-3 text-gray-700">
                 <p className="flex items-center space-x-2">
                   <span className="text-pink-400">•</span>
-                  <span>We are currently looking for writers to make Shufuti's blog more exciting.</span>
+                  <span>We are currently looking for writers to make SharApu's blog more exciting.</span>
                 </p>
                 
                 <p className="flex items-center space-x-2">
@@ -37,7 +37,7 @@ const BlogWriterSection = () => {
                 
                 <p className="flex items-center space-x-2">
                   <span className="text-pink-400">•</span>
-                  <span>Let's work together to provide useful information to Shufuti users!</span>
+                  <span>Let's work together to provide useful information to SharApu users!</span>
                 </p>
               </div>
 
