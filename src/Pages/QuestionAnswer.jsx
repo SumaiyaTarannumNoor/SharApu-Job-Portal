@@ -21,7 +21,7 @@ const QuestionAnswer = () => {
       {/* Breadcrumb */}
       <nav className="flex items-center space-x-2 text-sm mb-6">
         <Link to="/support" className="text-pink-500 hover:text-pink-600">
-          Shufuti Support
+          SharApu Support
         </Link>
         <span className="text-gray-400">›</span>
         <Link to="/qanda" className="text-pink-500 hover:text-pink-600">
@@ -69,7 +69,7 @@ const QuestionAnswer = () => {
           </Link> here.
         </p>
         <p className="text-gray-600">
-          If you want to return to the Shufuti site, please{' '}
+          If you want to return to the SharApu site, please{' '}
           <a href="#" className="text-pink-600 hover:text-pink-800 hover:underline">click here</a>.
         </p>
       </div>
