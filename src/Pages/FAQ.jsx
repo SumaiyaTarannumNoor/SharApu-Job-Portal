@@ -19,7 +19,7 @@ const FAQ = () => {
     {
       title: 'Opening times',
       items: [
-        { text: "Shufuti's business days and business hours", link: '#' }
+        { text: "SharApu's business days and business hours", link: '#' }
       ]
     },
     {
@@ -193,7 +193,7 @@ const FAQ = () => {
           .
         </p>
         <p>
-          If you want to return to the Shufuti site, please{' '}
+          If you want to return to the SharApu site, please{' '}
           <a href="#" className="text-pink-600 hover:text-pink-700 hover:underline">
             click here
           </a>
