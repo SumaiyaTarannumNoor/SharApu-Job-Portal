@@ -25,7 +25,7 @@ const Step2RegisterAJob = ({ currentStep, setCurrentStep }) => {
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumb */}
           <div className="text-sm text-gray-600 mb-6">
-            <Link to="/" className="text-pink-600 hover:text-pink-700">Work from home Shufuti</Link>
+            <Link to="/" className="text-pink-600 hover:text-pink-700">Work from home SharApu</Link>
             <span className="mx-2">&gt;</span>
             <span>Job registration</span>
           </div>
