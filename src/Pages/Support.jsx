@@ -35,7 +35,7 @@ const Support = () => {
   const guidelines = [
     { title: "Job Request Guidelines", link: "#" },
     { title: "Work Participation Guidelines", link: "#" },
-    { title: "Announcement from Shufuti", link: "#" }
+    { title: "Announcement from SharApu", link: "#" }
   ];
 
   const usage = [
@@ -192,7 +192,7 @@ const Support = () => {
 
         {(filteredUsage.length > 0 || !searchQuery) && (
           <>
-            <h2 className="text-2xl font-semibold mb-6 text-pink-700">Shufuti usage examples</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-pink-700">SharApu usage examples</h2>
             <div className="space-y-4 mb-8">
               {filteredUsage.map((item, index) => (
                 <a
@@ -233,7 +233,7 @@ const Support = () => {
             .
           </p>
           <p>
-            If you want to return to the Shufuti site, please{' '}
+            If you want to return to the SharApu site, please{' '}
             <a href="#" className="text-pink-600 hover:text-pink-700 hover:underline">
               click here
             </a>
