@@ -67,12 +67,12 @@ const Transactions = () => {
     },
     {
       id: 10,
-      text: "Do I need to notify Shufuti of my 'My Number'?",
+      text: "Do I need to notify SharApu of my 'My Number'?",
       link: "/qanda/my-number"
     },
     {
       id: 11,
-      text: "Can tax be withheld within Shufuti?",
+      text: "Can tax be withheld within SharApu?",
       link: "/qanda/tax-withholding"
     },
     {
@@ -87,7 +87,7 @@ const Transactions = () => {
     },
     {
       id: 14,
-      text: "Does Shufuti issue employment certificates?",
+      text: "Does SharApu issue employment certificates?",
       link: "/qanda/employment-certificates"
     },
     {
@@ -115,7 +115,7 @@ const Transactions = () => {
       {/* Breadcrumb */}
       <nav className="flex items-center space-x-2 text-sm mb-6">
         <Link to="/support" className="text-pink-500 hover:text-pink-600">
-          Shufuti Support
+          SharApu Support
         </Link>
         <span className="text-gray-400">›</span>
         <Link to="/qanda" className="text-pink-500 hover:text-pink-600">
