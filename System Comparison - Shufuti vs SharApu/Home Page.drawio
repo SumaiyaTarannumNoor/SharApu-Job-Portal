@@ -4,13 +4,13 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="CFbLDCY4ZLuh2Sqyp-87-1" value="Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="CFbLDCY4ZLuh2Sqyp-87-1" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="40" y="-3190" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CFbLDCY4ZLuh2Sqyp-87-2" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="40" y="-2980" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="CFbLDCY4ZLuh2Sqyp-87-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Shufuti vs SharApu (Home Page)&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="CFbLDCY4ZLuh2Sqyp-87-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;SharApu vs SharApu (Home Page)&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="210" y="-3270" width="390" height="40" as="geometry" />
         </mxCell>
         <mxCell id="CFbLDCY4ZLuh2Sqyp-87-5" value="Home Page" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -143,7 +143,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-19" value="Default Login For Shufuti" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="LYz6bHiGzQ8iUIDvPR2v-19" value="Default Login For SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="630" y="-2810" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="LYz6bHiGzQ8iUIDvPR2v-21" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
@@ -218,7 +218,7 @@
         <mxCell id="7Wn31qUXqN-l_yLnbQtK-2" value="Not IN SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="160" y="-2495" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7Wn31qUXqN-l_yLnbQtK-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Login for Hierer&lt;/h1&gt;&lt;p&gt;In Shufuti Hierer Login is co mpletely dependent on Registration. This is the main difference between Shufuti and SharApu.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="7Wn31qUXqN-l_yLnbQtK-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Login for Hierer&lt;/h1&gt;&lt;p&gt;In SharApu Hierer Login is co mpletely dependent on Registration. This is the main difference between SharApu and SharApu.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="560" y="-2465" width="180" height="175" as="geometry" />
         </mxCell>
         <mxCell id="7Wn31qUXqN-l_yLnbQtK-5" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=4;" parent="1" edge="1">
@@ -249,7 +249,7 @@
         <mxCell id="yBFr3Lubx84lgWoSp2jj-1" value="After Hero Section&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="90" y="-2170" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yBFr3Lubx84lgWoSp2jj-2" value="Shufuti&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="yBFr3Lubx84lgWoSp2jj-2" value="SharApu&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="60" y="-2100" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yBFr3Lubx84lgWoSp2jj-3" value="SharApu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
